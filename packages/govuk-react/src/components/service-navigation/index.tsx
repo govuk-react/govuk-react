@@ -52,9 +52,8 @@ export type MenuProps = Omit<Primitives.RootProps, 'media' | 'defaultOpen'> & Me
  * button shows and hides the list once JavaScript runs. Without JavaScript the list is always
  * shown and the button hidden.
  */
-export function Menu({ style, ...props }: MenuProps) {
-  // Takes no space, so govuk-frontend's styles still apply to the button and list.
-  return <Primitives.Root media={tablet} style={{ display: 'contents', ...style }} {...props} />;
+export function Menu(props: MenuProps) {
+  return <Primitives.Root media={tablet} {...props} />;
 }
 
 export type ToggleProps = Markup.ToggleProps;

@@ -33,8 +33,6 @@ export function Root({ children, ...props }: RootProps) {
       lightOnClass="govuk-exit-this-page__indicator-light--on"
       hideContentClass="govuk-exit-this-page-hide-content"
       overlayClass="govuk-exit-this-page-overlay"
-      // Leaves the sticky button's containing block as it is in govuk-frontend.
-      style={{ display: 'contents' }}
     >
       <Markup.Root {...props}>
         {children}
