@@ -67,9 +67,7 @@ for (const formMode of formModes) {
     test.afterEach(async ({ page }) => {
       // rjsf logs a known warning: https://github.com/rjsf-team/react-jsonschema-form/issues/1794
       if (formMode !== 'React JSON Schema Form') {
-        expect(await page.evaluate(() => (window as unknown as { consoleErrors: unknown[] }).consoleErrors)).toEqual(
-          []
-        );
+        expect(await page.evaluate(() => Reflect.get(window, 'consoleErrors'))).toEqual([]);
       }
     });
 

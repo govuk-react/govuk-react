@@ -69,7 +69,7 @@ function SectionForm({ section, focus }: { section: Section; focus: State['focus
   return (
     <form onSubmit={(event) => event.preventDefault()} noValidate>
       <Radios.Field idPrefix={id('contact')} legend="How would you prefer to be contacted?" legendSize="s">
-        <AutoFocus.Root key={focusHere ? focus.request : 'idle'} disabled={!focusHere}>
+        <AutoFocus.Root focusKey={focusHere ? focus.request : undefined} disabled={!focusHere}>
           <Radios.Item>
             <AutoFocus.Target asChild>
               <Radios.Input id={id('contact')} name={id('contact')} value="email" controls={id('contact-email')} />
@@ -159,7 +159,6 @@ export function PrimitivesTogether({ initialState }: { initialState?: State }) {
                 setState((previous) => ({
                   ...previous,
                   modal: open ? tab.id : undefined,
-                  focus: open ? previous.focus : undefined,
                 }))
               }
             >

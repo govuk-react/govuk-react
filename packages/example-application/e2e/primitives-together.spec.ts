@@ -31,7 +31,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.afterEach(async ({ page }) => {
-  expect(await page.evaluate(() => (window as unknown as { consoleErrors: unknown[] }).consoleErrors)).toEqual([]);
+  expect(await page.evaluate(() => Reflect.get(window, 'consoleErrors'))).toEqual([]);
 });
 
 for (const { name, width } of [
@@ -84,6 +84,34 @@ test('choosing the same form again focuses its first field again', async ({ page
   await expect(page.getByRole('dialog')).toHaveCount(0);
   await choose(page, 'tax', 'Tax decision');
   await expectFormFocused(page, 'Appeals', 'Tax decision', 'tax-decision');
+});
+
+test('closing the modal puts focus back on the search', async ({ page }) => {
+  await choose(page, 'tax', 'Tax decision');
+  await expectFormFocused(page, 'Appeals', 'Tax decision', 'tax-decision');
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('combobox', { name: 'Find a form' })).toBeFocused();
+});
+
+test('what the user entered survives closing the modal and searching again', async ({ page }) => {
+  await choose(page, 'tax', 'Tax decision');
+  await expectFormFocused(page, 'Appeals', 'Tax decision', 'tax-decision');
+  const form = page.getByRole('dialog', { name: 'Appeals' }).locator('#appeals-accordion-content-2');
+  await form.getByLabel('Email', { exact: true }).check();
+  await form.getByLabel('Email address').fill('name@example.com');
+  await page.getByRole('button', { name: 'Close' }).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+
+  await page.getByRole('button', { name: 'Update appeals' }).click();
+  await expect(form.getByLabel('Email', { exact: true })).toBeChecked();
+  await expect(form.getByLabel('Email address')).toHaveValue('name@example.com');
+  await page.getByRole('button', { name: 'Close' }).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+
+  await choose(page, 'tax', 'Tax decision');
+  await expectFormFocused(page, 'Appeals', 'Tax decision', 'tax-decision');
+  await expect(form.getByLabel('Email', { exact: true })).toBeChecked();
+  await expect(form.getByLabel('Email address')).toHaveValue('name@example.com');
 });
 
 test('the form’s components work inside the modal', async ({ page }) => {
