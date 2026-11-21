@@ -341,6 +341,11 @@ import * as FocusLinks from '@govuk-react/primitives/focus-links';
 
 Makes links inside it, to a part of the same page, move focus there. A link to a form field focuses the field and scrolls its label into view, or its fieldset's legend, as govuk-frontend's error summary does. A link to anything else focuses it with `tabindex="-1"` and `focusedClass` until focus moves on, as govuk-frontend's skip link does. Without JavaScript the browser follows the link as usual.
 
+A plain link to `#id` already scrolls to its target, but:
+
+- It scrolls the field to the top of the window, which hides the label or legend above it, so users can't see the question they need to answer. Focus links scroll the question into view instead.
+- Browsers don't reliably move focus to the target, and an element such as `main` can't take focus without `tabindex`. In some browsers the next Tab press then starts from the link, not the target, and screen readers may not announce where the user has moved to. Focus links always focus the target.
+
 ## Button
 
 ```tsx
