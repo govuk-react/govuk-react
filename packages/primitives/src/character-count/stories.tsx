@@ -16,7 +16,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <CharacterCount.Root maxLength={200}>
-      <label htmlFor="more-detail">Can you provide more detail?</label>
+      <p>
+        <label htmlFor="more-detail">Can you provide more detail?</label>
+      </p>
       <CharacterCount.Input
         id="more-detail"
         name="more-detail"

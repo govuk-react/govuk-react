@@ -16,10 +16,24 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <Tabs.Root defaultValue="past-day">
-      <Tabs.List>
-        <Tabs.Trigger value="past-day">Past day</Tabs.Trigger>
-        <Tabs.Trigger value="past-week">Past week</Tabs.Trigger>
-        <Tabs.Trigger value="past-month">Past month</Tabs.Trigger>
+      <Tabs.List asChild>
+        <ul>
+          <Tabs.Item value="past-day" asChild>
+            <li>
+              <Tabs.Trigger value="past-day">Past day</Tabs.Trigger>
+            </li>
+          </Tabs.Item>
+          <Tabs.Item value="past-week" asChild>
+            <li>
+              <Tabs.Trigger value="past-week">Past week</Tabs.Trigger>
+            </li>
+          </Tabs.Item>
+          <Tabs.Item value="past-month" asChild>
+            <li>
+              <Tabs.Trigger value="past-month">Past month</Tabs.Trigger>
+            </li>
+          </Tabs.Item>
+        </ul>
       </Tabs.List>
       <Tabs.Content value="past-day">
         <h2>Past day</h2>
@@ -42,9 +56,19 @@ export const RadiosFallback: Story = {
   name: 'Radios fallback',
   render: () => (
     <Tabs.RadiosRoot defaultValue="radios-past-day">
-      <Tabs.List>
-        <Tabs.RadiosTrigger value="radios-past-day">Past day</Tabs.RadiosTrigger>
-        <Tabs.RadiosTrigger value="radios-past-week">Past week</Tabs.RadiosTrigger>
+      <Tabs.List asChild>
+        <ul>
+          <Tabs.Item value="radios-past-day" asChild>
+            <li>
+              <Tabs.RadiosTrigger value="radios-past-day">Past day</Tabs.RadiosTrigger>
+            </li>
+          </Tabs.Item>
+          <Tabs.Item value="radios-past-week" asChild>
+            <li>
+              <Tabs.RadiosTrigger value="radios-past-week">Past week</Tabs.RadiosTrigger>
+            </li>
+          </Tabs.Item>
+        </ul>
       </Tabs.List>
       <Tabs.RadiosContent value="radios-past-day">
         <h2>Past day</h2>
