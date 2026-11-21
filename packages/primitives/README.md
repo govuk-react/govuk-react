@@ -175,6 +175,14 @@ A button that shows and hides some content, such as a navigation menu on small s
 
 `open` and `onOpenChange` control it once hydrated, such as to close a menu after navigating. A user's click before hydration is reported through `onOpenChange` rather than undone. `defaultOpen` starts it open. Once upgraded, the root, button and content have `data-state` ("open" or "closed"), and "open" while `media` matches.
 
+Like govuk-frontend's service navigation, it doesn't use `details` and `summary`:
+
+- Without JavaScript the content is shown, so users can always reach a menu's links. A closed `details` hides its content without JavaScript.
+- The content has to show, with no button, while `media` matches, such as on wider screens. A `details` can't be open at one screen width and closed at another without JavaScript, and its `summary` can't be hidden while its content shows.
+- The content can be any element, such as the `ul` of a `nav`. A `details` must hold its content and start with its `summary`.
+
+For a menu that opens and closes without JavaScript, use `details`. govuk-react's service navigation has a `details` version.
+
 ## Modal
 
 ```tsx
