@@ -108,4 +108,31 @@ describe('AutoFocus', () => {
     element.remove();
     hidden.remove();
   });
+
+  test('focuses a target that could not take focus once an ancestor shows it', async () => {
+    const hidden = document.createElement('div');
+    hidden.hidden = true;
+    hidden.innerHTML =
+      '<govuk-react-auto-focus><div data-auto-focus role="alert">There is a problem</div></govuk-react-auto-focus>';
+    document.body.appendChild(hidden);
+    await connected();
+    hidden.hidden = false;
+    await connected();
+    expect(screen.getByRole('alert')).toHaveFocus();
+    hidden.remove();
+  });
+
+  test('stops waiting for a target to be shown once the user presses a key', async () => {
+    const hidden = document.createElement('div');
+    hidden.hidden = true;
+    hidden.innerHTML =
+      '<govuk-react-auto-focus><div data-auto-focus role="alert">There is a problem</div></govuk-react-auto-focus>';
+    document.body.appendChild(hidden);
+    await connected();
+    fireEvent.keyDown(document.body, { key: 'Tab' });
+    hidden.hidden = false;
+    await connected();
+    expect(screen.getByRole('alert')).not.toHaveFocus();
+    hidden.remove();
+  });
 });
