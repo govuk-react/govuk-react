@@ -5,7 +5,7 @@ import { createContext, useCallback, useContext, useEffect, useId, useReducer, u
 import type { ComponentProps, ReactNode, SyntheticEvent } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { composeRefs, Slot } from '../utils/slot.js';
-import { tagName } from './element.js';
+import { tagName, type ModalElement } from './element.js';
 
 export type { ChangeDetails };
 
@@ -46,7 +46,7 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
 export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...props }: RootProps) {
   const generatedId = useId();
   const dialogId = dialogIdProp ?? generatedId;
-  const element = useRef<HTMLElement>(null);
+  const element = useRef<ModalElement>(null);
   const synced = useRef(false);
   const [, render] = useReducer((count: number) => count + 1, 0);
   // `open` is set once hydrated, so the server markup is uncontrolled and the buttons work before
@@ -54,7 +54,7 @@ export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...
   useEffect(() => {
     const node = element.current;
     if (!node || open === undefined) {
-      node?.removeAttribute('open');
+      if (node) node.open = undefined;
       return;
     }
     if (!synced.current) {
@@ -66,7 +66,7 @@ export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...
         return;
       }
     }
-    node.setAttribute('open', String(open));
+    node.open = open;
   });
   return (
     <ModalContext.Provider
@@ -135,7 +135,7 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
     if (reported.current === dialog.open) return;
     reported.current = dialog.open;
     // A controlled dialog that arrives at `open` is no news.
-    if (dialog.closest(tagName)?.getAttribute('open') === String(dialog.open)) return;
+    if (dialog.closest(tagName)?.open === dialog.open) return;
     onOpenChange.current?.(dialog.open, live);
   }, []);
   // A dialog the user opened before hydration, through its invoker command or the element, fired

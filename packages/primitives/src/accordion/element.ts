@@ -22,15 +22,19 @@
  *   collapsed.
  *
  * Attributes:
- * - `value`: the open sections' values, separated by spaces, to control them. A user's click only
- *   fires the change event, and the sections change when `value` does.
- * - `default-value`: the sections open at first, instead of `data-expanded`.
+ * - `default-value`: the values of the sections open at first, separated by spaces, instead of
+ *   `data-expanded`.
  * - `remember-expanded`: "false" stops the open sections being remembered in session storage,
  *   keyed by content id, as govuk-frontend does.
  * - `show-section-text`, `hide-section-text`, `show-section-label`, `hide-section-label`,
  *   `show-all-sections-text`, `hide-all-sections-text`: the text, English by default.
  * - `upgraded-class`, `expanded-item-class`, `collapsed-icon-class`: classes to add, for styles
  *   keyed off classes rather than `data-upgraded`, `data-state` and `aria-expanded`.
+ *
+ * Properties:
+ * - `value`: when an array of the open sections' values, controls them. A user's click then only
+ *   fires the change event, and the sections change when `value` does. `undefined` stops
+ *   controlling them.
  *
  * While upgraded it sets `data-upgraded`, and `data-state` ("open" or "closed") on each item,
  * trigger and content.
@@ -53,6 +57,8 @@ declare global {
 export const tagName = 'govuk-react-accordion';
 
 export interface AccordionElement extends HTMLElement {
+  /** Controls the open sections, by value, when set. */
+  value: readonly string[] | undefined;
   /** The open sections' values, once upgraded. */
   readonly openValues: string[] | undefined;
   /** The open sections after the user's last change before `value` was first set, such as before React hydrated. */
@@ -72,15 +78,11 @@ const valuesOf = (attribute: string | null) => attribute?.split(/\s+/).filter(Bo
 
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactAccordion extends HTMLElement implements AccordionElement {
-    static get observedAttributes() {
-      return ['value'];
-    }
-
     private open = new Set<string>();
 
     private upgraded = false;
 
-    private controlled = false;
+    private controlledValue?: readonly string[];
 
     private picked?: string[];
 
@@ -149,12 +151,19 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.removeEventListener('beforematch', this.onBeforeMatch, true);
     }
 
-    attributeChangedCallback() {
-      const value = valuesOf(this.getAttribute('value'));
-      this.controlled = value !== undefined;
+    get value() {
+      return this.controlledValue;
+    }
+
+    set value(value: readonly string[] | undefined) {
+      this.controlledValue = value;
       if (!value) return;
       this.open = new Set(value);
       this.render();
+    }
+
+    private get controlled() {
+      return this.controlledValue !== undefined;
     }
 
     private get items() {
@@ -195,9 +204,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const items = this.items;
       if (!items.some((item) => this.find(item, 'button[data-accordion-trigger]'))) return;
       this.upgraded = true;
-      const value = valuesOf(this.getAttribute('value'));
-      this.controlled = value !== undefined;
-      this.open = new Set(value ?? valuesOf(this.getAttribute('default-value')));
+      this.open = new Set(this.controlledValue ?? valuesOf(this.getAttribute('default-value')));
       this.dataset.upgraded = '';
       const upgradedClasses = classesOf(this.getAttribute('upgraded-class'));
       if (upgradedClasses.length) this.classList.add(...upgradedClasses);

@@ -31,8 +31,6 @@ const AccordionContext = createContext<{ open?: string[]; texts: Texts }>({ text
 
 const ItemContext = createContext<{ expanded?: boolean }>({});
 
-const isAccordion = (element: HTMLElement): element is AccordionElement => 'pickedValue' in element;
-
 export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'defaultValue' | 'onChange'> & {
   /** The open sections' values, to control them once hydrated. */
   value?: string[];
@@ -79,7 +77,7 @@ export function Root({
   children,
   ...props
 }: RootProps) {
-  const element = useRef<HTMLElement>(null);
+  const element = useRef<AccordionElement>(null);
   const onValueChangeRef = useRef(onValueChange);
   const synced = useRef(false);
   const [, render] = useReducer((count: number) => count + 1, 0);
@@ -101,25 +99,23 @@ export function Root({
 
   // `value` is set once hydrated, so the server markup is uncontrolled and a click before
   // hydration still works. That click is then reported, rather than undone.
-  const controlled = value?.join(' ');
   const initialValue = (value ?? defaultValue ?? []).join(' ');
   useEffect(() => {
     const node = element.current;
     if (!node) return;
     if (!synced.current) {
       synced.current = true;
-      const picked = isAccordion(node) ? node.pickedValue : undefined;
+      const picked = node.pickedValue;
       if (picked !== undefined && picked.join(' ') !== initialValue && onValueChangeRef.current) {
         onValueChangeRef.current(picked, early);
-        if (controlled !== undefined) {
+        if (value !== undefined) {
           // The pick shows until the next render, which adopts it or goes back to `value`.
           render();
           return;
         }
       }
     }
-    if (controlled === undefined) node.removeAttribute('value');
-    else node.setAttribute('value', controlled);
+    node.value = value;
   });
 
   const initial = value ?? defaultValue;
