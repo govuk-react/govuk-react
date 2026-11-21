@@ -19,21 +19,12 @@ const AutoFocusContext = createContext<{ disabled?: boolean }>({});
 export type RootProps = React.HTMLAttributes<HTMLElement> & {
   /** Don't move focus. */
   disabled?: boolean;
-  /**
-   * Move focus to the target again each time this changes, such as each time the user searches
-   * for something on the page, without remounting it.
-   */
-  focusKey?: string | number;
 };
 
-export function Root({ disabled, focusKey, ...props }: RootProps) {
+export function Root({ disabled, ...props }: RootProps) {
   return (
     <AutoFocusContext.Provider value={{ disabled }}>
-      {React.createElement(tagName, {
-        ...props,
-        disabled: disabled ? '' : undefined,
-        'focus-key': focusKey === undefined ? undefined : String(focusKey),
-      })}
+      {React.createElement(tagName, { ...props, disabled: disabled ? '' : undefined })}
     </AutoFocusContext.Provider>
   );
 }
