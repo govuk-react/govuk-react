@@ -1,5 +1,11 @@
 # govuk-react
 
+## 1.0.0-alpha.5
+
+### Minor Changes
+
+- Updated dependency: `@govuk-react/primitives@0.6.0`. `hidden` on Accordion and Disclosure `Content` sets how closed content is hidden: `true` for plain `hidden`, or `"until-found"` so find in page can open it.
+
 ## 1.0.0-alpha.4
 
 ### Minor Changes
