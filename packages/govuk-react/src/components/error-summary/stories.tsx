@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
+import { useState } from 'react';
 
 import * as ErrorSummary from '.';
+import { Button } from '../button';
 import { InputField } from '../input';
 
 const meta = {
@@ -41,4 +43,28 @@ export const WithField: Story = {
       <InputField id="full-name" name="fullName" label="Full name" errorMessage="Enter your full name" />
     </>
   ),
+};
+
+/** Submit the form without a name: the summary appears and takes focus, and its link moves focus to the field. */
+export const OnSubmit: Story = {
+  args: { title: 'There is a problem' },
+  render: function OnSubmit() {
+    const [error, setError] = useState<string>();
+    const submit = (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      const fullName = new FormData(event.currentTarget).get('fullName');
+      setError(fullName ? undefined : 'Enter your full name');
+    };
+    return (
+      <form noValidate onSubmit={submit}>
+        {error && (
+          <ErrorSummary.Composite title="There is a problem">
+            <ErrorSummary.ListItemComposite href="#full-name-on-submit">{error}</ErrorSummary.ListItemComposite>
+          </ErrorSummary.Composite>
+        )}
+        <InputField id="full-name-on-submit" name="fullName" label="Full name" errorMessage={error} />
+        <Button>Continue</Button>
+      </form>
+    );
+  },
 };
