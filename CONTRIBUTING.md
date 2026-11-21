@@ -36,16 +36,6 @@ To run & watch unit tests:
 pnpm test:unit
 ```
 
-## Generating docs
-
-Markdown docs, in `README.md` files, are automatically generated based on the React component APIs. When making changes to component APIs, you should regenerate the docs to keep them in sync with the components.
-
-To generate docs:
-
-```sh
-pnpm run docs
-```
-
 ## Opening a pull request
 
 - when adding a new component, include a screenshot of the component in the PR

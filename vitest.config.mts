@@ -22,7 +22,6 @@ export default defineConfig({
       exclude: [
         '**/{stories,example,fixtures,test}.[jt]s?(x)',
         'packages/storybook/**',
-        'packages/api-docs/**',
         'packages/example-application/**',
       ],
     },

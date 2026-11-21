@@ -44,7 +44,7 @@ export default tseslint.config(
     rules: { 'react/jsx-key': 'off' },
   },
   {
-    files: ['**/*.js', 'packages/api-docs/**'],
+    files: ['**/*.js'],
     rules: { '@typescript-eslint/no-require-imports': 'off' },
   },
   {
