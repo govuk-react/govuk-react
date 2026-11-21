@@ -87,3 +87,19 @@ test('hydrated: focus moved before hydration stays where the user moved it', asy
   await expect(field).toBeFocused();
   await expect(summary).not.toHaveAttribute('tabindex');
 });
+
+test('hydrated: a target in a modal that opens in the same update takes focus, and again when focusKey changes', async ({
+  page,
+}) => {
+  await page.goto('/test/focus-in-modal');
+  await expect(page.locator('[data-hydrated]')).toHaveAttribute('data-hydrated', 'true');
+  await page.getByRole('button', { name: 'Change your email address' }).click();
+  const field = page.getByRole('dialog', { name: 'Your details' }).getByLabel('Email address');
+  await expect(field).toBeFocused();
+  await field.fill('name@example.com');
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Change your email address' }).click();
+  await expect(field).toBeFocused();
+  await expect(field).toHaveValue('name@example.com');
+});
