@@ -16,7 +16,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <>
-      <label htmlFor="password">Password</label>
+      <p>
+        <label htmlFor="password">Password</label>
+      </p>
       <PasswordInput.Root>
         <PasswordInput.Input id="password" name="password" autoComplete="current-password" />
         <PasswordInput.Trigger />
