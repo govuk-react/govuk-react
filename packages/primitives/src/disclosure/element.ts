@@ -19,7 +19,7 @@
  *
  * Properties:
  * - `open`: when `true` or `false`, controls the content. A user's click then only fires the
- *   change event, and the content changes when `open` does. `undefined` stops controlling it.
+ *   change event, and the content changes when `open` does. `undefined` or `null` stops controlling it.
  *
  * While upgraded it sets `data-upgraded`, and `data-state` ("open" or "closed") on itself, the
  * button and the content. A user's click fires a bubbling
@@ -93,9 +93,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       return this.controlledOpen;
     }
 
-    set open(open: boolean | undefined) {
-      this.controlledOpen = open;
-      if (open === undefined) return;
+    set open(open: boolean | null | undefined) {
+      this.controlledOpen = open ?? undefined;
+      if (open == null) return;
       this.controlled = true;
       this.apply(open);
     }

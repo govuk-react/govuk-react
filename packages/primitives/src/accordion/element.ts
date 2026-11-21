@@ -33,8 +33,8 @@
  *
  * Properties:
  * - `value`: when an array of the open sections' values, controls them. A user's click then only
- *   fires the change event, and the sections change when `value` does. `undefined` stops
- *   controlling them.
+ *   fires the change event, and the sections change when `value` does. `undefined` or `null`
+ *   stops controlling them.
  *
  * While upgraded it sets `data-upgraded`, and `data-state` ("open" or "closed") on each item,
  * trigger and content.
@@ -157,8 +157,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       return this.controlledValue;
     }
 
-    set value(value: readonly string[] | undefined) {
-      this.controlledValue = value;
+    set value(value: readonly string[] | null | undefined) {
+      this.controlledValue = value ?? undefined;
       if (!value) return;
       this.open = new Set(value);
       this.render();

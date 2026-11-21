@@ -272,6 +272,32 @@ test.describe('in a browser that fires no toggle events on dialogs', () => {
   });
 });
 
+test('without React, the open property controls the dialog, until it is undefined or null', async ({ page }) => {
+  await page.goto('/test/modal');
+  const setOpen = (open: boolean | null | undefined) =>
+    page.evaluate((value) => {
+      const element = document.getElementById('upgraded')?.closest('govuk-react-modal');
+      if (element) Reflect.set(element, 'open', value);
+    }, open);
+  await setOpen(true);
+  await expect(dialog(page, 'upgraded')).toBeVisible();
+  expect(await dialog(page, 'upgraded').evaluate((element) => element.matches(':modal'))).toBe(true);
+  await dialog(page, 'upgraded').getByRole('button', { name: 'Cancel' }).click();
+  await expect(dialog(page, 'upgraded')).toBeVisible();
+  await setOpen(false);
+  await expect(dialog(page, 'upgraded')).toBeHidden();
+  await demo(page, 'upgraded').getByRole('button', { name: 'Delete account' }).click();
+  await expect(dialog(page, 'upgraded')).toBeHidden();
+  for (const released of [undefined, null]) {
+    await setOpen(false);
+    await setOpen(released);
+    await demo(page, 'upgraded').getByRole('button', { name: 'Delete account' }).click();
+    await expect(dialog(page, 'upgraded')).toBeVisible();
+    await dialog(page, 'upgraded').getByRole('button', { name: 'Cancel' }).click();
+    await expect(dialog(page, 'upgraded')).toBeHidden();
+  }
+});
+
 test('works when rendered only in the browser', async ({ page }) => {
   await page.goto('/test/modal-client-only');
   await expect(demo(page, 'client')).toHaveAttribute('data-hydrated', 'true');

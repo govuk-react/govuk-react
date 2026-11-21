@@ -26,7 +26,7 @@
  *
  * Properties:
  * - `value`: when set, controls the selected tab. A user's choice then only fires the change
- *   events, and the tab changes when `value` does. `undefined` stops controlling it.
+ *   events, and the tab changes when `value` does. `undefined` or `null` stops controlling it.
  *
  * While upgraded it sets `data-upgraded`, `data-orientation` on itself, the list, tabs and
  * panels, and `data-state` ("active" or "inactive") on the items, tabs and panels. A user's
@@ -166,8 +166,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       return this.controlledValue;
     }
 
-    set value(next: string | undefined) {
+    set value(value: string | null | undefined) {
       const previous = this.controlledValue;
+      const next = value ?? undefined;
       this.controlledValue = next;
       // Until it starts, the element reads `value` when it sets up, after any pick before upgrade.
       if (this.started && next !== undefined && next !== previous && next !== this.dataset.value) this.select(next);

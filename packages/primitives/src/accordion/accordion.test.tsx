@@ -243,7 +243,7 @@ test('hides closed content with plain hidden when asked', async () => {
   expect(screen.getByText('Content')).toHaveAttribute('hidden', '');
 });
 
-test('without React, the value property controls the open sections, until it is undefined', async () => {
+test('without React, the value property controls the open sections, until it is undefined or null', async () => {
   const container = document.createElement('div');
   document.body.appendChild(container);
   container.innerHTML = renderToString(<Example />);
@@ -257,6 +257,10 @@ test('without React, the value property controls the open sections, until it is 
   expect(onChange).toHaveBeenLastCalledWith(['writing', 'specialists']);
   expect(screen.getByText('Writing well for the web content')).not.toBeVisible();
   if (element) element.value = undefined;
+  fireEvent.click(button(/^Writing well for the web/));
+  expect(screen.getByText('Writing well for the web content')).toBeVisible();
+  if (element) element.value = [];
+  Reflect.set(element ?? {}, 'value', null);
   fireEvent.click(button(/^Writing well for the web/));
   expect(screen.getByText('Writing well for the web content')).toBeVisible();
   container.remove();

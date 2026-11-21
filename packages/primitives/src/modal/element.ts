@@ -17,7 +17,7 @@
  *   on dialogs (Chrome 132, Firefox 133, Safari 26). Escape is cancelled at its `keydown`, since the `cancel` event of a
  *   second Escape in a row isn't cancelable. The browser doesn't let a page cancel a script
  *   calling `close()`: that fires the change event, and the dialog goes back to `open` a moment
- *   later unless `open` has changed. Set it to `undefined` to stop controlling the dialog.
+ *   later unless `open` has changed. Set it to `undefined` or `null` to stop controlling the dialog.
  * - It fires a bubbling `govuk-react-modal:change` event with `{ open }` when the dialog opens
  *   or closes, for code that doesn't use React.
  *
@@ -185,8 +185,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       return this.controlledOpen;
     }
 
-    set open(open: boolean | undefined) {
-      this.controlledOpen = open;
+    set open(open: boolean | null | undefined) {
+      this.controlledOpen = open ?? undefined;
       this.sync();
     }
 
