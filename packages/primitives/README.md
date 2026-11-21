@@ -104,7 +104,7 @@ import * as Accordion from '@govuk-react/primitives/accordion';
 </Accordion.Root>;
 ```
 
-Without JavaScript every section is shown under its `Fallback` heading. It needs the package's [stylesheet](#styles). Each section also renders a hidden `Trigger` with the same heading, which the element shows on upgrade while hiding the fallback. Nothing is moved, so React can keep rendering the markup. Closed content gets `hidden="until-found"`, so find in page opens it. `Label`s name the trigger, followed by "Show this section" or "Hide this section".
+Without JavaScript every section is shown under its `Fallback` heading. It needs the package's [stylesheet](#styles). Each section also renders a hidden `Trigger` with the same heading, which the element shows on upgrade while hiding the fallback. Nothing is moved, so React can keep rendering the markup. Closed content gets `hidden="until-found"`, so find in page opens it. Pass `hidden` to `Content` to use plain `hidden` instead. `Label`s name the trigger, followed by "Show this section" or "Hide this section".
 
 Once upgraded, each item, trigger and content has `data-state` ("open" or "closed").
 
@@ -163,7 +163,7 @@ import * as Disclosure from '@govuk-react/primitives/disclosure';
 </nav>;
 ```
 
-A button that shows and hides some content, such as a navigation menu on small screens. Without JavaScript the content is shown and the button hidden. While `media` matches, the content is always shown and the button hidden.
+A button that shows and hides some content, such as a navigation menu on small screens. Without JavaScript the content is shown and the button hidden. While `media` matches, the content is always shown and the button hidden. Closed content gets plain `hidden`. Pass `hidden="until-found"` to `Content` so find in page can open it.
 
 `open` and `onOpenChange` control it once hydrated, such as to close a menu after navigating. A user's click before hydration is reported through `onOpenChange` rather than undone. `defaultOpen` starts it open. Once upgraded, the root, button and content have `data-state` ("open" or "closed"), and "open" while `media` matches.
 

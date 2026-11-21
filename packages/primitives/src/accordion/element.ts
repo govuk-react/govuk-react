@@ -7,6 +7,7 @@
  * plain headings, then each button shows and hides its section's content, and a "show all"
  * button shows or hides every section. The rendered markup is never moved, so React can keep
  * rendering it. Content is hidden with `hidden="until-found"`, so find in page still opens it.
+ * A `data-hidden` attribute on the content overrides that: empty for plain `hidden`.
  *
  * Markup inside the element:
  * - `[data-accordion-controls]` (optional): holds the "show all" button. Rendered `hidden`.
@@ -38,7 +39,7 @@
  * sections' values.
  */
 
-import { classesOf, setText } from '../utils/dom.js';
+import { classesOf, setHidden, setText } from '../utils/dom.js';
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -297,8 +298,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         expandedClasses.forEach((name) => item.classList.toggle(name, expanded));
         if (content) {
           content.dataset.state = state;
-          if (expanded) content.removeAttribute('hidden');
-          else content.setAttribute('hidden', 'until-found');
+          setHidden(content, !expanded, 'until-found');
         }
         if (!trigger) return;
         trigger.dataset.state = state;

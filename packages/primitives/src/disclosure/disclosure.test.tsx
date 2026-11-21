@@ -122,3 +122,32 @@ test('server markup: an uncontrolled click before hydration is reported as such'
   expect(screen.getByText('Navigation')).toBeVisible();
   container.remove();
 });
+
+test('hides the content with hidden="until-found" when asked, and a find-in-page match opens it', async () => {
+  const onOpenChange = vi.fn();
+  render(
+    <Disclosure.Root onOpenChange={onOpenChange}>
+      <Disclosure.Trigger>Menu</Disclosure.Trigger>
+      <Disclosure.Content id="menu" hidden="until-found">
+        Navigation
+      </Disclosure.Content>
+    </Disclosure.Root>
+  );
+  await upgraded();
+  const content = screen.getByText('Navigation');
+  expect(content).toHaveAttribute('hidden', 'until-found');
+  fireEvent(content, new Event('beforematch'));
+  expect(content).not.toHaveAttribute('hidden');
+  expect(screen.getByRole('button', { name: 'Menu' })).toHaveAttribute('aria-expanded', 'true');
+  expect(onOpenChange).toHaveBeenLastCalledWith(true, { beforeHydration: false });
+});
+
+test('renders no hidden attribute before upgrade, whatever hidden asks for', () => {
+  const html = renderToString(
+    <Disclosure.Root>
+      <Disclosure.Trigger>Menu</Disclosure.Trigger>
+      <Disclosure.Content hidden="until-found">Navigation</Disclosure.Content>
+    </Disclosure.Root>
+  );
+  expect(html).toContain('<div data-disclosure-content="" data-hidden="until-found">Navigation</div>');
+});

@@ -222,3 +222,23 @@ test('server markup: an uncontrolled section opened before hydration is reported
   container.remove();
   window.sessionStorage.clear();
 });
+
+test('hides closed content with plain hidden when asked', async () => {
+  render(
+    <Accordion.Root rememberExpanded={false}>
+      <Accordion.Item value="web">
+        <h2>
+          <Accordion.Fallback>Writing well for the web</Accordion.Fallback>
+          <Accordion.Trigger>
+            <Accordion.Label>Writing well for the web</Accordion.Label>
+          </Accordion.Trigger>
+        </h2>
+        <Accordion.Content id="web-content" hidden>
+          Content
+        </Accordion.Content>
+      </Accordion.Item>
+    </Accordion.Root>
+  );
+  await upgraded();
+  expect(screen.getByText('Content')).toHaveAttribute('hidden', '');
+});
