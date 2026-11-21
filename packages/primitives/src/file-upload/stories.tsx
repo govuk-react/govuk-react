@@ -24,6 +24,7 @@ export const Default: Story = {
           <FileUpload.Trigger>
             <FileUpload.Status />
             <FileUpload.Separator className="visually-hidden" />
+            <br />
             Choose file or drop file
           </FileUpload.Trigger>
           <FileUpload.Input id="file-upload" name="file-upload" />
