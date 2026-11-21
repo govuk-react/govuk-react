@@ -1,21 +1,24 @@
 /*
  * <govuk-react-auto-focus>: a headless, light-DOM custom element that moves focus to its target
  * when it appears, such as an error summary or a success banner, with or without React. It moves
- * focus once: give the element a new `key` in React to move it again, such as after each submit.
+ * focus once, and again each time `focus-key` changes.
  *
  * The target is server-rendered with `tabindex="-1"` and `autofocus`, so the browser focuses it
  * when the page loads, even without JavaScript. When the element connects later, such as when React
  * renders the target after a form is submitted, the element focuses it. As in govuk-frontend, the
  * target loses its `tabindex` when it loses focus. If the user has moved focus on before the script
  * runs, it leaves them there. Without JavaScript the target keeps its `tabindex`.
- * A target that can't take focus yet, such as in a closed dialog or a hidden panel, takes it once
- * an ancestor shows it, unless the user presses a key or clicks first.
+ *
+ * A target that isn't shown yet, such as in a dialog, tab panel or popover that opens in the same
+ * update, takes focus once it is, if that's within a second and the user hasn't pressed a key or
+ * clicked.
  *
  * Markup inside the element:
  * - `[data-auto-focus]`: the target. Without one, the element's first child.
  *
  * Attributes:
  * - `disabled`: don't move focus.
+ * - `focus-key`: move focus again each time it changes to a new value.
  */
 
 import { dropAutoFocus, setFocus } from '../utils/set-focus.js';
@@ -23,8 +26,18 @@ import { setUpWhenReady } from '../utils/set-up-when-ready.js';
 
 export const tagName = 'govuk-react-auto-focus';
 
+/** How long to wait, in milliseconds, for a target that isn't shown yet. */
+const wait = 1000;
+
+/** Whether the target is rendered, where the browser can tell without trying to focus it. */
+const shown = (target: HTMLElement) => (typeof target.checkVisibility === 'function' ? target.checkVisibility() : true);
+
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactAutoFocus extends HTMLElement {
+    static get observedAttributes() {
+      return ['disabled', 'focus-key'];
+    }
+
     private focused = false;
 
     private observer?: MutationObserver;
@@ -37,12 +50,21 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     disconnectedCallback() {
+      this.observer?.disconnect();
+      // Still waiting for the target: try again if the element moves.
+      if (this.waiting) this.focused = false;
       this.stopWaiting();
     }
 
-    private stopWaiting() {
-      this.observer?.disconnect();
-      this.waiting?.abort();
+    attributeChangedCallback(name: string, previous: string | null, value: string | null) {
+      if (name === 'disabled' && value !== null) this.stopWaiting();
+      if (name !== 'focus-key' || value === null || value === previous || !this.focused) return;
+      this.stopWaiting();
+      this.focused = false;
+      // React may remove `disabled` after this, in the same commit.
+      queueMicrotask(() => {
+        if (this.isConnected) this.focusTarget();
+      });
     }
 
     private get target() {
@@ -74,33 +96,47 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       }
       // React puts focus back where it was at the end of a commit, which can connect the element.
       queueMicrotask(() => {
-        if (target.isConnected && setFocus(target)) return;
-        // Not in place yet, such as in a streamed boundary: try again when it moves.
-        this.focused = false;
-        if (target.isConnected) this.focusWhenShown(target);
+        if (!target.isConnected) {
+          // Not in place yet, such as in a streamed boundary: try again when it moves.
+          this.focused = false;
+          return;
+        }
+        if (!(shown(target) && setFocus(target))) this.focusWhenShown(target);
       });
       return true;
     }
 
     /**
-     * Focuses a target that can't take focus yet, such as in a closed dialog, a hidden tab panel or
-     * a collapsed section that opens in the same update, once an ancestor shows it. A dialog moves
-     * focus when it opens, and this runs after that. Gives up if the user presses a key or clicks.
+     * Focuses a target that isn't shown yet once it is, such as in a dialog that opens in an effect.
+     * Checking each frame runs after the dialog has moved focus itself, and catches what no
+     * attribute marks, such as a popover. Gives up after `wait`, or when the user presses a key or
+     * clicks.
      */
     private focusWhenShown(target: HTMLElement) {
       this.waiting = new AbortController();
       const { signal } = this.waiting;
-      const stop = () => this.stopWaiting();
-      this.observer = new MutationObserver(() => {
-        if (!setFocus(target)) return;
-        this.focused = true;
-        stop();
-      });
-      for (let ancestor = target.parentElement; ancestor; ancestor = ancestor.parentElement) {
-        this.observer.observe(ancestor, { attributes: true, attributeFilter: ['open', 'hidden', 'class', 'style'] });
-      }
+      const giveUpAt = performance.now() + wait;
+      const stop = () => {
+        // Leave no `tabindex` that was only there to take focus.
+        if (document.activeElement !== target) dropAutoFocus(target);
+        this.stopWaiting();
+      };
+      const check = () => {
+        if (signal.aborted) return undefined;
+        if (!target.isConnected || performance.now() > giveUpAt) return stop();
+        if (shown(target) && setFocus(target)) return this.stopWaiting();
+        const frame = requestAnimationFrame(check);
+        signal.addEventListener('abort', () => cancelAnimationFrame(frame), { once: true });
+        return undefined;
+      };
       document.addEventListener('keydown', stop, { capture: true, signal });
       document.addEventListener('pointerdown', stop, { capture: true, signal });
+      requestAnimationFrame(check);
+    }
+
+    private stopWaiting() {
+      this.waiting?.abort();
+      this.waiting = undefined;
     }
   }
 
