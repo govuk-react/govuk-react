@@ -110,13 +110,16 @@ Once upgraded, each item, trigger and content has `data-state` ("open" or "close
 
 `ShowAll` opens every section, or closes them all when every one is open. `value` and `onValueChange` control the open sections once hydrated, and a section opened before hydration is reported rather than undone. As in govuk-frontend, open sections are remembered for the session by content id, unless `rememberExpanded` is `false`. In an island without a `Root`, pass `defaultExpanded` to `Item`.
 
-Like govuk-frontend's accordion, it doesn't use `details` and `summary`:
+Like govuk-frontend's accordion, it doesn't use `details` and `summary`. They work without JavaScript, so you might expect them to be the better choice, but GOV.UK's research and accessibility audits found problems with them:
 
-- Each section's heading has to stay a heading, so users can find sections with a screen reader's heading navigation. A `summary` is a button, and screen readers don't reliably announce a heading inside one. Here the heading holds the button, as in the WAI-ARIA accordion pattern.
-- Without JavaScript every section is shown, as the Design System asks. A closed `details` hides its content without JavaScript.
-- The trigger's accessible name says what it does ("Show this section" or "Hide this section") and "show all" opens or closes every section together, neither of which `details` offers.
+- Users of Dragon voice control can't open a `summary` with standard commands, only by speaking all of its text. GOV.UK decided not to fix this in its details component, because adding `role="button"` caused problems for some screen readers. The accessibility audit that found it suggested building it as a button, as the accordion is ([govuk-design-system#4029](https://github.com/alphagov/govuk-design-system/issues/4029), [govuk-frontend#5308](https://github.com/alphagov/govuk-frontend/issues/5308)).
+- VoiceOver reads a summary's text twice ([govuk-frontend#4739](https://github.com/alphagov/govuk-frontend/issues/4739)).
+- A closed `details` can't be made to show its content when printed ([govuk-design-system#6031](https://github.com/alphagov/govuk-design-system/issues/6031)).
+- Assistive technology treats a `summary` as a button ([govuk-design-system#1259](https://github.com/alphagov/govuk-design-system/issues/1259)), so a heading inside one isn't reliably announced as a heading. Each section's heading has to stay a heading, so users can find sections with a screen reader's heading navigation. Here the heading holds the button, as in the [WAI-ARIA accordion pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/).
+- Without JavaScript every section is shown. A closed `details` hides its content without JavaScript.
+- The trigger's accessible name says what it does ("Show this section" or "Hide this section"), and "show all" opens or closes every section together.
 
-For a single section the user can open, use `details`.
+GOV.UK still uses `details` for a single, short piece of help that users can open.
 
 ## Tabs
 
@@ -175,13 +178,15 @@ A button that shows and hides some content, such as a navigation menu on small s
 
 `open` and `onOpenChange` control it once hydrated, such as to close a menu after navigating. A user's click before hydration is reported through `onOpenChange` rather than undone. `defaultOpen` starts it open. Once upgraded, the root, button and content have `data-state` ("open" or "closed"), and "open" while `media` matches.
 
-Like govuk-frontend's service navigation, it doesn't use `details` and `summary`:
+Like govuk-frontend's service navigation, it doesn't use `details` and `summary`. They work without JavaScript, so you might expect them to be the better choice, but GOV.UK's research and accessibility audits found problems with them:
 
+- Users of Dragon voice control can't open a `summary` with standard commands, only by speaking all of its text. GOV.UK decided not to fix this in its details component, because adding `role="button"` caused problems for some screen readers. The accessibility audit that found it suggested building it as a button, as the accordion is ([govuk-design-system#4029](https://github.com/alphagov/govuk-design-system/issues/4029), [govuk-frontend#5308](https://github.com/alphagov/govuk-frontend/issues/5308)).
+- VoiceOver reads a summary's text twice ([govuk-frontend#4739](https://github.com/alphagov/govuk-frontend/issues/4739)).
+- A closed `details` can't be made to show its content when printed ([govuk-design-system#6031](https://github.com/alphagov/govuk-design-system/issues/6031)).
 - Without JavaScript the content is shown, so users can always reach a menu's links. A closed `details` hides its content without JavaScript.
 - The content has to show, with no button, while `media` matches, such as on wider screens. A `details` can't be open at one screen width and closed at another without JavaScript, and its `summary` can't be hidden while its content shows.
-- The content can be any element, such as the `ul` of a `nav`. A `details` must hold its content and start with its `summary`.
 
-For a menu that opens and closes without JavaScript, use `details`. govuk-react's service navigation has a `details` version.
+For a menu that opens and closes without JavaScript, govuk-react's service navigation also has a `details` version.
 
 ## Modal
 
