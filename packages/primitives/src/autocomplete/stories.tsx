@@ -18,7 +18,9 @@ const countries = ['France', 'Germany', 'Greece', 'Ireland', 'Italy', 'Spain', '
 export const Default: Story = {
   render: () => (
     <>
-      <label htmlFor="country">Country</label>
+      <p>
+        <label htmlFor="country">Country</label>
+      </p>
       <Autocomplete.Root>
         <Autocomplete.Input id="country" name="country" />
         <Autocomplete.Listbox>
