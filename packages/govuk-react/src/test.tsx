@@ -5,6 +5,8 @@ import { pathToFileURL } from 'url';
 
 import * as packageExports from '.';
 
+const exportsByName: Record<string, unknown> = packageExports;
+
 const sources = import.meta.glob<Record<string, unknown>>('./components/*/index.tsx');
 const stories = import.meta.glob<{ default: { id: string } }>('./components/*/stories.tsx', { eager: true });
 
@@ -12,17 +14,17 @@ describe('Exports', () => {
   // all exports are truthy
   Object.keys(packageExports).map((exportName) =>
     it(`${exportName} is truthy`, () => {
-      expect(!!packageExports[exportName]).toBe(true);
+      expect(!!exportsByName[exportName]).toBe(true);
     })
   );
 });
 
 // Function components, or exotic components such as memo; module namespaces are neither
-const isComponent = (value: unknown) =>
+const isComponent = (value: unknown): value is { displayName?: string; name?: string } =>
   typeof value === 'function' || (typeof value === 'object' && value !== null && '$$typeof' in value);
 
 // https://stackoverflow.com/questions/18112204/get-all-directories-within-directory-nodejs?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-const dirs = (p) => fs.readdirSync(p).filter((f) => fs.statSync(path.join(p, f)).isDirectory());
+const dirs = (p: string) => fs.readdirSync(p).filter((f) => fs.statSync(path.join(p, f)).isDirectory());
 
 describe('Components', () => {
   const components = dirs(path.join(__dirname, 'components'));
@@ -32,12 +34,13 @@ describe('Components', () => {
       const pascal = kebabCaseToPascalCase(component);
 
       it(`is exported as ${pascal}`, () => {
-        expect(!!packageExports[pascal]).toBe(true);
+        expect(!!exportsByName[pascal]).toBe(true);
       });
 
       // Multi-part components are namespaces of parts, so only single components have a name
-      it.skipIf(!isComponent(packageExports[pascal]))(`is named ${pascal}`, () => {
-        expect(packageExports[pascal].displayName ?? packageExports[pascal].name).toBe(pascal);
+      const value = exportsByName[pascal];
+      it.skipIf(!isComponent(value))(`is named ${pascal}`, () => {
+        expect(isComponent(value) && (value.displayName ?? value.name)).toBe(pascal);
       });
 
       it(`has a stories.tsx file with id set to "${component}""`, () => {

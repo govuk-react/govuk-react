@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
 
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, type FieldProps } from 'formik';
 
 import {
   validateNationality,
@@ -63,14 +63,17 @@ const FinalForm: React.FC = () => {
             nationality: [],
             dob: { day: '', month: '', year: '' },
             animal: '',
-            petPhoto: null,
-            hasMultiplePets: null,
+            petPhoto: undefined,
+            hasMultiplePets: '',
           }}
           validateOnChange={false}
           validateOnBlur={false}
           onSubmit={handleFormSubmit}
           render={({ errors, touched, setFieldValue, setFieldTouched }) => {
-            const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
+            const touchedKeys = new Set(
+              Object.entries(touched).flatMap(([key, isTouched]) => (isTouched ? [key] : []))
+            );
+            const errorsToShow = Object.entries(errors).filter(([key]) => touchedKeys.has(key));
             return (
               <Form>
                 <GovUK.LoadingBox loading={isSubmitting}>
@@ -82,16 +85,16 @@ const FinalForm: React.FC = () => {
                       title="Error summary"
                       description="Please address the following issues"
                     >
-                      {errorsToShow.map((key) => (
+                      {errorsToShow.map(([key, error]) => (
                         <GovUK.ErrorSummary.ListItemComposite key={key} href={`#${key}`}>
-                          {Array.isArray(errors[key]) ? errors[key][0] : errors[key]}
+                          {firstError(error)}
                         </GovUK.ErrorSummary.ListItemComposite>
                       ))}
                     </GovUK.ErrorSummary.Composite>
                   )}
                   <GovUK.Fieldset.Composite legend="About you" legendSize="m">
                     <Field name="firstName" validate={validateFirstName}>
-                      {({ field, meta }) => (
+                      {({ field, meta }: FieldProps<string>) => (
                         <GovUK.InputField
                           {...field}
                           id="firstName"
@@ -102,7 +105,7 @@ const FinalForm: React.FC = () => {
                       )}
                     </Field>
                     <Field name="description" validate={validateDescription}>
-                      {({ field, meta }) => (
+                      {({ field, meta }: FieldProps<string>) => (
                         <GovUK.TextareaField
                           {...field}
                           id="description"
@@ -125,7 +128,7 @@ const FinalForm: React.FC = () => {
                           value={value}
                           validate={validateNationality}
                         >
-                          {({ field }) => (
+                          {({ field }: FieldProps<string>) => (
                             <GovUK.Checkboxes.ItemComposite
                               {...field}
                               id={index ? `nationality-${index + 1}` : 'nationality'}
@@ -137,7 +140,7 @@ const FinalForm: React.FC = () => {
                       ))}
                     </GovUK.Checkboxes.Field>
                     <Field name="dob" validate={validateDateOfBirth}>
-                      {({ field, meta }) => (
+                      {({ field, meta }: FieldProps<FormValues['dob']>) => (
                         <DateOfBirth
                           name={field.name}
                           value={field.value}
@@ -150,7 +153,7 @@ const FinalForm: React.FC = () => {
                   </GovUK.Fieldset.Composite>
                   <GovUK.Fieldset.Composite legend="About your pet" legendSize="m">
                     <Field name="animal" validate={validateAnimal}>
-                      {({ field, meta }) => (
+                      {({ field, meta }: FieldProps<string>) => (
                         <GovUK.SelectField
                           {...field}
                           id="animal"
@@ -163,7 +166,7 @@ const FinalForm: React.FC = () => {
                       )}
                     </Field>
                     <Field name="petPhoto" validate={validatePetPhoto}>
-                      {({ field: { value, onChange, ...field }, meta }) => (
+                      {({ field: { value, onChange, ...field }, meta }: FieldProps<FileList | undefined>) => (
                         <GovUK.FileUploadField
                           {...field}
                           id="petPhoto"
@@ -189,7 +192,7 @@ const FinalForm: React.FC = () => {
                           value={value}
                           validate={validateMultiplePets}
                         >
-                          {({ field }) => (
+                          {({ field }: FieldProps<string>) => (
                             <GovUK.Radios.ItemComposite
                               {...field}
                               id={index ? 'hasMultiplePets-2' : 'hasMultiplePets'}
@@ -209,7 +212,7 @@ const FinalForm: React.FC = () => {
           }}
         />
       )}
-      {hasSubmitted && (
+      {hasSubmitted && submittedData && (
         <>
           <pre>{JSON.stringify(submittedData)}</pre>
           <Results backLink="/forms/formik" onBackClick={() => setHasSubmitted(false)} {...submittedData} />

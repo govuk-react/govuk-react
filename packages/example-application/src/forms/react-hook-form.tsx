@@ -59,7 +59,7 @@ const ReactHookForm: React.FC = () => {
     [isSubmitting]
   );
 
-  const errorsToShow = Object.keys(errors);
+  const errorsToShow = Object.entries(errors);
   const shownError = (message?: string) => (submitCount > 0 ? message : undefined);
 
   return (
@@ -72,9 +72,9 @@ const ReactHookForm: React.FC = () => {
             </GovUK.BackLink>
             {!!errorsToShow?.length && (
               <GovUK.ErrorSummary.Composite title="Error summary" description="Please address the following issues">
-                {errorsToShow.map((key) => (
+                {errorsToShow.map(([key, error]) => (
                   <GovUK.ErrorSummary.ListItemComposite key={key} href={`#${key}`}>
-                    {errors[key].message}
+                    {error?.message}
                   </GovUK.ErrorSummary.ListItemComposite>
                 ))}
               </GovUK.ErrorSummary.Composite>
@@ -170,7 +170,7 @@ const ReactHookForm: React.FC = () => {
           </GovUK.LoadingBox>
         </form>
       )}
-      {hasSubmitted && (
+      {hasSubmitted && submittedData && (
         <Results backLink="/forms/react-hook-form" onBackClick={() => setHasSubmitted(false)} {...submittedData} />
       )}
     </>
