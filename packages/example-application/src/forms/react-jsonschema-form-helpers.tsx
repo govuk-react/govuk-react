@@ -7,6 +7,7 @@ import type { FormProps, FieldTemplateProps, AjvError, ObjectFieldTemplateProps,
 import React, { useCallback, useState } from 'react';
 import * as GovUK from 'govuk-react';
 import BaseForm from '@rjsf/core';
+import type { JSONSchema7Definition } from 'json-schema';
 
 import DateOfBirth, { type DateValue } from './components/date-of-birth';
 
@@ -19,7 +20,14 @@ export const dobStringToObj: (dob: string) => { year?: number; month?: number; d
   return { year: parseInt(year, 10), month: parseInt(month, 10), day: parseInt(day, 10) };
 };
 
-const DateField = ({ name, onChange, rawErrors }) => {
+type InputProps = Pick<FieldProps, 'schema' | 'uiSchema' | 'onChange' | 'rawErrors' | 'name'>;
+
+const options = (definitions: JSONSchema7Definition[] = []) =>
+  definitions.flatMap((definition) =>
+    typeof definition === 'boolean' ? [] : [{ value: String(definition.const), title: definition.title }]
+  );
+
+const DateField = ({ name, onChange, rawErrors }: InputProps) => {
   const [value, setValue] = useState<DateValue>({ day: '', month: '', year: '' });
   const handleChange = useCallback(
     (newValue: DateValue) => {
@@ -48,7 +56,9 @@ const AnyOf: React.FC<FieldProps> = ({ name, schema, formData = [], onChange, ra
                 label={item.title}
                 hint={item.description}
                 onChange={(e) =>
-                  onChange(e.target.checked ? formData.concat(item.const) : formData.filter((i) => i !== item.const))
+                  onChange(
+                    e.target.checked ? formData.concat(item.const) : formData.filter((i: unknown) => i !== item.const)
+                  )
                 }
               />
             )
@@ -57,15 +67,15 @@ const AnyOf: React.FC<FieldProps> = ({ name, schema, formData = [], onChange, ra
   </GovUK.Checkboxes.Field>
 );
 
-const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
+const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }: InputProps) => {
   if (uiSchema?.['ui:widget'] === 'radio') {
     return (
       <GovUK.Radios.Field idPrefix={name} legend={schema.title} errorMessage={rawErrors?.[0]}>
-        {schema?.oneOf?.map((item, index) => (
+        {options(schema.oneOf).map((item, index) => (
           <GovUK.Radios.ItemComposite
-            key={item.const}
+            key={item.value}
             id={index ? `${name}-${index + 1}` : name}
-            value={item.const}
+            value={item.value}
             name={name}
             label={item.title}
             onChange={(e) => onChange(e.target.value)}
@@ -84,8 +94,8 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
       onChange={(e) => onChange(e.target.value)}
     >
       <option value="">Please select...</option>
-      {schema?.oneOf?.map((item) => (
-        <option key={item.const} value={item.const}>
+      {options(schema.oneOf).map((item) => (
+        <option key={item.value} value={item.value}>
           {item.title}
         </option>
       ))}
@@ -94,18 +104,18 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
 };
 
 const handleFilesChanged =
-  (onChange) =>
-  ({ target }) => {
-    onChange();
-    const { files } = target;
-    if (files.length > 0) {
+  (onChange: InputProps['onChange']) =>
+  ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(undefined);
+    const file = target.files?.[0];
+    if (file) {
       const reader = new FileReader();
-      reader.onload = ({ target: innerTarget }) => onChange(innerTarget.result);
-      reader.readAsDataURL(files[0]);
+      reader.onload = () => onChange(reader.result);
+      reader.readAsDataURL(file);
     }
   };
 
-const FileUpload = ({ rawErrors, schema, onChange, name }) => (
+const FileUpload = ({ rawErrors, schema, onChange, name }: InputProps) => (
   <GovUK.FileUploadField
     id={name}
     name={name}
@@ -116,7 +126,7 @@ const FileUpload = ({ rawErrors, schema, onChange, name }) => (
   />
 );
 
-const TextArea = ({ schema, rawErrors, onChange, name }) => (
+const TextArea = ({ schema, rawErrors, onChange, name }: InputProps) => (
   <GovUK.TextareaField
     id={name}
     name={name}
@@ -127,7 +137,7 @@ const TextArea = ({ schema, rawErrors, onChange, name }) => (
   />
 );
 
-const InputField = ({ schema, rawErrors, onChange, name }) => (
+const InputField = ({ schema, rawErrors, onChange, name }: InputProps) => (
   <GovUK.InputField
     id={name}
     name={name}
@@ -210,8 +220,8 @@ export const ObjectFieldTemplate: React.FC<ObjectFieldTemplateProps> = ({ title,
 
 export const CustomFieldTemplate: React.FC<FieldTemplateProps> = ({ children }) => <>{children}</>;
 
-export const Form: React.FC<FormProps<void>> = (props) => (
-  <BaseForm
+export const Form = <T,>(props: FormProps<T>) => (
+  <BaseForm<T>
     fields={customFields}
     FieldTemplate={CustomFieldTemplate}
     ObjectFieldTemplate={ObjectFieldTemplate}

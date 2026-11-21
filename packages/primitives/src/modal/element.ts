@@ -181,7 +181,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.dialog = undefined;
     }
 
-    get open() {
+    get open(): boolean | undefined {
       return this.controlledOpen;
     }
 

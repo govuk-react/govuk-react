@@ -15,11 +15,19 @@ import Results from './components/results';
 import DateOfBirth, { type DateValue } from './components/date-of-birth';
 import { animalOptions, nationalities } from './components/options';
 
-function isNotEmpty(obj) {
-  return Object.keys(obj).some((key) => obj[key]?.length > 0);
-}
+type Errors = {
+  firstName?: string;
+  description?: string;
+  nationality?: string;
+  dob?: string;
+  animal?: string;
+  petPhoto?: string;
+  hasMultiplePets?: string;
+};
 
-const toggle = (array, newItem) =>
+const messages = (errors: Errors) => Object.entries(errors).filter(([, message]) => message);
+
+const toggle = (array: string[], newItem: string) =>
   array.includes(newItem) ? array.filter((existingItem) => existingItem !== newItem) : [...array, newItem];
 
 const Form: React.FC = () => {
@@ -30,15 +38,7 @@ const Form: React.FC = () => {
   const [animal, setAnimal] = useState<string>();
   const [hasMultiplePets, setHasMultiplePets] = useState<string>();
   const [petPhoto, setPetPhoto] = useState<FileList>();
-  const [errors, setErrors] = useState<{
-    firstName?: string;
-    description?: string;
-    nationality?: string;
-    dob?: string;
-    animal?: string;
-    petPhoto?: string;
-    hasMultiplePets?: string;
-  }>({});
+  const [errors, setErrors] = useState<Errors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const handleSubmit = useCallback(() => {
@@ -53,13 +53,13 @@ const Form: React.FC = () => {
       hasMultiplePets: validateMultiplePets(hasMultiplePets),
     };
 
-    if (isNotEmpty(newErrors)) {
+    if (messages(newErrors).length) {
       setErrors(newErrors);
     } else {
       setIsSubmitting(true);
       setTimeout(() => {
         // simulate async submission
-        setErrors(null);
+        setErrors({});
         setHasSubmitted(true);
         setIsSubmitting(false);
       }, 1000);
@@ -73,11 +73,11 @@ const Form: React.FC = () => {
           <GovUK.BackLink asChild>
             <Link to="/forms">Home</Link>
           </GovUK.BackLink>
-          {errors && !!Object.keys(errors).length && (
+          {!!messages(errors).length && (
             <GovUK.ErrorSummary.Composite title="Error summary" description="Please address the following issues">
-              {Object.keys(errors).map((key) => (
+              {messages(errors).map(([key, message]) => (
                 <GovUK.ErrorSummary.ListItemComposite key={key} href={`#${key}`}>
-                  {errors[key]}
+                  {message}
                 </GovUK.ErrorSummary.ListItemComposite>
               ))}
             </GovUK.ErrorSummary.Composite>
@@ -88,7 +88,7 @@ const Form: React.FC = () => {
               name="firstName"
               label="First name"
               hint="You can find this on your passport"
-              errorMessage={errors?.firstName}
+              errorMessage={errors.firstName}
               onChange={(e) => setFirstName(e.target.value)}
               value={firstName}
             />
@@ -97,11 +97,11 @@ const Form: React.FC = () => {
               name="description"
               label="Description of what you saw"
               hint="Enter as many words as you like"
-              errorMessage={errors?.description}
+              errorMessage={errors.description}
               onChange={(e) => setDescription(e.target.value)}
               value={description}
             />
-            <GovUK.Checkboxes.Field idPrefix="nationality" legend="Nationality" errorMessage={errors?.nationality}>
+            <GovUK.Checkboxes.Field idPrefix="nationality" legend="Nationality" errorMessage={errors.nationality}>
               {nationalities.map(({ value, label, hint }, index) => (
                 <GovUK.Checkboxes.ItemComposite
                   key={value}
@@ -115,7 +115,7 @@ const Form: React.FC = () => {
                 />
               ))}
             </GovUK.Checkboxes.Field>
-            <DateOfBirth name="dob" value={dob} onChange={setDob} errorMessage={errors?.dob} />
+            <DateOfBirth name="dob" value={dob} onChange={setDob} errorMessage={errors.dob} />
           </GovUK.Fieldset.Composite>
           <GovUK.Fieldset.Composite legend="About your pet" legendSize="m">
             <GovUK.SelectField
@@ -123,7 +123,7 @@ const Form: React.FC = () => {
               name="animal"
               label="What animal is your pet"
               hint="A cat for example"
-              errorMessage={errors?.animal}
+              errorMessage={errors.animal}
               onChange={(e) => setAnimal(e.target.value)}
               value={animal ?? ''}
             >
@@ -135,13 +135,13 @@ const Form: React.FC = () => {
               label="Please upload a recent photograph"
               hint="This can be in either JPG or PNG format"
               accept=".jpg, .png"
-              errorMessage={errors?.petPhoto}
-              onChange={(event) => setPetPhoto(event.target.files)}
+              errorMessage={errors.petPhoto}
+              onChange={(event) => setPetPhoto(event.target.files ?? undefined)}
             />
             <GovUK.Radios.Field
               idPrefix="hasMultiplePets"
               legend="Do you have more than one pet?"
-              errorMessage={errors?.hasMultiplePets}
+              errorMessage={errors.hasMultiplePets}
               inline
             >
               <GovUK.Radios.ItemComposite

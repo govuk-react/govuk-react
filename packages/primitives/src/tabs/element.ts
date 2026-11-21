@@ -162,7 +162,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.dispatchEvent(new CustomEvent('govuk-react-tabs:change', { detail: { value }, bubbles: true }));
     };
 
-    get value() {
+    get value(): string | undefined {
       return this.controlledValue;
     }
 

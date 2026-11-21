@@ -153,7 +153,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.removeEventListener('beforematch', this.onBeforeMatch, true);
     }
 
-    get value() {
+    get value(): readonly string[] | undefined {
       return this.controlledValue;
     }
 

@@ -157,7 +157,8 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
       const observer = new MutationObserver(() => report(dialog));
       observer.observe(dialog, { attributes: true, attributeFilter: ['open'] });
       // While controlled, the element asks for a change the dialog hasn't made.
-      const root = dialog.closest(tagName);
+      const closest = dialog.closest(tagName);
+      const root = closest instanceof HTMLElement ? closest : null;
       const onRequest = (event: CustomEvent<{ open: boolean }>) => {
         if (event.target !== root || event.detail.open === dialog.open) return;
         onOpenChange.current?.(event.detail.open, live);
