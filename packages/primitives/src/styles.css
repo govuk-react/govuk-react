@@ -1,4 +1,22 @@
-/* Rules the primitives' fallbacks need. They set no look, only `display`. */
+/* Rules the primitives need. They set no look, only `display`. */
+
+/* Each element only holds its parts' state, so it leaves no box of its own. A class on it wins. */
+:where(
+  govuk-react-accordion,
+  govuk-react-auto-focus,
+  govuk-react-autocomplete,
+  govuk-react-character-count,
+  govuk-react-choices,
+  govuk-react-disclosure,
+  govuk-react-exit-this-page,
+  govuk-react-file-upload,
+  govuk-react-focus-links,
+  govuk-react-modal,
+  govuk-react-password-input,
+  govuk-react-tabs
+) {
+  display: contents;
+}
 
 /* Tabs: the radios fallback shows only the checked tab's panel, until the element upgrades. */
 govuk-react-tabs:not([data-upgraded]) [data-tabs-content]:has(> input[data-tabs-fallback]):not(:has(> input:checked)) {
