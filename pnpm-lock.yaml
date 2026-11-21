@@ -508,6 +508,9 @@ importers:
       astro:
         specifier: ^7.4.7
         version: 7.4.12(@types/node@24.19.2)(esbuild@0.28.2)(terser@5.27.0)(yaml@2.9.1)
+      govuk-react:
+        specifier: workspace:*
+        version: link:../govuk-react
       react:
         specifier: ^19.2.0
         version: 19.3.1
@@ -524,6 +527,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.3.0
         version: 19.3.0(@types/react@19.3.0)
+      govuk-frontend:
+        specifier: 6.6.0
+        version: 6.6.0
 
   packages/storybook:
     dependencies:
