@@ -332,7 +332,7 @@ import * as AutoFocus from '@govuk-react/primitives/auto-focus';
 </AutoFocus.Root>;
 ```
 
-Moves focus to `Target` when it appears, such as an error summary after a form is submitted. The server renders the target with `tabindex="-1"` and `autofocus`, so the browser focuses it when the page loads, even without JavaScript. As in govuk-frontend, the target loses its `tabindex` once focus moves on. Pass `disabled` to `Root` to leave focus alone, or to `Target` in an island without a `Root`.
+Moves focus to `Target` when it appears, such as an error summary after a form is submitted. The server renders the target with `tabindex="-1"` and `autofocus`, so the browser focuses it when the page loads, even without JavaScript. As in govuk-frontend, the target loses its `tabindex` once focus moves on. Pass `disabled` to `Root` to leave focus alone, or to `Target` in an island without a `Root`. It moves focus once, and again each time `focusKey` changes, such as each time the user searches for something on the page. A target that isn't shown yet, such as in a modal, tab panel or accordion section that opens in the same update, takes focus once it's shown, if that's within a second and the user hasn't pressed a key or clicked.
 
 ## Focus links
 
