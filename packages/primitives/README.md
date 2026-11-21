@@ -110,6 +110,17 @@ Once upgraded, each item, trigger and content has `data-state` ("open" or "close
 
 `ShowAll` opens every section, or closes them all when every one is open. `value` and `onValueChange` control the open sections once hydrated, and a section opened before hydration is reported rather than undone. As in govuk-frontend, open sections are remembered for the session by content id, unless `rememberExpanded` is `false`. In an island without a `Root`, pass `defaultExpanded` to `Item`.
 
+Like govuk-frontend's accordion, it doesn't use `details` and `summary`. They work without JavaScript, so you might expect them to be the better choice, but GOV.UK's research and accessibility audits found problems with them:
+
+- Users of Dragon voice control can't open a `summary` with standard commands, only by speaking all of its text. GOV.UK decided not to fix this in its details component, because adding `role="button"` caused problems for some screen readers. The accessibility audit that found it suggested building it as a button, as the accordion is ([govuk-design-system#4029](https://github.com/alphagov/govuk-design-system/issues/4029), [govuk-frontend#5308](https://github.com/alphagov/govuk-frontend/issues/5308)).
+- VoiceOver reads a summary's text twice ([govuk-frontend#4739](https://github.com/alphagov/govuk-frontend/issues/4739)).
+- A closed `details` can't be made to show its content when printed ([govuk-design-system#6031](https://github.com/alphagov/govuk-design-system/issues/6031)).
+- Assistive technology treats a `summary` as a button ([govuk-design-system#1259](https://github.com/alphagov/govuk-design-system/issues/1259)), so a heading inside one isn't reliably announced as a heading. Each section's heading has to stay a heading, so users can find sections with a screen reader's heading navigation. Here the heading holds the button, as in the [WAI-ARIA accordion pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/).
+- Without JavaScript every section is shown. A closed `details` hides its content without JavaScript.
+- The trigger's accessible name says what it does ("Show this section" or "Hide this section"), and "show all" opens or closes every section together.
+
+GOV.UK still uses `details` for a single, short piece of help that users can open.
+
 ## Tabs
 
 ```tsx
@@ -166,6 +177,16 @@ import * as Disclosure from '@govuk-react/primitives/disclosure';
 A button that shows and hides some content, such as a navigation menu on small screens. Without JavaScript the content is shown and the button hidden. While `media` matches, the content is always shown and the button hidden.
 
 `open` and `onOpenChange` control it once hydrated, such as to close a menu after navigating. A user's click before hydration is reported through `onOpenChange` rather than undone. `defaultOpen` starts it open. Once upgraded, the root, button and content have `data-state` ("open" or "closed"), and "open" while `media` matches.
+
+Like govuk-frontend's service navigation, it doesn't use `details` and `summary`. They work without JavaScript, so you might expect them to be the better choice, but GOV.UK's research and accessibility audits found problems with them:
+
+- Users of Dragon voice control can't open a `summary` with standard commands, only by speaking all of its text. GOV.UK decided not to fix this in its details component, because adding `role="button"` caused problems for some screen readers. The accessibility audit that found it suggested building it as a button, as the accordion is ([govuk-design-system#4029](https://github.com/alphagov/govuk-design-system/issues/4029), [govuk-frontend#5308](https://github.com/alphagov/govuk-frontend/issues/5308)).
+- VoiceOver reads a summary's text twice ([govuk-frontend#4739](https://github.com/alphagov/govuk-frontend/issues/4739)).
+- A closed `details` can't be made to show its content when printed ([govuk-design-system#6031](https://github.com/alphagov/govuk-design-system/issues/6031)).
+- Without JavaScript the content is shown, so users can always reach a menu's links. A closed `details` hides its content without JavaScript.
+- The content has to show, with no button, while `media` matches, such as on wider screens. A `details` can't be open at one screen width and closed at another without JavaScript, and its `summary` can't be hidden while its content shows.
+
+For a menu that opens and closes without JavaScript, govuk-react's service navigation also has a `details` version.
 
 ## Modal
 
@@ -257,6 +278,7 @@ import * as FileUpload from '@govuk-react/primitives/file-upload';
     <FileUpload.Trigger>
       <FileUpload.Status />
       <FileUpload.Separator className="visually-hidden" />
+      <br />
       Choose file or drop file
     </FileUpload.Trigger>
     <FileUpload.Input id="photo" name="photo" />
@@ -323,6 +345,11 @@ import * as FocusLinks from '@govuk-react/primitives/focus-links';
 ```
 
 Makes links inside it, to a part of the same page, move focus there. A link to a form field focuses the field and scrolls its label into view, or its fieldset's legend, as govuk-frontend's error summary does. A link to anything else focuses it with `tabindex="-1"` and `focusedClass` until focus moves on, as govuk-frontend's skip link does. Without JavaScript the browser follows the link as usual.
+
+A plain link to `#id` already scrolls to its target, but:
+
+- It scrolls the field to the top of the window, which hides the label or legend above it, so users can't see the question they need to answer. Focus links scroll the question into view instead.
+- Browsers don't reliably move focus to the target, and an element such as `main` can't take focus without `tabindex`. In some browsers the next Tab press then starts from the link, not the target, and screen readers may not announce where the user has moved to. Focus links always focus the target.
 
 ## Button
 
