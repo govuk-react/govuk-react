@@ -1,6 +1,9 @@
 /* Rules the primitives need. They set no look, only `display`. */
 
-/* Each element only holds its parts' state, so it leaves no box of its own. A class on it wins. */
+/*
+ * Each element only holds its parts' state, so it leaves no box of its own. A class that sets
+ * `display` wins, and `hidden` still hides it.
+ */
 :where(
   govuk-react-accordion,
   govuk-react-auto-focus,
@@ -14,7 +17,7 @@
   govuk-react-modal,
   govuk-react-password-input,
   govuk-react-tabs
-) {
+):where(:not([hidden])) {
   display: contents;
 }
 

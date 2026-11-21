@@ -51,7 +51,7 @@ Returning without changing `value` puts the tabs back to `value`.
 
 Load the package's stylesheet once, or copy its rules into your own. Its rules only set `display`:
 
-- Each element gets `display: contents`, so it adds no box between your markup and its parent, such as a flex or grid container. A class you put on the element wins, as the rule has no specificity.
+- Each element gets `display: contents`, so it adds no box between your markup and its parent, such as a flex or grid container. The rule has no specificity, so a class of yours that sets `display` on the element wins, and `hidden` still hides it.
 - The Tabs radios fallback shows only the checked tab's panel.
 - The Accordion hides its fallback heading once upgraded, and its trigger and controls before then.
 
