@@ -16,8 +16,6 @@
  * - `[data-tabs-content][data-value]`: a panel. Its first child is a hidden radio.
  *
  * Attributes:
- * - `value` controls the selected tab: a user's choice only fires the change events, and the
- *   tab changes when `value` does.
  * - `default-value` is the first selected tab.
  * - `fallback`: "links" (the default) or "radios".
  * - `orientation`: "horizontal" (the default) or "vertical", the axis of the arrow keys. In a
@@ -25,6 +23,10 @@
  * - `media`: below this media query the element leaves the no-JS behaviour as it is.
  * - `upgraded-class`, `active-item-class`, `hidden-content-class`: classes to add, for styles
  *   keyed off classes rather than `data-state`, `aria-selected` and `hidden`.
+ *
+ * Properties:
+ * - `value`: when set, controls the selected tab. A user's choice then only fires the change
+ *   events, and the tab changes when `value` does. `undefined` or `null` stops controlling it.
  *
  * While upgraded it sets `data-upgraded`, `data-orientation` on itself, the list, tabs and
  * panels, and `data-state` ("active" or "inactive") on the items, tabs and panels. A user's
@@ -34,6 +36,7 @@
  */
 
 import { classesOf } from '../utils/dom.js';
+import { upgradeProperty } from '../utils/upgrade-property.js';
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -47,6 +50,8 @@ declare global {
 export const tagName = 'govuk-react-tabs';
 
 export interface TabsElement extends HTMLElement {
+  /** Controls the selected tab, by value, when set. */
+  value: string | undefined;
   /** The selected tab's value, once upgraded. */
   readonly selectedValue: string | undefined;
   /**
@@ -70,10 +75,12 @@ const addClasses = (element: Element, classes: string[]) => {
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactTabs extends HTMLElement implements TabsElement {
     static get observedAttributes() {
-      return ['value', 'media'];
+      return ['media'];
     }
 
     private mql?: MediaQueryList;
+
+    private controlledValue?: string;
 
     private started = false;
 
@@ -139,7 +146,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (value === undefined || value === this.dataset.value) return;
       this.picked = value;
       this.provisional = false;
-      if (this.hasAttribute('value')) {
+      if (this.controlledValue !== undefined) {
         // Controlled: the tab changes when `value` does. Put the radio back once the change has
         // been handled, so React's onChange still sees it, unless `value` has followed it.
         queueMicrotask(() => this.restoreRadio(radio));
@@ -155,13 +162,16 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.dispatchEvent(new CustomEvent('govuk-react-tabs:change', { detail: { value }, bubbles: true }));
     };
 
-    get value(): string | null {
-      return this.getAttribute('value');
+    get value() {
+      return this.controlledValue;
     }
 
-    set value(next: string | null) {
-      if (next == null) this.removeAttribute('value');
-      else this.setAttribute('value', next);
+    set value(value: string | null | undefined) {
+      const previous = this.controlledValue;
+      const next = value ?? undefined;
+      this.controlledValue = next;
+      // Until it starts, the element reads `value` when it sets up, after any pick before upgrade.
+      if (this.started && next !== undefined && next !== previous && next !== this.dataset.value) this.select(next);
     }
 
     get selectedValue() {
@@ -184,6 +194,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     connectedCallback() {
+      upgradeProperty(this, 'value');
       this.addEventListener('change', this.onChange);
       // Tabs can be added or removed later, and React can rewrite a class attribute.
       this.observer = new MutationObserver((records) => {
@@ -215,14 +226,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.teardown();
     }
 
-    attributeChangedCallback(name: string, oldValue: string | null, value: string | null) {
-      // Until it starts, the element reads its attributes when it sets up, after any pick before upgrade.
-      if (!this.started) return;
-      if (name === 'media') {
-        if (oldValue !== value) this.watchMedia();
-        return;
-      }
-      if (value != null && oldValue !== value && value !== this.dataset.value) this.select(value);
+    attributeChangedCallback(_name: string, oldValue: string | null, value: string | null) {
+      if (this.started && oldValue !== value) this.watchMedia();
     }
 
     private get radiosFallback() {
@@ -294,7 +299,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     /** The tab that would be selected if the user had picked nothing. */
     private defaultSelection() {
       return (
-        valueOf(this.triggerFor(this.getAttribute('value'))) ??
+        valueOf(this.triggerFor(this.controlledValue)) ??
         valueOf(this.triggerFor(this.getAttribute('default-value'))) ??
         valueOf(this.triggers[0])
       );
@@ -332,7 +337,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     private initialTrigger() {
-      const controlled = this.triggerFor(this.getAttribute('value'));
+      const controlled = this.triggerFor(this.controlledValue);
       const remembered = this.triggerFor(this.dataset.value);
       const picked = this.pickedTrigger();
       const fallback = this.triggerFor(this.getAttribute('default-value'));

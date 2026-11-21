@@ -15,9 +15,11 @@
  * Attributes:
  * - `media`: while this media query matches, the content is always shown and the button hidden,
  *   with `aria-hidden`, as in govuk-frontend's service navigation.
- * - `open`: controls the content. "true" shows it, anything else hides it. A user's click only
- *   fires the change event, and the content changes when `open` does.
  * - `default-open`: start with the content shown.
+ *
+ * Properties:
+ * - `open`: when `true` or `false`, controls the content. A user's click then only fires the
+ *   change event, and the content changes when `open` does. `undefined` or `null` stops controlling it.
  *
  * While upgraded it sets `data-upgraded`, and `data-state` ("open" or "closed") on itself, the
  * button and the content. A user's click fires a bubbling
@@ -26,6 +28,7 @@
 
 import { setHidden } from '../utils/dom.js';
 import { setUpWhenReady } from '../utils/set-up-when-ready.js';
+import { upgradeProperty } from '../utils/upgrade-property.js';
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -39,6 +42,8 @@ declare global {
 export const tagName = 'govuk-react-disclosure';
 
 export interface DisclosureElement extends HTMLElement {
+  /** Controls the content when `true` or `false`. */
+  open: boolean | undefined;
   /** Whether the content is open, once upgraded, even while `media` shows it anyway. */
   readonly expanded: boolean | undefined;
   /** The user's last choice before `open` was first set, such as before React hydrated. */
@@ -48,7 +53,7 @@ export interface DisclosureElement extends HTMLElement {
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactDisclosure extends HTMLElement implements DisclosureElement {
     static get observedAttributes() {
-      return ['open', 'media'];
+      return ['media'];
     }
 
     private toggle?: HTMLButtonElement;
@@ -65,6 +70,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private controlled = false;
 
+    private controlledOpen?: boolean;
+
     private readonly onClick = () => this.change(!this.isOpen);
 
     // `beforematch` doesn't bubble.
@@ -73,7 +80,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     };
 
     private change(open: boolean) {
-      if (!this.hasAttribute('open')) {
+      if (this.controlledOpen === undefined) {
         this.apply(open);
         if (!this.controlled) this.picked = open;
       }
@@ -81,6 +88,17 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     private readonly onModeChange = () => this.render();
+
+    get open() {
+      return this.controlledOpen;
+    }
+
+    set open(open: boolean | null | undefined) {
+      this.controlledOpen = open ?? undefined;
+      if (open == null) return;
+      this.controlled = true;
+      this.apply(open);
+    }
 
     get expanded() {
       return this.toggle ? this.isOpen : undefined;
@@ -91,6 +109,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     connectedCallback() {
+      upgradeProperty(this, 'open');
       this.observer = setUpWhenReady(this, () => this.setup());
     }
 
@@ -104,15 +123,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.mql = undefined;
     }
 
-    attributeChangedCallback(name: string) {
-      if (name === 'media') {
-        if (this.toggle) this.watchMedia();
-        return;
-      }
-      const open = this.getAttribute('open');
-      if (open === null) return;
-      this.controlled = true;
-      this.apply(open === 'true');
+    attributeChangedCallback() {
+      if (this.toggle) this.watchMedia();
     }
 
     private own<E extends Element>(selector: string, type: new () => E): E | undefined {
@@ -127,8 +139,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (!toggle || !content) return false;
       this.toggle = toggle;
       this.content = content;
-      const open = this.getAttribute('open');
-      this.isOpen = open === null ? this.hasAttribute('default-open') : open === 'true';
+      this.isOpen = this.controlledOpen ?? this.hasAttribute('default-open');
       this.dataset.upgraded = '';
       toggle.addEventListener('click', this.onClick);
       content.addEventListener('beforematch', this.onBeforeMatch);
