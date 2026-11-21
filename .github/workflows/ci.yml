@@ -21,7 +21,6 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
-      - run: pnpm run docs
       - run: pnpm test
       - run: pnpm build:dist # the dist build is only used to track bundle size delta
       - run: pnpm bundlesize
