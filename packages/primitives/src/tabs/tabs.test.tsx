@@ -432,3 +432,29 @@ test('a new media query takes over from the old one', async () => {
   expect(screen.getByRole('tablist')).toBeInTheDocument();
   vi.unstubAllGlobals();
 });
+
+test('without React, the value property controls the selected tab, until it is undefined or null', async () => {
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(<Example />);
+  await upgraded();
+  const element = container.querySelector('govuk-react-tabs');
+  const onChange = vi.fn();
+  element?.addEventListener('govuk-react-tabs:change', (event) => onChange(event.detail.value));
+  const selected = (name: string) => screen.getByRole('tab', { name }).getAttribute('aria-selected');
+  if (element) element.value = 'week';
+  expect(selected('Past week')).toBe('true');
+  fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
+  expect(onChange).toHaveBeenLastCalledWith('month');
+  expect(selected('Past week')).toBe('true');
+  // The element puts the radio back in a microtask.
+  await Promise.resolve();
+  if (element) element.value = undefined;
+  fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
+  expect(selected('Past month')).toBe('true');
+  if (element) element.value = 'day';
+  Reflect.set(element ?? {}, 'value', null);
+  fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+  expect(selected('Past week')).toBe('true');
+  container.remove();
+});

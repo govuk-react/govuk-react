@@ -210,7 +210,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       return this.hasAttribute('submit-on-confirm');
     }
 
-    private get locale() {
+    private get locale(): string {
       return (this.input ?? this).closest('[lang]')?.getAttribute('lang') || 'en';
     }
 

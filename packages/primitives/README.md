@@ -7,7 +7,7 @@ Each primitive:
 - works without JavaScript, through a fallback you choose
 - upgrades to the full WAI-ARIA pattern when its custom element is defined, with or without React
 - adds React props for its state once hydrated, where it has any, such as `value` and `onValueChange`, or `open` and `onOpenChange`
-- takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element, except Button's
+- takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element, except Button's and Details'
 - names its parts and props alike: the control that operates it is `Trigger`, and a text prop ends in `Text` when it's shown, `Label` when it's an accessible name and `Announcement` when only screen readers hear it
 
 Import each primitive from its own path, such as `@govuk-react/primitives/tabs`. Each path defines its element when imported.
@@ -25,7 +25,7 @@ Control a primitive only when your app has to set its state, such as closing a m
 
 ### Changes made before hydration
 
-`onValueChange` and `onOpenChange` on Tabs, Accordion, Disclosure and Modal get a second argument, `{ beforeHydration }`. It's `true` for a change the user made before React hydrated, which is reported once React has hydrated, whether or not the primitive is controlled.
+`onValueChange` and `onOpenChange` on Tabs, Accordion, Disclosure, Details and Modal get a second argument, `{ beforeHydration }`. It's `true` for a change the user made before React hydrated, which is reported once React has hydrated, whether or not the primitive is controlled.
 
 Such a report differs from a live change:
 
@@ -49,7 +49,11 @@ Returning without changing `value` puts the tabs back to `value`.
 
 ## Styles
 
-Two fallbacks need a CSS rule each, which only set `display`: the Tabs radios fallback and the Accordion. Load the package's stylesheet once, or copy its rules into your own:
+Load the package's stylesheet once, or copy its rules into your own. Its rules only set `display`:
+
+- Each element gets `display: contents`, so it adds no box between your markup and its parent, such as a flex or grid container. The rule has no specificity, so a class of yours that sets `display` on the element wins, and `hidden` still hides it.
+- The Tabs radios fallback shows only the checked tab's panel.
+- The Accordion hides its fallback heading once upgraded, and its trigger and controls before then.
 
 ```ts
 import '@govuk-react/primitives/styles.css';
@@ -59,7 +63,7 @@ No part renders a `style` element or attribute, so the primitives work under a s
 
 ## Without React
 
-Each element is also exported on its own, with no React, from `@govuk-react/primitives/<name>-element`, such as `tabs-element`. Importing it defines the element, such as `<govuk-react-tabs>`. Render the same markup as the React parts do: the element finds its parts by `data-` attributes, takes its options as attributes, and reports changes with bubbling events named after it, such as `govuk-react-tabs:change`. The comment at the top of each element's source lists its markup, attributes and events:
+Each element is also exported on its own, with no React, from `@govuk-react/primitives/<name>-element`, such as `tabs-element`. Importing it defines the element, such as `<govuk-react-tabs>`. Render the same markup as the React parts do: the element finds its parts by `data-` attributes, takes its options as attributes, and reports changes with bubbling events named after it, such as `govuk-react-tabs:change`. An attribute sets only where the state starts, such as `default-value`. To control the state, set a property: `value` on Tabs and Accordion, which takes an array, and `open` on Disclosure and Modal. Set it back to `undefined` or `null` to stop controlling it. The comment at the top of each element's source lists its markup, attributes, properties and events:
 
 [accordion](src/accordion/element.ts), [auto-focus](src/auto-focus/element.ts), [autocomplete](src/autocomplete/element.ts), [button](src/button/element.ts), [character-count](src/character-count/element.ts), [choices](src/choices/element.ts), [disclosure](src/disclosure/element.ts), [exit-this-page](src/exit-this-page/element.ts), [file-upload](src/file-upload/element.ts), [focus-links](src/focus-links/element.ts), [modal](src/modal/element.ts), [password-input](src/password-input/element.ts) and [tabs](src/tabs/element.ts).
 
@@ -187,6 +191,20 @@ Like govuk-frontend's service navigation, it doesn't use `details` and `summary`
 - The content has to show, with no button, while `media` matches, such as on wider screens. A `details` can't be open at one screen width and closed at another without JavaScript, and its `summary` can't be hidden while its content shows.
 
 For a menu that opens and closes without JavaScript, govuk-react's service navigation also has a `details` version.
+
+
+## Details
+
+```tsx
+import * as Details from '@govuk-react/primitives/details';
+
+<Details.Root onOpenChange={(open) => console.log(open)}>
+  <summary>Menu</summary>
+  <ul>…</ul>
+</Details.Root>;
+```
+
+A native `details`, for content that shows and hides without JavaScript. It has no custom element, because the browser holds its state before React hydrates. `open` and `onOpenChange` control it once hydrated. A user's change before hydration is reported through `onOpenChange` rather than undone. See Disclosure for why it may not suit a menu.
 
 ## Modal
 
@@ -332,7 +350,7 @@ import * as AutoFocus from '@govuk-react/primitives/auto-focus';
 </AutoFocus.Root>;
 ```
 
-Moves focus to `Target` when it appears, such as an error summary after a form is submitted. The server renders the target with `tabindex="-1"` and `autofocus`, so the browser focuses it when the page loads, even without JavaScript. As in govuk-frontend, the target loses its `tabindex` once focus moves on. Pass `disabled` to `Root` to leave focus alone, or to `Target` in an island without a `Root`.
+Moves focus to `Target` when it appears, such as an error summary after a form is submitted. The server renders the target with `tabindex="-1"` and `autofocus`, so the browser focuses it when the page loads, even without JavaScript. As in govuk-frontend, the target loses its `tabindex` once focus moves on. Pass `disabled` to `Root` to leave focus alone, or to `Target` in an island without a `Root`. It moves focus once, and again each time `focusKey` changes, such as each time the user searches for something on the page. A target that isn't shown yet, such as in a modal, tab panel or accordion section that opens in the same update, takes focus once it's shown, if that's within a second and the user hasn't pressed a key or clicked.
 
 ## Focus links
 

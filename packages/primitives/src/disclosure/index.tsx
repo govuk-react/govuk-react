@@ -27,10 +27,8 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
   onOpenChange?: (open: boolean, details: ChangeDetails) => void;
 };
 
-const isDisclosure = (element: HTMLElement): element is DisclosureElement => 'pickedOpen' in element;
-
 export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootProps) {
-  const element = useRef<HTMLElement>(null);
+  const element = useRef<DisclosureElement>(null);
   const onOpenChangeRef = useRef(onOpenChange);
   const synced = useRef(false);
   const [, render] = useReducer((count: number) => count + 1, 0);
@@ -57,7 +55,7 @@ export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootP
     if (!node) return;
     if (!synced.current) {
       synced.current = true;
-      const picked = isDisclosure(node) ? node.pickedOpen : undefined;
+      const picked = node.pickedOpen;
       if (picked !== undefined && picked !== (open ?? defaultOpen ?? false) && onOpenChangeRef.current) {
         onOpenChangeRef.current(picked, early);
         if (open !== undefined) {
@@ -67,8 +65,7 @@ export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootP
         }
       }
     }
-    if (open === undefined) node.removeAttribute('open');
-    else node.setAttribute('open', String(open));
+    node.open = open;
   });
 
   return React.createElement(tagName, {

@@ -191,7 +191,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     // As govuk-frontend: the field's closest `lang`, which can be inside the element, or English.
-    private get locale() {
+    private get locale(): string {
       return (this.input ?? this).closest('[lang]')?.getAttribute('lang') || 'en';
     }
 

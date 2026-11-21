@@ -112,8 +112,7 @@ function TabsRoot({
         }
       }
     }
-    if (value === undefined) node.removeAttribute('value');
-    else if (node.getAttribute('value') !== value) node.setAttribute('value', value);
+    node.value = value;
   });
 
   return (

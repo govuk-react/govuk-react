@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Children, useEffect, useRef } from 'react';
+import { Children } from 'react';
 import { clsx } from 'clsx';
 import type { ComponentProps, ReactNode } from 'react';
 import * as Primitives from '@govuk-react/primitives/disclosure';
+import * as DetailsPrimitive from '@govuk-react/primitives/details';
 import * as Markup from 'govuk-frontend-react/service-navigation';
 
 /*
@@ -52,9 +53,8 @@ export type MenuProps = Omit<Primitives.RootProps, 'media' | 'defaultOpen'> & Me
  * button shows and hides the list once JavaScript runs. Without JavaScript the list is always
  * shown and the button hidden.
  */
-export function Menu({ style, ...props }: MenuProps) {
-  // Takes no space, so govuk-frontend's styles still apply to the button and list.
-  return <Primitives.Root media={tablet} style={{ display: 'contents', ...style }} {...props} />;
+export function Menu(props: MenuProps) {
+  return <Primitives.Root media={tablet} {...props} />;
 }
 
 export type ToggleProps = Markup.ToggleProps;
@@ -70,7 +70,7 @@ export function Toggle(props: ToggleProps) {
 
 const detailsClass = 'govuk-react-service-navigation__details';
 
-export type DetailsMenuProps = Omit<ComponentProps<'details'>, 'open'> & MenuState;
+export type DetailsMenuProps = DetailsPrimitive.RootProps;
 
 /**
  * A menu that works without JavaScript: a native `details`, inside `Wrapper`, around `Summary`
@@ -85,36 +85,8 @@ export type DetailsMenuProps = Omit<ComponentProps<'details'>, 'open'> & MenuSta
  * @see https://github.com/alphagov/govuk-design-system/issues/4030
  * @see https://github.com/alphagov/govuk-frontend/issues/5310
  */
-export function DetailsMenu({ open, onOpenChange, onToggle, className, children, ...props }: DetailsMenuProps) {
-  const details = useRef<HTMLDetailsElement>(null);
-  const onOpenChangeRef = useRef(onOpenChange);
-  useEffect(() => {
-    onOpenChangeRef.current = onOpenChange;
-  });
-  // A menu opened before hydration is reported, rather than left out of step with `open`.
-  const initialOpen = useRef(open);
-  useEffect(() => {
-    const node = details.current;
-    if (node && initialOpen.current !== undefined && node.open !== initialOpen.current) {
-      onOpenChangeRef.current?.(node.open, { beforeHydration: true });
-    }
-  }, []);
-  return (
-    <details
-      ref={details}
-      className={clsx(detailsClass, className)}
-      open={open}
-      onToggle={(event) => {
-        onToggle?.(event);
-        if (event.currentTarget.open !== open) onOpenChange?.(event.currentTarget.open, { beforeHydration: false });
-      }}
-      // The user can open it before hydration.
-      suppressHydrationWarning
-      {...props}
-    >
-      {children}
-    </details>
-  );
+export function DetailsMenu({ className, ...props }: DetailsMenuProps) {
+  return <DetailsPrimitive.Root className={clsx(detailsClass, className)} {...props} />;
 }
 
 export type SummaryProps = ComponentProps<'summary'>;
