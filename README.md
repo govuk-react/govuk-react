@@ -2,6 +2,8 @@
 
 An implementation of the [GOV.UK Design System](https://design-system.service.gov.uk) in [React](https://react.dev), built on [govuk-frontend-react](https://github.com/govuk-react/govuk-frontend-react) and styled by govuk-frontend's CSS.
 
+govuk-react is a community project, actively maintained by volunteers. It isn't an official port of GOV.UK Frontend and isn't supported by the GOV.UK Design System team, who maintain [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend).
+
 [![codecov](https://codecov.io/gh/govuk-react/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/govuk-react/govuk-react)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/govuk-react)
 
