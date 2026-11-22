@@ -2,14 +2,14 @@ import * as React from 'react';
 import { hydrateRoot } from 'react-dom/client';
 import { renderToString } from 'react-dom/server';
 import { act, fireEvent, render } from '@testing-library/react';
-import * as Details from '.';
+import { Details, type DetailsProps } from '.';
 
-function Example(props: Details.RootProps) {
+function Example(props: DetailsProps) {
   return (
-    <Details.Root {...props}>
+    <Details {...props}>
       <summary>Menu</summary>
       Navigation
-    </Details.Root>
+    </Details>
   );
 }
 

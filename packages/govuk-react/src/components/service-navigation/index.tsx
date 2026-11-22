@@ -3,7 +3,7 @@ import { Children } from 'react';
 import { clsx } from 'clsx';
 import type { ComponentProps, ReactNode } from 'react';
 import * as Primitives from '@govuk-react/primitives/disclosure';
-import * as DetailsPrimitive from '@govuk-react/primitives/details';
+import { Details as DetailsPrimitive, type DetailsProps } from '@govuk-react/primitives/details';
 import * as Markup from 'govuk-frontend-react/service-navigation';
 
 /*
@@ -70,7 +70,7 @@ export function Toggle(props: ToggleProps) {
 
 const detailsClass = 'govuk-react-service-navigation__details';
 
-export type DetailsMenuProps = DetailsPrimitive.RootProps;
+export type DetailsMenuProps = DetailsProps;
 
 /**
  * A menu that works without JavaScript: a native `details`, inside `Wrapper`, around `Summary`
@@ -86,7 +86,7 @@ export type DetailsMenuProps = DetailsPrimitive.RootProps;
  * @see https://github.com/alphagov/govuk-frontend/issues/5310
  */
 export function DetailsMenu({ className, ...props }: DetailsMenuProps) {
-  return <DetailsPrimitive.Root className={clsx(detailsClass, className)} {...props} />;
+  return <DetailsPrimitive className={clsx(detailsClass, className)} {...props} />;
 }
 
 export type SummaryProps = ComponentProps<'summary'>;

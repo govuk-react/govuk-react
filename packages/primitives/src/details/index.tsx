@@ -13,14 +13,14 @@ export type { ChangeDetails };
  * It needs no custom element, because the browser keeps its state before React hydrates.
  */
 
-export type RootProps = Omit<ComponentProps<'details'>, 'open'> & {
+export type DetailsProps = Omit<ComponentProps<'details'>, 'open'> & {
   /** Whether it's open, to control it once hydrated. */
   open?: boolean;
   /** Called when the user opens or closes it. */
   onOpenChange?: (open: boolean, details: ChangeDetails) => void;
 };
 
-export function Root({ open, onOpenChange, onToggle, ref, ...props }: RootProps) {
+export function Details({ open, onOpenChange, onToggle, ref, ...props }: DetailsProps) {
   const details = useRef<HTMLDetailsElement>(null);
   const refs = useMemo(() => composeRefs(details, ref), [ref]);
   const reportChange = useEffectEvent((next: boolean, details: ChangeDetails) => onOpenChange?.(next, details));
