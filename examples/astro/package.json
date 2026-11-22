@@ -1,9 +1,9 @@
 {
-  "name": "@govuk-react/example-conform-astro",
+  "name": "@govuk-react/example-astro",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "A Conform form with govuk-react in Astro, which submits and shows its errors without JavaScript",
+  "description": "govuk-react in Astro: Conform forms, islands and inline scripts that work before and without JavaScript",
   "engines": {
     "node": ">=22.12.0"
   },

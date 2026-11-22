@@ -29,8 +29,6 @@ The server keeps no state: each submission carries the whole form. The add, remo
 - [Without React](./src/pages/without-react.astro): components with no client directive, enhanced by their elements' scripts, inlined in the page's head with `InlineScript`. The page sends no React to the browser.
 - [Upgrade to React](./src/pages/upgrade.astro): an accordion enhanced by its inline script as soon as the page loads, then hydrated with `client:idle`. React counts the sections the user has read, including those opened before React loaded, which `onValueChange` reports with `beforeHydration`.
 
-`client:visible` watches the island's child elements, which need a box of their own. The primitives' elements have `display: contents`, so a component whose outer element is one of them, such as an accordion, needs a wrapping element, as [`GuideAccordion`](./src/features/islands.tsx) has.
-
 ## Run it
 
 ```sh

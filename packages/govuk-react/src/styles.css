@@ -337,3 +337,8 @@
     }
   }
 }
+
+/* The button is sticky, so its element leaves no box that would contain it. */
+.govuk-react-exit-this-page:not([hidden]) {
+  display: contents;
+}

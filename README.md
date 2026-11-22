@@ -68,7 +68,7 @@ const MyComponent = ({ title }) => (
 
 See the [Storybook](https://govuk-react.github.io/govuk-react) for examples of all available components.
 
-Also see the [Example Application](packages/example-application/src) for basic usage, and the [Astro example](examples/conform-astro) for forms that submit and show their errors without JavaScript, and for islands and inline scripts.
+Also see the [Example Application](packages/example-application/src) for basic usage, and the [Astro example](examples/astro) for forms that submit and show their errors without JavaScript, and for islands and inline scripts.
 
 ## Fonts and images
 

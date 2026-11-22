@@ -16,19 +16,13 @@ export function FeedbackField() {
   );
 }
 
-/**
- * An accordion, which shows every section until React hydrates it. `client:visible` watches the
- * island's child elements, which need a box: the accordion's element has `display: contents`, so
- * it's wrapped in a `div`.
- */
+/** An accordion, which shows every section until React hydrates it. */
 export function GuideAccordion({ id }: { id: string }) {
   return (
-    <div>
-      <Accordion.Composite
-        id={id}
-        rememberExpanded={false}
-        sections={guide.map(({ value, heading, content }) => ({ value, heading, children: content }))}
-      />
-    </div>
+    <Accordion.Composite
+      id={id}
+      rememberExpanded={false}
+      sections={guide.map(({ value, heading, content }) => ({ value, heading, children: content }))}
+    />
   );
 }
