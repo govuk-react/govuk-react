@@ -13,6 +13,7 @@ import { InputField } from 'govuk-react/input';
 import { VisuallyHidden } from 'govuk-react/visually-hidden';
 import { z } from 'zod';
 import type { ActionResult } from '../action-result';
+import { path } from '../path';
 import { fieldProps } from '../components/fields';
 import { FormErrorSummary, useFailedSubmits } from '../components/FormErrorSummary';
 
@@ -56,7 +57,7 @@ export async function submitTodos(formData: FormData): Promise<ActionResult> {
     return { success: false, result: report(submission, { error: { issues: result.error.issues } }) };
   }
 
-  return { success: true, redirectTo: `/?value=${encodeURIComponent(JSON.stringify(result.data))}` };
+  return { success: true, redirectTo: path(`/?value=${encodeURIComponent(JSON.stringify(result.data))}`) };
 }
 
 export function TodosForm({ action, lastResult = null }: TodosFormProps) {

@@ -12,7 +12,7 @@ async function open(page: Page, mode: Mode, path: string) {
   if (mode === 'before hydration') {
     await page.route('**/_astro/*.js', (route) => route.abort());
   }
-  await page.goto(path);
+  await page.goto(path.replace(/^\//, ''));
   if (mode === 'hydrated') {
     await expect(page.locator('astro-island:not([ssr])')).toHaveCount(1);
   }

@@ -6,15 +6,18 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   reporter: process.env.CI ? 'github' : 'list',
   use: {
-    baseURL: 'http://localhost:4321',
+    // Set BASE_URL to test a deployed copy, such as https://govuk-react.com/examples/astro/.
+    baseURL: process.env.BASE_URL ?? 'http://localhost:4321/',
     trace: 'retain-on-failure',
   },
-  webServer: {
-    command: 'npm run build && npm run preview',
-    url: 'http://localhost:4321',
-    reuseExistingServer: false,
-    timeout: 120_000,
-  },
+  webServer: process.env.BASE_URL
+    ? undefined
+    : {
+        command: 'npm run build && npm run preview',
+        url: 'http://localhost:4321',
+        reuseExistingServer: false,
+        timeout: 120_000,
+      },
   projects: [
     {
       name: 'chromium',

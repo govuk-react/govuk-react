@@ -8,6 +8,7 @@ import { Heading } from 'govuk-react/heading';
 import { InputField } from 'govuk-react/input';
 import * as PasswordInput from 'govuk-react/password-input';
 import type { ActionResult } from '../action-result';
+import { path } from '../path';
 import { fieldProps } from '../components/fields';
 import { FormErrorSummary, useFailedSubmits } from '../components/FormErrorSummary';
 
@@ -46,7 +47,7 @@ export async function login(formData: FormData): Promise<ActionResult> {
   const { email, remember } = submission.payload;
   return {
     success: true,
-    redirectTo: `/?value=${encodeURIComponent(JSON.stringify({ email, remember }))}`,
+    redirectTo: path(`/?value=${encodeURIComponent(JSON.stringify({ email, remember }))}`),
   };
 }
 
