@@ -18,10 +18,11 @@ const { title, error } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>{error ? 'Error: ' : ''}{title} – Conform example</title>
+    <title>{error ? 'Error: ' : ''}{title} – Astro example</title>
     <InlineScript script={autoFocus} />
     <InlineScript script={focusLinks} />
     <InlineScript script={passwordInput} />
+    <slot name="head" />
   </head>
   <body class="govuk-template__body">
     <Chrome pathname={Astro.url.pathname}>

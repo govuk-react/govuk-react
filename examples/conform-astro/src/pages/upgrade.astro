@@ -1,0 +1,26 @@
+---
+import { InlineScript, accordion } from '@govuk-react/primitives/inline-script';
+import { Body } from 'govuk-react/body';
+import { GridColumn } from 'govuk-react/grid-column';
+import { GridRow } from 'govuk-react/grid-row';
+import { Heading } from 'govuk-react/heading';
+import { ReadingAccordion } from '../features/upgrade';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Upgrade to React">
+  <Fragment slot="head">
+    <InlineScript script={accordion} />
+  </Fragment>
+  <GridRow>
+    <GridColumn width="two-thirds">
+      <Heading size="l" headingLevel={1}>Upgrade to React</Heading>
+      <Body>
+        The accordion’s script is inlined in the page’s head, so the accordion works as soon as the HTML loads. It also
+        has <code>client:idle</code>, so React hydrates it later and counts the sections you’ve read, including any you
+        opened before React loaded.
+      </Body>
+      <ReadingAccordion client:idle />
+    </GridColumn>
+  </GridRow>
+</Layout>
