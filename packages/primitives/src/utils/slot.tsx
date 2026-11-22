@@ -1,4 +1,4 @@
-import { Children, cloneElement, isValidElement } from 'react';
+import { Children, cloneElement, isValidElement, useCallback } from 'react';
 import type { ReactNode, Ref } from 'react';
 import { clsx } from 'clsx';
 
@@ -27,6 +27,11 @@ export function composeRefs<T>(...refs: (Ref<T> | undefined)[]) {
 const isRef = (value: unknown): value is Ref<unknown> =>
   typeof value === 'function' || (typeof value === 'object' && value !== null && 'current' in value);
 
+/** `composeRefs`, kept the same between renders while the refs are, so React doesn't reattach it. */
+function useComposedRefs(a: unknown, b: unknown) {
+  return useCallback((node: unknown) => (isRef(a) && isRef(b) ? composeRefs(a, b)(node) : undefined), [a, b]);
+}
+
 /**
  * Renders its only child, merging its own props onto it, for parts that
  * take `asChild`. Class names are joined, styles are merged and event
@@ -35,6 +40,9 @@ const isRef = (value: unknown): value is Ref<unknown> =>
  */
 export function Slot<P extends object>({ children, ...slotProps }: SlotProps<P>) {
   const child = Children.only(children);
+  const childRef: unknown = isValidElement<Props>(child) ? child.props.ref : undefined;
+  const slotRef: unknown = 'ref' in slotProps ? slotProps.ref : undefined;
+  const ref = useComposedRefs(childRef, slotRef);
   if (!isValidElement<Props>(child)) return null;
 
   const merged: Props = { ...child.props };
@@ -45,7 +53,7 @@ export function Slot<P extends object>({ children, ...slotProps }: SlotProps<P>)
     if (childValue === undefined) {
       merged[key] = slotValue;
     } else if (key === 'ref' && isRef(slotValue) && isRef(childValue)) {
-      merged[key] = composeRefs(childValue, slotValue);
+      merged[key] = ref;
     } else if (key === 'className' && typeof slotValue === 'string' && typeof childValue === 'string') {
       merged[key] = clsx(slotValue, childValue);
     } else if (key === 'style' && isObject(slotValue) && isObject(childValue)) {

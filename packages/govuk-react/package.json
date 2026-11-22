@@ -34,8 +34,8 @@
   },
   "peerDependencies": {
     "govuk-frontend": "~6.6.0",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "react": ">=19.2",
+    "react-dom": ">=19.2"
   },
   "author": "Alasdair McLeay",
   "license": "MIT",

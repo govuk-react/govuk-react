@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { createContext, useCallback, useContext, useEffect, useId, useReducer, useRef } from 'react';
+import { createContext, useCallback, useContext, useEffect, useEffectEvent, useId, useReducer, useRef } from 'react';
 import type { ComponentProps, ReactNode, SyntheticEvent } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { composeRefs, Slot } from '../utils/slot.js';
@@ -125,58 +125,58 @@ export type ContentProps = PartProps<'dialog'>;
  */
 export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
   const context = useContext(ModalContext);
-  const reported = useRef<boolean | undefined>(undefined);
-  const onOpenChange = useRef(context.onOpenChange);
-  useEffect(() => {
-    onOpenChange.current = context.onOpenChange;
-  });
-  // Report each change once.
-  const report = useCallback((dialog: HTMLDialogElement) => {
-    if (reported.current === dialog.open) return;
-    reported.current = dialog.open;
-    // A controlled dialog that arrives at `open` is no news.
-    if (dialog.closest(tagName)?.open === dialog.open) return;
-    onOpenChange.current?.(dialog.open, live);
-  }, []);
-  // A dialog the user opened before hydration, through its invoker command or the element, fired
-  // nothing React heard, so report it once.
-  const dialogRef = useRef<HTMLDialogElement | null>(null);
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (dialog?.open && reported.current === undefined) {
-      reported.current = true;
-      onOpenChange.current?.(true, early);
-    }
-  }, []);
-  // Not every browser fires `toggle` on dialogs, so watch the dialog's `open` attribute.
-  const listen = useCallback(
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const refs = useCallback(
     (dialog: HTMLDialogElement | null) => {
       dialogRef.current = dialog;
-      if (!dialog) return undefined;
       const forget = composeRefs(ref)(dialog);
-      const observer = new MutationObserver(() => report(dialog));
-      observer.observe(dialog, { attributes: true, attributeFilter: ['open'] });
-      // While controlled, the element asks for a change the dialog hasn't made.
-      const closest = dialog.closest(tagName);
-      const root = closest instanceof HTMLElement ? closest : null;
-      const onRequest = (event: CustomEvent<{ open: boolean }>) => {
-        if (event.target !== root || event.detail.open === dialog.open) return;
-        onOpenChange.current?.(event.detail.open, live);
-      };
-      root?.addEventListener('govuk-react-modal:change', onRequest);
       return () => {
-        observer.disconnect();
-        root?.removeEventListener('govuk-react-modal:change', onRequest);
         dialogRef.current = null;
         forget();
       };
     },
-    [ref, report]
+    [ref]
   );
+  const reported = useRef<boolean | undefined>(undefined);
+  // Report each change once.
+  const report = (dialog: HTMLDialogElement) => {
+    if (reported.current === dialog.open) return;
+    reported.current = dialog.open;
+    // A controlled dialog that arrives at `open` is no news.
+    if (dialog.closest(tagName)?.open === dialog.open) return;
+    context.onOpenChange?.(dialog.open, live);
+  };
+  const reportFromDialog = useEffectEvent(report);
+  const reportChange = useEffectEvent((open: boolean, details: ChangeDetails) => context.onOpenChange?.(open, details));
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return undefined;
+    // A dialog the user opened before hydration, through its invoker command or the element, fired
+    // nothing React heard, so report it once.
+    if (dialog.open && reported.current === undefined) {
+      reported.current = true;
+      reportChange(true, early);
+    }
+    // Not every browser fires `toggle` on dialogs, so watch the dialog's `open` attribute.
+    const observer = new MutationObserver(() => reportFromDialog(dialog));
+    observer.observe(dialog, { attributes: true, attributeFilter: ['open'] });
+    // While controlled, the element asks for a change the dialog hasn't made.
+    const closest = dialog.closest(tagName);
+    const root = closest instanceof HTMLElement ? closest : null;
+    const onRequest = (event: CustomEvent<{ open: boolean }>) => {
+      if (event.target !== root || event.detail.open === dialog.open) return;
+      reportChange(event.detail.open, live);
+    };
+    root?.addEventListener('govuk-react-modal:change', onRequest);
+    return () => {
+      observer.disconnect();
+      root?.removeEventListener('govuk-react-modal:change', onRequest);
+    };
+  }, []);
   const shared = {
     id: id ?? context.dialogId,
     'aria-labelledby': props['aria-label'] ? undefined : context.titleId,
-    ref: listen,
+    ref: refs,
     onClose: (event: SyntheticEvent<HTMLDialogElement>) => {
       onClose?.(event);
       report(event.currentTarget);

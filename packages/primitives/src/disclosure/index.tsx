@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { useEffect, useReducer, useRef } from 'react';
+import { useEffect, useEffectEvent, useReducer, useRef } from 'react';
 import type { ComponentProps } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
@@ -29,20 +29,16 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
 
 export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootProps) {
   const element = useRef<DisclosureElement>(null);
-  const onOpenChangeRef = useRef(onOpenChange);
+  const reportChange = useEffectEvent((next: boolean, details: ChangeDetails) => onOpenChange?.(next, details));
   const synced = useRef(false);
   const [, render] = useReducer((count: number) => count + 1, 0);
-
-  useEffect(() => {
-    onOpenChangeRef.current = onOpenChange;
-  });
 
   useEffect(() => {
     const node = element.current;
     if (!node) return undefined;
     // A nested disclosure's change bubbles through this one.
     const onChange = (event: CustomEvent<{ open: boolean }>) => {
-      if (event.target === node) onOpenChangeRef.current?.(event.detail.open, live);
+      if (event.target === node) reportChange(event.detail.open, live);
     };
     node.addEventListener('govuk-react-disclosure:change', onChange);
     return () => node.removeEventListener('govuk-react-disclosure:change', onChange);
@@ -56,8 +52,8 @@ export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootP
     if (!synced.current) {
       synced.current = true;
       const picked = node.pickedOpen;
-      if (picked !== undefined && picked !== (open ?? defaultOpen ?? false) && onOpenChangeRef.current) {
-        onOpenChangeRef.current(picked, early);
+      if (picked !== undefined && picked !== (open ?? defaultOpen ?? false) && onOpenChange) {
+        reportChange(picked, early);
         if (open !== undefined) {
           // The click shows until the next render, which adopts it or goes back to `open`.
           render();

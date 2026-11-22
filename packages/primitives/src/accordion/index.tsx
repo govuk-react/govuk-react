@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { createContext, useContext, useEffect, useReducer, useRef } from 'react';
+import { createContext, useContext, useEffect, useEffectEvent, useReducer, useRef } from 'react';
 import type { ComponentProps } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
@@ -78,20 +78,16 @@ export function Root({
   ...props
 }: RootProps) {
   const element = useRef<AccordionElement>(null);
-  const onValueChangeRef = useRef(onValueChange);
+  const reportChange = useEffectEvent((next: string[], details: ChangeDetails) => onValueChange?.(next, details));
   const synced = useRef(false);
   const [, render] = useReducer((count: number) => count + 1, 0);
-
-  useEffect(() => {
-    onValueChangeRef.current = onValueChange;
-  });
 
   useEffect(() => {
     const node = element.current;
     if (!node) return undefined;
     // A nested accordion's change bubbles through this one.
     const onChange = (event: CustomEvent<{ value: string[] }>) => {
-      if (event.target === node) onValueChangeRef.current?.(event.detail.value, live);
+      if (event.target === node) reportChange(event.detail.value, live);
     };
     node.addEventListener('govuk-react-accordion:change', onChange);
     return () => node.removeEventListener('govuk-react-accordion:change', onChange);
@@ -106,8 +102,8 @@ export function Root({
     if (!synced.current) {
       synced.current = true;
       const picked = node.pickedValue;
-      if (picked !== undefined && picked.join(' ') !== initialValue && onValueChangeRef.current) {
-        onValueChangeRef.current(picked, early);
+      if (picked !== undefined && picked.join(' ') !== initialValue && onValueChange) {
+        reportChange(picked, early);
         if (value !== undefined) {
           // The pick shows until the next render, which adopts it or goes back to `value`.
           render();
