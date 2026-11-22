@@ -4,9 +4,6 @@ An implementation of the [GOV.UK Design System](https://design-system.service.go
 
 govuk-react is a community project, actively maintained by volunteers. It isn't an official port of GOV.UK Frontend and isn't supported by the GOV.UK Design System team, who maintain [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend).
 
-[![codecov](https://codecov.io/gh/govuk-react/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/govuk-react/govuk-react)
-[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/govuk-react)
-
 We aim to track the following projects (in priority order) as to which components to implement and how they should look/behave. Where possible we are using the existing CSS as a guide. When we need to modify to suit custom markup, we aim to provide a comment in our code as to why this was done.
 
 - [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)
