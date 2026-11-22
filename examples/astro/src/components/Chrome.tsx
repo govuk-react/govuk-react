@@ -34,6 +34,11 @@ export const hydration: Example[] = [
     text: 'Upgrade to React',
     description: 'an inline script enhances a component, then React takes over and keeps what the user did',
   },
+  {
+    href: path('/together'),
+    text: 'Working together',
+    description: 'tabs, an accordion and modals holding forms, in one island',
+  },
 ];
 
 const navigation = [
