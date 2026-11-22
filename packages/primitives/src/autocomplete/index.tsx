@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { cloneElement, isValidElement, useEffect, useRef } from 'react';
+import { cloneElement, isValidElement, useEffect, useEffectEvent, useRef } from 'react';
 import type { ComponentProps, ReactElement, ReactNode } from 'react';
 import { Slot } from '../utils/slot.js';
 import { translationAttributes, type Translation } from '../utils/translation.js';
@@ -66,20 +66,20 @@ export function Root({
   ...props
 }: RootProps) {
   const element = useRef<HTMLElement>(null);
-  const callbacks = useRef({ onQueryChange, onConfirm });
-  useEffect(() => {
-    callbacks.current = { onQueryChange, onConfirm };
-  });
+  const reportQuery = useEffectEvent((query: string) => onQueryChange?.(query));
+  const reportConfirm = useEffectEvent((value: string, event: CustomEvent<{ value: string }>) =>
+    onConfirm?.(value, event)
+  );
 
   useEffect(() => {
     const node = element.current;
     if (!node) return undefined;
     // A nested autocomplete's events bubble through this one.
     const onQuery = (event: CustomEvent<{ query: string }>) => {
-      if (event.target === node) callbacks.current.onQueryChange?.(event.detail.query);
+      if (event.target === node) reportQuery(event.detail.query);
     };
     const onConfirmed = (event: CustomEvent<{ value: string }>) => {
-      if (event.target === node) callbacks.current.onConfirm?.(event.detail.value, event);
+      if (event.target === node) reportConfirm(event.detail.value, event);
     };
     node.addEventListener('govuk-react-autocomplete:query', onQuery);
     node.addEventListener('govuk-react-autocomplete:confirm', onConfirmed);
@@ -88,7 +88,7 @@ export function Root({
     const input = node.querySelector('input[data-autocomplete-input]');
     const query = isAutocomplete(node) ? node.query : undefined;
     if (query && input instanceof HTMLInputElement && query !== input.defaultValue) {
-      callbacks.current.onQueryChange?.(query);
+      reportQuery(query);
     }
     return () => {
       node.removeEventListener('govuk-react-autocomplete:query', onQuery);

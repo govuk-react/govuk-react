@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { useEffect, useMemo, useReducer, useRef } from 'react';
+import { useEffect, useEffectEvent, useMemo, useReducer, useRef } from 'react';
 import type { ComponentProps } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { composeRefs } from '../utils/slot.js';
@@ -23,13 +23,9 @@ export type RootProps = Omit<ComponentProps<'details'>, 'open'> & {
 export function Root({ open, onOpenChange, onToggle, ref, ...props }: RootProps) {
   const details = useRef<HTMLDetailsElement>(null);
   const refs = useMemo(() => composeRefs(details, ref), [ref]);
-  const onOpenChangeRef = useRef(onOpenChange);
+  const reportChange = useEffectEvent((next: boolean, details: ChangeDetails) => onOpenChange?.(next, details));
   const synced = useRef(false);
   const [, render] = useReducer((count: number) => count + 1, 0);
-
-  useEffect(() => {
-    onOpenChangeRef.current = onOpenChange;
-  });
 
   // The user can open or close it before hydration. That's reported, rather than undone.
   useEffect(() => {
@@ -37,8 +33,8 @@ export function Root({ open, onOpenChange, onToggle, ref, ...props }: RootProps)
     if (!node) return;
     if (!synced.current) {
       synced.current = true;
-      if (node.open !== (open ?? false) && onOpenChangeRef.current) {
-        onOpenChangeRef.current(node.open, early);
+      if (node.open !== (open ?? false) && onOpenChange) {
+        reportChange(node.open, early);
         if (open !== undefined) {
           // It stays as the user left it until the next render, which adopts it or goes back to `open`.
           render();
