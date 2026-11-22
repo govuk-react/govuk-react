@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { fireEvent, render, screen } from '@testing-library/react';
-import * as Button from '.';
+import { Button } from '.';
 
 describe('Button', () => {
   afterEach(() => vi.useRealTimers());
 
   test('marks the button, and its double click setting, for the listeners', () => {
-    expect(renderToStaticMarkup(<Button.Root preventDoubleClick>Save</Button.Root>)).toBe(
+    expect(renderToStaticMarkup(<Button preventDoubleClick>Save</Button>)).toBe(
       '<button data-button="" data-prevent-double-click="true">Save</button>'
     );
   });
@@ -16,9 +16,9 @@ describe('Button', () => {
     vi.useFakeTimers({ toFake: ['Date', 'performance'] });
     const onClick = vi.fn();
     render(
-      <Button.Root preventDoubleClick onClick={onClick}>
+      <Button preventDoubleClick onClick={onClick}>
         Save
-      </Button.Root>
+      </Button>
     );
     const button = screen.getByRole('button');
     fireEvent.click(button);
@@ -31,7 +31,7 @@ describe('Button', () => {
 
   test('without preventDoubleClick, hears every click', () => {
     const onClick = vi.fn();
-    render(<Button.Root onClick={onClick}>Save</Button.Root>);
+    render(<Button onClick={onClick}>Save</Button>);
     fireEvent.click(screen.getByRole('button'));
     fireEvent.click(screen.getByRole('button'));
     expect(onClick).toHaveBeenCalledTimes(2);
@@ -40,11 +40,11 @@ describe('Button', () => {
   test('Space activates a link button', () => {
     const onClick = vi.fn((event: React.MouseEvent) => event.preventDefault());
     render(
-      <Button.Root asChild>
+      <Button asChild>
         <a href="#next" role="button" onClick={onClick}>
           Continue
         </a>
-      </Button.Root>
+      </Button>
     );
     const notCancelled = fireEvent.keyDown(screen.getByRole('button'), { key: ' ' });
     expect(onClick).toHaveBeenCalledTimes(1);
@@ -55,11 +55,11 @@ describe('Button', () => {
   test('Space activates a link button once while held, and not when a handler took the key', () => {
     const onClick = vi.fn((event: React.MouseEvent) => event.preventDefault());
     render(
-      <Button.Root asChild>
+      <Button asChild>
         <a href="#next" role="button" onClick={onClick} onKeyDown={(event) => event.shiftKey && event.preventDefault()}>
           Continue
         </a>
-      </Button.Root>
+      </Button>
     );
     const link = screen.getByRole('button');
     fireEvent.keyDown(link, { key: ' ' });

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { ElementType, ReactNode } from 'react';
-import * as Primitives from '@govuk-react/primitives/button';
+import { Button as ButtonPrimitive } from '@govuk-react/primitives/button';
 import {
   Button as MarkupButton,
   StartButton as MarkupStartButton,
@@ -24,9 +24,9 @@ export function Button<As extends ElementType = 'button'>(props: ButtonProps<As>
 export function Button(props: ButtonProps<ElementType>) {
   return (
     // Covers `as` components too, which govuk-frontend-react doesn't mark. Links can't be double submitted.
-    <Primitives.Root asChild preventDoubleClick={props.href ? undefined : props.preventDoubleClick}>
+    <ButtonPrimitive asChild preventDoubleClick={props.href ? undefined : props.preventDoubleClick}>
       <MarkupButton {...props} />
-    </Primitives.Root>
+    </ButtonPrimitive>
   );
 }
 
@@ -43,8 +43,8 @@ export function StartButton<As extends ElementType = 'button'>(props: Omit<Butto
 export function StartButton(props: Omit<ButtonProps<ElementType>, 'start'>) {
   return (
     // Covers `as` components too, which govuk-frontend-react doesn't mark. Links can't be double submitted.
-    <Primitives.Root asChild preventDoubleClick={props.href ? undefined : props.preventDoubleClick}>
+    <ButtonPrimitive asChild preventDoubleClick={props.href ? undefined : props.preventDoubleClick}>
       <MarkupStartButton {...props} />
-    </Primitives.Root>
+    </ButtonPrimitive>
   );
 }
