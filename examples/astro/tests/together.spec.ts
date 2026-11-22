@@ -76,5 +76,37 @@ for (const mode of modes) {
       await page.getByRole('dialog').getByRole('button', { name: 'Send' }).click();
       await expect(page.getByRole('dialog')).toBeHidden();
     });
+    test('Escape closes a modal and puts focus back on its button', async ({ page }) => {
+      await open(page, mode);
+      const trigger = page.getByRole('button', { name: 'Change your password' });
+      await trigger.click();
+      await expect(page.getByRole('dialog', { name: 'Change your password' })).toBeVisible();
+      await page.keyboard.press('Escape');
+      await expect(page.getByRole('dialog')).toBeHidden();
+      await expect(trigger).toBeFocused();
+    });
+
+    test('what you enter survives switching tabs', async ({ page }) => {
+      await open(page, mode);
+      await page.getByRole('tab', { name: 'Messages' }).click();
+      await page.getByRole('button', { name: 'Send us a message' }).click();
+      await page.getByLabel('Your message').fill('Draft');
+      await page.getByRole('dialog').getByRole('button', { name: 'Cancel' }).click();
+      await page.getByRole('tab', { name: 'Details' }).click();
+      await page.getByRole('tab', { name: 'Messages' }).click();
+      await page.getByRole('button', { name: 'Send us a message' }).click();
+      await expect(page.getByLabel('Your message')).toHaveValue('Draft');
+    });
+
+    test.describe('on a phone, with a list of links to the panels', () => {
+      test.use({ viewport: { width: 375, height: 800 } });
+
+      test('each panel’s button opens its modal', async ({ page }) => {
+        await open(page, mode);
+        await expect(page.getByRole('tab')).toHaveCount(0);
+        await page.getByRole('button', { name: 'Send us a message' }).click();
+        await expect(page.getByRole('dialog', { name: 'Send us a message' })).toBeVisible();
+      });
+    });
   });
 }
