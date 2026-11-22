@@ -25,7 +25,7 @@ export type RootProps = Markup.RootProps;
 export function Root({ children, ...props }: RootProps) {
   return (
     <Primitives.Root
-      className="govuk-react-exit-this-page"
+      className="govuk-react-exit-this-page__root"
       activatedAnnouncement={props.activatedText}
       timedOutAnnouncement={props.timedOutText}
       pressTwoMoreTimesAnnouncement={props.pressTwoMoreTimesText}

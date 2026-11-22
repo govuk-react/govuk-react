@@ -17,7 +17,11 @@ export type RootProps = Primitives.RootProps;
 
 /** Holds the modal and the buttons that open and close it. */
 export function Root({ children, ...props }: RootProps) {
-  return <Primitives.Root {...props}>{children}</Primitives.Root>;
+  return (
+    <Primitives.Root {...props} className={clsx(`${name}__root`, props.className)}>
+      {children}
+    </Primitives.Root>
+  );
 }
 
 export type TriggerProps = Omit<ButtonProps, 'as' | 'href' | 'type'> & Pick<Primitives.TriggerProps, 'dialogId'>;

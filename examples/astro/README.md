@@ -27,7 +27,7 @@ The server keeps no state: each submission carries the whole form. The add, remo
 
 - [Islands](./src/pages/islands.astro): only components with a client directive hydrate, each as its own island. One has no directive, one has `client:idle` and one has `client:visible`.
 - [Without React](./src/pages/without-react.astro): components with no client directive, enhanced by their elements' scripts, inlined in the page's head with `InlineScript`. The page sends no React to the browser.
-- [Upgrade to React](./src/pages/upgrade.astro): an accordion enhanced by its inline script as soon as the page loads, then hydrated with `client:idle`. React counts the sections the user has read, including those opened before React loaded, which `onValueChange` reports with `beforeHydration`.
+- [Upgrade to React](./src/pages/upgrade.astro): an accordion enhanced by its inline script as soon as the page loads, then hydrated with `client:idle`. React counts the sections the user has read, including those still open when React loaded, which `onValueChange` reports with `beforeHydration`.
 
 ## Run it
 

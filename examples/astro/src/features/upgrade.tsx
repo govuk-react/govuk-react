@@ -5,7 +5,7 @@ import { guide } from './content';
 
 /**
  * An accordion that records which sections the user has read. The inline script opens and closes
- * sections before React hydrates; once it has, React is told about sections opened before then.
+ * sections before React hydrates; once it has, React is told about sections open by then.
  */
 export function ReadingAccordion() {
   const [read, setRead] = useState<string[]>([]);

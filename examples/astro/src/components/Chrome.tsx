@@ -34,7 +34,7 @@ export const hydration: Example[] = [
   },
 ];
 
-const navigation = [{ href: path('/'), text: 'Forms', pages: forms.map(({ href }) => href) }].concat(
+const navigation = [{ href: path('/'), text: 'Forms', pages: [path('/'), ...forms.map(({ href }) => href)] }].concat(
   hydration.map(({ href, text }) => ({ href, text, pages: [href] }))
 );
 

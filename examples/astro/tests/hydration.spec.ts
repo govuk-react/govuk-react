@@ -7,17 +7,25 @@ test.beforeEach(({ page }) => {
 });
 
 test('islands hydrate only the components with a client directive', async ({ page }) => {
+  const scripts: string[] = [];
+  page.on('request', (request) => {
+    if (request.resourceType() === 'script') scripts.push(request.url());
+  });
   await page.goto('islands');
-  await expect(page.locator('astro-island[client="idle"]:not([ssr])')).toHaveCount(1);
-  await expect(page.locator('astro-island[client="visible"][ssr]')).toHaveCount(1);
   await page.getByText('Help with nationality').click();
   await expect(page.getByText('We need to know your nationality')).toBeVisible();
+
+  await expect(page.locator('astro-island[client="idle"]:not([ssr])')).toHaveCount(1);
+  await expect(page.locator('astro-island[client="visible"][ssr]')).toHaveCount(1);
+  await expect(page.getByText('Apply online.')).toBeVisible();
+  expect(scripts.filter((url) => url.includes('guide-accordion'))).toEqual([]);
 
   await page.getByLabel('Can you provide more detail?').fill('Some detail');
   await expect(page.getByText('You have 189 characters remaining', { exact: true })).toBeVisible();
 
-  await page.getByRole('button', { name: 'How to apply' }).scrollIntoViewIfNeeded();
+  await page.getByText('We’ll email you within 5 working days').scrollIntoViewIfNeeded();
   await expect(page.locator('astro-island[client="visible"]:not([ssr])')).toHaveCount(1);
+  await expect(page.getByText('Apply online.')).toBeHidden();
   await page.getByRole('button', { name: 'How to apply' }).click();
   await expect(page.getByText('Apply online.')).toBeVisible();
 });
@@ -52,7 +60,9 @@ test('React takes over from the inline script, and keeps what the user did', asy
     await reactLoads;
     await route.continue();
   });
-  await page.goto('upgrade');
+  // Firefox holds the load event for the held scripts.
+  await page.goto('upgrade', { waitUntil: 'commit' });
+  await expect(page.locator('govuk-react-accordion[data-upgraded]')).toHaveCount(1);
 
   const howToApply = page.getByRole('button', { name: 'How to apply' });
   await howToApply.click();

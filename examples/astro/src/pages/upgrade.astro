@@ -17,8 +17,8 @@ import Layout from '../layouts/Layout.astro';
       <Heading size="l" headingLevel={1}>Upgrade to React</Heading>
       <Body>
         The accordion’s script is inlined in the page’s head, so the accordion works as soon as the HTML loads. It also
-        has <code>client:idle</code>, so React hydrates it later and counts the sections you’ve read, including any you
-        opened before React loaded.
+        has <code>client:idle</code>, so React hydrates it later and counts the sections you’ve read, including any still
+        open when React loaded.
       </Body>
       <ReadingAccordion client:idle />
     </GridColumn>
