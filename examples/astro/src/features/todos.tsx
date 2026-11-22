@@ -57,7 +57,7 @@ export async function submitTodos(formData: FormData): Promise<ActionResult> {
     return { success: false, result: report(submission, { error: { issues: result.error.issues } }) };
   }
 
-  return { success: true, redirectTo: path(`/?value=${encodeURIComponent(JSON.stringify(result.data))}`) };
+  return { success: true, redirectTo: path(`/forms?value=${encodeURIComponent(JSON.stringify(result.data))}`) };
 }
 
 export function TodosForm({ action, lastResult = null }: TodosFormProps) {

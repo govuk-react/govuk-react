@@ -77,7 +77,7 @@ export async function signup(formData: FormData): Promise<ActionResult> {
 
   return {
     success: true,
-    redirectTo: path(`/?value=${encodeURIComponent(JSON.stringify({ username: result.data.username }))}`),
+    redirectTo: path(`/forms?value=${encodeURIComponent(JSON.stringify({ username: result.data.username }))}`),
   };
 }
 

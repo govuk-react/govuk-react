@@ -34,9 +34,9 @@ export const hydration: Example[] = [
   },
 ];
 
-const navigation = [{ href: path('/'), text: 'Forms', pages: [path('/'), ...forms.map(({ href }) => href)] }].concat(
-  hydration.map(({ href, text }) => ({ href, text, pages: [href] }))
-);
+const navigation = [
+  { href: path('/forms'), text: 'Forms', pages: [path('/forms'), ...forms.map(({ href }) => href)] },
+].concat(hydration.map(({ href, text }) => ({ href, text, pages: [href] })));
 
 export function Chrome({ pathname, children }: { pathname: string; children: ReactNode }) {
   return (

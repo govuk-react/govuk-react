@@ -47,7 +47,7 @@ export async function login(formData: FormData): Promise<ActionResult> {
   const { email, remember } = submission.payload;
   return {
     success: true,
-    redirectTo: path(`/?value=${encodeURIComponent(JSON.stringify({ email, remember }))}`),
+    redirectTo: path(`/forms?value=${encodeURIComponent(JSON.stringify({ email, remember }))}`),
   };
 }
 

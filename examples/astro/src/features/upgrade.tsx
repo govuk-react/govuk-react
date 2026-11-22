@@ -24,7 +24,7 @@ export function ReadingAccordion() {
           setRead((previous) => [...new Set([...previous, ...open])]);
           if (beforeHydration) setBeforeReact(open);
         }}
-        sections={guide.map(({ value, heading, content }) => ({ value, heading, children: content }))}
+        sections={guide.map(({ value, heading, content }) => ({ value, heading, children: <Body>{content}</Body> }))}
       />
     </>
   );

@@ -66,8 +66,8 @@ for (const mode of modes) {
       await page.getByLabel('Remember me').check();
       await page.getByRole('button', { name: 'Sign in' }).click();
 
-      await expect(page).toHaveURL(/\/\?value=/);
-      await expect(page).toHaveTitle('Examples – Astro example');
+      await expect(page).toHaveURL(/\/forms\?value=/);
+      await expect(page).toHaveTitle('Forms – Astro example');
       const banner = page.getByRole('alert').filter({ hasText: 'Form submitted' });
       await expect(banner).toContainText('name@example.com');
       await expect(banner).toContainText('on');
@@ -100,7 +100,7 @@ for (const mode of modes) {
         await page.getByLabel('Confirm password').fill('correct horse');
         await page.getByRole('button', { name: 'Create account' }).click();
 
-        await expect(page).toHaveURL(/\/\?value=/);
+        await expect(page).toHaveURL(/\/forms\?value=/);
         await expect(page.getByRole('alert').filter({ hasText: 'Form submitted' })).toContainText('example1');
       });
     }
@@ -135,7 +135,7 @@ for (const mode of modes) {
 
       // Enter submits, rather than clicking the first task's Remove button.
       await page.getByLabel('Title').press('Enter');
-      await expect(page).toHaveURL(/\/\?value=/);
+      await expect(page).toHaveURL(/\/forms\?value=/);
       await expect(page.getByRole('alert').filter({ hasText: 'Form submitted' })).toContainText(
         '[{"content":"Eggs","completed":true},{"content":"Milk","completed":false}]'
       );

@@ -1,4 +1,5 @@
 import * as Accordion from 'govuk-react/accordion';
+import { Body } from 'govuk-react/body';
 import { guide } from './content';
 
 /**
@@ -12,7 +13,7 @@ export function GuideAccordion({ id }: { id: string }) {
       <Accordion.Composite
         id={id}
         rememberExpanded={false}
-        sections={guide.map(({ value, heading, content }) => ({ value, heading, children: content }))}
+        sections={guide.map(({ value, heading, content }) => ({ value, heading, children: <Body>{content}</Body> }))}
       />
     </div>
   );
