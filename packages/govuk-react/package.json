@@ -1,6 +1,6 @@
 {
   "name": "govuk-react",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "description": "govuk-react: React components for the GOV.UK Design System, built on govuk-frontend-react.",
   "type": "module",
   "types": "./dist/index.d.ts",
@@ -28,9 +28,9 @@
   },
   "dependencies": {
     "@govuk-react/icon-crown": "0.2.0",
-    "@govuk-react/primitives": "0.6.0",
+    "@govuk-react/primitives": "0.7.0",
     "clsx": "^2.1.1",
-    "govuk-frontend-react": "1.0.0-alpha.6"
+    "govuk-frontend-react": "1.0.0-alpha.7"
   },
   "peerDependencies": {
     "govuk-frontend": "~6.6.0",

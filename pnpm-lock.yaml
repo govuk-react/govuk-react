@@ -359,7 +359,7 @@ importers:
         specifier: ^1.21.3
         version: 1.21.3(zod@4.6.7)
       '@govuk-react/primitives':
-        specifier: 0.6.0
+        specifier: 0.7.0
         version: link:../../packages/primitives
       astro:
         specifier: ^7.4.13
@@ -368,7 +368,7 @@ importers:
         specifier: ~6.6.0
         version: 6.6.0
       govuk-react:
-        specifier: 1.0.0-alpha.5
+        specifier: 1.0.0-alpha.6
         version: link:../../packages/govuk-react
       react:
         specifier: ^19.3.1
@@ -451,14 +451,14 @@ importers:
         specifier: 0.2.0
         version: 0.2.0(react@19.3.1)
       '@govuk-react/primitives':
-        specifier: 0.6.0
+        specifier: 0.7.0
         version: link:../primitives
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
       govuk-frontend-react:
-        specifier: 1.0.0-alpha.6
-        version: 1.0.0-alpha.6(govuk-frontend@6.6.0)(react@19.3.1)
+        specifier: 1.0.0-alpha.7
+        version: 1.0.0-alpha.7(govuk-frontend@6.6.0)(react@19.3.1)
       react:
         specifier: '>=19.2'
         version: 19.3.1
@@ -4253,8 +4253,8 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
-  govuk-frontend-react@1.0.0-alpha.6:
-    resolution: {integrity: sha512-7Q5CKV4JSl41zrWKeAxfYJhVLhTb9NZy54gmKYs2qPy7Vp+ovJD8Pc1NsF44F5p0Zpd1K7bZXU3Wj+x9Pb+pVw==}
+  govuk-frontend-react@1.0.0-alpha.7:
+    resolution: {integrity: sha512-K1BITffoMq/4Ai4BXYXSnhsMGO18CdMu73B0+RWKteCdWtsZAtysdAaueP7OlSEF8QP/w/t4QLPFwHlE4EhjWw==}
     engines: {node: '>=20'}
     peerDependencies:
       govuk-frontend: ~6.6.0
@@ -10759,7 +10759,7 @@ snapshots:
 
   gopd@1.2.0: {}
 
-  govuk-frontend-react@1.0.0-alpha.6(govuk-frontend@6.6.0)(react@19.3.1):
+  govuk-frontend-react@1.0.0-alpha.7(govuk-frontend@6.6.0)(react@19.3.1):
     dependencies:
       '@govuk-react/icon-crown': 0.2.0(react@19.3.1)
       clsx: 2.1.1

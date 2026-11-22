@@ -1,5 +1,23 @@
 # govuk-react
 
+## 1.0.0-alpha.6
+
+### Minor Changes
+
+- Require React 19.2 or later.
+- Add `ButtonGroup`, for two or more buttons placed together.
+- `Accordion.SectionComposite` takes one `idPrefix` in place of `accordionId` and `index`.
+- Props that set a starting state are named `default*`: `expanded` on `Accordion.Section` and `Accordion.SectionComposite` is now `defaultExpanded`, and `selected` on `Tabs.ListItem`, `Tabs.Panel` and `Tabs.RadiosPanel` is now `defaultSelected`.
+- `Tabs.RadioTab` and `Tabs.RadioPanel` are now `Tabs.RadiosTab` and `Tabs.RadiosPanel`.
+- `CharacterCount` loses `maxWords`, which govuk-frontend has deprecated. Use `maxLength` with `countType="words"`.
+- `onQueryChange` on `SearchBox` gets a second argument, `{ beforeHydration }`, which is `true` for a query the user typed before React hydrated.
+- Updated dependency: `govuk-frontend-react@1.0.0-alpha.7`. `LanguageNavigation.ItemComposite` is now `ListItemComposite`, and every part and prop has a description.
+- Updated dependency: `@govuk-react/primitives@0.7.0`. The Details and Button primitives are exported flat as `Details` and `Button`, primitives read their latest handlers with `useEffectEvent`, and `asChild` parts no longer reattach a composed ref on every render.
+
+### Patch Changes
+
+- Update @govuk-react/icon-crown to 0.2.0.
+
 ## 1.0.0-alpha.5
 
 ### Minor Changes
