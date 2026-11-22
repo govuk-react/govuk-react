@@ -1,0 +1,24 @@
+---
+import frontendStyles from 'govuk-frontend/dist/govuk/govuk-frontend.min.css?url';
+import styles from 'govuk-react/styles.css?url';
+import { PrimitivesTogether } from '../../../../example-application/src/primitives-together';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Primitives together</title><link rel="icon" href="data:," /><link rel="stylesheet" href={frontendStyles} /><link rel="stylesheet" href={styles} /></head>
+  <body class="govuk-template__body">
+    <div class="govuk-width-container">
+      <!-- No client directive: the elements upgrade the server markup, and React never hydrates. -->
+      <PrimitivesTogether />
+    </div>
+    <script>
+      import '@govuk-react/primitives/accordion-element';
+      import '@govuk-react/primitives/character-count-element';
+      import '@govuk-react/primitives/choices-element';
+      import '@govuk-react/primitives/file-upload-element';
+      import '@govuk-react/primitives/modal-element';
+      import '@govuk-react/primitives/password-input-element';
+      import '@govuk-react/primitives/tabs-element';
+    </script>
+  </body>
+</html>

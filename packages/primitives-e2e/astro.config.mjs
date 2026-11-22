@@ -10,6 +10,8 @@ export default defineConfig({
   integrations: [react()],
   vite: {
     build: { minify: devReact ? false : 'esbuild' },
+    // govuk-frontend's CSS has old Internet Explorer hacks that LightningCSS rejects.
+    css: { lightningcss: { errorRecovery: true } },
     ...(devReact ? { define: { 'process.env.NODE_ENV': '"development"' } } : {}),
   },
 });
