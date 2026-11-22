@@ -9,18 +9,9 @@ import * as NotificationBanner from 'govuk-react/notification-banner';
 import * as SummaryList from 'govuk-react/summary-list';
 import { forms } from '../components/Chrome';
 import Layout from '../layouts/Layout.astro';
+import { takeSubmitted } from '../submitted';
 
-function parseJson(value: string | null): Record<string, unknown> | null {
-  if (value === null) return null;
-  try {
-    const parsed: unknown = JSON.parse(value);
-    return parsed && typeof parsed === 'object' ? Object.fromEntries(Object.entries(parsed)) : null;
-  } catch {
-    return null;
-  }
-}
-
-const value = parseJson(Astro.url.searchParams.get('value'));
+const value = takeSubmitted(Astro.cookies);
 ---
 
 <Layout title="Forms">

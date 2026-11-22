@@ -7,8 +7,7 @@ import { GridRow } from 'govuk-react/grid-row';
 import { Heading } from 'govuk-react/heading';
 import { InputField } from 'govuk-react/input';
 import * as PasswordInput from 'govuk-react/password-input';
-import type { ActionResult } from '../action-result';
-import { path } from '../path';
+import type { HandlerResult } from '../action-result';
 import { fieldProps } from '../components/fields';
 import { FormErrorSummary, useFailedSubmits } from '../components/FormErrorSummary';
 
@@ -33,7 +32,7 @@ export function validateLogin(value: Record<string, unknown>): FormError | null 
   return Object.keys(fieldErrors).length > 0 ? { formErrors: [], fieldErrors } : null;
 }
 
-export async function login(formData: FormData): Promise<ActionResult> {
+export async function login(formData: FormData): Promise<HandlerResult> {
   const submission = parseSubmission(formData);
   const error = validateLogin(submission.payload);
 
@@ -45,10 +44,7 @@ export async function login(formData: FormData): Promise<ActionResult> {
   }
 
   const { email, remember } = submission.payload;
-  return {
-    success: true,
-    redirectTo: path(`/forms?value=${encodeURIComponent(JSON.stringify({ email, remember }))}`),
-  };
+  return { success: true, value: { email, remember } };
 }
 
 export function LoginForm({ action, lastResult = null }: LoginFormProps) {
