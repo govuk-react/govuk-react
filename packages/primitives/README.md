@@ -8,7 +8,7 @@ Each primitive:
 - upgrades to the full WAI-ARIA pattern when its custom element is defined, with or without React
 - adds React props for its state once hydrated, where it has any, such as `value` and `onValueChange`, or `open` and `onOpenChange`
 - reports a state change through `onValueChange` or `onOpenChange`, with the new state and `{ beforeHydration }`, rather than a native event such as `onToggle`. A change the user made before hydration is reported once React hydrates, when there is no event to pass. Native event props still pass through, for changes after hydration
-- takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element, except Button's
+- takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element
 - names its parts and props alike: the control that operates it is `Trigger`, and a text prop ends in `Text` when it's shown, `Label` when it's an accessible name and `Announcement` when only screen readers hear it
 
 Import each primitive from its own path, such as `@govuk-react/primitives/tabs`. Each path defines its element when imported.
@@ -375,18 +375,18 @@ A plain link to `#id` already scrolls to its target, but:
 ## Button
 
 ```tsx
-import * as Button from '@govuk-react/primitives/button';
+import { Button } from '@govuk-react/primitives/button';
 
-<Button.Root preventDoubleClick>Save and continue</Button.Root>;
+<Button preventDoubleClick>Save and continue</Button>;
 
-<Button.Root asChild>
+<Button asChild>
   <a href="/start" role="button">
     Start now
   </a>
-</Button.Root>;
+</Button>;
 ```
 
-With `preventDoubleClick`, a second click within a second of the first is ignored, so a form isn't submitted twice. The click is stopped before React hears it, so `onClick` doesn't run twice either. Space activates a link with `role="button"`, as it does a button. Unlike the other primitives there's no wrapper element, which would change a button group's layout: importing the module adds one click and one keydown listener to the document, for any element marked by `Root`. Without React, mark buttons with `data-button`.
+With `preventDoubleClick`, a second click within a second of the first is ignored, so a form isn't submitted twice. The click is stopped before React hears it, so `onClick` doesn't run twice either. Space activates a link with `role="button"`, as it does a button. Unlike the other primitives there's no wrapper element, which would change a button group's layout: importing the module adds one click and one keydown listener to the document, for any element `Button` marks. Without React, mark buttons with `data-button`.
 
 ## Exit this page
 

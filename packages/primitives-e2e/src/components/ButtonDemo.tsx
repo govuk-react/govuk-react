@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
-import * as Button from '@govuk-react/primitives/button';
+import { Button } from '@govuk-react/primitives/button';
 
 /** A form whose submit button prevents double clicks, a button that doesn't, and a link button. */
 export default function ButtonDemo({ id }: { id: string }) {
@@ -20,15 +20,15 @@ export default function ButtonDemo({ id }: { id: string }) {
           setSubmits((count) => count + 1);
         }}
       >
-        <Button.Root preventDoubleClick>Save and continue</Button.Root>
-        <Button.Root type="button" onClick={() => setClicks((count) => count + 1)}>
+        <Button preventDoubleClick>Save and continue</Button>
+        <Button type="button" onClick={() => setClicks((count) => count + 1)}>
           Add another
-        </Button.Root>
-        <Button.Root asChild>
+        </Button>
+        <Button asChild>
           <a href={`#${id}-linked`} role="button" draggable="false">
             Link button
           </a>
-        </Button.Root>
+        </Button>
       </form>
       <p data-testid="submits">{submits}</p>
       <p data-testid="clicks">{clicks}</p>

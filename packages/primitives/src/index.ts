@@ -9,7 +9,7 @@ export * as CharacterCountText from './character-count-text/index.js';
 export * as Choices from './choices/index.js';
 export * as AutoFocus from './auto-focus/index.js';
 export * as FocusLinks from './focus-links/index.js';
-export * as Button from './button/index.js';
+export { Button, type ButtonProps } from './button/index.js';
 export * as ExitThisPage from './exit-this-page/index.js';
 export * as FileUpload from './file-upload/index.js';
 export * as Autocomplete from './autocomplete/index.js';
