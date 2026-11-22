@@ -5,38 +5,13 @@ import { GridRow } from 'govuk-react/grid-row';
 import { Heading } from 'govuk-react/heading';
 import { Link } from 'govuk-react/link';
 import { List } from 'govuk-react/list';
-import * as NotificationBanner from 'govuk-react/notification-banner';
-import * as SummaryList from 'govuk-react/summary-list';
 import { forms, hydration } from '../components/Chrome';
 import Layout from '../layouts/Layout.astro';
-
-function parseJson(value: string | null): Record<string, unknown> | null {
-  if (value === null) return null;
-  try {
-    const parsed: unknown = JSON.parse(value);
-    return parsed && typeof parsed === 'object' ? Object.fromEntries(Object.entries(parsed)) : null;
-  } catch {
-    return null;
-  }
-}
-
-const value = parseJson(Astro.url.searchParams.get('value'));
 ---
 
 <Layout title="Examples">
   <GridRow>
     <GridColumn width="two-thirds">
-      {
-        value && (
-          <NotificationBanner.Composite success heading="Form submitted">
-            <SummaryList.Root>
-              {Object.entries(value).map(([key, item]) => (
-                <SummaryList.RowComposite term={key} value={typeof item === 'object' ? JSON.stringify(item) : String(item ?? '')} />
-              ))}
-            </SummaryList.Root>
-          </NotificationBanner.Composite>
-        )
-      }
       <Heading size="l" headingLevel={1}>govuk-react with Astro</Heading>
       <Body>These pages are rendered on the server by Astro, and work before and without JavaScript.</Body>
       <Heading size="m" headingLevel={2}>Forms</Heading>

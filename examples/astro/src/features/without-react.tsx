@@ -11,7 +11,7 @@ export function WithoutReact() {
       <Accordion.Composite
         id="without-react-guide"
         rememberExpanded={false}
-        sections={guide.map(({ value, heading, content }) => ({ value, heading, children: content }))}
+        sections={guide.map(({ value, heading, content }) => ({ value, heading, children: <Body>{content}</Body> }))}
       />
       <Tabs.Composite
         title="Contents"

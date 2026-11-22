@@ -41,7 +41,7 @@ export async function signupWithAsyncSchema(formData: FormData): Promise<ActionR
 
   return {
     success: true,
-    redirectTo: path(`/?value=${encodeURIComponent(JSON.stringify({ username: result.data.username }))}`),
+    redirectTo: path(`/forms?value=${encodeURIComponent(JSON.stringify({ username: result.data.username }))}`),
   };
 }
 
