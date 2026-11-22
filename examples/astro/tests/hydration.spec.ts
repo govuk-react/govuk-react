@@ -67,7 +67,8 @@ test('React takes over from the inline script, and keeps what the user did', asy
   const howToApply = page.getByRole('button', { name: 'How to apply' });
   await howToApply.click();
   await expect(howToApply).toHaveAttribute('aria-expanded', 'true');
-  await expect(page.getByText('You’ve read 0 of 3 sections.')).toBeVisible();
+  await expect(page.getByText('You’ve read 0 of 3 sections.')).toHaveCount(1);
+  await expect(page.getByText('You’ve read 0 of 3 sections.')).toBeHidden();
 
   loadReact();
   await expect(page.locator('astro-island:not([ssr])')).toHaveCount(1);
