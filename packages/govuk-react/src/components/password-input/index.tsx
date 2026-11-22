@@ -54,6 +54,7 @@ export { Wrapper, type WrapperProps } from 'govuk-frontend-react/password-input'
 
 export type InputProps = Markup.InputProps;
 
+/** The password input. */
 export function Input(props: InputProps) {
   return (
     <Primitives.Input asChild>

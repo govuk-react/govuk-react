@@ -27,6 +27,7 @@ export type LabelProps = ComponentProps<'label'> & {
   visuallyHidden?: boolean;
 };
 
+/** The label of the search input. */
 export function Label({ size, visuallyHidden, className, children, ...props }: LabelProps) {
   return (
     <label
@@ -51,6 +52,7 @@ export function Wrapper({ className, ...props }: WrapperProps) {
 
 export type InputProps = ComponentProps<'input'>;
 
+/** The search input. */
 export function Input({ className, type = 'search', ...props }: InputProps) {
   return (
     <input type={type} enterKeyHint="search" className={clsx('govuk-input', `${name}__input`, className)} {...props} />

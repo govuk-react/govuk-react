@@ -38,6 +38,7 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
 // What the status starts with, so the element only changes text React rendered.
 const InitialStatus = createContext<string>(defaults['no-file-chosen-text']);
 
+/** A file input shown as a button and a drop zone. Without JavaScript the native file input shows. */
 export function Root({
   noFileChosenText,
   multipleFilesChosenText,

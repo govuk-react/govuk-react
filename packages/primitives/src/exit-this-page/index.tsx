@@ -35,6 +35,7 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
   overlayClass?: string;
 };
 
+/** A button that hides the page and goes to another one, also reached by pressing Shift 3 times. Without JavaScript the button is a plain link. */
 export function Root({
   activatedAnnouncement,
   timedOutAnnouncement,

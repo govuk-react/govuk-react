@@ -23,6 +23,7 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
 
 const isChoices = (element: HTMLElement): element is ChoicesElement => 'sync' in element;
 
+/** Radios or checkboxes that reveal content when one is checked, and checkboxes that uncheck the others. */
 export function Root({ upgradedClass, hiddenConditionalClass, ...props }: RootProps) {
   const element = useRef<HTMLElement>(null);
 

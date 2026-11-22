@@ -55,6 +55,7 @@ export type InputProps = Markup.InputProps & {
   controls?: string;
 };
 
+/** The radio input. */
 export function Input({ controls, ...props }: InputProps) {
   return (
     <Primitives.Input asChild controls={controls}>
@@ -78,6 +79,7 @@ export type ItemCompositeProps = Markup.ItemCompositeProps;
 
 const isSet = (node: React.ReactNode) => node !== undefined && node !== null && node !== false && node !== '';
 
+/** A radio with its label, hint and conditional content. */
 export function ItemComposite({
   id,
   label,

@@ -54,6 +54,7 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
 
 const isAutocomplete = (element: HTMLElement): element is AutocompleteElement => 'query' in element;
 
+/** An input with a list of options that match what the user types. Without JavaScript it’s a plain input. */
 export function Root({
   minLength,
   filter,

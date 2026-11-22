@@ -57,6 +57,7 @@ const InitialMessage = createContext<string | undefined>(undefined);
 
 const isCharacterCount = (element: HTMLElement): element is CharacterCountElement => 'update' in element;
 
+/** Counts what the user types in its `Input` against a limit. Without JavaScript the description shows and the counts are hidden. */
 export function Root({
   maxLength,
   countType = 'length',

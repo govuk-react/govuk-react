@@ -87,6 +87,7 @@ export type SectionProps = Omit<Markup.SectionProps, 'expanded'> & {
   defaultExpanded?: boolean;
 };
 
+/** A section of the accordion: a header and the content it shows and hides. */
 export function Section({ value, defaultExpanded, ...props }: SectionProps) {
   const context = useContext(AccordionContext);
   const isExpanded = defaultExpanded ?? context.open?.includes(value) ?? false;

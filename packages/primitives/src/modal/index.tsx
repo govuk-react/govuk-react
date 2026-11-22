@@ -43,6 +43,7 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
   dialogId?: string;
 };
 
+/** A modal dialog with the buttons that open and close it. */
 export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...props }: RootProps) {
   const generatedId = useId();
   const dialogId = dialogIdProp ?? generatedId;

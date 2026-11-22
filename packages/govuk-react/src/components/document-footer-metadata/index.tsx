@@ -11,12 +11,14 @@ export function Root({ className, ...props }: RootProps) {
 
 export type TermProps = ComponentProps<'dt'>;
 
+/** The label of an item, such as “From”. */
 export function Term({ className, ...props }: TermProps) {
   return <dt className={clsx('govuk-!-margin-bottom-1', className)} {...props} />;
 }
 
 export type DefinitionProps = ComponentProps<'dd'>;
 
+/** A value of an item. */
 export function Definition({ className, ...props }: DefinitionProps) {
   return (
     <dd

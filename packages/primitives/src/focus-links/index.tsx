@@ -14,6 +14,7 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
   focusedClass?: string;
 };
 
+/** Makes links inside it to a part of the same page move focus there. */
 export function Root({ focusedClass, ...props }: RootProps) {
   return React.createElement(tagName, { ...props, 'focused-class': focusedClass });
 }
