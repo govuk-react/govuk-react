@@ -54,11 +54,14 @@ for (const mode of modes) {
       await expect(page.getByText('A passport or photocard driving licence.')).toBeVisible();
 
       await page.getByRole('button', { name: 'Upload a document' }).click();
-      await page.getByRole('dialog').locator('input[type="file"]').setInputFiles({
-        name: 'passport.pdf',
-        mimeType: 'application/pdf',
-        buffer: Buffer.from('%PDF-1.4'),
-      });
+      await page
+        .getByRole('dialog')
+        .locator('input[type="file"]')
+        .setInputFiles({
+          name: 'passport.pdf',
+          mimeType: 'application/pdf',
+          buffer: Buffer.from('%PDF-1.4'),
+        });
       await expect(page.getByRole('dialog')).toContainText('passport.pdf');
       await page.getByRole('dialog').getByRole('button', { name: 'Upload', exact: true }).click();
       await expect(page.getByRole('dialog')).toBeHidden();
