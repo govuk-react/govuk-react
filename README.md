@@ -126,7 +126,7 @@ See [MIGRATION.md](MIGRATION.md).
 
 ## Acknowledgements
 
-We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing and it is awesome, you should too!
+We use [Chromatic](https://www.chromatic.com/) for visual regression testing.
 
 <a href="https://www.netlify.com">
   <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deploys by Netlify" />
