@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as GovUK from 'govuk-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 const Home: React.FC = () => (
   <>

@@ -25,6 +25,10 @@ const config: StorybookConfig = {
         },
       ],
     };
+    viteConfig.css = {
+      ...viteConfig.css,
+      lightningcss: { ...viteConfig.css?.lightningcss, errorRecovery: true },
+    };
     return viteConfig;
   },
 };

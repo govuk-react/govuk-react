@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import type { JSONSchema7 } from 'json-schema';
-import type { FormValidation, ISubmitEvent } from '@rjsf/core';
+import type { IChangeEvent } from '@rjsf/core';
+import type { FieldValidation, FormValidation } from '@rjsf/utils';
 
 import React, { useCallback, useState } from 'react';
 import * as GovUK from 'govuk-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 import Results from './components/results';
 import {
@@ -59,9 +60,9 @@ const formSchema: JSONSchema7 = {
           title: 'What animal is your pet',
           description: 'A cat for example',
           oneOf: [
-            { const: 'cat', type: 'string', title: 'Cat' },
-            { const: 'other-feline', type: 'string', title: 'Other feline' },
-            { const: 'other-non-feline', type: 'string', title: 'Other non feline' },
+            { enum: ['cat'], type: 'string', title: 'Cat' },
+            { enum: ['other-feline'], type: 'string', title: 'Other feline' },
+            { enum: ['other-non-feline'], type: 'string', title: 'Other non feline' },
           ],
         },
         petPhoto: {
@@ -74,8 +75,8 @@ const formSchema: JSONSchema7 = {
           type: 'string',
           title: 'Do you have more than one pet?',
           oneOf: [
-            { const: 'yes', type: 'string', title: 'Yes' },
-            { const: 'no', type: 'string', title: 'No' },
+            { enum: ['yes'], type: 'string', title: 'Yes' },
+            { enum: ['no'], type: 'string', title: 'No' },
           ],
         },
       },
@@ -99,18 +100,6 @@ const uiSchema = {
   },
 };
 
-type FieldValidation = FormValidation[string];
-
-const isFieldValidation = (value: unknown): value is FieldValidation =>
-  typeof value === 'object' && value !== null && 'addError' in value && typeof value.addError === 'function';
-
-/** rjsf's types only describe one level of nesting, so look up each section's fields at runtime. */
-const fieldErrors = (errors: FormValidation, section: 0 | 1, field: string) => {
-  const sectionErrors = errors[section];
-  const value: unknown = Object.getOwnPropertyDescriptor(sectionErrors, field)?.value;
-  return isFieldValidation(value) ? value : undefined;
-};
-
 const conditionalAddError = <T,>(
   value: T,
   validator: (value: T) => string | undefined,
@@ -122,14 +111,15 @@ const conditionalAddError = <T,>(
   }
 };
 
-const validate = (formData: SubmittedData, errors: FormValidation) => {
-  conditionalAddError(formData[0].nationality, validateNationality, fieldErrors(errors, 0, 'nationality'));
-  conditionalAddError(formData[0].firstName, validateFirstName, fieldErrors(errors, 0, 'firstName'));
-  conditionalAddError(formData[0].description, validateDescription, fieldErrors(errors, 0, 'description'));
-  conditionalAddError(dobStringToObj(formData[0].dob), validateDateOfBirth, fieldErrors(errors, 0, 'dob'));
-  conditionalAddError(formData[1].hasMultiplePets, validateMultiplePets, fieldErrors(errors, 1, 'hasMultiplePets'));
-  conditionalAddError(formData[1].animal, validateAnimal, fieldErrors(errors, 1, 'animal'));
-  conditionalAddError(formData[1].petPhoto, validatePetPhotoString, fieldErrors(errors, 1, 'petPhoto'));
+const validate = (formData: SubmittedData | undefined, errors: FormValidation<SubmittedData>) => {
+  if (!formData) return errors;
+  conditionalAddError(formData[0].nationality, validateNationality, errors[0]?.nationality);
+  conditionalAddError(formData[0].firstName, validateFirstName, errors[0]?.firstName);
+  conditionalAddError(formData[0].description, validateDescription, errors[0]?.description);
+  conditionalAddError(dobStringToObj(formData[0].dob), validateDateOfBirth, errors[0]?.dob);
+  conditionalAddError(formData[1].hasMultiplePets, validateMultiplePets, errors[1]?.hasMultiplePets);
+  conditionalAddError(formData[1].animal, validateAnimal, errors[1]?.animal);
+  conditionalAddError(formData[1].petPhoto, validatePetPhotoString, errors[1]?.petPhoto);
   return errors;
 };
 
@@ -152,8 +142,8 @@ const ReactJSONSchemaForm: React.FC = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState<SubmittedData>();
   const handleFormSubmit = useCallback(
-    ({ formData }: ISubmitEvent<SubmittedData>) => {
-      if (isSubmitting) return;
+    ({ formData }: IChangeEvent<SubmittedData>) => {
+      if (isSubmitting || !formData) return;
       setIsSubmitting(true);
       setTimeout(() => {
         // simulate async submission
@@ -176,7 +166,7 @@ const ReactJSONSchemaForm: React.FC = () => {
             schema={formSchema}
             uiSchema={uiSchema}
             onSubmit={handleFormSubmit}
-            validate={validate}
+            customValidate={validate}
             onError={() => null}
           >
             <GovUK.Button type="submit">Submit</GovUK.Button>

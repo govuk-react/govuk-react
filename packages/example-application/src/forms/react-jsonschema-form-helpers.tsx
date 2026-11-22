@@ -1,12 +1,20 @@
 /* eslint-disable react/prop-types */
 
-import type { FormProps, FieldTemplateProps, AjvError, ObjectFieldTemplateProps, FieldProps } from '@rjsf/core';
+import type { FormProps } from '@rjsf/core';
+import type {
+  ErrorListProps,
+  FieldProps,
+  FieldTemplateProps,
+  ObjectFieldTemplateProps,
+  RJSFValidationError,
+} from '@rjsf/utils';
 
 // TODO: extract these reusable parts in to a published module e.g. @govuk-react/json-schema-form
 
 import React, { useCallback, useState } from 'react';
 import * as GovUK from 'govuk-react';
 import BaseForm from '@rjsf/core';
+import validator from '@rjsf/validator-ajv8';
 import type { JSONSchema7Definition } from 'json-schema';
 
 import DateOfBirth, { type DateValue } from './components/date-of-birth';
@@ -20,27 +28,28 @@ export const dobStringToObj: (dob: string) => { year?: number; month?: number; d
   return { year: parseInt(year, 10), month: parseInt(month, 10), day: parseInt(day, 10) };
 };
 
-type InputProps = Pick<FieldProps, 'schema' | 'uiSchema' | 'onChange' | 'rawErrors' | 'name'>;
+type InputProps = Pick<FieldProps, 'schema' | 'uiSchema' | 'onChange' | 'rawErrors' | 'name' | 'fieldPathId'>;
 
+/** Options use a single-value enum rather than const, as rjsf's custom validation would otherwise default to the first. */
 const options = (definitions: JSONSchema7Definition[] = []) =>
   definitions.flatMap((definition) =>
-    typeof definition === 'boolean' ? [] : [{ value: String(definition.const), title: definition.title }]
+    typeof definition === 'boolean' ? [] : [{ value: String(definition.enum?.[0]), title: definition.title }]
   );
 
-const DateField = ({ name, onChange, rawErrors }: InputProps) => {
+const DateField = ({ name, onChange, rawErrors, fieldPathId }: InputProps) => {
   const [value, setValue] = useState<DateValue>({ day: '', month: '', year: '' });
   const handleChange = useCallback(
     (newValue: DateValue) => {
       setValue(newValue);
-      return onChange(dobObjToString(newValue));
+      return onChange(dobObjToString(newValue), fieldPathId.path);
     },
-    [onChange]
+    [onChange, fieldPathId]
   );
 
   return <DateOfBirth name={name} value={value} onChange={handleChange} errorMessage={rawErrors?.[0]} />;
 };
 
-const AnyOf: React.FC<FieldProps> = ({ name, schema, formData = [], onChange, rawErrors }) => (
+const AnyOf: React.FC<FieldProps> = ({ name, schema, formData = [], onChange, rawErrors, fieldPathId }) => (
   <GovUK.Checkboxes.Field idPrefix={name} legend={schema.title} errorMessage={rawErrors?.[0]}>
     {(Array.isArray(schema?.items) ? schema.items : [schema?.items]).map(
       (items) =>
@@ -57,7 +66,8 @@ const AnyOf: React.FC<FieldProps> = ({ name, schema, formData = [], onChange, ra
                 hint={item.description}
                 onChange={(e) =>
                   onChange(
-                    e.target.checked ? formData.concat(item.const) : formData.filter((i: unknown) => i !== item.const)
+                    e.target.checked ? formData.concat(item.const) : formData.filter((i: unknown) => i !== item.const),
+                    fieldPathId.path
                   )
                 }
               />
@@ -67,7 +77,7 @@ const AnyOf: React.FC<FieldProps> = ({ name, schema, formData = [], onChange, ra
   </GovUK.Checkboxes.Field>
 );
 
-const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }: InputProps) => {
+const OneOf = ({ schema, uiSchema, name, onChange, rawErrors, fieldPathId }: InputProps) => {
   if (uiSchema?.['ui:widget'] === 'radio') {
     return (
       <GovUK.Radios.Field idPrefix={name} legend={schema.title} errorMessage={rawErrors?.[0]}>
@@ -78,7 +88,7 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }: InputProps) => {
             value={item.value}
             name={name}
             label={item.title}
-            onChange={(e) => onChange(e.target.value)}
+            onChange={(e) => onChange(e.target.value, fieldPathId.path)}
           />
         ))}
       </GovUK.Radios.Field>
@@ -91,7 +101,7 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }: InputProps) => {
       label={schema.title}
       hint={schema.description}
       errorMessage={rawErrors?.[0]}
-      onChange={(e) => onChange(e.target.value)}
+      onChange={(e) => onChange(e.target.value, fieldPathId.path)}
     >
       <option value="">Please select...</option>
       {options(schema.oneOf).map((item) => (
@@ -104,58 +114,51 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }: InputProps) => {
 };
 
 const handleFilesChanged =
-  (onChange: InputProps['onChange']) =>
+  (onChange: InputProps['onChange'], path: InputProps['fieldPathId']['path']) =>
   ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(undefined);
+    onChange(undefined, path);
     const file = target.files?.[0];
     if (file) {
       const reader = new FileReader();
-      reader.onload = () => onChange(reader.result);
+      reader.onload = () => onChange(reader.result, path);
       reader.readAsDataURL(file);
     }
   };
 
-const FileUpload = ({ rawErrors, schema, onChange, name }: InputProps) => (
+const FileUpload = ({ rawErrors, schema, onChange, name, fieldPathId }: InputProps) => (
   <GovUK.FileUploadField
     id={name}
     name={name}
     label={schema.title}
     hint={schema.description}
     errorMessage={rawErrors?.[0]}
-    onChange={handleFilesChanged(onChange)}
+    onChange={handleFilesChanged(onChange, fieldPathId.path)}
   />
 );
 
-const TextArea = ({ schema, rawErrors, onChange, name }: InputProps) => (
+const TextArea = ({ schema, rawErrors, onChange, name, fieldPathId }: InputProps) => (
   <GovUK.TextareaField
     id={name}
     name={name}
     label={schema.title}
     hint={schema.description}
     errorMessage={rawErrors?.[0]}
-    onChange={(e) => onChange(e.target.value)}
+    onChange={(e) => onChange(e.target.value, fieldPathId.path)}
   />
 );
 
-const InputField = ({ schema, rawErrors, onChange, name }: InputProps) => (
+const InputField = ({ schema, rawErrors, onChange, name, fieldPathId }: InputProps) => (
   <GovUK.InputField
     id={name}
     name={name}
     label={schema.title}
     hint={schema.description}
     errorMessage={rawErrors?.[0]}
-    onChange={(e) => onChange(e.target.value)}
+    onChange={(e) => onChange(e.target.value, fieldPathId.path)}
   />
 );
 
-// interface StringFieldProps {
-//   uiSchema: any;
-//   schema: any;
-//   onChange: (value: any) => void;
-//   rawErrors?: string[];
-//   name: string;
-// }
-const StringField: React.FC<FieldProps> = ({ uiSchema, schema, onChange, rawErrors, name }) => {
+const StringField: React.FC<FieldProps> = ({ uiSchema, schema, onChange, rawErrors, name, fieldPathId }) => {
   let Component;
   if (uiSchema?.['ui:widget'] === 'textarea') {
     Component = TextArea;
@@ -169,17 +172,26 @@ const StringField: React.FC<FieldProps> = ({ uiSchema, schema, onChange, rawErro
     Component = InputField;
   }
 
-  return <Component uiSchema={uiSchema} schema={schema} onChange={onChange} rawErrors={rawErrors} name={name} />;
+  return (
+    <Component
+      uiSchema={uiSchema}
+      schema={schema}
+      onChange={onChange}
+      rawErrors={rawErrors}
+      name={name}
+      fieldPathId={fieldPathId}
+    />
+  );
 };
 
-const BooleanField: React.FC<FieldProps> = ({ name, schema, onChange }) => (
+const BooleanField: React.FC<FieldProps> = ({ name, schema, onChange, fieldPathId }) => (
   <GovUK.Checkboxes.Root>
     <GovUK.Checkboxes.ItemComposite
       id={name}
       name={name}
       label={schema.title}
       hint={schema.description}
-      onChange={(e) => onChange(e.target.checked)}
+      onChange={(e) => onChange(e.target.checked, fieldPathId.path)}
     />
   </GovUK.Checkboxes.Root>
 );
@@ -190,23 +202,15 @@ export const customFields = {
   BooleanField,
 };
 
-// Schema errors have a property such as ".firstName". Custom validation errors only have a stack, "firstName: message".
-const errorFieldAndMessage = ({ property, message, stack }: AjvError) => {
-  if (property) return { field: property.replace(/^\./, ''), message };
-  const separator = stack.indexOf(': ');
-  return { field: stack.slice(0, separator), message: stack.slice(separator + 2) };
-};
+const errorField = ({ property = '' }: RJSFValidationError) => property.split('.').pop();
 
-export const ErrorListTemplate: React.FC<{ errors: AjvError[] }> = ({ errors }) => (
+export const ErrorListTemplate: React.FC<ErrorListProps> = ({ errors }) => (
   <GovUK.ErrorSummary.Composite title="Error summary" description="Please address the following issues">
-    {errors.map((error) => {
-      const { field, message } = errorFieldAndMessage(error);
-      return (
-        <GovUK.ErrorSummary.ListItemComposite key={error.stack} href={`#${field}`}>
-          {message}
-        </GovUK.ErrorSummary.ListItemComposite>
-      );
-    })}
+    {errors.map((error) => (
+      <GovUK.ErrorSummary.ListItemComposite key={error.stack} href={`#${errorField(error)}`}>
+        {error.message}
+      </GovUK.ErrorSummary.ListItemComposite>
+    ))}
   </GovUK.ErrorSummary.Composite>
 );
 
@@ -220,12 +224,11 @@ export const ObjectFieldTemplate: React.FC<ObjectFieldTemplateProps> = ({ title,
 
 export const CustomFieldTemplate: React.FC<FieldTemplateProps> = ({ children }) => <>{children}</>;
 
-export const Form = <T,>(props: FormProps<T>) => (
+export const Form = <T,>(props: Omit<FormProps<T>, 'validator'>) => (
   <BaseForm<T>
+    validator={validator}
     fields={customFields}
-    FieldTemplate={CustomFieldTemplate}
-    ObjectFieldTemplate={ObjectFieldTemplate}
-    ErrorList={ErrorListTemplate}
+    templates={{ FieldTemplate: CustomFieldTemplate, ObjectFieldTemplate, ErrorListTemplate }}
     {...props}
   />
 );
