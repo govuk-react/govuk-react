@@ -10,21 +10,15 @@ import { GridColumn } from 'govuk-react/grid-column';
 import { GridRow } from 'govuk-react/grid-row';
 import { Heading } from 'govuk-react/heading';
 import { InputField } from 'govuk-react/input';
-import * as NotificationBanner from 'govuk-react/notification-banner';
 import { VisuallyHidden } from 'govuk-react/visually-hidden';
 import { z } from 'zod';
 import type { ActionResult } from '../action-result';
 import { fieldProps } from '../components/fields';
 import { FormErrorSummary, useFailedSubmits } from '../components/FormErrorSummary';
 
-export type TodosValue = z.infer<typeof todosSchema>;
-
 type TodosFormProps = {
   action: string;
-  id?: string;
-  defaultValue: TodosValue | null;
   lastResult?: SubmissionResult<string[]> | null;
-  saved?: boolean;
 };
 
 const todosSchema = coerceFormValue(
@@ -47,29 +41,7 @@ const todosSchema = coerceFormValue(
   })
 );
 
-function createInMemoryStore<Type>() {
-  const stores: Record<string, Type | null> = {};
-
-  return {
-    async getValue(id?: string) {
-      await new Promise((resolve) => setTimeout(resolve, Math.random() * 150));
-      return stores[id ?? ''] ?? null;
-    },
-    async setValue(value: Type, id?: string) {
-      await new Promise((resolve) => setTimeout(resolve, Math.random() * 1000));
-      stores[id ?? ''] = value;
-    },
-  };
-}
-
-const todosStore = createInMemoryStore<TodosValue>();
-
-export async function getTodos(id?: string) {
-  return todosStore.getValue(id);
-}
-
 export async function submitTodos(formData: FormData): Promise<ActionResult> {
-  const id = formData.get('id')?.toString() || undefined;
   const submission = parseSubmission(formData);
   const { intent, targetValue } = resolveSubmission(submission);
 
@@ -84,16 +56,14 @@ export async function submitTodos(formData: FormData): Promise<ActionResult> {
     return { success: false, result: report(submission, { error: { issues: result.error.issues } }) };
   }
 
-  await todosStore.setValue(result.data, id);
-
-  return { success: true, result: report(submission, { reset: true, targetValue: result.data }) };
+  return { success: true, redirectTo: `/?value=${encodeURIComponent(JSON.stringify(result.data))}` };
 }
 
-export function TodosForm({ action, id, defaultValue, lastResult, saved }: TodosFormProps) {
+export function TodosForm({ action, lastResult = null }: TodosFormProps) {
   const failedSubmits = useFailedSubmits();
   const { form, fields, intent } = useForm(todosSchema, {
     lastResult,
-    defaultValue: defaultValue ?? { title: '', tasks: [{ content: '', completed: false }] },
+    defaultValue: { title: '', tasks: [{ content: '', completed: false }] },
     onError: failedSubmits.onError,
   });
   const tasks = fields.tasks.getFieldList();
@@ -101,7 +71,6 @@ export function TodosForm({ action, id, defaultValue, lastResult, saved }: Todos
   return (
     <GridRow>
       <GridColumn width="two-thirds">
-        {saved && <NotificationBanner.Composite success heading="Your tasks have been saved" />}
         <FormErrorSummary form={form} failedSubmits={failedSubmits.count} />
         <Heading size="l" headingLevel={1}>
           Tasks
@@ -113,7 +82,6 @@ export function TodosForm({ action, id, defaultValue, lastResult, saved }: Todos
               Save
             </button>
           </VisuallyHidden>
-          {id ? <input type="hidden" name="id" value={id} /> : null}
           <InputField label="Title" {...fieldProps(fields.title)} />
           {tasks.map((task, index) => {
             const taskFields = task.getFieldset();

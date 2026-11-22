@@ -21,7 +21,6 @@ export function formState(Astro: AstroGlobal, action: Action) {
     action: formAction.toString(),
     redirectTo: data && 'redirectTo' in data ? data.redirectTo : undefined,
     lastResult,
-    success: data?.success ?? false,
     hasErrors: hasErrors(lastResult),
   };
 }

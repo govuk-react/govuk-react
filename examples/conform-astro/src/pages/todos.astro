@@ -1,14 +1,16 @@
 ---
 import { actions } from 'astro:actions';
-import { getTodos, TodosForm } from '../features/todos';
+import { TodosForm } from '../features/todos';
 import { formState } from '../form-state';
 import Layout from '../layouts/Layout.astro';
 
-const { action, lastResult, success, hasErrors } = formState(Astro, actions.todos);
-const id = Astro.url.searchParams.get('id') ?? undefined;
-const todos = await getTodos(id);
+const { action, redirectTo, lastResult, hasErrors } = formState(Astro, actions.todos);
+
+if (redirectTo) {
+  return Astro.redirect(redirectTo);
+}
 ---
 
 <Layout title="Tasks" error={hasErrors}>
-  <TodosForm client:load action={action} id={id} defaultValue={todos} lastResult={lastResult} saved={success} />
+  <TodosForm client:load action={action} lastResult={lastResult} />
 </Layout>

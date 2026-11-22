@@ -11,9 +11,9 @@ export const examples = [
     description: 'the same form, with an async schema',
   },
   {
-    href: '/todos?id=demo',
+    href: '/todos',
     text: 'Tasks',
-    description: 'a list of fields you can add to, remove and reorder, saved on the server',
+    description: 'a list of fields you can add to, remove and reorder',
   },
 ];
 

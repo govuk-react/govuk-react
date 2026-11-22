@@ -105,9 +105,8 @@ for (const mode of modes) {
       });
     }
 
-    test('tasks can be added, reordered, removed and saved', async ({ page }, testInfo) => {
-      const path = `/todos?id=${testInfo.project.name}-${mode.replace(/ /g, '-')}-${Date.now()}`;
-      await open(page, mode, path);
+    test('tasks can be added, reordered, removed and submitted', async ({ page }) => {
+      await open(page, mode, '/todos');
 
       await page.getByRole('button', { name: 'Save' }).click();
       await expectErrors(page, [
@@ -134,16 +133,12 @@ for (const mode of modes) {
       await expect(page.getByRole('group', { name: /^Task \d$/ })).toHaveCount(2);
       await expect(page.getByLabel('Title')).toHaveValue('Shopping');
 
-      // Enter saves, rather than clicking the first task's Remove button.
+      // Enter submits, rather than clicking the first task's Remove button.
       await page.getByLabel('Title').press('Enter');
-      await expect(page.getByRole('alert').filter({ hasText: 'Your tasks have been saved' })).toBeVisible();
-
-      await page.goto(path);
-      await expect(page.getByLabel('Title')).toHaveValue('Shopping');
-      await expect(task(1).getByLabel('Description')).toHaveValue('Eggs');
-      await expect(task(1).getByLabel('Completed')).toBeChecked();
-      await expect(task(2).getByLabel('Description')).toHaveValue('Milk');
-      await expect(page.getByRole('group', { name: /^Task \d$/ })).toHaveCount(2);
+      await expect(page).toHaveURL(/\/\?value=/);
+      await expect(page.getByRole('alert').filter({ hasText: 'Form submitted' })).toContainText(
+        '[{"content":"Eggs","completed":true},{"content":"Milk","completed":false}]'
+      );
     });
   });
 }
