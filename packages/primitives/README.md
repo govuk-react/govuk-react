@@ -83,7 +83,7 @@ import { InlineScript, tabs } from '@govuk-react/primitives/inline-script';
 </head>;
 ```
 
-The scripts are `accordion`, `autocomplete`, `autoFocus`, `button`, `characterCount`, `choices`, `disclosure`, `exitThisPage`, `fileUpload`, `focusLinks`, `modal`, `passwordInput` and `tabs`. `InlineScript` isn't a client component, so the scripts stay out of client bundles. A script React adds in the browser doesn't run, and isn't needed, since React's parts define their elements.
+The scripts are `accordion`, `autocomplete`, `autoFocus`, `button`, `characterCount`, `choices`, `disclosure`, `exitThisPage`, `fileUpload`, `focusLinks`, `modal`, `passwordInput` and `tabs`. `InlineScript` renders only on the server, so the scripts stay out of client bundles: it has no `'use client'` directive, and in Astro it needs no `client:*` directive. A script React adds in the browser doesn't run, and isn't needed, since React's parts define their elements.
 
 ## Accordion
 
@@ -245,7 +245,7 @@ Without JavaScript the `Description` is shown and both statuses are hidden. On u
 
 `countType` is "length" (the default, as `maxlength` counts), "characters" (as users see them, such as an emoji as one) or "words". The messages are English by default, and take a message for each plural form. The statuses get `data-state` ("under", "at" or "over") for styling, or pass class names such as `overLimitClass`. The field's value is the state, so a value React sets is counted too.
 
-`countOf` and `countMessage` count text and build the message as the element does. They are in their own entry point, which has no `'use client'`, so a server component can call them:
+`countOf` and `countMessage` count text and build the message as the element does. They are in their own entry point, which has no `'use client'`, so they can run on the server, for example in a React Server Component or an Astro component:
 
 ```tsx
 import { countOf, countMessage } from '@govuk-react/primitives/character-count-text';
