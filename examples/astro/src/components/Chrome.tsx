@@ -1,7 +1,9 @@
 import type { ReactNode } from 'react';
+import * as GenericHeader from 'govuk-react/generic-header';
 import { Page } from 'govuk-react/page';
 import * as ServiceNavigation from 'govuk-react/service-navigation';
 import { path } from '../path';
+import { ReactLogo } from './ReactLogo';
 
 export type Example = { href: string; text: string; description: string };
 
@@ -42,13 +44,24 @@ export function Chrome({ pathname, children }: { pathname: string; children: Rea
   return (
     <Page
       header={
-        <ServiceNavigation.Composite serviceName="Astro example" serviceHref={path('/')}>
-          {navigation.map((item) => (
-            <ServiceNavigation.ItemComposite key={item.href} href={item.href} current={item.pages.includes(pathname)}>
-              {item.text}
-            </ServiceNavigation.ItemComposite>
-          ))}
-        </ServiceNavigation.Composite>
+        <>
+          <GenericHeader.Root>
+            <GenericHeader.Container>
+              <GenericHeader.Logo>
+                <GenericHeader.HomepageLink href="https://govuk-react.com/">
+                  <ReactLogo width="34" height="30" aria-hidden="true" focusable="false" /> govuk-react
+                </GenericHeader.HomepageLink>
+              </GenericHeader.Logo>
+            </GenericHeader.Container>
+          </GenericHeader.Root>
+          <ServiceNavigation.Composite serviceName="Astro example" serviceHref={path('/')}>
+            {navigation.map((item) => (
+              <ServiceNavigation.ItemComposite key={item.href} href={item.href} current={item.pages.includes(pathname)}>
+                {item.text}
+              </ServiceNavigation.ItemComposite>
+            ))}
+          </ServiceNavigation.Composite>
+        </>
       }
     >
       {children}
