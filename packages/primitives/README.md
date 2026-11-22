@@ -7,7 +7,8 @@ Each primitive:
 - works without JavaScript, through a fallback you choose
 - upgrades to the full WAI-ARIA pattern when its custom element is defined, with or without React
 - adds React props for its state once hydrated, where it has any, such as `value` and `onValueChange`, or `open` and `onOpenChange`
-- takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element, except Button's and Details'
+- reports a state change through `onValueChange` or `onOpenChange`, with the new state and `{ beforeHydration }`, rather than a native event such as `onToggle`. A change the user made before hydration is reported once React hydrates, when there is no event to pass. Native event props still pass through, for changes after hydration
+- takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element, except Button's
 - names its parts and props alike: the control that operates it is `Trigger`, and a text prop ends in `Text` when it's shown, `Label` when it's an accessible name and `Announcement` when only screen readers hear it
 
 Import each primitive from its own path, such as `@govuk-react/primitives/tabs`. Each path defines its element when imported.
@@ -182,6 +183,8 @@ A button that shows and hides some content, such as a navigation menu on small s
 
 `open` and `onOpenChange` control it once hydrated, such as to close a menu after navigating. A user's click before hydration is reported through `onOpenChange` rather than undone. `defaultOpen` starts it open. Once upgraded, the root, button and content have `data-state` ("open" or "closed"), and "open" while `media` matches.
 
+### Why not `details`
+
 Like govuk-frontend's service navigation, it doesn't use `details` and `summary`. They work without JavaScript, so you might expect them to be the better choice, but GOV.UK's research and accessibility audits found problems with them:
 
 - Users of Dragon voice control can't open a `summary` with standard commands, only by speaking all of its text. GOV.UK decided not to fix this in its details component, because adding `role="button"` caused problems for some screen readers. The accessibility audit that found it suggested building it as a button, as the accordion is ([govuk-design-system#4029](https://github.com/alphagov/govuk-design-system/issues/4029), [govuk-frontend#5308](https://github.com/alphagov/govuk-frontend/issues/5308)).
@@ -196,15 +199,15 @@ For a menu that opens and closes without JavaScript, govuk-react's service navig
 ## Details
 
 ```tsx
-import * as Details from '@govuk-react/primitives/details';
+import { Details } from '@govuk-react/primitives/details';
 
-<Details.Root onOpenChange={(open) => console.log(open)}>
+<Details onOpenChange={(open) => console.log(open)}>
   <summary>Menu</summary>
   <ul>…</ul>
-</Details.Root>;
+</Details>;
 ```
 
-A native `details`, for content that shows and hides without JavaScript. It has no custom element, because the browser holds its state before React hydrates. `open` and `onOpenChange` control it once hydrated. A user's change before hydration is reported through `onOpenChange` rather than undone. See Disclosure for why it may not suit a menu.
+A native `details`, for content that shows and hides without JavaScript. It has no custom element, because the browser holds its state before React hydrates. `open` and `onOpenChange` control it once hydrated. A user's change before hydration is reported through `onOpenChange` rather than undone. See [Disclosure](#why-not-details) for why it may not suit a menu.
 
 ## Modal
 
