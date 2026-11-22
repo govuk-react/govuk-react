@@ -124,16 +124,6 @@ See [MIGRATION.md](MIGRATION.md).
 - [govuk_template](http://alphagov.github.io/govuk_template/) ([source](https://github.com/alphagov/govuk_template))
 - [GOV.UK Design Patterns](https://www.gov.uk/service-manual/design#find-patterns)
 
-### Other React component libraries
-
-- [Auth0 Cosmos](https://github.com/auth0/cosmos)
-- [Shopify Polaris](https://github.com/Shopify/polaris)
-- [Zendesk Garden](https://github.com/zendeskgarden/react-components)
-- [Atlassian Atlaskit](https://bitbucket.org/atlassian/atlaskit-mk-2)
-- [Carbon Design System](https://github.com/carbon-design-system/carbon-components-react)
-- [Material UI](https://github.com/mui-org/material-ui)
-- [Rebass](https://rebassjs.org)
-
 ## Acknowledgements
 
 We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing and it is awesome, you should too!
