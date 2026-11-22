@@ -1,0 +1,37 @@
+{
+  "name": "@govuk-react/example-conform-astro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "A Conform form with govuk-react in Astro, which submits and shows its errors without JavaScript",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview --ignore-lock",
+    "check": "astro check",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@astrojs/node": "^11.1.14",
+    "@astrojs/react": "^7.1.9",
+    "@conform-to/react": "^1.21.3",
+    "@conform-to/zod": "^1.21.3",
+    "@govuk-react/primitives": "0.6.0",
+    "astro": "^7.4.13",
+    "govuk-frontend": "~6.6.0",
+    "govuk-react": "1.0.0-alpha.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@playwright/test": "^1.65.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,56 @@
+---
+import { Body } from 'govuk-react/body';
+import { GridColumn } from 'govuk-react/grid-column';
+import { GridRow } from 'govuk-react/grid-row';
+import { Heading } from 'govuk-react/heading';
+import { Link } from 'govuk-react/link';
+import { List } from 'govuk-react/list';
+import * as NotificationBanner from 'govuk-react/notification-banner';
+import * as SummaryList from 'govuk-react/summary-list';
+import { examples } from '../components/Chrome';
+import Layout from '../layouts/Layout.astro';
+
+function parseJson(value: string | null): Record<string, unknown> | null {
+  if (value === null) return null;
+  try {
+    const parsed: unknown = JSON.parse(value);
+    return parsed && typeof parsed === 'object' ? Object.fromEntries(Object.entries(parsed)) : null;
+  } catch {
+    return null;
+  }
+}
+
+const value = parseJson(Astro.url.searchParams.get('value'));
+---
+
+<Layout title="Examples">
+  <GridRow>
+    <GridColumn width="two-thirds">
+      {
+        value && (
+          <NotificationBanner.Composite success heading="Form submitted">
+            <SummaryList.Root>
+              {Object.entries(value).map(([key, item]) => (
+                <SummaryList.RowComposite term={key} value={typeof item === 'object' ? JSON.stringify(item) : String(item ?? '')} />
+              ))}
+            </SummaryList.Root>
+          </NotificationBanner.Composite>
+        )
+      }
+      <Heading size="l" headingLevel={1}>Conform with govuk-react</Heading>
+      <Body>
+        These forms use <Link href="https://conform.guide/">Conform</Link> with govuk-react and Astro. They submit, and
+        show their errors, before and without JavaScript.
+      </Body>
+      <List variant="bullet">
+        {
+          examples.map((example) => (
+            <li>
+              <Link href={example.href}>{example.text}</Link>: {example.description}
+            </li>
+          ))
+        }
+      </List>
+    </GridColumn>
+  </GridRow>
+</Layout>

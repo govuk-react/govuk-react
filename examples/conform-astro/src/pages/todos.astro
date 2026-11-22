@@ -1,0 +1,16 @@
+---
+import { actions } from 'astro:actions';
+import { TodosForm } from '../features/todos';
+import { formState } from '../form-state';
+import Layout from '../layouts/Layout.astro';
+
+const { action, redirectTo, lastResult, hasErrors } = formState(Astro, actions.todos);
+
+if (redirectTo) {
+  return Astro.redirect(redirectTo);
+}
+---
+
+<Layout title="Tasks" error={hasErrors}>
+  <TodosForm client:load action={action} lastResult={lastResult} />
+</Layout>
