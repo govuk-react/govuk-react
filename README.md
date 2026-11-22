@@ -100,15 +100,3 @@ We use [Chromatic](https://www.chromatic.com/) for visual regression testing.
 <a href="https://www.netlify.com">
   <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deploys by Netlify" />
 </a>
-
-## Contributors
-
-- [Alasdair McLeay](https://github.com/penx)
-- [David Murdoch](https://github.com/dsm23)
-- [Gavin Orland](https://github.com/gavinorland)
-- [Mark Chambers](https://github.com/marksy)
-- [Steve Sims](https://github.com/stevesims)
-- [Taran Chauhan](https://github.com/taranchauhan)
-- [Toby Brancher](https://github.com/Loque-)
-
-Want to contribute? Checkout our [Contributing page](CONTRIBUTING.md).
