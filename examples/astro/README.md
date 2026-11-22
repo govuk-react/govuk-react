@@ -28,7 +28,7 @@ The server keeps no state: each submission carries the whole form. The add, remo
 - [Islands](./src/pages/islands.astro): only components with a client directive hydrate, each as its own island. One has no directive, one has `client:idle` and one has `client:visible`.
 - [Without React](./src/pages/without-react.astro): components with no client directive, enhanced by their elements' scripts, inlined in the page's head with `InlineScript`. The page sends no React to the browser.
 - [Upgrade to React](./src/pages/upgrade.astro): an accordion enhanced by its inline script as soon as the page loads, then hydrated with `client:idle`. React counts the sections the user has read, including those still open when React loaded, which `onValueChange` reports with `beforeHydration`.
-- [Working together](./src/pages/together.astro): a licence application with tabs, an accordion, and modals holding forms with radios and conditional reveals, password inputs, a file upload and a character count. It's one island with `client:idle`, and every component's script is inlined, so it all works before React loads.
+- [Working together](./src/pages/together.astro): a licence application with tabs, an accordion, and modals holding forms with radios and conditional reveals, password inputs, a file upload and a character count. It's one island with `client:idle`, and every component's script is inlined, so it all works before React loads. It proves the components work together, rather than recommending this design.
 
 `client:visible` watches the island's child elements, which need a box of their own. The primitives' elements have `display: contents`, so the accordion in [`GuideAccordion`](./src/features/guide-accordion.tsx) is wrapped in a `div`.
 

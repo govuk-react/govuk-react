@@ -37,7 +37,7 @@ export const hydration: Example[] = [
   {
     href: path('/together'),
     text: 'Working together',
-    description: 'tabs, an accordion and modals holding forms, in one island',
+    description: 'tabs, an accordion and modals holding forms, in one island, to prove they work together',
   },
 ];
 
