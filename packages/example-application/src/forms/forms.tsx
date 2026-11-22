@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as GovUK from 'govuk-react';
 import { Routes, Route } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 import Form from './form';
 import FinalForm from './final-form';

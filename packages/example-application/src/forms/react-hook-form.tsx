@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 import { Controller, useForm } from 'react-hook-form';
 

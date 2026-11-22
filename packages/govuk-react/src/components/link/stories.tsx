@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
-import { BrowserRouter, Link as RouterLink, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link as RouterLink, Route, Routes } from 'react-router';
 
 import { Link } from '.';
 

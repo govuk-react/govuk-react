@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 import { Formik, Form, Field, type FieldProps } from 'formik';
 
