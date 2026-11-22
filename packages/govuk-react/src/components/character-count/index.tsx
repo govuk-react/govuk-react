@@ -13,7 +13,7 @@ import { joinIds } from '../../utils/join-ids.js';
  * characters", and keeps its `maxlength`, if you give it one.
  */
 
-export type RootProps = Markup.RootProps;
+export type RootProps = Omit<Markup.RootProps, 'maxWords'>;
 
 /**
  * Tell users how many characters or words they can enter into a textarea.
@@ -25,7 +25,6 @@ export type RootProps = Markup.RootProps;
  */
 export function Root({
   maxLength,
-  maxWords,
   threshold,
   countType,
   charactersUnderLimitText,
@@ -47,9 +46,8 @@ export function Root({
   };
   return (
     <Primitives.Root
-      // As in govuk-frontend, `maxWords` counts words, and `maxLength` wins.
-      maxLength={maxLength ?? maxWords}
-      countType={countType ?? (maxWords && maxLength === undefined ? 'words' : 'length')}
+      maxLength={maxLength}
+      countType={countType}
       threshold={threshold}
       charactersUnderLimitText={charactersUnderLimitText}
       charactersAtLimitText={charactersAtLimitText}
@@ -66,7 +64,6 @@ export function Root({
     >
       <Markup.Root
         maxLength={maxLength}
-        maxWords={maxWords}
         threshold={threshold}
         countType={countType}
         error={error}
@@ -127,7 +124,7 @@ export function ScreenReaderStatus({ className, ...props }: ScreenReaderStatusPr
   );
 }
 
-export type FieldProps = Markup.FieldProps;
+export type FieldProps = Omit<Markup.FieldProps, 'maxWords'>;
 
 const isSet = (node: React.ReactNode) => node !== undefined && node !== null && node !== false && node !== '';
 
@@ -145,7 +142,6 @@ export function Field({
   hint,
   errorMessage,
   maxLength,
-  maxWords,
   threshold,
   countType,
   textareaDescriptionText,
@@ -162,15 +158,13 @@ export function Field({
   const infoId = `${id}-info`;
   const hintId = isSet(hint) ? `${id}-hint` : undefined;
   const errorId = isSet(errorMessage) ? `${id}-error` : undefined;
-  const limit = maxWords || maxLength;
-  const words = (countType ?? (maxWords ? 'words' : undefined)) === 'words';
+  const words = countType === 'words';
   const ariaDescribedBy = joinIds(describedBy, infoId, hintId, errorId);
 
   return (
     <Root
       error={Boolean(errorId)}
       maxLength={maxLength}
-      maxWords={maxWords}
       threshold={threshold}
       countType={countType}
       textareaDescriptionText={textareaDescriptionText}
@@ -188,10 +182,10 @@ export function Field({
       {errorId && <ErrorMessageComposite id={errorId}>{errorMessage}</ErrorMessageComposite>}
       <Textarea id={id} name={name} error={Boolean(errorId)} aria-describedby={ariaDescribedBy} {...props} />
       <Message id={infoId}>
-        {limit
+        {maxLength
           ? (textareaDescriptionText || `You can enter up to %{count} ${words ? 'words' : 'characters'}`).replaceAll(
               '%{count}',
-              String(limit)
+              String(maxLength)
             )
           : null}
       </Message>

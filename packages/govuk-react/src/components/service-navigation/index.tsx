@@ -46,7 +46,7 @@ type MenuState = {
   onOpenChange?: (open: boolean, details: Primitives.ChangeDetails) => void;
 };
 
-export type MenuProps = Omit<Primitives.RootProps, 'media' | 'defaultOpen'> & MenuState;
+export type MenuProps = Omit<Primitives.RootProps, 'media' | 'defaultOpen' | keyof MenuState> & MenuState;
 
 /**
  * govuk-frontend's menu: inside `Wrapper`, around `Toggle` and `List`. Below tablet width the

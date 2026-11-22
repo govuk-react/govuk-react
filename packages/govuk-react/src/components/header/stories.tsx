@@ -21,3 +21,7 @@ export const Default = {
     </Header.Root>
   ),
 };
+
+export const WithProductName = {
+  render: () => <Header.Composite homepageHref="#" productName="Design System" />,
+};

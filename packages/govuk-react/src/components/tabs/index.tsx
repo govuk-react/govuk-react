@@ -10,7 +10,7 @@ import * as Markup from 'govuk-frontend-react/tabs';
  * panel below it or without JavaScript. With `RadiosRoot`, tabs switch without JavaScript too.
  */
 
-// Fills in defaults only: in an island without a Root, pass `selected` to the parts.
+// Fills in defaults only: in an island without a Root, pass `defaultSelected` to the parts.
 const TabsContext = createContext<{ selected?: string }>({});
 
 /** govuk-frontend's tablet breakpoint, where its tabs start. */
@@ -63,7 +63,7 @@ export type RadiosRootProps = BaseRootProps &
 
 /**
  * Tabs that switch panels without JavaScript too, through a hidden radio in each panel. Use
- * `RadioTab` and `RadioPanel` inside it. Each tab's `value` is its panel's id.
+ * `RadiosTab` and `RadiosPanel` inside it. Each tab's `value` is its panel's id.
  *
  * @see https://design-system.service.gov.uk/components/tabs/
  */
@@ -98,15 +98,17 @@ function useSelected(value: string, selected: boolean | undefined) {
   return selected ?? value === context.selected;
 }
 
-export type ListItemProps = Markup.ListItemProps & {
+export type ListItemProps = Omit<Markup.ListItemProps, 'selected'> & {
   /** The value of the tab inside it. */
   value: string;
+  /** Whether its tab is selected when the page loads. Defaults to whether it is the tabs' value. */
+  defaultSelected?: boolean;
 };
 
-export function ListItem({ value, selected, ...props }: ListItemProps) {
+export function ListItem({ value, defaultSelected, ...props }: ListItemProps) {
   return (
     <Primitives.Item value={value} asChild>
-      <Markup.ListItem selected={useSelected(value, selected)} {...props} />
+      <Markup.ListItem selected={useSelected(value, defaultSelected)} {...props} />
     </Primitives.Item>
   );
 }
@@ -125,13 +127,13 @@ export function Tab({ value, children, ...props }: TabProps) {
   );
 }
 
-export type RadioTabProps = TabProps & {
+export type RadiosTabProps = TabProps & {
   /** The panels' radio group name. Set by RadiosRoot: pass it to a tab rendered without one, such as in an island. */
   name?: string;
 };
 
 /** A tab in a `RadiosRoot`: a label for its panel's radio. */
-export function RadioTab({ value, name, children, ...props }: RadioTabProps) {
+export function RadiosTab({ value, name, children, ...props }: RadiosTabProps) {
   return (
     <Primitives.RadiosTrigger value={value} name={name} asChild>
       <Markup.Tab asChild {...props}>
@@ -141,16 +143,18 @@ export function RadioTab({ value, name, children, ...props }: RadioTabProps) {
   );
 }
 
-export type PanelProps = Omit<Markup.PanelProps, 'id'> & {
+export type PanelProps = Omit<Markup.PanelProps, 'id' | 'selected'> & {
   /** Its tab's value, which is the panel's id. */
   value: string;
+  /** Whether the panel is shown when the page loads. Defaults to whether it is the tabs' value. */
+  defaultSelected?: boolean;
   /** The panels' radio group name. Set by Root: pass it to a panel rendered without one, such as in an island. */
   name?: string;
 };
 
 /** A panel in a `Root`. */
-export function Panel({ value, selected, name, ...props }: PanelProps) {
-  const isSelected = useSelected(value, selected);
+export function Panel({ value, defaultSelected, name, ...props }: PanelProps) {
+  const isSelected = useSelected(value, defaultSelected);
   return (
     <Primitives.Content value={value} name={name} defaultSelected={isSelected} asChild>
       <Markup.Panel selected={isSelected} {...props} />
@@ -158,11 +162,11 @@ export function Panel({ value, selected, name, ...props }: PanelProps) {
   );
 }
 
-export type RadioPanelProps = PanelProps;
+export type RadiosPanelProps = PanelProps;
 
 /** A panel in a `RadiosRoot`, shown without JavaScript only while its tab is chosen. */
-export function RadioPanel({ value, selected, name, ...props }: RadioPanelProps) {
-  const isSelected = useSelected(value, selected);
+export function RadiosPanel({ value, defaultSelected, name, ...props }: RadiosPanelProps) {
+  const isSelected = useSelected(value, defaultSelected);
   return (
     <Primitives.RadiosContent value={value} name={name} defaultSelected={isSelected} asChild>
       <Markup.Panel selected={isSelected} {...props} />
@@ -225,14 +229,14 @@ export function RadiosComposite({ title, items, value, defaultValue, ...props }:
       <List>
         {items.map((item) => (
           <ListItem key={item.id} value={item.id}>
-            <RadioTab value={item.id}>{item.label}</RadioTab>
+            <RadiosTab value={item.id}>{item.label}</RadiosTab>
           </ListItem>
         ))}
       </List>
       {items.map((item) => (
-        <RadioPanel key={item.id} value={item.id}>
+        <RadiosPanel key={item.id} value={item.id}>
           {item.panel}
-        </RadioPanel>
+        </RadiosPanel>
       ))}
     </RadiosRoot>
   );

@@ -26,7 +26,7 @@ Control a primitive only when your app has to set its state, such as closing a m
 
 ### Changes made before hydration
 
-`onValueChange` and `onOpenChange` on Tabs, Accordion, Disclosure, Details and Modal get a second argument, `{ beforeHydration }`. It's `true` for a change the user made before React hydrated, which is reported once React has hydrated, whether or not the primitive is controlled.
+`onValueChange` and `onOpenChange` on Tabs, Accordion, Disclosure, Details and Modal, and `onQueryChange` on Autocomplete, get a second argument, `{ beforeHydration }`. It's `true` for a change the user made before React hydrated, which is reported once React has hydrated, whether or not the primitive is controlled.
 
 Such a report differs from a live change:
 
@@ -195,7 +195,6 @@ Like govuk-frontend's service navigation, it doesn't use `details` and `summary`
 
 For a menu that opens and closes without JavaScript, govuk-react's service navigation also has a `details` version.
 
-
 ## Details
 
 ```tsx
@@ -280,7 +279,7 @@ import * as Autocomplete from '@govuk-react/primitives/autocomplete';
 
 A port of GOV.UK's [accessible-autocomplete](https://github.com/alphagov/accessible-autocomplete) that enhances your own input. Without JavaScript the input is a plain input. On upgrade it's a combobox with accessible-autocomplete's behaviour: options that match the query show in the `Listbox`, Up and Down move focus through them, Enter, Space or a click confirms one, and Escape closes the menu. `Status` tells screen readers how many options there are once the user pauses, so hide it visually with your own class, and `AssistiveHint` describes the input while the query is empty.
 
-The input's value is the query, and the options are whatever you render, so there is nothing else to control. `onQueryChange` is called when options are due, such as to fetch them, including for a query typed before hydration. `filter` sets which options match the query: "contains" (the default), "starts-with", or "none" for options that already match, such as results from a server. Leave out `NoResults` to show nothing when no option matches.
+The input's value is the query, and the options are whatever you render, so there is nothing else to control. `onQueryChange` is called when options are due, such as to fetch them. It gets the query and `{ beforeHydration }`, which is `true` for a query typed before hydration. `filter` sets which options match the query: "contains" (the default), "starts-with", or "none" for options that already match, such as results from a server. Leave out `NoResults` to show nothing when no option matches.
 
 `minLength` is the length the query needs before options show. `onConfirm` is called when the user confirms an option. With `submitOnConfirm`, confirming an option submits the form, and Enter submits it while no option is highlighted. As in accessible-autocomplete, focus leaving a highlighted option confirms it, unless `confirmOnBlur` is `false`. The status messages are English by default, and take a message for each plural form.
 

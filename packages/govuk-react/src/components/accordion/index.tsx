@@ -80,14 +80,16 @@ export function Controls({ className, ...props }: ControlsProps) {
   );
 }
 
-export type SectionProps = Markup.SectionProps & {
+export type SectionProps = Omit<Markup.SectionProps, 'expanded'> & {
   /** Identifies the section in the accordion's `value`. */
   value: string;
+  /** Sets whether the section should be expanded when the page loads for the first time. Defaults to whether the accordion's value includes it. */
+  defaultExpanded?: boolean;
 };
 
-export function Section({ value, expanded, ...props }: SectionProps) {
+export function Section({ value, defaultExpanded, ...props }: SectionProps) {
   const context = useContext(AccordionContext);
-  const isExpanded = expanded ?? context.open?.includes(value) ?? false;
+  const isExpanded = defaultExpanded ?? context.open?.includes(value) ?? false;
   return (
     <Primitives.Item value={value} defaultExpanded={isExpanded} asChild>
       <Markup.Section expanded={isExpanded} {...props} />
@@ -165,36 +167,58 @@ export function SectionContent(props: SectionContentProps) {
   );
 }
 
-export type SectionCompositeProps = Omit<Markup.SectionCompositeProps, 'expanded'> & {
-  /** Identifies the section in the accordion's `value`. Defaults to its content's id. */
-  value?: string;
-  /** Sets whether the section should be expanded when the page loads for the first time. Defaults to whether the accordion's value includes it. */
-  expanded?: boolean;
-};
+type SectionIds = { headingId: string; summaryId: string; contentId: string };
 
-export function SectionComposite({
-  accordionId,
-  index,
+type SectionContentsProps = Omit<SectionProps, 'value'> &
+  Pick<Markup.SectionHeadingProps, 'headingLevel'> & {
+    /** Identifies the section in the accordion's `value`. Defaults to its content's id. */
+    value?: string;
+    /** The heading of each accordion section. The header is inside the HTML `<button>` element, so you can only add [phrasing content](https://html.spec.whatwg.org/#phrasing-content) to it. */
+    heading: ReactNode;
+    /** The summary line of each accordion section. The summary line is inside the HTML `<button>` element, so you can only add [phrasing content](https://html.spec.whatwg.org/#phrasing-content) to it. */
+    summary?: ReactNode;
+  };
+
+function SectionWithIds({
+  headingId,
+  summaryId,
+  contentId,
   heading,
   summary,
   headingLevel,
   value,
   children,
   ...props
-}: SectionCompositeProps) {
-  const contentId = `${accordionId}-content-${index}`;
+}: SectionContentsProps & SectionIds) {
   return (
     <Section value={value ?? contentId} {...props}>
       <Markup.SectionHeader>
         <Markup.SectionHeading headingLevel={headingLevel}>
-          <SectionButton id={`${accordionId}-heading-${index}`} summary={summary}>
+          <SectionButton id={headingId} summary={summary}>
             {heading}
           </SectionButton>
         </Markup.SectionHeading>
-        {hasContent(summary) && <SectionSummary id={`${accordionId}-summary-${index}`}>{summary}</SectionSummary>}
+        {hasContent(summary) && <SectionSummary id={summaryId}>{summary}</SectionSummary>}
       </Markup.SectionHeader>
       <SectionContent id={contentId}>{children}</SectionContent>
     </Section>
+  );
+}
+
+export type SectionCompositeProps = SectionContentsProps & {
+  /** Prefix for the `id`s of the section's heading, summary and content. Must be unique on the page. */
+  idPrefix: string;
+};
+
+/** A section with its heading, summary and content. `idPrefix` prefixes their ids. */
+export function SectionComposite({ idPrefix, ...props }: SectionCompositeProps) {
+  return (
+    <SectionWithIds
+      headingId={`${idPrefix}-heading`}
+      summaryId={`${idPrefix}-summary`}
+      contentId={`${idPrefix}-content`}
+      {...props}
+    />
   );
 }
 
@@ -207,7 +231,7 @@ export type CompositeProps = Omit<RootProps, 'id' | 'children'> &
     | {
         children?: never;
         /** Prefer children, which memoise and re-render better. */
-        sections: Omit<SectionCompositeProps, 'accordionId' | 'index' | 'headingLevel'>[];
+        sections: Omit<SectionCompositeProps, 'idPrefix' | 'headingLevel'>[];
       }
   );
 
@@ -224,7 +248,14 @@ export function Composite({ id, headingLevel, sections, children, ...props }: Co
       <Controls />
       {sections
         ? sections.map((section, index) => (
-            <SectionComposite key={index} accordionId={id} index={index + 1} headingLevel={headingLevel} {...section} />
+            <SectionWithIds
+              key={index}
+              headingId={`${id}-heading-${index + 1}`}
+              summaryId={`${id}-summary-${index + 1}`}
+              contentId={`${id}-content-${index + 1}`}
+              headingLevel={headingLevel}
+              {...section}
+            />
           ))
         : children}
     </Root>
