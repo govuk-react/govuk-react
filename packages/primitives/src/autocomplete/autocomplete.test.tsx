@@ -91,6 +91,14 @@ describe('Autocomplete', () => {
     expect(screen.getByTestId('status')).toHaveTextContent('1 result is available.');
   });
 
+  test('calls onQueryChange with the query, and whether it was typed before hydration', async () => {
+    const onQueryChange = vi.fn();
+    render(<Example onQueryChange={onQueryChange} />);
+    await upgraded();
+    type('fr');
+    expect(onQueryChange).toHaveBeenCalledWith('fr', { beforeHydration: false });
+  });
+
   test('calls onConfirm, and a cancelled confirm doesn’t submit the form', async () => {
     const onSubmit = vi.fn((event: SubmitEvent) => event.preventDefault());
     const onConfirm = vi.fn((_value: string, event: CustomEvent) => event.preventDefault());

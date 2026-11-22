@@ -78,3 +78,7 @@ export const WithNavigation: Story = {
     ),
   },
 };
+
+export const WithCustomMeta: Story = {
+  args: { metaContent: 'GOV.UK Prototype Kit v7.0.1' },
+};

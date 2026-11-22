@@ -114,7 +114,7 @@ export const Radios: Story = {
     docs: {
       description: {
         story:
-          '`RadiosComposite`, and `RadiosRoot` with `RadioTab` and `RadioPanel`, switch tabs without JavaScript too, through a hidden radio in each panel. Without JavaScript the tabs can’t be reached by keyboard.',
+          '`RadiosComposite`, and `RadiosRoot` with `RadiosTab` and `RadiosPanel`, switch tabs without JavaScript too, through a hidden radio in each panel. Without JavaScript the tabs can’t be reached by keyboard.',
       },
     },
   },

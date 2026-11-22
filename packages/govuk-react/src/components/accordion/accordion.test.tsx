@@ -83,4 +83,20 @@ describe('Accordion', () => {
     expect(button.closest('.govuk-accordion__section')).toHaveClass('govuk-accordion__section--expanded');
     expect(screen.getByRole('button', { name: 'Show all sections' })).toBeInTheDocument();
   });
+
+  test('SectionComposite prefixes its ids with idPrefix, and its value defaults to its content’s id', () => {
+    const container = parse(
+      renderToStaticMarkup(
+        <Accordion.Root id="b" defaultValue={['b-web-content']}>
+          <Accordion.SectionComposite idPrefix="b-web" heading="Writing well for the web" summary="An introduction">
+            Web content
+          </Accordion.SectionComposite>
+        </Accordion.Root>
+      )
+    );
+    expect(container.querySelector('#b-web-heading')).toHaveTextContent('Writing well for the web');
+    expect(container.querySelector('#b-web-summary')).toHaveTextContent('An introduction');
+    expect(container.querySelector('#b-web-content')).toHaveTextContent('Web content');
+    expect(container.querySelector('.govuk-accordion__section')).toHaveClass('govuk-accordion__section--expanded');
+  });
 });

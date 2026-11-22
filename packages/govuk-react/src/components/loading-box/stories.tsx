@@ -22,14 +22,16 @@ const Template: StoryFn<React.ComponentProps<typeof LoadingBox>> = (args) => <Lo
 export const Default = Template.bind({});
 Default.args = {
   loading: true,
-  children: [
-    <PhaseBanner.Composite tag="Alpha">
-      This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
-    </PhaseBanner.Composite>,
-    <Heading size="l">Example</Heading>,
-    <InputField id="email-address" name="email-address" label="Email address" />,
-    <StartButton>Continue</StartButton>,
-  ],
+  children: (
+    <>
+      <PhaseBanner.Composite tag="Alpha">
+        This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
+      </PhaseBanner.Composite>
+      <Heading size="l">Example</Heading>
+      <InputField id="email-address" name="email-address" label="Email address" />
+      <StartButton>Continue</StartButton>
+    </>
+  ),
 };
 
 export const PartialCover = Template.bind({});
@@ -45,36 +47,40 @@ PartialCover.decorators = [
 ];
 PartialCover.args = {
   loading: true,
-  children: [
-    <Heading size="l">Example</Heading>,
-    <InputField id="email-address" name="email-address" label="Email address" />,
-    <StartButton>Continue</StartButton>,
-  ],
+  children: (
+    <>
+      <Heading size="l">Example</Heading>
+      <InputField id="email-address" name="email-address" label="Email address" />
+      <StartButton>Continue</StartButton>
+    </>
+  ),
 };
 
 export const LoadingBoxLong = Template.bind({});
 LoadingBoxLong.args = {
   loading: true,
-  children: [
-    <PhaseBanner.Composite tag="Alpha">
-      This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
-    </PhaseBanner.Composite>,
-    <Heading size="l">Example</Heading>,
-    <InputField id="first-name" name="first-name" label="First name" />,
-    <InputField id="last-name" name="last-name" label="Last name" />,
-    <InputField id="email-address" name="email-address" label="Email address" />,
-    <Radios.Field idPrefix="contact" legend="Do you want us to contact you?" inline>
-      <Radios.ItemComposite id="contact" name="contact" value="yes" label="Yes" />
-      <Radios.ItemComposite id="contact-2" name="contact" value="no" label="No" />
-    </Radios.Field>,
-    <InputField
-      id="national-insurance-number"
-      name="national-insurance-number"
-      label="National Insurance number"
-      hint="It’s on your National Insurance card"
-    />,
-    <StartButton>Continue</StartButton>,
-  ],
+  children: (
+    <>
+      <PhaseBanner.Composite tag="Alpha">
+        This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
+      </PhaseBanner.Composite>
+      <Heading size="l">Example</Heading>
+      <InputField id="first-name" name="first-name" label="First name" />
+      <InputField id="last-name" name="last-name" label="Last name" />
+      <InputField id="email-address" name="email-address" label="Email address" />
+      <Radios.Field idPrefix="contact" legend="Do you want us to contact you?" inline>
+        <Radios.ItemComposite id="contact" name="contact" value="yes" label="Yes" />
+        <Radios.ItemComposite id="contact-2" name="contact" value="no" label="No" />
+      </Radios.Field>
+      <InputField
+        id="national-insurance-number"
+        name="national-insurance-number"
+        label="National Insurance number"
+        hint="It’s on your National Insurance card"
+      />
+      <StartButton>Continue</StartButton>
+    </>
+  ),
 };
 
 export const ShortHeight = Template.bind({});
@@ -86,12 +92,14 @@ ShortHeight.args = {
 export const WithBoldText = Template.bind({});
 WithBoldText.args = {
   loading: true,
-  children: [
-    <Heading size="xl" headingLevel={1}>
-      Lorem ipsum dolor sit amet
-    </Heading>,
-    <Heading size="l">Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</Heading>,
-  ],
+  children: (
+    <>
+      <Heading size="xl" headingLevel={1}>
+        Lorem ipsum dolor sit amet
+      </Heading>
+      <Heading size="l">Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</Heading>
+    </>
+  ),
 };
 
 export const Toggle: StoryFn<React.ComponentProps<typeof LoadingBox>> = (args) => {

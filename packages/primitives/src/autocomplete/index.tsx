@@ -3,10 +3,12 @@
 import * as React from 'react';
 import { cloneElement, isValidElement, useEffect, useEffectEvent, useRef } from 'react';
 import type { ComponentProps, ReactElement, ReactNode } from 'react';
+import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
 import { translationAttributes, type Translation } from '../utils/translation.js';
 import { tagName, type AutocompleteElement, type Filter } from './element.js';
 
+export type { ChangeDetails };
 export type { Filter } from './element.js';
 export type { Translation } from '../utils/translation.js';
 
@@ -35,9 +37,9 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
   submitOnConfirm?: boolean;
   /**
    * Called when the user changes the query and options are due, such as to fetch them. Also
-   * called once hydrated, with a query the user typed before hydration.
+   * called once hydrated, with a query the user typed before hydration and `beforeHydration: true`.
    */
-  onQueryChange?: (query: string) => void;
+  onQueryChange?: (query: string, details: ChangeDetails) => void;
   /** Called when the user confirms an option. Call `preventDefault` on the event to stop `submitOnConfirm`. */
   onConfirm?: (value: string, event: CustomEvent<{ value: string }>) => void;
   /** Heard while the query is too short. `%{count}` is `minLength`. */
@@ -66,7 +68,7 @@ export function Root({
   ...props
 }: RootProps) {
   const element = useRef<HTMLElement>(null);
-  const reportQuery = useEffectEvent((query: string) => onQueryChange?.(query));
+  const reportQuery = useEffectEvent((query: string, details: ChangeDetails) => onQueryChange?.(query, details));
   const reportConfirm = useEffectEvent((value: string, event: CustomEvent<{ value: string }>) =>
     onConfirm?.(value, event)
   );
@@ -76,7 +78,7 @@ export function Root({
     if (!node) return undefined;
     // A nested autocomplete's events bubble through this one.
     const onQuery = (event: CustomEvent<{ query: string }>) => {
-      if (event.target === node) reportQuery(event.detail.query);
+      if (event.target === node) reportQuery(event.detail.query, live);
     };
     const onConfirmed = (event: CustomEvent<{ value: string }>) => {
       if (event.target === node) reportConfirm(event.detail.value, event);
@@ -88,7 +90,7 @@ export function Root({
     const input = node.querySelector('input[data-autocomplete-input]');
     const query = isAutocomplete(node) ? node.query : undefined;
     if (query && input instanceof HTMLInputElement && query !== input.defaultValue) {
-      reportQuery(query);
+      reportQuery(query, early);
     }
     return () => {
       node.removeEventListener('govuk-react-autocomplete:query', onQuery);

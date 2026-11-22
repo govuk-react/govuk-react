@@ -118,3 +118,20 @@ export const WithConditional: Story = {
     ),
   },
 };
+
+export const WithDivider: Story = {
+  args: {
+    children: (
+      <>
+        {items}
+        <Radios.Divider>or</Radios.Divider>
+        <Radios.ItemComposite
+          id="where-do-you-live-6"
+          name="where-do-you-live"
+          value="abroad"
+          label="I am a British citizen living abroad"
+        />
+      </>
+    ),
+  },
+};

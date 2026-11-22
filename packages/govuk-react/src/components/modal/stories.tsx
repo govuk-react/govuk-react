@@ -43,7 +43,7 @@ export const WithParts: Story = {
       <Modal.Trigger variant="secondary">Show the timeout warning</Modal.Trigger>
       <Modal.Content>
         <Modal.Title>You’re about to be signed out</Modal.Title>
-        <p className="govuk-body">For your security, we will sign you out in 2 minutes.</p>
+        <Modal.Description>For your security, we will sign you out in 2 minutes.</Modal.Description>
         <div className="govuk-button-group">
           <Modal.Close variant={undefined}>Stay signed in</Modal.Close>
           <a className="govuk-link" href="#sign-out">
@@ -70,7 +70,7 @@ export const WithPartsOpen: Story = {
       <Modal.Trigger variant="secondary">Show the timeout warning</Modal.Trigger>
       <Modal.Content>
         <Modal.Title>You’re about to be signed out</Modal.Title>
-        <p className="govuk-body">For your security, we will sign you out in 2 minutes.</p>
+        <Modal.Description>For your security, we will sign you out in 2 minutes.</Modal.Description>
         <div className="govuk-button-group">
           <Modal.Close variant={undefined}>Stay signed in</Modal.Close>
           <a className="govuk-link" href="#sign-out">

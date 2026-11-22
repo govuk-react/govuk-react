@@ -68,3 +68,11 @@ export const OnSubmit: Story = {
     );
   },
 };
+
+export const WithDescription: Story = {
+  render: Default.render,
+  args: {
+    title: 'There is a problem',
+    description: 'The file couldn’t be loaded. Try again later.',
+  },
+};
