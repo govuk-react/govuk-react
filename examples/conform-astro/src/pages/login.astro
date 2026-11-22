@@ -1,0 +1,16 @@
+---
+import { actions } from 'astro:actions';
+import { LoginForm } from '../features/login';
+import { formState } from '../form-state';
+import Layout from '../layouts/Layout.astro';
+
+const { action, redirectTo, lastResult, hasErrors } = formState(Astro, actions.login);
+
+if (redirectTo) {
+  return Astro.redirect(redirectTo);
+}
+---
+
+<Layout title="Sign in" error={hasErrors}>
+  <LoginForm client:load action={action} lastResult={lastResult} />
+</Layout>

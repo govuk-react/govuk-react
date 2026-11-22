@@ -1,0 +1,31 @@
+---
+import 'govuk-frontend/dist/govuk/govuk-frontend.min.css';
+import 'govuk-react/styles.css';
+import { InlineScript, autoFocus, focusLinks, passwordInput } from '@govuk-react/primitives/inline-script';
+import { Chrome } from '../components/Chrome';
+
+type Props = {
+  title: string;
+  /** Whether the page shows validation errors. */
+  error?: boolean;
+};
+
+const { title, error } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="govuk-template">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{error ? 'Error: ' : ''}{title} – Conform example</title>
+    <InlineScript script={autoFocus} />
+    <InlineScript script={focusLinks} />
+    <InlineScript script={passwordInput} />
+  </head>
+  <body class="govuk-template__body">
+    <Chrome pathname={Astro.url.pathname}>
+      <slot />
+    </Chrome>
+  </body>
+</html>

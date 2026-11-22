@@ -1,0 +1,5 @@
+dist
+.astro
+public/assets
+test-results
+playwright-report

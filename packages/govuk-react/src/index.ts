@@ -4,6 +4,7 @@ export { BackLink } from './components/back-link/index.js';
 export { Body } from './components/body/index.js';
 export * as Breadcrumbs from './components/breadcrumbs/index.js';
 export * from './components/button/index.js';
+export { ButtonGroup } from './components/button-group/index.js';
 export { Caption } from './components/caption/index.js';
 export * as CharacterCount from './components/character-count/index.js';
 export * as Checkboxes from './components/checkboxes/index.js';

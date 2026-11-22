@@ -1,0 +1,16 @@
+---
+import { actions } from 'astro:actions';
+import { SignupAsyncSchemaForm } from '../features/signup-async-schema';
+import { formState } from '../form-state';
+import Layout from '../layouts/Layout.astro';
+
+const { action, redirectTo, lastResult, hasErrors } = formState(Astro, actions.signupAsyncSchema);
+
+if (redirectTo) {
+  return Astro.redirect(redirectTo);
+}
+---
+
+<Layout title="Create an account" error={hasErrors}>
+  <SignupAsyncSchemaForm client:load action={action} lastResult={lastResult} />
+</Layout>

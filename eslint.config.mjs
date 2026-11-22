@@ -48,6 +48,15 @@ export default tseslint.config(
     rules: { '@typescript-eslint/no-require-imports': 'off' },
   },
   {
+    // The examples use React's automatic JSX runtime, as new projects do.
+    files: ['examples/**/*.{ts,tsx}'],
+    rules: { 'react/react-in-jsx-scope': 'off' },
+  },
+  {
+    files: ['examples/**/*.mjs'],
+    languageOptions: { globals: globals.node },
+  },
+  {
     files: ['**/test.{ts,tsx}', '**/*.test.{ts,tsx}', 'scripts/setupTests.ts'],
     languageOptions: { globals: globals.vitest },
   },
