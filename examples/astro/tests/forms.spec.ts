@@ -67,7 +67,7 @@ for (const mode of modes) {
       await page.getByRole('button', { name: 'Sign in' }).click();
 
       await expect(page).toHaveURL(/\/\?value=/);
-      await expect(page).toHaveTitle('Examples – Conform example');
+      await expect(page).toHaveTitle('Examples – Astro example');
       const banner = page.getByRole('alert').filter({ hasText: 'Form submitted' });
       await expect(banner).toContainText('name@example.com');
       await expect(banner).toContainText('on');

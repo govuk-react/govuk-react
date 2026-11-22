@@ -1,0 +1,27 @@
+---
+import { InlineScript, accordion, characterCount, tabs } from '@govuk-react/primitives/inline-script';
+import { Body } from 'govuk-react/body';
+import { GridColumn } from 'govuk-react/grid-column';
+import { GridRow } from 'govuk-react/grid-row';
+import { Heading } from 'govuk-react/heading';
+import { WithoutReact } from '../features/without-react';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Without React">
+  <Fragment slot="head">
+    <InlineScript script={accordion} />
+    <InlineScript script={characterCount} />
+    <InlineScript script={tabs} />
+  </Fragment>
+  <GridRow>
+    <GridColumn width="two-thirds">
+      <Heading size="l" headingLevel={1}>Without React</Heading>
+      <Body>
+        None of these components has a client directive, so this page sends no React to the browser. Each is enhanced
+        by its element’s script, inlined in the page’s head, as soon as the HTML loads.
+      </Body>
+      <WithoutReact />
+    </GridColumn>
+  </GridRow>
+</Layout>

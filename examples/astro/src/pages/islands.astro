@@ -1,0 +1,39 @@
+---
+import { Body } from 'govuk-react/body';
+import * as Details from 'govuk-react/details';
+import { GridColumn } from 'govuk-react/grid-column';
+import { GridRow } from 'govuk-react/grid-row';
+import { Heading } from 'govuk-react/heading';
+import { FeedbackField } from '../features/feedback-field';
+import { GuideAccordion } from '../features/guide-accordion';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Islands">
+  <GridRow>
+    <GridColumn width="two-thirds">
+      <Heading size="l" headingLevel={1}>Islands</Heading>
+      <Body>
+        Astro renders every component on this page to HTML. Only the components with a client directive hydrate in the
+        browser, each as its own island, so React only runs where it’s needed.
+      </Body>
+
+      <Heading size="m" headingLevel={2}>Without a directive</Heading>
+      <Body>This details component has no directive, so it sends no JavaScript. It works as HTML.</Body>
+      <Details.Composite summary="Help with nationality">
+        We need to know your nationality so we can work out which elections you’re entitled to vote in.
+      </Details.Composite>
+
+      <Heading size="m" headingLevel={2}>When the browser is idle</Heading>
+      <Body>This character count has <code>client:idle</code>. It hydrates once the page has loaded and the browser is idle.</Body>
+      <FeedbackField client:idle />
+
+      <Heading size="m" headingLevel={2}>When it’s visible</Heading>
+      <Body>
+        This accordion has <code>client:visible</code>. It hydrates when it scrolls into view. Until then, it shows every section, as it does without
+        JavaScript.
+      </Body>
+      <GuideAccordion client:visible id="islands-guide" />
+    </GridColumn>
+  </GridRow>
+</Layout>

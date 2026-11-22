@@ -12,7 +12,7 @@
     "eslint:fix": "eslint --fix .",
     "eslint": "eslint .",
     "start": "pnpm --filter @govuk-react/storybook start",
-    "test:e2e": "pnpm --filter @govuk-react/example-application test:e2e && pnpm --filter @govuk-react/primitives-e2e test:e2e && pnpm --filter @govuk-react/primitives-e2e test:e2e:hydration && pnpm --filter \"govuk-react...\" build && pnpm --filter @govuk-react/example-conform-astro test:e2e",
+    "test:e2e": "pnpm --filter @govuk-react/example-application test:e2e && pnpm --filter @govuk-react/primitives-e2e test:e2e && pnpm --filter @govuk-react/primitives-e2e test:e2e:hydration && pnpm --filter \"govuk-react...\" build && pnpm --filter @govuk-react/example-astro test:e2e",
     "test:debug": "vitest --inspect-brk --no-file-parallelism",
     "test:snapshot": "vitest run -u",
     "test:unit": "vitest run",

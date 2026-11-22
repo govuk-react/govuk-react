@@ -1,4 +1,8 @@
-# Conform and Astro example
+# Astro example
+
+govuk-react in [Astro](https://astro.build/), with pages that work before and without JavaScript: forms, and how much JavaScript each component needs.
+
+## Forms
 
 [Conform](https://conform.guide/)'s [Astro example](https://github.com/edmundhung/conform/tree/main/examples/astro), rebuilt with govuk-react and the GOV.UK Design System's guidance on how to [recover from validation errors](https://design-system.service.gov.uk/patterns/validation/).
 
@@ -19,6 +23,14 @@ The forms validate when the user submits them, not when they leave a field, and 
 
 The server keeps no state: each submission carries the whole form. The add, remove and move buttons on the Tasks page are submit buttons. Without JavaScript, the server applies them to the submitted list with Conform's `resolveSubmission`, and renders the updated form. With JavaScript, Conform applies them in the browser.
 
+## Hydration
+
+- [Islands](./src/pages/islands.astro): only components with a client directive hydrate, each as its own island. One has no directive, one has `client:idle` and one has `client:visible`.
+- [Without React](./src/pages/without-react.astro): components with no client directive, enhanced by their elements' scripts, inlined in the page's head with `InlineScript`. The page sends no React to the browser.
+- [Upgrade to React](./src/pages/upgrade.astro): an accordion enhanced by its inline script as soon as the page loads, then hydrated with `client:idle`. React counts the sections the user has read, including those still open when React loaded, which `onValueChange` reports with `beforeHydration`.
+
+`client:visible` watches the island's child elements, which need a box of their own. The primitives' elements have `display: contents`, so the accordion in [`GuideAccordion`](./src/features/guide-accordion.tsx) is wrapped in a `div`.
+
 ## Run it
 
 ```sh
@@ -28,7 +40,7 @@ npm run dev
 
 ## Test it
 
-The Playwright tests submit each form without JavaScript, before React hydrates, and after.
+The Playwright tests submit each form without JavaScript, before React hydrates, and after. They also check that each hydration page hydrates only what it should.
 
 ```sh
 npx playwright install
