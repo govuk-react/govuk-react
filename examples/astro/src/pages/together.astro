@@ -12,6 +12,7 @@ import { Body } from 'govuk-react/body';
 import { GridColumn } from 'govuk-react/grid-column';
 import { GridRow } from 'govuk-react/grid-row';
 import { Heading } from 'govuk-react/heading';
+import { InsetText } from 'govuk-react/inset-text';
 import { Application } from '../features/together';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -33,6 +34,10 @@ import Layout from '../layouts/Layout.astro';
         script is inlined in the page’s head, so they all work before React loads, and keep what you’ve done once it
         has.
       </Body>
+      <InsetText>
+        This page proves that the components work together. It isn’t a recommendation for how to design a service, such
+        as when to use a modal.
+      </InsetText>
       <Application client:idle />
     </GridColumn>
   </GridRow>
