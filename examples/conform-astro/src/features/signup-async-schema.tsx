@@ -3,6 +3,7 @@ import { coerceFormValue } from '@conform-to/zod/v4/future';
 import { useMemo } from 'react';
 import { z } from 'zod';
 import type { ActionResult } from '../action-result';
+import { path } from '../path';
 import { FormErrorSummary, useFailedSubmits } from '../components/FormErrorSummary';
 import { hideFields, isUsernameAvailable, passwordsSchema, SignupPage, usernameSchema, usernameTaken } from './signup';
 
@@ -40,7 +41,7 @@ export async function signupWithAsyncSchema(formData: FormData): Promise<ActionR
 
   return {
     success: true,
-    redirectTo: `/?value=${encodeURIComponent(JSON.stringify({ username: result.data.username }))}`,
+    redirectTo: path(`/?value=${encodeURIComponent(JSON.stringify({ username: result.data.username }))}`),
   };
 }
 

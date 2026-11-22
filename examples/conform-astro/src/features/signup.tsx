@@ -16,6 +16,7 @@ import * as PasswordInput from 'govuk-react/password-input';
 import { useMemo, type ComponentProps, type ReactNode } from 'react';
 import { z } from 'zod';
 import type { ActionResult } from '../action-result';
+import { path } from '../path';
 import { fieldProps } from '../components/fields';
 import { FormErrorSummary, useFailedSubmits } from '../components/FormErrorSummary';
 
@@ -76,7 +77,7 @@ export async function signup(formData: FormData): Promise<ActionResult> {
 
   return {
     success: true,
-    redirectTo: `/?value=${encodeURIComponent(JSON.stringify({ username: result.data.username }))}`,
+    redirectTo: path(`/?value=${encodeURIComponent(JSON.stringify({ username: result.data.username }))}`),
   };
 }
 
