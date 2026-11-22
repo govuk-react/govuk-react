@@ -337,12 +337,3 @@
     }
   }
 }
-
-/*
- * These elements leave no box: Exit this page's button is sticky, and a modal's trigger can sit in
- * a button group.
- */
-.govuk-react-exit-this-page__root:not([hidden]),
-.govuk-react-modal__root:not([hidden]) {
-  display: contents;
-}

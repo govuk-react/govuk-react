@@ -1,9 +1,8 @@
 /* Rules the primitives need. They set no look, only `display`. */
 
 /*
- * Each element is a block, so it has a box for IntersectionObserver, which Astro's
- * `client:visible` uses. A class that sets `display` wins, such as `display: contents` in a flex
- * or grid container, and `hidden` still hides it.
+ * Each element only holds its parts' state, so it leaves no box of its own. A class that sets
+ * `display` wins, and `hidden` still hides it.
  */
 :where(
   govuk-react-accordion,
@@ -19,7 +18,7 @@
   govuk-react-password-input,
   govuk-react-tabs
 ):where(:not([hidden])) {
-  display: block;
+  display: contents;
 }
 
 /* Tabs: the radios fallback shows only the checked tab's panel, until the element upgrades. */
