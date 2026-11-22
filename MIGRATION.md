@@ -6,13 +6,15 @@ govuk-react 1.0 is a clean break from 0.x. It's built on [govuk-frontend-react](
 
 ```sh
 npm uninstall styled-components @types/styled-components
+# and any @govuk-react/* component packages, such as @govuk-react/button
 npm install govuk-react govuk-frontend
 ```
 
-Load govuk-frontend's CSS once in your app, for example:
+Load govuk-frontend's CSS once in your app, followed by govuk-react's, for example:
 
 ```js
 import 'govuk-frontend/dist/govuk/govuk-frontend.min.css';
+import 'govuk-react/styles.css';
 ```
 
 Serve govuk-frontend's font and image assets at `/assets`: see [Fonts and images](README.md#fonts-and-images).
@@ -20,9 +22,9 @@ Serve govuk-frontend's font and image assets at `/assets`: see [Fonts and images
 | 0.x                                                          | 1.0                                                                         |
 | ------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | `styled-components` peer dependency                          | `govuk-frontend` peer dependency (`~6.6.0`), and its CSS loaded in your app |
-| React 16.8 or later                                          | React 19 or later                                                           |
+| React 16.8 or later                                          | React 19.2 or later                                                         |
 | CommonJS and ES module builds                                | ES modules only                                                             |
-| `@govuk-react/*` packages, one per component                 | the single `govuk-react` package                                            |
+| `@govuk-react/*` packages, one per component                 | the single `govuk-react` package, with a subpath per component              |
 | `<GlobalStyle />`                                            | removed: govuk-frontend's CSS styles the page                               |
 | Server rendering needs styled-components' `ServerStyleSheet` | nothing extra: components render plain markup                               |
 
@@ -35,10 +37,12 @@ import { Heading, Input } from 'govuk-react';
 import * as DateInput from 'govuk-react/date-input';
 ```
 
-| 0.x                                         | 1.0                                             |
-| ------------------------------------------- | ----------------------------------------------- |
-| `import Button from '@govuk-react/button'`  | `import { Button } from 'govuk-react/button'`   |
-| `import Heading from 'govuk-react/heading'` | `import { Heading } from 'govuk-react/heading'` |
+From the package root, a multi-part component such as `Tabs` is imported by the same name as in 0.x, but it's now a module, so `<Tabs>` becomes `<Tabs.Composite>`.
+
+| 0.x                                        | 1.0                                           |
+| ------------------------------------------ | --------------------------------------------- |
+| `import Button from '@govuk-react/button'` | `import { Button } from 'govuk-react/button'` |
+| `import Tabs from '@govuk-react/tabs'`     | `import * as Tabs from 'govuk-react/tabs'`    |
 
 ## Props that every component had
 
@@ -62,7 +66,7 @@ import * as DateInput from 'govuk-react/date-input';
 
 ## New components
 
-These have no 0.x equivalent: `Accordion`, `CharacterCount`, `CookieBanner`, `Feedback`, `GenericHeader`, `Header`, `LanguageNavigation`, `Modal`, `NotificationBanner`, `PasswordInput`, `ServiceNavigation`, `SummaryList` and `TaskList`.
+These have no 0.x equivalent: `Accordion`, `ButtonGroup`, `CharacterCount`, `CookieBanner`, `ExitThisPage`, `Feedback`, `GenericHeader`, `Header`, `LanguageNavigation`, `Modal`, `NotificationBanner`, `PasswordInput`, `ServiceNavigation`, `SummaryList` and `TaskList`.
 
 The sections below cover each 0.x component.
 
@@ -92,17 +96,17 @@ There is no equivalent for the other whitespace props (`margin`, `padding` and s
 
 ## Body (was Paragraph and LeadParagraph)
 
-`Paragraph` and `LeadParagraph` are replaced by govuk-frontend-react's `Body`, which renders a `p` with govuk-frontend's body classes. It's a named export, and the `govuk-react/paragraph` and `govuk-react/lead-paragraph` subpaths are removed.
+`Paragraph` and `LeadParagraph` are replaced by govuk-frontend-react's `Body`, which renders a `p` with govuk-frontend's body classes. It's a named export, and there is no `paragraph` or `lead-paragraph` subpath.
 
-| 0.x                                             | 1.0                                                                                      |
-| ----------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `import Paragraph from 'govuk-react/paragraph'` | `import { Body } from 'govuk-react/body'`                                                |
-| `<Paragraph>`                                   | `<Body>`                                                                                 |
-| `<Paragraph supportingText>`                    | `<Body size="s" marginBottom={4}>` (`size="s"` alone has a 15px bottom margin, not 20px) |
-| `<LeadParagraph>`                               | `<Body size="l">`                                                                        |
-| `mb={n}`                                        | `marginBottom={n}`                                                                       |
-| markdown in `children`                          | JSX, e.g. `<strong>`, `<Link>` and `<code>`                                              |
-| `linkRenderer`                                  | your own link component in `children`                                                    |
+| 0.x                                              | 1.0                                                                                      |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| `import Paragraph from '@govuk-react/paragraph'` | `import { Body } from 'govuk-react/body'`                                                |
+| `<Paragraph>`                                    | `<Body>`                                                                                 |
+| `<Paragraph supportingText>`                     | `<Body size="s" marginBottom={4}>` (`size="s"` alone has a 15px bottom margin, not 20px) |
+| `<LeadParagraph>`                                | `<Body size="l">`                                                                        |
+| `mb={n}`                                         | `marginBottom={n}`                                                                       |
+| markdown in `children`                           | JSX, e.g. `<strong>`, `<Link>` and `<code>`                                              |
+| `linkRenderer`                                   | your own link component in `children`                                                    |
 
 Markdown parsing is now up to your app. `Paragraph` parsed its children as markdown inside a `div`. `Body` renders its children as given inside a single `p`, so:
 
@@ -116,13 +120,13 @@ There is no equivalent for the other whitespace props (`margin`, `padding` and s
 
 `Caption` is now govuk-frontend-react's `Caption`. It's a named export.
 
-| 0.x                                         | 1.0                                             |
-| ------------------------------------------- | ----------------------------------------------- |
-| `import Caption from 'govuk-react/caption'` | `import { Caption } from 'govuk-react/caption'` |
-| `<Caption>` (no size)                       | `<Caption size="xl">`                           |
-| `size="XL"` / `"XLARGE"` / `27`             | `size="xl"`                                     |
-| `size="L"` / `"LARGE"` / `24`               | `size="l"`                                      |
-| `size="M"` / `"MEDIUM"` / `19`              | `size="m"`                                      |
+| 0.x                                          | 1.0                                             |
+| -------------------------------------------- | ----------------------------------------------- |
+| `import Caption from '@govuk-react/caption'` | `import { Caption } from 'govuk-react/caption'` |
+| `<Caption>` (no size)                        | `<Caption size="xl">`                           |
+| `size="XL"` / `"XLARGE"` / `27`              | `size="xl"`                                     |
+| `size="L"` / `"LARGE"` / `24`                | `size="l"`                                      |
+| `size="M"` / `"MEDIUM"` / `19`               | `size="m"`                                      |
 
 `size` is now required, and numeric sizes are no longer accepted. There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and so on).
 
@@ -130,13 +134,13 @@ There is no equivalent for the other whitespace props (`margin`, `padding` and s
 
 `SectionBreak` is now govuk-frontend-react's `SectionBreak`. It's a named export.
 
-| 0.x                                                    | 1.0                                                        |
-| ------------------------------------------------------ | ---------------------------------------------------------- |
-| `import SectionBreak from 'govuk-react/section-break'` | `import { SectionBreak } from 'govuk-react/section-break'` |
-| `level="XL"` / `"XLARGE"`                              | `size="xl"`                                                |
-| `level="L"` / `"LARGE"`                                | `size="l"`                                                 |
-| `level="M"` / `"MEDIUM"`                               | `size="m"`                                                 |
-| `visible`                                              | `visible`                                                  |
+| 0.x                                                     | 1.0                                                        |
+| ------------------------------------------------------- | ---------------------------------------------------------- |
+| `import SectionBreak from '@govuk-react/section-break'` | `import { SectionBreak } from 'govuk-react/section-break'` |
+| `level="XL"` / `"XLARGE"`                               | `size="xl"`                                                |
+| `level="L"` / `"LARGE"`                                 | `size="l"`                                                 |
+| `level="M"` / `"MEDIUM"`                                | `size="m"`                                                 |
+| `visible`                                               | `visible`                                                  |
 
 There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and so on).
 
@@ -144,14 +148,14 @@ There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and s
 
 `UnorderedList`, `OrderedList` and `ListItem` are replaced by govuk-frontend-react's `List`. Use plain `li` elements for items.
 
-| 0.x                                                      | 1.0                                       |
-| -------------------------------------------------------- | ----------------------------------------- |
-| `import UnorderedList from 'govuk-react/unordered-list'` | `import { List } from 'govuk-react/list'` |
-| `<UnorderedList>`                                        | `<List variant="bullet">`                 |
-| `<OrderedList>`                                          | `<List variant="number">`                 |
-| `listStyleType="none"`                                   | `<List>` (no variant)                     |
-| `<ListItem>`                                             | `<li>`                                    |
-| `mb={n}` on the list                                     | `marginBottom={n}`                        |
+| 0.x                                                       | 1.0                                       |
+| --------------------------------------------------------- | ----------------------------------------- |
+| `import UnorderedList from '@govuk-react/unordered-list'` | `import { List } from 'govuk-react/list'` |
+| `<UnorderedList>`                                         | `<List variant="bullet">`                 |
+| `<OrderedList>`                                           | `<List variant="number">`                 |
+| `listStyleType="none"`                                    | `<List>` (no variant)                     |
+| `<ListItem>`                                              | `<li>`                                    |
+| `mb={n}` on the list                                      | `marginBottom={n}`                        |
 
 `List` renders an `ol` for `variant="number"` and a `ul` otherwise. Other `listStyleType` values and the whitespace props have no equivalent. `spaced` adds govuk-frontend's extra space between items.
 
@@ -159,18 +163,18 @@ There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and s
 
 `InsetText` is now govuk-frontend-react's `InsetText`. It's a named export, and the whitespace props (`mb`, `margin`, `padding` and so on) are removed.
 
-| 0.x                                              | 1.0                                                  |
-| ------------------------------------------------ | ---------------------------------------------------- |
-| `import InsetText from 'govuk-react/inset-text'` | `import { InsetText } from 'govuk-react/inset-text'` |
+| 0.x                                               | 1.0                                                  |
+| ------------------------------------------------- | ---------------------------------------------------- |
+| `import InsetText from '@govuk-react/inset-text'` | `import { InsetText } from 'govuk-react/inset-text'` |
 
 ## WarningText
 
 `WarningText` is now govuk-frontend-react's `WarningText`.
 
-| 0.x                                                  | 1.0                                                      |
-| ---------------------------------------------------- | -------------------------------------------------------- |
-| `import WarningText from 'govuk-react/warning-text'` | `import { WarningText } from 'govuk-react/warning-text'` |
-| `<WarningText>`                                      | `<WarningText>`                                          |
+| 0.x                                                   | 1.0                                                      |
+| ----------------------------------------------------- | -------------------------------------------------------- |
+| `import WarningText from '@govuk-react/warning-text'` | `import { WarningText } from 'govuk-react/warning-text'` |
+| `<WarningText>`                                       | `<WarningText>`                                          |
 
 It adds govuk-frontend's visually hidden "Warning" text before the message. Change it with `iconFallbackText`. The whitespace props (`mb` and so on) are removed.
 
@@ -178,30 +182,30 @@ It adds govuk-frontend's visually hidden "Warning" text before the message. Chan
 
 `Tag` is now govuk-frontend-react's `Tag`. It's a named export, and `tint` is replaced by govuk-frontend's `colour`.
 
-| 0.x                                 | 1.0                                             |
-| ----------------------------------- | ----------------------------------------------- |
-| `import Tag from 'govuk-react/tag'` | `import { Tag } from 'govuk-react/tag'`         |
-| `tint="SOLID"` (default)            | no `colour` (govuk-frontend's default blue tag) |
-| `tint="GREY"` or `inactive`         | `colour="grey"`                                 |
-| `tint="GREEN"`                      | `colour="green"`                                |
-| `tint="TURQUOISE"`                  | `colour="teal"`                                 |
-| `tint="BLUE"`                       | `colour="blue"`                                 |
-| `tint="PURPLE"`                     | `colour="purple"`                               |
-| `tint="PINK"`                       | `colour="magenta"`                              |
-| `tint="RED"`                        | `colour="red"`                                  |
-| `tint="ORANGE"`                     | `colour="orange"`                               |
-| `tint="YELLOW"`                     | `colour="yellow"`                               |
+| 0.x                                  | 1.0                                             |
+| ------------------------------------ | ----------------------------------------------- |
+| `import Tag from '@govuk-react/tag'` | `import { Tag } from 'govuk-react/tag'`         |
+| `tint="SOLID"` (default)             | no `colour` (govuk-frontend's default blue tag) |
+| `tint="GREY"` or `inactive`          | `colour="grey"`                                 |
+| `tint="GREEN"`                       | `colour="green"`                                |
+| `tint="TURQUOISE"`                   | `colour="teal"`                                 |
+| `tint="BLUE"`                        | `colour="blue"`                                 |
+| `tint="PURPLE"`                      | `colour="purple"`                               |
+| `tint="PINK"`                        | `colour="magenta"`                              |
+| `tint="RED"`                         | `colour="red"`                                  |
+| `tint="ORANGE"`                      | `colour="orange"`                               |
+| `tint="YELLOW"`                      | `colour="yellow"`                               |
 
-govuk-frontend's tags are no longer uppercase, and the default is a light blue tag rather than solid blue. `light-blue` is a new colour. Custom `backgroundColor` and `color` props are removed.
+govuk-frontend's tags aren't uppercase, and the default is a light blue tag rather than solid blue. `light-blue` is a new colour. Custom `backgroundColor` and `color` props are removed.
 
 ## PhaseBanner
 
 `PhaseBanner` is now govuk-frontend-react's `PhaseBanner`, a module of parts. `PhaseBanner.Composite` renders the whole banner, and `Root`, `Content`, `Tag` and `Text` are available for custom markup.
 
-| 0.x                                                  | 1.0                                                       |
-| ---------------------------------------------------- | --------------------------------------------------------- |
-| `import PhaseBanner from 'govuk-react/phase-banner'` | `import * as PhaseBanner from 'govuk-react/phase-banner'` |
-| `<PhaseBanner level="alpha">`                        | `<PhaseBanner.Composite tag="Alpha">`                     |
+| 0.x                                                   | 1.0                                                       |
+| ----------------------------------------------------- | --------------------------------------------------------- |
+| `import PhaseBanner from '@govuk-react/phase-banner'` | `import * as PhaseBanner from 'govuk-react/phase-banner'` |
+| `<PhaseBanner level="alpha">`                         | `<PhaseBanner.Composite tag="Alpha">`                     |
 
 The whitespace props (`mb` and so on) are removed.
 
@@ -209,10 +213,10 @@ The whitespace props (`mb` and so on) are removed.
 
 `Details` is now govuk-frontend-react's `Details`, a module of parts. `Details.Composite` renders the whole component, and `Root`, `Summary`, `SummaryText` and `Text` are available for custom markup.
 
-| 0.x                                         | 1.0                                              |
-| ------------------------------------------- | ------------------------------------------------ |
-| `import Details from 'govuk-react/details'` | `import * as Details from 'govuk-react/details'` |
-| `<Details summary="Help">`                  | `<Details.Composite summary="Help">`             |
+| 0.x                                          | 1.0                                              |
+| -------------------------------------------- | ------------------------------------------------ |
+| `import Details from '@govuk-react/details'` | `import * as Details from 'govuk-react/details'` |
+| `<Details summary="Help">`                   | `<Details.Composite summary="Help">`             |
 
 The whitespace props (`mb` and so on) are removed.
 
@@ -220,18 +224,18 @@ The whitespace props (`mb` and so on) are removed.
 
 `Panel` is now govuk-frontend-react's `Panel`, a module of parts. `Panel.Composite` renders the whole panel, and `Root`, `Title`, `Body` and `Actions` are available for custom markup. The composite also takes `headingLevel`, `variant` and `actions`.
 
-| 0.x                                     | 1.0                                              |
-| --------------------------------------- | ------------------------------------------------ |
-| `import Panel from 'govuk-react/panel'` | `import * as Panel from 'govuk-react/panel'`     |
-| `<Panel title="Application complete">`  | `<Panel.Composite title="Application complete">` |
+| 0.x                                      | 1.0                                              |
+| ---------------------------------------- | ------------------------------------------------ |
+| `import Panel from '@govuk-react/panel'` | `import * as Panel from 'govuk-react/panel'`     |
+| `<Panel title="Application complete">`   | `<Panel.Composite title="Application complete">` |
 
 ## VisuallyHidden
 
 `VisuallyHidden` is now govuk-frontend-react's `VisuallyHidden`, a `span` with the `govuk-visually-hidden` class.
 
-| 0.x                                                        | 1.0                                                            |
-| ---------------------------------------------------------- | -------------------------------------------------------------- |
-| `import VisuallyHidden from 'govuk-react/visually-hidden'` | `import { VisuallyHidden } from 'govuk-react/visually-hidden'` |
+| 0.x                                                         | 1.0                                                            |
+| ----------------------------------------------------------- | -------------------------------------------------------------- |
+| `import VisuallyHidden from '@govuk-react/visually-hidden'` | `import { VisuallyHidden } from 'govuk-react/visually-hidden'` |
 
 The `focusable` prop is removed, as govuk-frontend 6 no longer has a focusable variant. Hidden content that appears on focus is confusing for sighted keyboard users; use a visible control or `SkipLink` instead. The `important` and `as` props are also removed.
 
@@ -241,7 +245,7 @@ The `focusable` prop is removed, as govuk-frontend 6 no longer has a focusable v
 
 | 0.x                                            | 1.0                                                             |
 | ---------------------------------------------- | --------------------------------------------------------------- |
-| `import Link from 'govuk-react/link'`          | `import { Link } from 'govuk-react/link'`                       |
+| `import Link from '@govuk-react/link'`         | `import { Link } from 'govuk-react/link'`                       |
 | `<Link muted>`                                 | `<Link variant="muted">`                                        |
 | `<Link textColour>`                            | `<Link variant="text-colour">`                                  |
 | `<Link as={RouterLink} to="/page">Page</Link>` | `<Link asChild><RouterLink to="/page">Page</RouterLink></Link>` |
@@ -254,7 +258,7 @@ The `focusable` prop is removed, as govuk-frontend 6 no longer has a focusable v
 
 | 0.x                                                | 1.0                                                                 |
 | -------------------------------------------------- | ------------------------------------------------------------------- |
-| `import BackLink from 'govuk-react/back-link'`     | `import { BackLink } from 'govuk-react/back-link'`                  |
+| `import BackLink from '@govuk-react/back-link'`    | `import { BackLink } from 'govuk-react/back-link'`                  |
 | `<BackLink as={RouterLink} to="/">Back</BackLink>` | `<BackLink asChild><RouterLink to="/">Back</RouterLink></BackLink>` |
 
 The whitespace props (`mb` and so on) are removed. `BackLink` gains an `inverse` prop.
@@ -263,10 +267,10 @@ The whitespace props (`mb` and so on) are removed. `BackLink` gains an `inverse`
 
 `SkipLink` is now govuk-frontend-react's `SkipLink`. It still defaults to `href="#content"`, but no longer has default text, so pass the text as `children`. `Page` passes "Skip to main content".
 
-| 0.x                                            | 1.0                                                |
-| ---------------------------------------------- | -------------------------------------------------- |
-| `import SkipLink from 'govuk-react/skip-link'` | `import { SkipLink } from 'govuk-react/skip-link'` |
-| `<SkipLink />`                                 | `<SkipLink>Skip to main content</SkipLink>`        |
+| 0.x                                             | 1.0                                                |
+| ----------------------------------------------- | -------------------------------------------------- |
+| `import SkipLink from '@govuk-react/skip-link'` | `import { SkipLink } from 'govuk-react/skip-link'` |
+| `<SkipLink />`                                  | `<SkipLink>Skip to main content</SkipLink>`        |
 
 The `as` prop is removed.
 
@@ -294,7 +298,7 @@ The form components are now govuk-frontend-react's. Each control has a flat name
 | `<ErrorText>`                                                | `<ErrorMessageComposite>` (adds the visually hidden "Error:" prefix) or `<ErrorMessage>`                                                            |
 | `<FormGroup error>`                                          | `<FormGroup error>` (named import)                                                                                                                  |
 
-Subpath imports follow the new names: `govuk-react/checkboxes`, `govuk-react/radios`, `govuk-react/date-input`, `govuk-react/textarea`, `govuk-react/hint` and `govuk-react/error-message`. `govuk-react/checkbox`, `radio`, `multi-choice`, `date-field`, `input-field`, `text-area`, `label-text`, `hint-text` and `error-text` are removed.
+Subpath imports follow the new names: `govuk-react/checkboxes`, `govuk-react/radios`, `govuk-react/date-input`, `govuk-react/input`, `govuk-react/textarea`, `govuk-react/label`, `govuk-react/hint` and `govuk-react/error-message`, in place of the `@govuk-react/checkbox`, `radio`, `multi-choice`, `date-field`, `input-field`, `text-area`, `label-text`, `hint-text` and `error-text` packages.
 
 `Checkboxes.Field`, `Radios.Field` and `DateInput.Field` need an id prefix or id, because govuk-frontend uses it to link hints and errors with `aria-describedby`. `DateInput.Field` no longer manages the day, month and year state; see the example application's `DateOfBirth` for a controlled version.
 
@@ -316,7 +320,6 @@ The layout components are now govuk-frontend-react's. The whitespace props (`mb`
 | `<Footer.MetaLinks heading="…">`                                  | `metaHeading` prop                                                                                              |
 | `<Footer.MetaLinks>`, `<Footer.Link>`                             | `<Footer.InlineListItem>` and `<Footer.Link>` inside `metaLinks`                                                |
 | `<Footer.Navigation>`, `<Footer.NavigationLinks listColumns={2}>` | `<Footer.Section>`, `<Footer.Heading>`, `<Footer.List columns={2}>` and `<Footer.ListItem>` inside `navigation` |
-| `<GlobalStyle />`                                                 | removed: govuk-frontend's CSS styles the page                                                                   |
 
 `GridColumn` needs a `width`, and custom column widths (`setWidth="25%"`) are removed. `Footer.Composite` shows the crown, the Open Government Licence and "© Crown copyright" by default. The old footer showed no copyright unless given one; `copyright` is now the text to show, and its `link` and `image` are removed.
 
@@ -326,14 +329,14 @@ The layout components are now govuk-frontend-react's. The whitespace props (`mb`
 
 `Breadcrumbs` is now govuk-frontend-react's `Breadcrumbs`, a module of parts. `Breadcrumbs.Composite` renders the nav and list, and each `Breadcrumbs.ItemComposite` renders a link, or the current page when it has no `href`. `Root`, `List`, `Item` and `Link` are available for custom markup. The composite also takes `collapseOnMobile` and `inverse`.
 
-| 0.x                                                 | 1.0                                                                                                                       |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `import Breadcrumbs from 'govuk-react/breadcrumbs'` | `import * as Breadcrumbs from 'govuk-react/breadcrumbs'`                                                                  |
-| `<Breadcrumbs>`                                     | `<Breadcrumbs.Composite>`                                                                                                 |
-| `<Breadcrumbs.Link href="/section">`                | `<Breadcrumbs.ItemComposite href="/section">`                                                                             |
-| Plain text child for the current page               | `<Breadcrumbs.ItemComposite>Current page</Breadcrumbs.ItemComposite>`                                                     |
-| `<Breadcrumbs.Link as={RouterLink} to="/section">`  | `<Breadcrumbs.Link asChild><RouterLink to="/section">Section</RouterLink></Breadcrumbs.Link>` inside a `Breadcrumbs.Item` |
-| `mb` and other whitespace props                     | `className`                                                                                                               |
+| 0.x                                                  | 1.0                                                                                                                       |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `import Breadcrumbs from '@govuk-react/breadcrumbs'` | `import * as Breadcrumbs from 'govuk-react/breadcrumbs'`                                                                  |
+| `<Breadcrumbs>`                                      | `<Breadcrumbs.Composite>`                                                                                                 |
+| `<Breadcrumbs.Link href="/section">`                 | `<Breadcrumbs.ItemComposite href="/section">`                                                                             |
+| Plain text child for the current page                | `<Breadcrumbs.ItemComposite>Current page</Breadcrumbs.ItemComposite>`                                                     |
+| `<Breadcrumbs.Link as={RouterLink} to="/section">`   | `<Breadcrumbs.Link asChild><RouterLink to="/section">Section</RouterLink></Breadcrumbs.Link>` inside a `Breadcrumbs.Item` |
+| `mb` and other whitespace props                      | `className`                                                                                                               |
 
 ## ErrorSummary
 
@@ -343,7 +346,7 @@ Error links are now plain fragment links (`href="#field-id"`), so they work with
 
 | 0.x                                                       | 1.0                                                                                                                                                                |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `import ErrorSummary from 'govuk-react/error-summary'`    | `import * as ErrorSummary from 'govuk-react/error-summary'`                                                                                                        |
+| `import ErrorSummary from '@govuk-react/error-summary'`   | `import * as ErrorSummary from 'govuk-react/error-summary'`                                                                                                        |
 | `<ErrorSummary heading="There is a problem">`             | `<ErrorSummary.Composite title="There is a problem">`                                                                                                              |
 | `errors={[{ targetName: 'name', text: 'Enter a name' }]}` | `<ErrorSummary.ListItemComposite href="#name">Enter a name</ErrorSummary.ListItemComposite>` children, or `errors={[{ href: '#name', children: 'Enter a name' }]}` |
 | `onHandleErrorClick`                                      | Removed. For custom handling, use `ListItem` and `ListItemLink` parts with your own `onClick`                                                                      |
@@ -356,23 +359,21 @@ Error links are now plain fragment links (`href="#field-id"`), so they work with
 
 `head` now takes the header cells, not a row: the composite wraps them in a row.
 
-govuk-react now exports `overrideClasses`, which returns govuk-frontend's override classes (`govuk-!-*`) for typed props such as `width`, `textAlign` and `marginBottom`.
-
-| 0.x                                     | 1.0                                                                |
-| --------------------------------------- | ------------------------------------------------------------------ |
-| `import Table from 'govuk-react/table'` | `import * as Table from 'govuk-react/table'`                       |
-| `<Table>`                               | `<Table.Composite>`                                                |
-| `body={rows}`                           | Children                                                           |
-| `head={<Table.Row>{cells}</Table.Row>}` | `head={cells}`                                                     |
-| `<Table.Header>` (the `thead`)          | `<Table.Head>`                                                     |
-| `<Table.CellHeader>` in the head        | `<Table.ColumnHeader>`                                             |
-| `<Table.CellHeader>` in a body row      | `<Table.RowHeader>`                                                |
-| `<Table.Cell alignRight>`               | `<Table.Cell className={overrideClasses({ textAlign: 'right' })}>` |
-| `<Table.Cell bold>`                     | `<Table.Cell className={overrideClasses({ fontWeight: 'bold' })}>` |
-| `setWidth="one-half"` (fluid widths)    | `className={overrideClasses({ width: 'one-half' })}`               |
-| `setWidth="22%"` (other widths)         | `style={{ width: '22%' }}`                                         |
-| `numeric`                               | `numeric` (unchanged)                                              |
-| `mb` and other whitespace props         | `className={overrideClasses({ marginBottom: n })}`                 |
+| 0.x                                      | 1.0                                                                |
+| ---------------------------------------- | ------------------------------------------------------------------ |
+| `import Table from '@govuk-react/table'` | `import * as Table from 'govuk-react/table'`                       |
+| `<Table>`                                | `<Table.Composite>`                                                |
+| `body={rows}`                            | Children                                                           |
+| `head={<Table.Row>{cells}</Table.Row>}`  | `head={cells}`                                                     |
+| `<Table.Header>` (the `thead`)           | `<Table.Head>`                                                     |
+| `<Table.CellHeader>` in the head         | `<Table.ColumnHeader>`                                             |
+| `<Table.CellHeader>` in a body row       | `<Table.RowHeader>`                                                |
+| `<Table.Cell alignRight>`                | `<Table.Cell className={overrideClasses({ textAlign: 'right' })}>` |
+| `<Table.Cell bold>`                      | `<Table.Cell className={overrideClasses({ fontWeight: 'bold' })}>` |
+| `setWidth="one-half"` (fluid widths)     | `className={overrideClasses({ width: 'one-half' })}`               |
+| `setWidth="22%"` (other widths)          | `style={{ width: '22%' }}`                                         |
+| `numeric`                                | `numeric` (unchanged)                                              |
+| `mb` and other whitespace props          | `className={overrideClasses({ marginBottom: n })}`                 |
 
 ## Pagination
 
@@ -380,7 +381,7 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 
 | 0.x                                                           | 1.0                                                                                                                   |
 | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `import Pagination from 'govuk-react/pagination'`             | `import * as Pagination from 'govuk-react/pagination'`                                                                |
+| `import Pagination from '@govuk-react/pagination'`            | `import * as Pagination from 'govuk-react/pagination'`                                                                |
 | `<Pagination>`                                                | `<Pagination.Composite>`                                                                                              |
 | `<Pagination.Anchor href="/prev" previousPage pageTitle="…">` | `previousHref="/prev"`, with `previousText` for the link text and `previousLabel` for the page title                  |
 | `<Pagination.Anchor href="/next" nextPage pageTitle="…">`     | `nextHref="/next"`, with `nextText` and `nextLabel`                                                                   |
@@ -406,35 +407,35 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 
 `LoadingBox` no longer uses styled-components or react-transition-group. Its styles are in `govuk-react/styles.css`, with your props passed in as CSS custom properties, so it works with server rendering and without a CSS-in-JS runtime.
 
-| 0.x                                                | 1.0                                                                                                                |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `import LoadingBox from 'govuk-react/loading-box'` | `import { LoadingBox } from 'govuk-react/loading-box'`                                                             |
-| `spinnerColor`, `backgroundColor` took hex colours | Any CSS colour. They default to govuk-frontend's text and page background colours                                  |
-| The overlay unmounted when `loading` was `false`   | The overlay stays in the DOM, hidden, so it can fade out. The box sets `aria-busy` while loading                   |
-| `title` (the spinner's text alternative)           | `statusText`, announced in a `role="status"` region while loading. Say what's happening                            |
-| The whole box had `aria-busy`                      | Only the content has `aria-busy`, so the status is still announced. `inertWhileLoading` blocks interaction with it |
+| 0.x                                                 | 1.0                                                                                                                |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `import LoadingBox from '@govuk-react/loading-box'` | `import { LoadingBox } from 'govuk-react/loading-box'`                                                             |
+| `spinnerColor`, `backgroundColor` took hex colours  | Any CSS colour. They default to govuk-frontend's text and page background colours                                  |
+| The overlay unmounted when `loading` was `false`    | The overlay stays in the DOM, hidden, so it can fade out. The box sets `aria-busy` while loading                   |
+| `title` (the spinner's text alternative)            | `statusText`, announced in a `role="status"` region while loading. Say what's happening                            |
+| The whole box had `aria-busy`                       | Only the content has `aria-busy`, so the status is still announced. `inertWhileLoading` blocks interaction with it |
 
 ## RelatedItems
 
 `RelatedItems` is now a module of parts with no CSS-in-JS. `RelatedItems.Composite` renders the main heading (“Related content” by default), and each `RelatedItems.SectionComposite` renders a labelled navigation section with a heading and a list of `RelatedItems.Item`s. `Root`, `Heading`, `Section`, `SectionHeading` and `List` are available for custom markup. The blue top border comes from `govuk-react/styles.css`.
 
-| 0.x                                                    | 1.0                                                                      |
-| ------------------------------------------------------ | ------------------------------------------------------------------------ |
-| `import RelatedItems from 'govuk-react/related-items'` | `import * as RelatedItems from 'govuk-react/related-items'`              |
-| `<RelatedItems>` with your own headings and lists      | `<RelatedItems.Composite>`, or `<RelatedItems.Root>` for your own markup |
-| `<H3>Travel</H3><UnorderedList listStyleType="none">…` | `<RelatedItems.SectionComposite title="Travel"><RelatedItems.Item>…`     |
-| `mb` and other whitespace props                        | `className`                                                              |
+| 0.x                                                     | 1.0                                                                      |
+| ------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `import RelatedItems from '@govuk-react/related-items'` | `import * as RelatedItems from 'govuk-react/related-items'`              |
+| `<RelatedItems>` with your own headings and lists       | `<RelatedItems.Composite>`, or `<RelatedItems.Root>` for your own markup |
+| `<H3>Travel</H3><UnorderedList listStyleType="none">…`  | `<RelatedItems.SectionComposite title="Travel"><RelatedItems.Item>…`     |
+| `mb` and other whitespace props                         | `className`                                                              |
 
 ## DocumentFooterMetadata
 
 `DocumentFooterMetadata` is now a module of parts with no CSS-in-JS. It renders a description list (`dl`) with govuk-frontend classes. `DocumentFooterMetadata.Composite` keeps the `from`, `partOf` and `other` props, and also takes `ItemComposite` children. `Root`, `Term` and `Definition` are available for custom markup.
 
-| 0.x                                                                         | 1.0                                                                                                        |
-| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `import DocumentFooterMetadata from 'govuk-react/document-footer-metadata'` | `import * as DocumentFooterMetadata from 'govuk-react/document-footer-metadata'`                           |
-| `<DocumentFooterMetadata from={…} partOf={…} other={…}>`                    | `<DocumentFooterMetadata.Composite from={…} partOf={…} other={…}>`                                         |
-| `other={[{ id, title: 'Published', content: '20 January 2012' }]}`          | The same, or `<DocumentFooterMetadata.ItemComposite term="Published" definitions={['20 January 2012']} />` |
-| `mb` and other whitespace props                                             | `className`                                                                                                |
+| 0.x                                                                          | 1.0                                                                                                        |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `import DocumentFooterMetadata from '@govuk-react/document-footer-metadata'` | `import * as DocumentFooterMetadata from 'govuk-react/document-footer-metadata'`                           |
+| `<DocumentFooterMetadata from={…} partOf={…} other={…}>`                     | `<DocumentFooterMetadata.Composite from={…} partOf={…} other={…}>`                                         |
+| `other={[{ id, title: 'Published', content: '20 January 2012' }]}`           | The same, or `<DocumentFooterMetadata.ItemComposite term="Published" definitions={['20 January 2012']} />` |
+| `mb` and other whitespace props                                              | `className`                                                                                                |
 
 ## SearchBox
 
@@ -442,7 +443,7 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 
 | 0.x                                                              | 1.0                                                                     |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `import SearchBox from 'govuk-react/search-box'`                 | `import * as SearchBox from 'govuk-react/search-box'`                   |
+| `import SearchBox from '@govuk-react/search-box'`                | `import * as SearchBox from 'govuk-react/search-box'`                   |
 | `<SearchBox><SearchBox.Input /><SearchBox.Button /></SearchBox>` | `<SearchBox.Composite id="search" name="q" label="Search on GOV.UK" />` |
 | `placeholder` as the only label                                  | `label`, visible by default. A placeholder is not a label               |
 | `mb` and other whitespace props                                  | `className`                                                             |
@@ -455,7 +456,7 @@ Each tab now has a `value`, which is its panel's id. The tabs keep track of the 
 
 | 0.x                                                | 1.0                                                                |
 | -------------------------------------------------- | ------------------------------------------------------------------ |
-| `import Tabs from 'govuk-react/tabs'`              | `import * as Tabs from 'govuk-react/tabs'`                         |
+| `import Tabs from '@govuk-react/tabs'`             | `import * as Tabs from 'govuk-react/tabs'`                         |
 | `<Tabs>`                                           | `<Tabs.Composite items={[{ id, label, panel }]}>` or `<Tabs.Root>` |
 | `<Tabs.Tab href="#past-day" selected onClick={…}>` | `<Tabs.ListItem value="past-day"><Tabs.Tab value="past-day">`      |
 | `<Tabs.Panel id="past-day" selected>`              | `<Tabs.Panel value="past-day">`                                    |
