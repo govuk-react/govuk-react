@@ -32,10 +32,6 @@ The server keeps no state: each submission carries the whole form. The add, remo
 
 `client:visible` watches the island's child elements, which need a box of their own. The primitives' elements have `display: contents`, so the accordion in [`GuideAccordion`](./src/features/guide-accordion.tsx) is wrapped in a `div`.
 
-## Fonts
-
-govuk-react.com isn't on service.gov.uk, so the example uses Arial rather than GDS Transport. [`govuk-frontend.scss`](./src/styles/govuk-frontend.scss) sets `$govuk-font-family`, which also leaves out govuk-frontend's `@font-face` rules, so the browser downloads no font.
-
 ## Run it
 
 ```sh
