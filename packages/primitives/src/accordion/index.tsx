@@ -60,6 +60,7 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'defaultValue' |
   collapsedIconClass?: string;
 };
 
+/** Sections the user shows and hides, with a button for each and one for all of them. Without JavaScript every section is open. */
 export function Root({
   value,
   defaultValue,
@@ -180,6 +181,7 @@ export function ShowAllText({ asChild, children, ...props }: ShowAllTextProps) {
 }
 
 export type ItemProps = PartProps<'div'> & {
+  /** Identifies the section in Root’s `value`. */
   value: string;
   /** Whether it's open at first. Defaults to whether Root's value includes it. */
   defaultExpanded?: boolean;

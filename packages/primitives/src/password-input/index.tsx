@@ -28,6 +28,7 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
   hiddenAnnouncement?: string;
 };
 
+/** A password input with a button that shows and hides the password. Without JavaScript the button is hidden. */
 export function Root({
   showText,
   hideText,

@@ -18,6 +18,7 @@ export function Root({ className, children, ...props }: RootProps) {
 
 export type HeadingProps = ComponentProps<'h2'>;
 
+/** The main heading. */
 export function Heading({ className, children, ...props }: HeadingProps) {
   return (
     <h2 className={clsx('govuk-heading-s', className)} {...props}>
@@ -28,12 +29,14 @@ export function Heading({ className, children, ...props }: HeadingProps) {
 
 export type SectionProps = ComponentProps<'nav'>;
 
+/** A navigation section: a heading and a list of links. */
 export function Section(props: SectionProps) {
   return <nav {...props} />;
 }
 
 export type SectionHeadingProps = ComponentProps<'h3'>;
 
+/** The heading of a section. */
 export function SectionHeading({ className, children, ...props }: SectionHeadingProps) {
   return (
     <h3 className={clsx('govuk-body-s', 'govuk-!-font-weight-bold', 'govuk-!-margin-bottom-2', className)} {...props}>
@@ -44,12 +47,14 @@ export function SectionHeading({ className, children, ...props }: SectionHeading
 
 export type ListProps = ComponentProps<'ul'>;
 
+/** The list of links in a section. */
 export function List({ className, ...props }: ListProps) {
   return <ul className={clsx('govuk-list', 'govuk-body-s', className)} {...props} />;
 }
 
 export type ItemProps = ComponentProps<'li'>;
 
+/** An item in the list, containing a link. */
 export function Item(props: ItemProps) {
   return <li {...props} />;
 }

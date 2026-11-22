@@ -62,6 +62,7 @@ export type InputProps = Markup.InputProps & {
   'data-behaviour'?: string;
 };
 
+/** The checkbox input. */
 export function Input({ controls, exclusive, 'data-behaviour': behaviour, ...props }: InputProps) {
   return (
     // govuk-frontend's `data-behaviour="exclusive"` works too. It isn't rendered, so govuk-frontend's
@@ -87,6 +88,7 @@ export type ItemCompositeProps = Markup.ItemCompositeProps & Pick<InputProps, 'e
 
 const isSet = (node: React.ReactNode) => node !== undefined && node !== null && node !== false && node !== '';
 
+/** A checkbox with its label, hint and conditional content. */
 export function ItemComposite({
   id,
   label,
@@ -119,7 +121,13 @@ export type FieldProps = Omit<Markup.FieldProps, 'items' | 'children'> &
     | {
         children?: never;
         /** Prefer children, which memoise and re-render better. */
-        items: (ItemCompositeProps | { divider: React.ReactNode })[];
+        items: (
+          | ItemCompositeProps
+          | {
+              /** Divider text to separate checkbox items, for example the text `"or"`. */
+              divider: React.ReactNode;
+            }
+        )[];
       }
   );
 

@@ -26,6 +26,7 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
   focusKey?: string | number;
 };
 
+/** Moves focus to its `Target` when it appears. */
 export function Root({ disabled, focusKey, ...props }: RootProps) {
   return (
     <AutoFocusContext.Provider value={{ disabled }}>

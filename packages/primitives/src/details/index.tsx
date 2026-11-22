@@ -20,6 +20,7 @@ export type DetailsProps = Omit<ComponentProps<'details'>, 'open'> & {
   onOpenChange?: (open: boolean, details: ChangeDetails) => void;
 };
 
+/** A native `<details>`, which shows and hides its content without JavaScript. */
 export function Details({ open, onOpenChange, onToggle, ref, ...props }: DetailsProps) {
   const details = useRef<HTMLDetailsElement>(null);
   const refs = useMemo(() => composeRefs(details, ref), [ref]);

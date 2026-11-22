@@ -27,6 +27,7 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
   onOpenChange?: (open: boolean, details: ChangeDetails) => void;
 };
 
+/** Content that a button shows and hides. Without JavaScript the content is shown and the button hidden. */
 export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootProps) {
   const element = useRef<DisclosureElement>(null);
   const reportChange = useEffectEvent((next: boolean, details: ChangeDetails) => onOpenChange?.(next, details));

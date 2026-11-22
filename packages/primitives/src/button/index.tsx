@@ -17,6 +17,7 @@ export type ButtonProps = ComponentProps<'button'> & {
   preventDoubleClick?: boolean;
 };
 
+/** A button that can cancel a double click, and a link with `role="button"` that Space activates. */
 export function Button({ asChild, preventDoubleClick, ...props }: ButtonProps) {
   const Element = asChild ? Slot : 'button';
   return (

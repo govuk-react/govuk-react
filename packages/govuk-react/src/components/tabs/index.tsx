@@ -84,6 +84,7 @@ export { Title, type TitleProps } from 'govuk-frontend-react/tabs';
 
 export type ListProps = Markup.ListProps;
 
+/** The list of tabs. */
 export function List(props: ListProps) {
   return (
     <Primitives.List asChild>
@@ -105,6 +106,7 @@ export type ListItemProps = Omit<Markup.ListItemProps, 'selected'> & {
   defaultSelected?: boolean;
 };
 
+/** An item in the list of tabs, around a `Tab` or `RadiosTab`. */
 export function ListItem({ value, defaultSelected, ...props }: ListItemProps) {
   return (
     <Primitives.Item value={value} asChild>
@@ -177,13 +179,16 @@ export function RadiosPanel({ value, defaultSelected, name, ...props }: RadiosPa
 export type CompositeItem = {
   /** The panel's id, and the tab's value. */
   id: string;
+  /** The text of the tab. */
   label: ReactNode;
+  /** The content of the panel. */
   panel: ReactNode;
 };
 
 export type CompositeProps = Omit<RootProps, 'title'> & {
   /** The heading shown above the list of links when the tabs aren't shown. Defaults to "Contents". */
   title?: ReactNode;
+  /** The tabs, each with its panel. */
   items: CompositeItem[];
 };
 
@@ -213,6 +218,7 @@ export function Composite({ title, items, value, defaultValue, ...props }: Compo
 export type RadiosCompositeProps = Omit<BaseRootProps, 'title'> & {
   /** The heading shown above the list of tabs when they aren't styled as tabs. Defaults to "Contents". */
   title?: ReactNode;
+  /** The tabs, each with its panel. */
   items: CompositeItem[];
   /** The selected tab's value, to control the tabs. */
   value?: string;

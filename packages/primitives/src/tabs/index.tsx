@@ -147,12 +147,16 @@ type PartProps<E extends keyof React.JSX.IntrinsicElements> = ComponentProps<E> 
 
 export type ListProps = PartProps<'div'>;
 
+/** The list of tabs. */
 export function List({ asChild, ...props }: ListProps) {
   const Element = asChild ? Slot : 'div';
   return <Element data-tabs-list="" suppressHydrationWarning {...props} />;
 }
 
-export type ItemProps = PartProps<'div'> & { value: string };
+export type ItemProps = PartProps<'div'> & {
+  /** The value of the tab inside it. */
+  value: string;
+};
 
 /** An optional wrapper around a tab, such as a list item. */
 export function Item({ asChild, value, ...props }: ItemProps) {
@@ -178,6 +182,7 @@ function useIsland({ name }: IslandProps) {
 export type TriggerProps = React.HTMLAttributes<HTMLElement> & {
   /** Render the only child instead, with this part's props merged onto it. */
   asChild?: boolean;
+  /** Its panel’s value, which is the panel’s id. */
   value: string;
 };
 
@@ -204,6 +209,7 @@ export function RadiosTrigger({ asChild, value, name: nameProp, ...props }: Radi
 
 export type ContentProps = PartProps<'div'> &
   IslandProps & {
+    /** Its tab’s value, which is the panel’s id. */
     value: string;
     /** Whether this panel's radio is checked at first. Defaults to Root's value. */
     defaultSelected?: boolean;
