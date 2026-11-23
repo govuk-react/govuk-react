@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { hydrateRoot } from 'react-dom/client';
+import { renderToString } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import * as PasswordInput from '.';
 
@@ -31,6 +33,24 @@ describe('PasswordInput', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Hide password' }));
     expect(input).toHaveAttribute('type', 'password');
     expect(screen.getByText('Your password is hidden')).toBeInTheDocument();
+  });
+
+  test('keeps what the user typed when they show the password before React hydrates', async () => {
+    const container = document.createElement('div');
+    container.innerHTML = renderToString(<Example />);
+    document.body.append(container);
+    onTestFinished(() => container.remove());
+    await upgraded();
+    const input = screen.getByLabelText<HTMLInputElement>('Password');
+    input.value = 'correct horse';
+    fireEvent.click(screen.getByRole('button', { name: 'Show password' }));
+    const onRecoverableError = vi.fn();
+    await act(async () => {
+      hydrateRoot(container, <Example />, { onRecoverableError });
+    });
+    expect(onRecoverableError).not.toHaveBeenCalled();
+    expect(screen.getByLabelText('Password')).toBe(input);
+    expect(input).toHaveValue('correct horse');
   });
 
   test('hides the password when its form is submitted', async () => {
