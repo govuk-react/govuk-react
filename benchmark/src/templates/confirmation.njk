@@ -1,0 +1,9 @@
+{% extends "layout.njk" %}
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
+{% block form %}
+  {{ govukPanel({ titleText: title, text: body }) }}
+  <p class="govuk-body">
+    <a href="{{ next.href }}" class="govuk-link">{{ next.text }}</a>
+  </p>
+{% endblock %}

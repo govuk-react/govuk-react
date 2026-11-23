@@ -1,0 +1,77 @@
+---
+import { AccountPage } from '../../components/AccountPage';
+import { CheckPage } from '../../components/CheckPage';
+import { ConfirmationPage } from '../../components/ConfirmationPage';
+import { ContactPage } from '../../components/ContactPage';
+import { EventPage } from '../../components/EventPage';
+import { TaskListPage } from '../../components/TaskListPage';
+import Layout from '../../layouts/Layout.astro';
+import { route, screenErrors, screenScripts } from '../../routes';
+
+const { variant, path = '' } = Astro.params;
+if (variant !== 'govuk-react' && variant !== 'govuk-react-hydrated') return new Response(null, { status: 404 });
+
+const base = `/${variant}`;
+const result = await route({ base, path, request: Astro.request, cookies: Astro.cookies });
+if ('redirect' in result) return Astro.redirect(result.redirect, 303);
+if ('notFound' in result) return new Response(null, { status: 404 });
+
+const { screen } = result;
+const hydrate = variant === 'govuk-react-hydrated';
+---
+
+<Layout
+  title={screen.title}
+  errors={screenErrors(screen)}
+  serviceHref={`${base}/licence`}
+  scripts={screenScripts(screen)}
+>
+  {
+    screen.name === 'account' &&
+      (hydrate ? (
+        <AccountPage client:load values={screen.values} errors={screen.errors} />
+      ) : (
+        <AccountPage values={screen.values} errors={screen.errors} />
+      ))
+  }
+  {
+    screen.name === 'confirmation' &&
+      (hydrate ? (
+        <ConfirmationPage client:load title={screen.title} body={screen.body} next={screen.next} />
+      ) : (
+        <ConfirmationPage title={screen.title} body={screen.body} next={screen.next} />
+      ))
+  }
+  {
+    screen.name === 'task-list' &&
+      (hydrate ? (
+        <TaskListPage client:load base={base} contactDone={screen.contactDone} eventDone={screen.eventDone} />
+      ) : (
+        <TaskListPage base={base} contactDone={screen.contactDone} eventDone={screen.eventDone} />
+      ))
+  }
+  {
+    screen.name === 'contact' &&
+      (hydrate ? (
+        <ContactPage client:load values={screen.values} errors={screen.errors} />
+      ) : (
+        <ContactPage values={screen.values} errors={screen.errors} />
+      ))
+  }
+  {
+    screen.name === 'event' &&
+      (hydrate ? (
+        <EventPage client:load values={screen.values} errors={screen.errors} />
+      ) : (
+        <EventPage values={screen.values} errors={screen.errors} />
+      ))
+  }
+  {
+    screen.name === 'check' &&
+      (hydrate ? (
+        <CheckPage client:load base={base} contact={screen.contact} event={screen.event} />
+      ) : (
+        <CheckPage base={base} contact={screen.contact} event={screen.event} />
+      ))
+  }
+</Layout>

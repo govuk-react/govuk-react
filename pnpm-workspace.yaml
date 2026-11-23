@@ -1,6 +1,7 @@
 packages:
   - packages/*
   - examples/*
+  - benchmark
 
 allowBuilds:
   core-js: false

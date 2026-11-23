@@ -1,0 +1,43 @@
+{% extends "layout.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{% block form %}
+  <form method="post" novalidate>
+    {% set items = [] %}
+    {% for method in contactMethods %}
+      {% if method.detail %}
+        {% set conditional = { html: govukInput({
+          name: method.detail.name,
+          type: method.detail.type,
+          label: { text: method.detail.label },
+          value: values[method.detail.name],
+          errorMessage: errorFor(method.detail.name),
+          autocomplete: method.detail.type,
+          spellcheck: false,
+          classes: "govuk-input--width-20"
+        }) } %}
+      {% else %}
+        {% set conditional = undefined %}
+      {% endif %}
+      {% set items = (items.push({
+        value: method.value,
+        text: method.text,
+        checked: values.method == method.value,
+        conditional: conditional
+      }), items) %}
+    {% endfor %}
+    {{ govukRadios({
+      name: "method",
+      idPrefix: "method",
+      fieldset: {
+        legend: { text: "How would you like to be contacted?", isPageHeading: true, classes: "govuk-fieldset__legend--l" }
+      },
+      hint: { text: "Select one option" },
+      errorMessage: errorFor("method"),
+      items: items
+    }) }}
+    {{ govukButton({ text: "Save and continue" }) }}
+  </form>
+{% endblock %}

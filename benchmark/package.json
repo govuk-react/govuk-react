@@ -1,0 +1,39 @@
+{
+  "name": "@govuk-react/benchmark",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "The same journeys in govuk-frontend and govuk-react, measured on an emulated low-end phone",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "astro build",
+    "start": "node server.mjs",
+    "check": "astro check",
+    "test:e2e": "playwright test",
+    "measure": "node measure.mjs"
+  },
+  "dependencies": {
+    "@astrojs/node": "^11.1.14",
+    "@astrojs/react": "^7.1.9",
+    "@govuk-react/primitives": "workspace:*",
+    "astro": "^7.4.13",
+    "compression": "^1.8.2",
+    "govuk-frontend": "~6.6.0",
+    "govuk-react": "workspace:*",
+    "nunjucks": "^3.2.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@playwright/test": "^1.65.1",
+    "@types/nunjucks": "^3.2.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "lighthouse": "^13.0.0",
+    "sass": "^1.108.2",
+    "typescript": "^6.0.3"
+  }
+}

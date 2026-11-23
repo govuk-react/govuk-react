@@ -1,0 +1,40 @@
+name: Benchmark
+
+on:
+  workflow_dispatch:
+    inputs:
+      runs:
+        description: Runs of each journey
+        default: '10'
+
+permissions:
+  contents: read
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter "govuk-react..." build
+      - run: pnpm --filter @govuk-react/benchmark exec playwright install --with-deps chromium
+      - run: pnpm --filter @govuk-react/benchmark build
+      - run: |
+          pnpm --filter @govuk-react/benchmark start &
+          curl --retry 30 --retry-connrefused --retry-delay 1 -sfo /dev/null http://localhost:4322/govuk-frontend/account
+          pnpm --filter @govuk-react/benchmark measure --runs "$RUNS"
+        env:
+          RUNS: ${{ inputs.runs }}
+      - run: cat benchmark/results/results.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: benchmark-results
+          path: benchmark/results

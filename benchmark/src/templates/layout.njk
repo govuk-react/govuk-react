@@ -1,0 +1,27 @@
+{% extends "govuk/template.njk" %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+{% block pageTitle %}{{ pageTitle }}{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="/stylesheets/govuk-frontend.css">
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% if errorList.length %}
+        {{ govukErrorSummary({ titleText: "There is a problem", errorList: errorList }) }}
+      {% endif %}
+      {% block form %}{% endblock %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block bodyEnd %}
+  <script type="module" src="/javascripts/govuk-frontend.min.js"></script>
+  <script type="module">
+    import { initAll } from '/javascripts/govuk-frontend.min.js'
+    initAll()
+  </script>
+{% endblock %}

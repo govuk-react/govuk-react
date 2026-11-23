@@ -1,0 +1,6 @@
+dist
+public/assets
+public/javascripts
+public/stylesheets
+results/raw
+node_modules
