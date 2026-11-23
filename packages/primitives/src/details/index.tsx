@@ -26,6 +26,8 @@ export function Details({ open, onOpenChange, onToggle, ref, ...props }: Details
   const refs = useMemo(() => composeRefs(details, ref), [ref]);
   const reportChange = useEffectEvent((next: boolean, details: ChangeDetails) => onOpenChange?.(next, details));
   const synced = useRef(false);
+  // The open state already reported or set, as `toggle` fires in a later task, even after hydration.
+  const known = useRef<boolean>(undefined);
   const [, render] = useReducer((count: number) => count + 1, 0);
 
   // The user can open or close it before hydration. That's reported, rather than undone.
@@ -34,6 +36,7 @@ export function Details({ open, onOpenChange, onToggle, ref, ...props }: Details
     if (!node) return;
     if (!synced.current) {
       synced.current = true;
+      known.current = node.open;
       if (node.open !== (open ?? false) && onOpenChange) {
         reportChange(node.open, early);
         if (open !== undefined) {
@@ -43,7 +46,10 @@ export function Details({ open, onOpenChange, onToggle, ref, ...props }: Details
         }
       }
     }
-    if (open !== undefined) node.open = open;
+    if (open !== undefined) {
+      known.current = open;
+      node.open = open;
+    }
   });
 
   return (
@@ -53,7 +59,11 @@ export function Details({ open, onOpenChange, onToggle, ref, ...props }: Details
       open={open}
       onToggle={(event) => {
         onToggle?.(event);
-        if (event.currentTarget.open !== open) onOpenChange?.(event.currentTarget.open, live);
+        const next = event.currentTarget.open;
+        // Until synced, the effect reports what changed before hydration.
+        if (!synced.current || next === known.current) return;
+        known.current = next;
+        if (next !== open) onOpenChange?.(next, live);
       }}
       suppressHydrationWarning
     />

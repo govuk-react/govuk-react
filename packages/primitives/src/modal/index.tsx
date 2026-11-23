@@ -153,10 +153,10 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
     const dialog = dialogRef.current;
     if (!dialog) return undefined;
     // A dialog the user opened before hydration, through its invoker command or the element, fired
-    // nothing React heard, so report it once.
-    if (dialog.open && reported.current === undefined) {
-      reported.current = true;
-      reportChange(true, early);
+    // nothing React heard, so report it once. Its `close` event can still arrive after hydration.
+    if (reported.current === undefined) {
+      reported.current = dialog.open;
+      if (dialog.open) reportChange(true, early);
     }
     // Not every browser fires `toggle` on dialogs, so watch the dialog's `open` attribute.
     const observer = new MutationObserver(() => reportFromDialog(dialog));

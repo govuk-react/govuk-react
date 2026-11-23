@@ -43,17 +43,33 @@ test('follows `open` when controlled', () => {
   expect(detailsIn(container).open).toBe(true);
 });
 
-/** Server renders `element`, opens it as a user would before hydration, then hydrates it. */
-async function hydrateAfterOpening(element: React.ReactElement) {
+const toggled = (details: HTMLDetailsElement) =>
+  new Promise((resolve) => {
+    details.addEventListener('toggle', resolve, { once: true });
+  });
+
+/**
+ * Server renders `element`, opens it as a user would before hydration, then hydrates it. The
+ * browser fires `toggle` in a task, which can run before or after React hydrates.
+ */
+async function hydrateAfterOpening(element: React.ReactElement, toggle: 'before' | 'after' = 'before') {
   const container = document.createElement('div');
   document.body.appendChild(container);
   container.innerHTML = renderToString(element);
-  detailsIn(container).open = true;
-  // The browser fires `toggle` in a task, before React hydrates.
-  await new Promise((resolve) => setTimeout(resolve));
-  await act(async () => {
-    hydrateRoot(container, element);
-  });
+  const details = detailsIn(container);
+  details.open = true;
+  if (toggle === 'before') {
+    await toggled(details);
+    await act(async () => {
+      hydrateRoot(container, element);
+    });
+  } else {
+    const late = toggled(details);
+    act(() => {
+      hydrateRoot(container, element);
+    });
+    await act(() => late);
+  }
   return container;
 }
 
@@ -62,13 +78,18 @@ afterEach(() => {
 });
 
 test.each([
-  ['controlled', false],
-  ['uncontrolled', undefined],
-])('server markup, %s: opening it before hydration is reported as such', async (_, open) => {
-  const onOpenChange = vi.fn();
-  await hydrateAfterOpening(<Example open={open} onOpenChange={onOpenChange} />);
-  expect(onOpenChange.mock.calls).toEqual([[true, { beforeHydration: true }]]);
-});
+  ['controlled', false, 'before'],
+  ['uncontrolled', undefined, 'before'],
+  ['controlled', false, 'after'],
+  ['uncontrolled', undefined, 'after'],
+] as const)(
+  'server markup, %s, toggle event %s hydration: opening it before hydration is reported once',
+  async (_, open, toggle) => {
+    const onOpenChange = vi.fn();
+    await hydrateAfterOpening(<Example open={open} onOpenChange={onOpenChange} />, toggle);
+    expect(onOpenChange.mock.calls).toEqual([[true, { beforeHydration: true }]]);
+  }
+);
 
 test('server markup: a controlled open before hydration goes back to `open` unless adopted', async () => {
   const container = await hydrateAfterOpening(<Example open={false} onOpenChange={() => {}} />);
