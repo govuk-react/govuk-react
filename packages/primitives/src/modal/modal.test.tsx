@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import * as Modal from '.';
 
 function Example(props: Modal.RootProps) {
@@ -76,4 +76,13 @@ test('with asChild, reports through the dialogâ€™s own ref as well as the childâ
   await waitFor(() => expect(onOpenChange).toHaveBeenCalledExactlyOnceWith(true, { beforeHydration: false }));
   unmount();
   expect(childRef.current).toBeNull();
+});
+
+test('a close that arrives after hydration, for an open and close before it, is not reported', () => {
+  const onOpenChange = vi.fn();
+  render(<Example dialogId="confirm" onOpenChange={onOpenChange} />);
+  const dialog = document.getElementById('confirm');
+  if (!dialog) throw new Error('No dialog');
+  fireEvent(dialog, new Event('close'));
+  expect(onOpenChange).not.toHaveBeenCalled();
 });
