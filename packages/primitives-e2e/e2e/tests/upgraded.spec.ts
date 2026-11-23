@@ -57,27 +57,27 @@ test('ignores arrows across a horizontal tablist', async ({ page }) => {
 
 test('a choice checks its panel’s radio', async ({ page }) => {
   await demo(page).getByRole('tab', { name: 'Settings' }).click();
-  await expect(page.locator('#up-up-settings')).toBeChecked();
+  await expect(page.locator('#up-settings > input')).toBeChecked();
 });
 
-test.describe('links fallback', () => {
+test.describe('URL hash', () => {
   test('the URL hash follows the selected tab', async ({ page }) => {
-    await demo(page, 'ul').getByRole('tab', { name: 'Documents' }).click();
-    await expect(page).toHaveURL(/#ul-documents$/);
-    await expect(demo(page, 'ul').getByText('Access and update your documents.')).toBeVisible();
-    await expect(demo(page, 'ul').getByText('Make changes to your account.')).toBeHidden();
+    await demo(page).getByRole('tab', { name: 'Documents' }).click();
+    await expect(page).toHaveURL(/#up-documents$/);
+    await expect(demo(page).getByText('Access and update your documents.')).toBeVisible();
+    await expect(demo(page).getByText('Make changes to your account.')).toBeHidden();
   });
 
   test('going back selects the previous tab', async ({ page }) => {
-    await demo(page, 'ul').getByRole('tab', { name: 'Documents' }).click();
-    await demo(page, 'ul').getByRole('tab', { name: 'Settings' }).click();
+    await demo(page).getByRole('tab', { name: 'Documents' }).click();
+    await demo(page).getByRole('tab', { name: 'Settings' }).click();
     await page.goBack();
-    await expect(demo(page, 'ul').getByRole('tab', { name: 'Documents' })).toHaveAttribute('aria-selected', 'true');
+    await expect(demo(page).getByRole('tab', { name: 'Documents' })).toHaveAttribute('aria-selected', 'true');
   });
 
   test('a URL hash selects its tab on load', async ({ page }) => {
-    await page.goto('/test/upgraded#ul-settings');
-    await expect(demo(page, 'ul').getByRole('tab', { name: 'Settings' })).toHaveAttribute('aria-selected', 'true');
+    await page.goto('/test/upgraded#up-settings');
+    await expect(demo(page).getByRole('tab', { name: 'Settings' })).toHaveAttribute('aria-selected', 'true');
   });
 });
 
@@ -103,24 +103,24 @@ const inject = (page: Page, id: string, html: string) =>
     [id, html]
   );
 
+const tabs = (name: string, attributes = '') =>
+  `<govuk-react-tabs${attributes}><div data-tabs-list>${['a', 'b']
+    .map(
+      (value) =>
+        `<a data-tabs-trigger data-value="${name}-${value}" href="#${name}-${value}">${value.toUpperCase()}</a>`
+    )
+    .join('')}</div>`;
+
 const panel = (value: string, name: string, checked = false) =>
-  `<div data-tabs-content data-value="${value}"><input type="radio" name="${name}" id="${name}-${value}" hidden${checked ? ' checked' : ''}>${value} panel</div>`;
+  `<div data-tabs-content data-value="${name}-${value}" id="${name}-${value}"><input type="radio" name="${name}" hidden${checked ? ' checked' : ''}>${value} panel</div>`;
 
 test('starts on a checked radio over the first tab', async ({ page }) => {
-  await inject(
-    page,
-    'inject-pick',
-    `<govuk-react-tabs fallback="radios"><div data-tabs-list><label data-tabs-trigger data-value="a" for="pk-a">A</label><label data-tabs-trigger data-value="b" for="pk-b">B</label></div>${panel('a', 'pk')}${panel('b', 'pk', true)}</govuk-react-tabs>`
-  );
+  await inject(page, 'inject-pick', `${tabs('pk')}${panel('a', 'pk')}${panel('b', 'pk', true)}</govuk-react-tabs>`);
   await expect(page.locator('#inject-pick').getByRole('tab', { name: 'B' })).toHaveAttribute('aria-selected', 'true');
 });
 
 test('starts on the first tab when nothing else selects one', async ({ page }) => {
-  await inject(
-    page,
-    'inject-first',
-    `<govuk-react-tabs fallback="radios"><div data-tabs-list><label data-tabs-trigger data-value="a" for="fb-a">A</label><label data-tabs-trigger data-value="b" for="fb-b">B</label></div>${panel('a', 'fb')}${panel('b', 'fb')}</govuk-react-tabs>`
-  );
+  await inject(page, 'inject-first', `${tabs('fb')}${panel('a', 'fb')}${panel('b', 'fb')}</govuk-react-tabs>`);
   await expect(page.locator('#inject-first').getByRole('tab', { name: 'A' })).toHaveAttribute('aria-selected', 'true');
 });
 
@@ -131,7 +131,7 @@ test('fires no change event at first, and none when the selected tab is chosen a
   await inject(
     page,
     'inject-event',
-    `<govuk-react-tabs fallback="radios" default-value="a"><div data-tabs-list><label data-tabs-trigger data-value="a" for="ev-a">A</label><label data-tabs-trigger data-value="b" for="ev-b">B</label></div>${panel('a', 'ev', true)}${panel('b', 'ev')}</govuk-react-tabs>`
+    `${tabs('ev', ' default-value="ev-a"')}${panel('a', 'ev', true)}${panel('b', 'ev')}</govuk-react-tabs>`
   );
   await page.evaluate(() => {
     document.getElementById('inject-event')?.addEventListener('govuk-react-tabs:change', (event) => {
@@ -143,9 +143,9 @@ test('fires no change event at first, and none when the selected tab is chosen a
   await expect(host.getByRole('tab', { name: 'A' })).toHaveAttribute('aria-selected', 'true');
   expect(await changes()).toEqual([]);
   await host.getByRole('tab', { name: 'B' }).click();
-  expect(await changes()).toEqual(['b']);
+  expect(await changes()).toEqual(['ev-b']);
   await host.getByRole('tab', { name: 'B' }).click();
-  expect(await changes()).toEqual(['b']);
+  expect(await changes()).toEqual(['ev-b']);
 });
 
 test('upgrades once its tabs are added later', async ({ page }) => {

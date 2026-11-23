@@ -6,9 +6,8 @@ test('works without JavaScript', async ({ browser }) => {
   const page = await context.newPage();
   await page.goto('/test/islands');
   await expect(page.getByText('Documents panel')).toBeVisible();
-  await expect(page.getByText('Account panel')).toBeHidden();
-  await page.locator('label', { hasText: 'Account' }).click();
   await expect(page.getByText('Account panel')).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Account' })).toHaveAttribute('href', '#i-account');
   await context.close();
 });
 

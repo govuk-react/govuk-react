@@ -49,5 +49,5 @@ test('when the value is kept, the tab stays and each choice is reported', async 
   await expect(page.getByTestId('ck-changes')).toHaveText('2');
   await expect(demo.getByRole('tab', { name: 'Account' })).toHaveAttribute('aria-selected', 'true');
   await expect(demo.getByText('Account panel')).toBeVisible();
-  await expect(page.locator('#ck-ck-account')).toBeChecked();
+  await expect(page.locator('#ck-account > input')).toBeChecked();
 });

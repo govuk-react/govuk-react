@@ -29,7 +29,7 @@ export default function ControlledTabs({ id, keep = false }: { id: string; keep?
       </button>
       <p data-testid={`${id}-value`}>{value}</p>
       <p data-testid={`${id}-changes`}>{changes}</p>
-      <Tabs.RadiosRoot
+      <Tabs.Root
         name={id}
         value={value}
         onValueChange={(next) => {
@@ -39,17 +39,17 @@ export default function ControlledTabs({ id, keep = false }: { id: string; keep?
       >
         <Tabs.List>
           {items.map((item) => (
-            <Tabs.RadiosTrigger key={item.value} value={`${id}-${item.value}`}>
+            <Tabs.Trigger key={item.value} value={`${id}-${item.value}`}>
               {item.label}
-            </Tabs.RadiosTrigger>
+            </Tabs.Trigger>
           ))}
         </Tabs.List>
         {items.map((item) => (
-          <Tabs.RadiosContent key={item.value} value={`${id}-${item.value}`}>
+          <Tabs.Content key={item.value} value={`${id}-${item.value}`}>
             {item.label} panel
-          </Tabs.RadiosContent>
+          </Tabs.Content>
         ))}
-      </Tabs.RadiosRoot>
+      </Tabs.Root>
     </div>
   );
 }

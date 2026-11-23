@@ -21,21 +21,6 @@ function Example(props: Tabs.RootProps) {
   );
 }
 
-function RadiosExample(props: Tabs.RadiosRootProps) {
-  return (
-    <Tabs.RadiosRoot {...props}>
-      <Tabs.List>
-        <Tabs.RadiosTrigger value="day">Past day</Tabs.RadiosTrigger>
-        <Tabs.RadiosTrigger value="week">Past week</Tabs.RadiosTrigger>
-        <Tabs.RadiosTrigger value="month">Past month</Tabs.RadiosTrigger>
-      </Tabs.List>
-      <Tabs.RadiosContent value="day">Day content</Tabs.RadiosContent>
-      <Tabs.RadiosContent value="week">Week content</Tabs.RadiosContent>
-      <Tabs.RadiosContent value="month">Month content</Tabs.RadiosContent>
-    </Tabs.RadiosRoot>
-  );
-}
-
 // The element upgrades in connectedCallback, after React commits.
 const upgraded = () => act(() => Promise.resolve());
 
@@ -127,18 +112,6 @@ describe('Tabs', () => {
     render(<Example />);
     expect(screen.getByText('Past week').closest('a')).toHaveAttribute('href', '#week');
     expect(screen.getByText('Week content')).toHaveAttribute('id', 'week');
-  });
-
-  test('the radios fallback labels a hidden radio in each panel', async () => {
-    render(<RadiosExample defaultValue="week" />);
-    const label = screen.getByText('Past week').closest('label');
-    const radio = document.getElementById(label?.htmlFor ?? '');
-    expect(radio).toBeInstanceOf(HTMLInputElement);
-    expect(radio).toBeChecked();
-    expect(radio?.parentElement).toHaveAttribute('id', 'week');
-    await upgraded();
-    fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
-    expect(document.getElementById(screen.getByText('Past month').closest('label')?.htmlFor ?? '')).toBeChecked();
   });
 
   test('asChild parts render your own elements', async () => {
@@ -326,7 +299,7 @@ describe('Tabs', () => {
     expect(screen.getByRole('tab', { name: 'Past month' })).toHaveAttribute('aria-selected', 'true');
   });
 
-  test('below its media query, radios keep switching tabs and the selection is kept', async () => {
+  test('below its media query, the tabs are links to every panel and the selection is kept', async () => {
     const listeners = new Set<() => void>();
     const query = {
       matches: true,
@@ -335,7 +308,7 @@ describe('Tabs', () => {
     };
     const matchMedia = vi.fn(() => query);
     vi.stubGlobal('matchMedia', matchMedia);
-    const { container } = render(<RadiosExample defaultValue="day" media="(min-width: 40rem)" />);
+    const { container } = render(<Example defaultValue="day" media="(min-width: 40rem)" />);
     await upgraded();
     fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
     query.matches = false;
@@ -343,7 +316,8 @@ describe('Tabs', () => {
     const element = container.querySelector('govuk-react-tabs');
     expect(element).not.toHaveAttribute('data-upgraded');
     expect(screen.queryByRole('tab')).not.toBeInTheDocument();
-    expect(document.getElementById(screen.getByText('Past month').closest('label')?.htmlFor ?? '')).toBeChecked();
+    expect(screen.getByText('Day content')).toBeVisible();
+    expect(screen.getByText('Month content').querySelector('input[type=radio]')).toBeChecked();
     query.matches = true;
     listeners.forEach((listener) => listener());
     expect(screen.getByRole('tab', { name: 'Past month' })).toHaveAttribute('aria-selected', 'true');
@@ -353,16 +327,16 @@ describe('Tabs', () => {
   test('parts work without a Root, as in an island', () => {
     render(
       <>
-        <Tabs.RadiosTrigger value="day" name="island">
-          Past day
-        </Tabs.RadiosTrigger>
-        <Tabs.RadiosContent value="day" name="island" defaultSelected>
+        <Tabs.Trigger value="day">Past day</Tabs.Trigger>
+        <Tabs.Content value="day" name="island" defaultSelected>
           Day content
-        </Tabs.RadiosContent>
+        </Tabs.Content>
       </>
     );
-    expect(screen.getByText('Past day').closest('label')).toHaveAttribute('for', 'island-day');
-    expect(document.getElementById('island-day')).toBeChecked();
+    expect(screen.getByText('Past day')).toHaveAttribute('href', '#day');
+    const radio = screen.getByText('Day content').querySelector('input[type=radio]');
+    expect(radio).toHaveAttribute('name', 'island');
+    expect(radio).toBeChecked();
   });
 });
 
@@ -543,7 +517,7 @@ describe('while the page is still being parsed', () => {
   });
 
   test('selects the radio checked in a panel parsed later', async () => {
-    const { parseTheRest } = parsedUpTo('week', <RadiosExample defaultValue="month" />);
+    const { parseTheRest } = parsedUpTo('week', <Example defaultValue="month" />);
     await upgraded();
     parseTheRest();
     await upgraded();

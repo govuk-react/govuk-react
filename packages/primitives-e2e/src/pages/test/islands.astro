@@ -7,13 +7,13 @@ import '@govuk-react/primitives/styles.css';
   <head><meta charset="utf-8" /><title>Tabs</title><link rel="icon" href="data:," /></head>
   <body>
     <!-- Parts rendered without a Root, each panel its own island, so no React context links them. -->
-    <govuk-react-tabs data-testid="islands" fallback="radios" default-value="i-documents">
+    <govuk-react-tabs data-testid="islands" default-value="i-documents">
       <div data-tabs-list>
-        <Tabs.RadiosTrigger value="i-account" name="i">Account</Tabs.RadiosTrigger>
-        <Tabs.RadiosTrigger value="i-documents" name="i">Documents</Tabs.RadiosTrigger>
+        <Tabs.Trigger value="i-account">Account</Tabs.Trigger>
+        <Tabs.Trigger value="i-documents">Documents</Tabs.Trigger>
       </div>
-      <Tabs.RadiosContent client:load value="i-account" name="i">Account panel</Tabs.RadiosContent>
-      <Tabs.RadiosContent client:load value="i-documents" name="i" defaultSelected>Documents panel</Tabs.RadiosContent>
+      <Tabs.Content client:load value="i-account" name="i">Account panel</Tabs.Content>
+      <Tabs.Content client:load value="i-documents" name="i" defaultSelected>Documents panel</Tabs.Content>
     </govuk-react-tabs>
     <script>
       import '@govuk-react/primitives/tabs-element';

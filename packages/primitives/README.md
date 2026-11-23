@@ -63,7 +63,6 @@ Returning without changing `value` puts the tabs back to `value`.
 Load the package's stylesheet once, or copy its rules into your own. Its rules only set what is shown:
 
 - Each element gets `display: contents`, so it adds no box between your markup and its parent, such as a flex or grid container. The rule has no specificity, so a class of yours that sets `display` on the element wins, and `hidden` still hides it.
-- The Tabs radios fallback shows only the checked tab's panel.
 - The Accordion hides its fallback heading once upgraded, and its trigger and controls before then.
 - The Character count visually hides its description once upgraded, unless `hiddenDescriptionClass` does.
 - The Exit this page overlay covers the page. The rule has no specificity, so `overlayClass` wins.
@@ -168,22 +167,17 @@ import * as Tabs from '@govuk-react/primitives/tabs';
 
 Each panel holds a hidden radio, and the radio group is the source of truth, as in the reference. Choosing a tab checks its radio, and the radio's native change updates the tabs and calls `onValueChange`.
 
-The root sets how the tabs work without JavaScript, and its parts match it:
-
-- `Root`, with `Trigger` and `Content`: each tab links to its panel, and every panel shows.
-- `RadiosRoot`, with `RadiosTrigger` and `RadiosContent`: each tab is a label for a hidden radio in its panel, so tabs switch with no JavaScript when clicked. It needs `defaultValue` or `value`. Without JavaScript the labels can't be reached by keyboard, as in the reference. Pass `name` when tabs render in separate React roots, such as islands. It needs the package's [stylesheet](#styles).
-
-They are separate components rather than a prop, because a prop can change after the first render, and the markup each needs can't.
+Without JavaScript, each tab links to its panel and every panel shows, as in govuk-frontend.
 
 When controlled with `value`, a user's choice calls `onValueChange` and the tab changes only when `value` does. `value` applies once hydrated, so tabs still switch before then, and a tab picked before hydration is reported through `onValueChange` rather than undone.
 
 `orientation` (`"horizontal"` or `"vertical"`) sets the axis of the arrow keys. Horizontal arrow keys follow the page's direction, so in right-to-left text the left arrow moves to the next tab. Once upgraded, the root, list, tabs and panels have `data-orientation`, and the tabs, items and panels have `data-state` ("active" or "inactive").
 
-`media` limits the tab behaviour to a media query, and can change. Below it, `Root`'s tabs are a list of links to panels, and `RadiosRoot`'s keep switching through their radios. With `Root`, the URL hash follows the selected tab, as in govuk-frontend.
+`media` limits the tab behaviour to a media query, and can change. Below it, the tabs are a list of links to panels. The URL hash follows the selected tab, as in govuk-frontend.
 
 Each `value` is also its panel's `id`, and its tab links to it, so it must be unique on the page and valid as an id. For another id, pass `id` to the panel and the matching `href` to its `Trigger`.
 
-In an island without a root, pass `name` and `defaultSelected` to the triggers and panels. `upgradedClass`, `activeItemClass` and `hiddenContentClass` add classes for styles that key off classes rather than `data-state`, `aria-selected` and `hidden`.
+In an island without a root, pass `name` and `defaultSelected` to the panels. `upgradedClass`, `activeItemClass` and `hiddenContentClass` add classes for styles that key off classes rather than `data-state`, `aria-selected` and `hidden`.
 
 Without React, the markup includes a hidden radio as the first child of each panel.
 

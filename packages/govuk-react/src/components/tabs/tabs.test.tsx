@@ -41,10 +41,4 @@ describe('Tabs', () => {
     expect(screen.getByText('Week content')).not.toHaveClass('govuk-tabs__panel--hidden');
     expect(onValueChange).toHaveBeenCalledWith('past-week', { beforeHydration: false });
   });
-
-  test('RadiosComposite makes each tab a label for its panel’s radio', () => {
-    render(<Tabs.RadiosComposite items={items} name="cases" />);
-    expect(screen.getByText('Past week').closest('label')).toHaveClass('govuk-tabs__tab');
-    expect(document.getElementById('cases-past-day')).toBeChecked();
-  });
 });

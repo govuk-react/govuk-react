@@ -17,9 +17,7 @@ export type { ChangeDetails };
  * Each panel holds a hidden radio, and the radio group is the source of truth. A user's choice
  * fires the radio's native change, which React reports through the radio's `onChange`.
  *
- * Without JavaScript, `Root`'s tabs are links to every panel, and `RadiosRoot`'s are labels for the
- * panels' radios, so they switch panels without JavaScript too. Use `Trigger` and `Content` in a
- * `Root`, and `RadiosTrigger` and `RadiosContent` in a `RadiosRoot`.
+ * Without JavaScript, the tabs are links to every panel.
  *
  * Context only fills in defaults: in an island without a Root, pass `name` and `defaultSelected`
  * to the parts. Each `value` is also its panel's id, so must be unique.
@@ -31,9 +29,7 @@ const TabsContext = createContext<{
   onValueChange?: (value: string, details: ChangeDetails) => void;
 }>({});
 
-const radioId = (name: string, value: string) => `${name}-${value}`;
-
-type BaseRootProps = {
+export type RootProps = {
   children?: ReactNode;
   /** The selected tab's value, to control the tabs. */
   value?: string;
@@ -55,32 +51,13 @@ type BaseRootProps = {
   hiddenContentClass?: string;
 } & Omit<React.HTMLAttributes<HTMLElement>, 'defaultValue' | 'onChange'>;
 
-export type RootProps = BaseRootProps;
-
 /** Tabs that are links to every panel without JavaScript. Use `Trigger` and `Content` inside it. */
-export function Root(props: RootProps) {
-  return <TabsRoot fallback="links" {...props} />;
-}
-
-export type RadiosRootProps = BaseRootProps &
-  // Without JavaScript only the checked radio's panel shows, so one must be checked from the start.
-  ({ value: string } | { defaultValue: string });
-
-/**
- * Tabs that switch panels without JavaScript too, through the panels' radios. Use `RadiosTrigger`
- * and `RadiosContent` inside it.
- */
-export function RadiosRoot(props: RadiosRootProps) {
-  return <TabsRoot fallback="radios" {...props} />;
-}
-
-function TabsRoot({
+export function Root({
   children,
   value,
   defaultValue,
   onValueChange,
   orientation,
-  fallback,
   name,
   media,
   upgradedClass,
@@ -88,7 +65,7 @@ function TabsRoot({
   hiddenContentClass,
   className,
   ...props
-}: BaseRootProps & { fallback: 'links' | 'radios' }) {
+}: RootProps) {
   const generatedName = useId();
   const groupName = name ?? generatedName;
   const ref = useRef<TabsElement>(null);
@@ -135,10 +112,8 @@ function TabsRoot({
         {
           ...props,
           ref,
-          // The radios fallback switches tabs before upgrade, so it is styled as tabs from the start.
-          className: [className, fallback === 'radios' && upgradedClass].filter(Boolean).join(' ') || undefined,
+          className,
           'default-value': value ?? defaultValue,
-          fallback,
           orientation,
           media,
           'upgraded-class': upgradedClass,
@@ -199,25 +174,10 @@ export type TriggerProps = React.HTMLAttributes<HTMLElement> & {
   value: string;
 };
 
-const triggerData = (value: string) => ({
-  'data-tabs-trigger': '',
-  'data-value': value,
-  suppressHydrationWarning: true,
-});
-
-/** A tab in a `Root`: a link to its panel. */
+/** A tab: a link to its panel. */
 export function Trigger({ asChild, value, ...props }: TriggerProps) {
   const Element = asChild ? Slot : 'a';
-  return <Element {...triggerData(value)} href={`#${value}`} {...props} />;
-}
-
-export type RadiosTriggerProps = TriggerProps & IslandProps;
-
-/** A tab in a `RadiosRoot`: a label for its panel's radio. */
-export function RadiosTrigger({ asChild, value, name: nameProp, ...props }: RadiosTriggerProps) {
-  const { name } = useIsland({ name: nameProp });
-  const Element = asChild ? Slot : 'label';
-  return <Element {...triggerData(value)} htmlFor={radioId(name, value)} {...props} />;
+  return <Element data-tabs-trigger="" data-value={value} href={`#${value}`} suppressHydrationWarning {...props} />;
 }
 
 export type ContentProps = PartProps<'div'> &
@@ -228,39 +188,17 @@ export type ContentProps = PartProps<'div'> &
     defaultSelected?: boolean;
   };
 
-/** A panel in a `Root`. Its id is its `value`. */
-export function Content(props: ContentProps) {
-  return <Panel {...props} />;
-}
-
-export type RadiosContentProps = ContentProps;
-
-/** A panel in a `RadiosRoot`, shown without JavaScript only while its radio is checked. Its id is its `value`. */
-export function RadiosContent(props: RadiosContentProps) {
-  return <Panel radios {...props} />;
-}
-
-function Panel({
-  asChild,
-  value,
-  children,
-  name: nameProp,
-  defaultSelected,
-  radios = false,
-  ...props
-}: ContentProps & { radios?: boolean }) {
+/** A panel. Its id is its `value`. */
+export function Content({ asChild, value, children, name: nameProp, defaultSelected, ...props }: ContentProps) {
   const { name, selected, onValueChange } = useIsland({ name: nameProp });
   const radio = (
-    // The selection, and in a RadiosRoot the no-JS state. `form` names no form, so the radio is
-    // never submitted with a form around it.
+    // The selection. `form` names no form, so the radio is never submitted with a form around it.
     <input
       type="radio"
       name={name}
-      id={radioId(name, value)}
       form={`${name}-none`}
       defaultChecked={defaultSelected ?? value === selected}
       hidden
-      data-tabs-fallback={radios ? '' : undefined}
       suppressHydrationWarning
       onChange={() => onValueChange?.(value, live)}
     />

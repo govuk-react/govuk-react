@@ -3,21 +3,19 @@
  * markup into a WAI-ARIA tablist, with or without React.
  *
  * The hidden radio group is the single source of truth, as in the react-design-system-apis
- * Tabs reference. Each panel's first child is a hidden radio. Choosing a tab (a label click, or
- * a link click or arrow key, which call `radio.click()`) checks its radio and fires the radio's
+ * Tabs reference. Each panel's first child is a hidden radio. Choosing a tab (a click or arrow
+ * key, which call `radio.click()`) checks its radio and fires the radio's
  * native `change`. The element listens for that one change to update the tablist. React sees
  * the same native change through the radio's `onChange`, so it needs no bridging event.
  *
  * Markup inside the element:
  * - `[data-tabs-list]`: the list of tabs.
  * - `[data-tabs-item][data-value]` (optional): a wrapper around a tab, such as an `li`.
- * - `[data-tabs-trigger][data-value]`: a tab. An `a` linking to its panel ("links" fallback)
- *   or a `label` for the radio in its panel ("radios" fallback).
+ * - `[data-tabs-trigger][data-value]`: a tab, an `a` linking to its panel.
  * - `[data-tabs-content][data-value]`: a panel. Its first child is a hidden radio.
  *
  * Attributes:
  * - `default-value` is the first selected tab.
- * - `fallback`: "links" (the default) or "radios".
  * - `orientation`: "horizontal" (the default) or "vertical", the axis of the arrow keys. In a
  *   right-to-left direction, horizontal arrow keys follow it.
  * - `media`: below this media query the element leaves the no-JS behaviour as it is.
@@ -31,8 +29,8 @@
  * While upgraded it sets `data-upgraded`, `data-orientation` on itself, the list, tabs and
  * panels, and `data-state` ("active" or "inactive") on the items, tabs and panels. A user's
  * choice fires a bubbling, cancelable `govuk-react-tabs:change` event with `{ value }`. Cancel it
- * to stay on the selected tab. To control the tab, use `TabsController` from `tabs-controller`. With "links", the URL hash follows the selected tab and selects it, as in
- * govuk-frontend.
+ * to stay on the selected tab. To control the tab, use `TabsController` from `tabs-controller`. The URL hash follows the
+ * selected tab and selects it, as in govuk-frontend.
  */
 
 import { classesOf } from '../utils/dom.js';
@@ -52,8 +50,7 @@ export interface TabsElement extends HTMLElement {
   /** The selected tab's value, once upgraded. */
   readonly selectedValue: string | undefined;
   /**
-   * The tab the user picked before React hydrated, through the no-JS fallback, the URL hash or
-   * the upgraded tabs, when it differs from the tab that would otherwise be selected.
+   * The tab the user picked before React hydrated, through the URL hash or the upgraded tabs, when it differs from the tab that would otherwise be selected.
    */
   readonly pickedValue: string | undefined;
   /** Selects a tab without reporting a change, such as to apply a controlled value. */
@@ -99,11 +96,11 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (trigger) this.choose(trigger);
     };
 
-    // A link's click becomes a click on its radio. A label already clicks its radio.
+    // A tab's click becomes a click on its radio.
     private readonly onClick = (event: MouseEvent) => {
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const trigger = this.ownTrigger(event.target);
-      if (!trigger || this.radiosFallback) return;
+      if (!trigger) return;
       event.preventDefault();
       this.choose(trigger);
     };
@@ -151,7 +148,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       } else {
         this.show(this.triggerFor(value));
         const id = content.id;
-        if (!this.radiosFallback && id && window.location.hash !== `#${id}`) {
+        if (id && window.location.hash !== `#${id}`) {
           window.history.pushState(window.history.state, '', `#${id}`);
         }
       }
@@ -209,10 +206,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (this.started && oldValue !== value) this.watchMedia();
     }
 
-    private get radiosFallback() {
-      return this.getAttribute('fallback') === 'radios';
-    }
-
     private get triggers(): HTMLElement[] {
       return this.own('[data-tabs-trigger]');
     }
@@ -234,7 +227,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     private triggerForHash() {
-      if (this.radiosFallback) return undefined;
       const hash = decodeURIComponent(window.location.hash.slice(1));
       return hash ? this.triggers.find((trigger) => this.parts(valueOf(trigger)).content?.id === hash) : undefined;
     }
@@ -336,7 +328,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.wire();
       this.addEventListener('click', this.onClick);
       this.addEventListener('keydown', this.onKeydown);
-      if (!this.radiosFallback) window.addEventListener('hashchange', this.onHashChange);
+      window.addEventListener('hashchange', this.onHashChange);
 
       this.showInitial();
     }
@@ -379,8 +371,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.removeEventListener('click', this.onClick);
       this.removeEventListener('keydown', this.onKeydown);
       window.removeEventListener('hashchange', this.onHashChange);
-      // The radios fallback still switches tabs, so it keeps its classes.
-      if (!this.radiosFallback) this.classList.remove(...classesOf(this.getAttribute('upgraded-class')));
+      this.classList.remove(...classesOf(this.getAttribute('upgraded-class')));
       this.own('[data-tabs-list]').forEach((list) => {
         list.removeAttribute('role');
         list.removeAttribute('aria-orientation');

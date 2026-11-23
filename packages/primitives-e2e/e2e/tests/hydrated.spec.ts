@@ -8,7 +8,6 @@ test.beforeEach(async ({ page }) => {
 
 test('does not call onValueChange on mount', async ({ page }) => {
   await expect(page.getByTestId('last-h')).toHaveText('');
-  await expect(page.getByTestId('last-l')).toHaveText('');
 });
 
 test('calls onValueChange when the user chooses a tab', async ({ page }) => {
@@ -22,10 +21,10 @@ test('calls onValueChange for a keyboard choice', async ({ page }) => {
   await expect(page.getByTestId('last-h')).toHaveText('h-documents');
 });
 
-test('calls onValueChange with links, and the hash follows', async ({ page }) => {
-  await page.getByTestId('demo-l').getByRole('tab', { name: 'Settings' }).click();
-  await expect(page.getByTestId('last-l')).toHaveText('l-settings');
-  await expect(page).toHaveURL(/#l-settings$/);
+test('the hash follows the selected tab', async ({ page }) => {
+  await page.getByTestId('demo-h').getByRole('tab', { name: 'Settings' }).click();
+  await expect(page.getByTestId('last-h')).toHaveText('h-settings');
+  await expect(page).toHaveURL(/#h-settings$/);
 });
 
 test('a vertical tablist moves with Up and Down, and ignores Left and Right', async ({ page }) => {
