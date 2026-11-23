@@ -5,6 +5,7 @@ import { createContext, useContext, useEffect, useId, useReducer, useRef } from 
 import type { ComponentProps, ReactElement, ReactNode } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
+import { TabsController } from './controller.js';
 import { tagName, type TabsElement } from './element.js';
 
 export type { ChangeDetails };
@@ -95,6 +96,17 @@ function TabsRoot({
   // `value` is set once hydrated, so the server markup is uncontrolled and a choice made before
   // hydration still switches tab. That choice fired no onChange that React saw, so it is reported
   // once.
+  const controller = useRef<TabsController>(null);
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return undefined;
+    const created = new TabsController(node);
+    controller.current = created;
+    return () => {
+      created.disconnect();
+      controller.current = null;
+    };
+  }, []);
   const synced = useRef(false);
   const [, render] = useReducer((count: number) => count + 1, 0);
   useEffect(() => {
@@ -112,7 +124,7 @@ function TabsRoot({
         }
       }
     }
-    node.value = value;
+    if (controller.current) controller.current.value = value;
   });
 
   return (

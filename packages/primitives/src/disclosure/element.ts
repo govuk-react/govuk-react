@@ -18,17 +18,16 @@
  * - `default-open`: start with the content shown.
  *
  * Properties:
- * - `open`: when `true` or `false`, controls the content. A user's click then only fires the
- *   change event, and the content changes when `open` does. `undefined` or `null` stops controlling it.
+ * - `expanded`: whether the content is open. Setting it fires no change event.
  *
  * While upgraded it sets `data-upgraded`, and `data-state` ("open" or "closed") on itself, the
- * button and the content. A user's click fires a bubbling
- * `govuk-react-disclosure:change` event with `{ open }`, for code that doesn't use React.
+ * button and the content. A user's click fires a bubbling, cancelable
+ * `govuk-react-disclosure:change` event with `{ open }`. Cancel it to leave the content as it is.
+ * To control the content, use `DisclosureController` from `disclosure-controller`.
  */
 
 import { setHidden } from '../utils/dom.js';
 import { setUpWhenReady } from '../utils/set-up-when-ready.js';
-import { upgradeProperty } from '../utils/upgrade-property.js';
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -42,11 +41,9 @@ declare global {
 export const tagName = 'govuk-react-disclosure';
 
 export interface DisclosureElement extends HTMLElement {
-  /** Controls the content when `true` or `false`. */
-  open: boolean | undefined;
-  /** Whether the content is open, once upgraded, even while `media` shows it anyway. */
-  readonly expanded: boolean | undefined;
-  /** The user's last choice before `open` was first set, such as before React hydrated. */
+  /** Whether the content is open, once upgraded, even while `media` shows it anyway. Setting it reports no change. */
+  expanded: boolean | undefined;
+  /** The user's last choice, such as before React hydrated. */
   readonly pickedOpen: boolean | undefined;
 }
 
@@ -64,13 +61,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private observer?: MutationObserver;
 
-    private isOpen = false;
+    private isOpen?: boolean;
 
     private picked?: boolean;
-
-    private controlled = false;
-
-    private controlledOpen?: boolean;
 
     private readonly onClick = () => this.change(!this.isOpen);
 
@@ -80,28 +73,24 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     };
 
     private change(open: boolean) {
-      if (this.controlledOpen === undefined) {
-        this.apply(open);
-        if (!this.controlled) this.picked = open;
-      }
-      this.dispatchEvent(new CustomEvent('govuk-react-disclosure:change', { detail: { open }, bubbles: true }));
+      const event = new CustomEvent('govuk-react-disclosure:change', {
+        detail: { open },
+        bubbles: true,
+        cancelable: true,
+      });
+      if (!this.dispatchEvent(event)) return;
+      this.apply(open);
+      this.picked = open;
     }
 
     private readonly onModeChange = () => this.render();
 
-    get open(): boolean | undefined {
-      return this.controlledOpen;
-    }
-
-    set open(open: boolean | null | undefined) {
-      this.controlledOpen = open ?? undefined;
-      if (open == null) return;
-      this.controlled = true;
-      this.apply(open);
-    }
-
     get expanded() {
       return this.toggle ? this.isOpen : undefined;
+    }
+
+    set expanded(open: boolean | undefined) {
+      if (open !== undefined) this.apply(open);
     }
 
     get pickedOpen() {
@@ -109,7 +98,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     connectedCallback() {
-      upgradeProperty(this, 'open');
       this.observer = setUpWhenReady(this, () => this.setup());
     }
 
@@ -139,7 +127,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (!toggle || !content) return false;
       this.toggle = toggle;
       this.content = content;
-      this.isOpen = this.controlledOpen ?? this.hasAttribute('default-open');
+      this.isOpen ??= this.hasAttribute('default-open');
       this.dataset.upgraded = '';
       toggle.addEventListener('click', this.onClick);
       content.addEventListener('beforematch', this.onBeforeMatch);
