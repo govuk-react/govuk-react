@@ -5,6 +5,7 @@ import { renderToString } from 'react-dom/server';
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import * as ControlledField from '.';
+import * as PasswordInput from '../password-input';
 import type { ChangeDetails } from '.';
 
 type FormProps = {
@@ -180,4 +181,40 @@ test('asChild reports for the child field, and keeps its own handlers and ref', 
   expect(onChange).toHaveBeenCalledTimes(1);
   expect(ref.current).toBe(screen.getByLabelText('Name'));
   expect(ref.current).toHaveClass('field');
+});
+
+test('asChild over another primitive field keeps what was entered before hydration', async () => {
+  const onValueChange = vi.fn();
+  function Password() {
+    const [password, setPassword] = useState('');
+    return (
+      <PasswordInput.Root>
+        <ControlledField.Input
+          asChild
+          value={password}
+          onValueChange={(value, details) => {
+            onValueChange(value, details);
+            setPassword(value);
+          }}
+        >
+          <PasswordInput.Input aria-label="Password" />
+        </ControlledField.Input>
+        <PasswordInput.Trigger />
+        <PasswordInput.Status />
+        <output>{password}</output>
+      </PasswordInput.Root>
+    );
+  }
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(<Password />);
+  const input = screen.getByLabelText<HTMLInputElement>('Password');
+  input.value = 'secret';
+  await act(async () => {
+    hydrateRoot(container, <Password />);
+  });
+  expect(onValueChange.mock.calls).toEqual([['secret', { beforeHydration: true }]]);
+  expect(screen.getByRole('status')).toHaveTextContent('secret');
+  expect(input).toHaveValue('secret');
+  expect(input).toHaveAttribute('data-password-input');
 });
