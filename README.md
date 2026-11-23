@@ -4,8 +4,6 @@ An implementation of the [GOV.UK Design System](https://design-system.service.go
 
 govuk-react is a community project, actively maintained by volunteers. It isn't an official port of GOV.UK Frontend and isn't supported by the GOV.UK Design System team, who maintain [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend).
 
-The GOV.UK Service Manual's guidance on [building a robust frontend using progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement) and the [Service Standard](https://www.gov.uk/service-manual/service-standard) describe how government services are expected to work without JavaScript. Every govuk-react component renders HTML that works before and without JavaScript, so pages can be rendered on the server. See [Server rendering](https://govuk-react.com/guides/server-rendering/).
-
 We aim to track the following projects (in priority order) as to which components to implement and how they should look/behave. Where possible we are using the existing CSS as a guide. When we need to modify to suit custom markup, we aim to provide a comment in our code as to why this was done.
 
 - [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)
@@ -14,6 +12,14 @@ We aim to track the following projects (in priority order) as to which component
 - [GOV.UK Design System Backlog](https://github.com/alphagov/govuk-design-system-backlog) (where there are open tickets in the backlog that reference patterns/components in existing govuk sites)
 
 The project is currently maintained for free by a small number of volunteers. If you would like to contribute, help maintain or sponsor this project, please get in touch via [Discussions](https://github.com/govuk-react/govuk-react/discussions) or [Twitter](https://twitter.com/penx).
+
+## Do you need React?
+
+Point 5 of the [Service Standard](https://www.gov.uk/service-manual/service-standard/point-5-make-sure-everyone-can-use-the-service) is to make sure everyone can use the service. Alex Russell [argues](https://infrequently.org/2024/11/if-not-react-then-what/) that React is too heavy for users on the margins, and that it has repeatedly led to bloated services that keep people out, in both the public and private sector. His [Reckoning series](https://infrequently.org/series/reckoning/) sets out the evidence.
+
+For most public-facing services, plain HTML with [govuk-frontend](https://github.com/alphagov/govuk-frontend) is enough. govuk-react is for teams that have already chosen React. It renders the same markup as govuk-frontend, and every component works before and without JavaScript, so pages can be rendered on the server. The Service Manual's guidance on [building a robust frontend using progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement) describes how government services are expected to work without JavaScript. See [Server rendering](https://govuk-react.com/guides/server-rendering/).
+
+If you use React, keep an eye on bundle size and on performance on low-end devices and slow connections, and check that your service still works before JavaScript loads.
 
 ## Usage
 
