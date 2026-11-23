@@ -26,7 +26,7 @@ Control a primitive only when your app has to set its state, such as closing a m
 
 ### Changes made before hydration
 
-`onValueChange` and `onOpenChange` on Tabs, Accordion, Disclosure, Details and Modal, and `onQueryChange` on Autocomplete, get a second argument, `{ beforeHydration }`. It's `true` for a change the user made before React hydrated, which is reported once React has hydrated, whether or not the primitive is controlled.
+`onValueChange` and `onOpenChange` on Tabs, Accordion, Disclosure, Details and Modal, `onQueryChange` on Autocomplete, and the handlers of a [controlled field](#controlled-field), get a second argument, `{ beforeHydration }`. It's `true` for a change the user made before React hydrated, which is reported once React has hydrated, whether or not the primitive is controlled.
 
 Such a report differs from a live change:
 
@@ -207,6 +207,30 @@ import { Details } from '@govuk-react/primitives/details';
 ```
 
 A native `details`, for content that shows and hides without JavaScript. It has no custom element, because the browser holds its state before React hydrates. `open` and `onOpenChange` control it once hydrated. A user's change before hydration is reported through `onOpenChange` rather than undone. See [Disclosure](#why-not-details) for why it may not suit a menu.
+
+## Controlled field
+
+```tsx
+import * as ControlledField from '@govuk-react/primitives/controlled-field';
+
+<ControlledField.Input id="name" name="name" value={name} onValueChange={setName} />;
+```
+
+Native form fields whose value React holds. Prefer an uncontrolled field, with `defaultValue` or `defaultChecked`: the browser holds its value, so nothing is lost. Use these parts for a field your app has to control.
+
+A user can fill in a server-rendered field before React hydrates. React leaves what they entered in a controlled field without calling `onChange`, so your state doesn't have it, then replaces it with your state at the next render. These parts report it instead, once hydrated, with `{ beforeHydration: true }`. They have no custom element, because the browser holds the value before React hydrates.
+
+- `Input`, `Textarea` and `Select` take `value` and `onValueChange`. `Select` holds one option.
+- `Checkbox` takes `checked` and `onCheckedChange`.
+- `Radio` takes `checked` and `onCheck`, which is called when the user picks that radio. As with a native radio's `change` event, nothing is called for the radio that picking it unchecks.
+
+If your handler doesn't adopt what's reported, the field goes back to the prop. Until React hydrates, your state doesn't have what the user entered, so read the form rather than state for anything that can run before then, such as a native submit. Each part takes `asChild`, to control another component's field:
+
+```tsx
+<ControlledField.Input asChild value={password} onValueChange={setPassword}>
+  <PasswordInput.Input id="password" name="password" />
+</ControlledField.Input>
+```
 
 ## Modal
 
