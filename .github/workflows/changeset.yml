@@ -1,0 +1,23 @@
+name: Changeset
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  changeset:
+    if: github.actor != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Require a changeset
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if git diff --name-only --diff-filter=AD "$BASE_SHA"...HEAD -- '.changeset/*.md' ':!.changeset/README.md' | grep -q .; then
+            exit 0
+          fi
+          echo "::error::Add a changeset with \`pnpm changeset\`, or \`pnpm changeset --empty\` if the PR needs no release notes."
+          exit 1
