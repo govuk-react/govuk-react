@@ -101,9 +101,11 @@ To render them from React on the server, `inline-script` has each script as a st
 import { InlineScript, tabs } from '@govuk-react/primitives/inline-script';
 
 <head>
-  <InlineScript script={tabs} nonce={nonce} />
+  <InlineScript script={tabs} />
 </head>;
 ```
+
+A Content Security Policy can block inline scripts. One that allows them with a [nonce](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/nonce), a random value made for each response and listed in the policy, runs only the scripts that carry it. Pass that value as `nonce`, such as `<InlineScript script={tabs} nonce={nonce} />`. Without such a policy, leave it out.
 
 The scripts are `accordion`, `autocomplete`, `autoFocus`, `button`, `characterCount`, `choices`, `disclosure`, `exitThisPage`, `fileUpload`, `focusLinks`, `modal`, `passwordInput` and `tabs`. `InlineScript` renders only on the server, so the scripts stay out of client bundles: it has no `'use client'` directive, and in Astro it needs no `client:*` directive. A script React adds in the browser doesn't run, and isn't needed, since React's parts define their elements.
 
