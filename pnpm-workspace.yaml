@@ -6,6 +6,8 @@ allowBuilds:
   core-js: false
   core-js-pure: false
   esbuild: true
+  # Sass's optional file watcher, unused by the Astro example's build.
+  '@parcel/watcher': false
   # Astro's image service, unused by the primitives browser tests.
   sharp: false
 linkWorkspacePackages: true
