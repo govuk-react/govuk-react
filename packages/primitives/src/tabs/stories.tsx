@@ -50,34 +50,3 @@ export const Default: Story = {
     </Tabs.Root>
   ),
 };
-
-/** Each tab is a label for a hidden radio, so the tabs switch without JavaScript. */
-export const RadiosFallback: Story = {
-  name: 'Radios fallback',
-  render: () => (
-    <Tabs.RadiosRoot defaultValue="radios-past-day">
-      <Tabs.List asChild>
-        <ul>
-          <Tabs.Item value="radios-past-day" asChild>
-            <li>
-              <Tabs.RadiosTrigger value="radios-past-day">Past day</Tabs.RadiosTrigger>
-            </li>
-          </Tabs.Item>
-          <Tabs.Item value="radios-past-week" asChild>
-            <li>
-              <Tabs.RadiosTrigger value="radios-past-week">Past week</Tabs.RadiosTrigger>
-            </li>
-          </Tabs.Item>
-        </ul>
-      </Tabs.List>
-      <Tabs.RadiosContent value="radios-past-day">
-        <h2>Past day</h2>
-        <p>3 cases opened, 0 cases closed.</p>
-      </Tabs.RadiosContent>
-      <Tabs.RadiosContent value="radios-past-week">
-        <h2>Past week</h2>
-        <p>24 cases opened, 18 cases closed.</p>
-      </Tabs.RadiosContent>
-    </Tabs.RadiosRoot>
-  ),
-};

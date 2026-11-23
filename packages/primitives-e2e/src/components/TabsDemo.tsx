@@ -16,13 +16,11 @@ const items = [
 export default function TabsDemo({
   id,
   name,
-  fallback = 'radios',
   orientation,
   media,
 }: {
   id: string;
   name?: string;
-  fallback?: 'links' | 'radios';
   orientation?: 'horizontal' | 'vertical';
   media?: string;
 }) {
@@ -35,37 +33,20 @@ export default function TabsDemo({
   const root = { name, defaultValue: `${id}-account`, orientation, media, onValueChange: setLast };
   return (
     <div data-testid={`demo-${id}`} ref={hydrated} data-hydrated="false" suppressHydrationWarning>
-      {fallback === 'radios' ? (
-        <Tabs.RadiosRoot {...root}>
-          <Tabs.List>
-            {items.map((item) => (
-              <Tabs.RadiosTrigger key={item.value} value={`${id}-${item.value}`}>
-                {item.label}
-              </Tabs.RadiosTrigger>
-            ))}
-          </Tabs.List>
+      <Tabs.Root {...root}>
+        <Tabs.List>
           {items.map((item) => (
-            <Tabs.RadiosContent key={item.value} value={`${id}-${item.value}`}>
-              {item.body}
-            </Tabs.RadiosContent>
+            <Tabs.Trigger key={item.value} value={`${id}-${item.value}`}>
+              {item.label}
+            </Tabs.Trigger>
           ))}
-        </Tabs.RadiosRoot>
-      ) : (
-        <Tabs.Root {...root}>
-          <Tabs.List>
-            {items.map((item) => (
-              <Tabs.Trigger key={item.value} value={`${id}-${item.value}`}>
-                {item.label}
-              </Tabs.Trigger>
-            ))}
-          </Tabs.List>
-          {items.map((item) => (
-            <Tabs.Content key={item.value} value={`${id}-${item.value}`}>
-              {item.body}
-            </Tabs.Content>
-          ))}
-        </Tabs.Root>
-      )}
+        </Tabs.List>
+        {items.map((item) => (
+          <Tabs.Content key={item.value} value={`${id}-${item.value}`}>
+            {item.body}
+          </Tabs.Content>
+        ))}
+      </Tabs.Root>
       <p data-testid={`last-${id}`}>{last}</p>
     </div>
   );

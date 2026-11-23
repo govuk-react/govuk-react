@@ -1,7 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 
-// Holds back every script until release(), so a test can use the no-JS fallback before the
-// element upgrades and React hydrates, then let them load.
+// Holds back every script until release(), so a test can follow a tab's link before the element
+// upgrades and React hydrates, then let them load.
 async function holdScripts(page: Page) {
   let release = () => {};
   const gate = new Promise<void>((resolve) => {
@@ -17,11 +17,11 @@ async function holdScripts(page: Page) {
   return () => release();
 }
 
-test('uncontrolled: a choice made before hydration is reported', async ({ page }) => {
+test('uncontrolled: a link followed before hydration is reported', async ({ page }) => {
   const release = await holdScripts(page);
   await page.goto('/test/hydrated', { waitUntil: 'commit' });
-  await page.getByTestId('demo-h').locator('label', { hasText: 'Settings' }).click();
-  await expect(page.locator('#h-h-settings')).toBeChecked();
+  await page.getByTestId('demo-h').getByRole('link', { name: 'Settings' }).click();
+  await expect(page).toHaveURL(/#h-settings$/);
   release();
   await expect(page.getByTestId('demo-h')).toHaveAttribute('data-hydrated', 'true');
   await expect(page.getByTestId('demo-h').getByRole('tab', { name: 'Settings' })).toHaveAttribute(
@@ -31,21 +31,21 @@ test('uncontrolled: a choice made before hydration is reported', async ({ page }
   await expect(page.getByTestId('last-h')).toHaveText('h-settings');
 });
 
-test('uncontrolled links: a URL hash on load is reported', async ({ page }) => {
-  await page.goto('/test/hydrated#l-documents');
-  await expect(page.getByTestId('demo-l')).toHaveAttribute('data-hydrated', 'true');
-  await expect(page.getByTestId('demo-l').getByRole('tab', { name: 'Documents' })).toHaveAttribute(
+test('uncontrolled: a URL hash on load is reported', async ({ page }) => {
+  await page.goto('/test/hydrated#h-documents');
+  await expect(page.getByTestId('demo-h')).toHaveAttribute('data-hydrated', 'true');
+  await expect(page.getByTestId('demo-h').getByRole('tab', { name: 'Documents' })).toHaveAttribute(
     'aria-selected',
     'true'
   );
-  await expect(page.getByTestId('last-l')).toHaveText('l-documents');
+  await expect(page.getByTestId('last-h')).toHaveText('h-documents');
 });
 
-test('controlled: a choice made before hydration is reported and adopted', async ({ page }) => {
+test('controlled: a link followed before hydration is reported and adopted', async ({ page }) => {
   const release = await holdScripts(page);
   await page.goto('/test/controlled', { waitUntil: 'commit' });
-  await page.getByTestId('ctrl-cv').locator('label', { hasText: 'Settings' }).click();
-  await expect(page.locator('#cv-cv-settings')).toBeChecked();
+  await page.getByTestId('ctrl-cv').getByRole('link', { name: 'Settings' }).click();
+  await expect(page).toHaveURL(/#cv-settings$/);
   release();
   await expect(page.getByTestId('ctrl-cv')).toHaveAttribute('data-hydrated', 'true');
   await expect(page.getByTestId('cv-value')).toHaveText('cv-settings');
@@ -56,13 +56,13 @@ test('controlled: a choice made before hydration is reported and adopted', async
   );
 });
 
-test('controlled: a choice made before hydration that the app does not adopt is reported, then undone', async ({
+test('controlled: a link followed before hydration that the app does not adopt is reported, then undone', async ({
   page,
 }) => {
   const release = await holdScripts(page);
   await page.goto('/test/controlled', { waitUntil: 'commit' });
-  await page.getByTestId('ctrl-ck').locator('label', { hasText: 'Settings' }).click();
-  await expect(page.locator('#ck-ck-settings')).toBeChecked();
+  await page.getByTestId('ctrl-ck').getByRole('link', { name: 'Settings' }).click();
+  await expect(page).toHaveURL(/#ck-settings$/);
   release();
   await expect(page.getByTestId('ctrl-ck')).toHaveAttribute('data-hydrated', 'true');
   await expect(page.getByTestId('ck-changes')).toHaveText('1');
@@ -70,5 +70,5 @@ test('controlled: a choice made before hydration that the app does not adopt is 
     'aria-selected',
     'true'
   );
-  await expect(page.locator('#ck-ck-account')).toBeChecked();
+  await expect(page.locator('#ck-account > input')).toBeChecked();
 });

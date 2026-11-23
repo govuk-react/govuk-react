@@ -107,19 +107,6 @@ export const Default: Story = {
   args: { items },
 };
 
-export const Radios: Story = {
-  args: { items },
-  render: () => <Tabs.RadiosComposite items={items} name="cases-radios" />,
-  parameters: {
-    docs: {
-      description: {
-        story:
-          '`RadiosComposite`, and `RadiosRoot` with `RadiosTab` and `RadiosPanel`, switch tabs without JavaScript too, through a hidden radio in each panel. Without JavaScript the tabs can’t be reached by keyboard.',
-      },
-    },
-  },
-};
-
 export const WithParts: Story = {
   args: { items: [] },
   render: () => (
