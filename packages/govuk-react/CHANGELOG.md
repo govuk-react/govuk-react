@@ -1,5 +1,15 @@
 # govuk-react
 
+## 1.0.0-alpha.7
+
+### Patch Changes
+
+- Updated dependency: `@govuk-react/primitives@0.8.0`. What a user does before React hydrates is kept and reported more reliably:
+  - Showing a password before React hydrates no longer makes React throw away the server's HTML, and with it what the user typed.
+  - Controlled Tabs, Accordion and Modal no longer make React throw away the server's HTML of a Suspense boundary inside them that has yet to hydrate, when going back to the prop after a change the user made before hydration.
+  - A Details or Modal change made before hydration is reported once, even when its event arrives after hydration.
+  - Tabs upgraded by an inline script no longer wait for the page to finish loading.
+
 ## 1.0.0-alpha.6
 
 ### Minor Changes
