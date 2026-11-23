@@ -64,7 +64,16 @@ No part renders a `style` element or attribute, so the primitives work under a s
 
 ## Without React
 
-Each element is also exported on its own, with no React, from `@govuk-react/primitives/<name>-element`, such as `tabs-element`. Importing it defines the element, such as `<govuk-react-tabs>`. Render the same markup as the React parts do: the element finds its parts by `data-` attributes, takes its options as attributes, and reports changes with bubbling events named after it, such as `govuk-react-tabs:change`. An attribute sets only where the state starts, such as `default-value`. To control the state, set a property: `value` on Tabs and Accordion, which takes an array, and `open` on Disclosure and Modal. Set it back to `undefined` or `null` to stop controlling it. The comment at the top of each element's source lists its markup, attributes, properties and events:
+Each element is also exported on its own, with no React, from `@govuk-react/primitives/<name>-element`, such as `tabs-element`. Importing it defines the element, such as `<govuk-react-tabs>`. Render the same markup as the React parts do: the element finds its parts by `data-` attributes, takes its options as attributes, and reports changes with bubbling events named after it, such as `govuk-react-tabs:change`. An attribute sets only where the state starts, such as `default-value`. A user's change to Tabs, Accordion or Disclosure fires a cancelable change event: cancel it to leave the state as it is. To control the state, use the primitive's controller, kept out of the element so its inline script stays small: `TabsController` and `AccordionController` take a `value`, which for Accordion is an array, and `DisclosureController` and `ModalController` take `open`. Set it back to `undefined` to stop controlling the state.
+
+```ts
+import { ModalController } from '@govuk-react/primitives/modal-controller';
+
+const controller = new ModalController(element);
+controller.open = true;
+```
+
+The comment at the top of each element's source lists its markup, attributes, properties and events:
 
 [accordion](src/accordion/element.ts), [auto-focus](src/auto-focus/element.ts), [autocomplete](src/autocomplete/element.ts), [button](src/button/element.ts), [character-count](src/character-count/element.ts), [choices](src/choices/element.ts), [disclosure](src/disclosure/element.ts), [exit-this-page](src/exit-this-page/element.ts), [file-upload](src/file-upload/element.ts), [focus-links](src/focus-links/element.ts), [modal](src/modal/element.ts), [password-input](src/password-input/element.ts) and [tabs](src/tabs/element.ts).
 
@@ -73,6 +82,8 @@ Each element that changes how its markup shows sets `data-upgraded` on itself on
 ## Inline scripts
 
 Each element is also built as a small, self-contained classic script, with no imports and no React, at `@govuk-react/primitives/inline/<name>-element.js`, such as `inline/tabs-element.js`. Inline the ones your page uses, so the markup is interactive as soon as it loads, before React has downloaded and hydrated. React's parts then pick up from the elements, including anything the user did before hydration. Each element is defined only once, whichever runs first: the inline script or React's bundle. So inline the scripts from the same version of this package as the one in your bundle.
+
+Without its inline script, an element upgrades once your bundle has loaded, and until then the page shows the markup as it is without JavaScript. The accordion, tabs, disclosure and file upload change the page's layout when they upgrade: an accordion's sections all start open, then close. With the script inlined in the `head`, the element upgrades as it is parsed, before the browser first paints it.
 
 To render them from React on the server, `inline-script` has each script as a string, and an `InlineScript` component:
 

@@ -65,3 +65,22 @@ test('React first: an inline script that runs later leaves React’s element alo
   await expect(tab).toHaveAttribute('aria-selected', 'true');
   expect(errors).toEqual([]);
 });
+
+test('the inline tabs upgrade while a deferred script holds the page loading', async ({ page }) => {
+  await page.route('**/held.js', () => {});
+  await page.route('**/test/still-loading', (route) =>
+    route.fulfill({
+      contentType: 'text/html',
+      body: `<!doctype html><html lang="en"><head><title>Still loading</title><script>${inlineTabs}</script><script defer src="/held.js"></script></head><body>
+        <govuk-react-tabs>
+          <div data-tabs-list><a data-tabs-trigger data-value="a" href="#a">A</a><a data-tabs-trigger data-value="b" href="#b">B</a></div>
+          <div data-tabs-content data-value="a" id="a"><input type="radio" name="t" hidden checked>A panel</div>
+          <div data-tabs-content data-value="b" id="b"><input type="radio" name="t" hidden>B panel</div>
+        </govuk-react-tabs></body></html>`,
+    })
+  );
+  await page.goto('/test/still-loading', { waitUntil: 'commit' });
+  await expect(page.getByRole('tab', { name: 'A' })).toHaveAttribute('aria-selected', 'true');
+  await expect(page.getByText('B panel')).toBeHidden();
+  expect(await page.evaluate(() => document.readyState)).not.toBe('complete');
+});

@@ -5,6 +5,7 @@ import { useEffect, useEffectEvent, useReducer, useRef } from 'react';
 import type { ComponentProps } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
+import { DisclosureController } from './controller.js';
 import { tagName, type DisclosureElement } from './element.js';
 
 export type { ChangeDetails };
@@ -31,6 +32,17 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
 export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootProps) {
   const element = useRef<DisclosureElement>(null);
   const reportChange = useEffectEvent((next: boolean, details: ChangeDetails) => onOpenChange?.(next, details));
+  const controller = useRef<DisclosureController>(null);
+  useEffect(() => {
+    const node = element.current;
+    if (!node) return undefined;
+    const created = new DisclosureController(node);
+    controller.current = created;
+    return () => {
+      created.disconnect();
+      controller.current = null;
+    };
+  }, []);
   const synced = useRef(false);
   const [, render] = useReducer((count: number) => count + 1, 0);
 
@@ -62,7 +74,7 @@ export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootP
         }
       }
     }
-    node.open = open;
+    if (controller.current) controller.current.open = open;
   });
 
   return React.createElement(tagName, {

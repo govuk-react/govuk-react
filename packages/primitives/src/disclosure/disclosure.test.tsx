@@ -4,6 +4,7 @@ import { hydrateRoot } from 'react-dom/client';
 import { renderToString } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import * as Disclosure from '.';
+import { DisclosureController } from './controller.js';
 
 function Example(props: Disclosure.RootProps) {
   return (
@@ -150,4 +151,23 @@ test('renders no hidden attribute before upgrade, whatever hidden asks for', () 
     </Disclosure.Root>
   );
   expect(html).toContain('<div data-disclosure-content="" data-hidden="until-found">Navigation</div>');
+});
+
+test('without React, a DisclosureController controls the content, until its open is undefined', async () => {
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(<Example />);
+  await upgraded();
+  const element = container.querySelector('govuk-react-disclosure');
+  if (!element) throw new Error('No element');
+  const controller = new DisclosureController(element);
+  const button = screen.getByRole('button', { name: 'Menu' });
+  controller.open = true;
+  expect(button).toHaveAttribute('aria-expanded', 'true');
+  fireEvent.click(button);
+  expect(button).toHaveAttribute('aria-expanded', 'true');
+  controller.open = undefined;
+  fireEvent.click(button);
+  expect(button).toHaveAttribute('aria-expanded', 'false');
+  container.remove();
 });

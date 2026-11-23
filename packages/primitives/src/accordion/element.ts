@@ -32,19 +32,18 @@
  *   keyed off classes rather than `data-upgraded`, `data-state` and `aria-expanded`.
  *
  * Properties:
- * - `value`: when an array of the open sections' values, controls them. A user's click then only
- *   fires the change event, and the sections change when `value` does. `undefined` or `null`
- *   stops controlling them.
+ * - `openValues`: the open sections' values, once upgraded. Setting it fires no change event.
  *
  * While upgraded it sets `data-upgraded`, and `data-state` ("open" or "closed") on each item,
  * trigger and content.
  *
- * A user's click fires a bubbling `govuk-react-accordion:change` event with `{ value }`, the open
- * sections' values.
+ * A user's click fires a bubbling, cancelable `govuk-react-accordion:change` event with
+ * `{ value }`, the open sections' values. Cancel it to leave the sections as they are, though
+ * find in page still opens the section with the match. To control the sections, use
+ * `AccordionController` from `accordion-controller`.
  */
 
 import { classesOf, setHidden, setText } from '../utils/dom.js';
-import { upgradeProperty } from '../utils/upgrade-property.js';
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -58,11 +57,9 @@ declare global {
 export const tagName = 'govuk-react-accordion';
 
 export interface AccordionElement extends HTMLElement {
-  /** Controls the open sections, by value, when set. */
-  value: readonly string[] | undefined;
-  /** The open sections' values, once upgraded. */
-  readonly openValues: string[] | undefined;
-  /** The open sections after the user's last change before `value` was first set, such as before React hydrated. */
+  /** The open sections' values, once upgraded. Setting it reports no change. */
+  openValues: readonly string[] | undefined;
+  /** The open sections after the user's last change, such as before React hydrated. */
   readonly pickedValue: string[] | undefined;
 }
 
@@ -82,8 +79,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private open = new Set<string>();
 
     private upgraded = false;
-
-    private controlledValue?: readonly string[];
 
     private picked?: string[];
 
@@ -118,8 +113,14 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.change(new Set([...this.open, value]), true);
     };
 
-    get openValues() {
+    get openValues(): string[] | undefined {
       return this.upgraded ? [...this.open] : undefined;
+    }
+
+    set openValues(value: readonly string[] | undefined) {
+      if (!value) return;
+      this.open = new Set(value);
+      this.render();
     }
 
     get pickedValue() {
@@ -127,7 +128,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     connectedCallback() {
-      upgradeProperty(this, 'value');
       // Sections can be parsed or rendered later, and React can rewrite a class attribute.
       this.observer = new MutationObserver((records) => {
         if (!this.upgraded) {
@@ -151,21 +151,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.observer?.disconnect();
       this.removeEventListener('click', this.onClick);
       this.removeEventListener('beforematch', this.onBeforeMatch, true);
-    }
-
-    get value(): readonly string[] | undefined {
-      return this.controlledValue;
-    }
-
-    set value(value: readonly string[] | null | undefined) {
-      this.controlledValue = value ?? undefined;
-      if (!value) return;
-      this.open = new Set(value);
-      this.render();
-    }
-
-    private get controlled() {
-      return this.controlledValue !== undefined;
     }
 
     private get items() {
@@ -206,7 +191,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const items = this.items;
       if (!items.some((item) => this.find(item, 'button[data-accordion-trigger]'))) return;
       this.upgraded = true;
-      this.open = new Set(this.controlledValue ?? valuesOf(this.getAttribute('default-value')));
+      this.open = new Set(valuesOf(this.getAttribute('default-value')));
       this.dataset.upgraded = '';
       const upgradedClasses = classesOf(this.getAttribute('upgraded-class'));
       if (upgradedClasses.length) this.classList.add(...upgradedClasses);
@@ -230,11 +215,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (!trigger || this.prepared.has(item)) return;
       this.prepared.add(item);
       const value = item.dataset.value ?? '';
-      if (!this.controlled) {
-        const defaultValue = valuesOf(this.getAttribute('default-value'));
-        if (defaultValue ? defaultValue.includes(value) : item.hasAttribute('data-expanded')) this.open.add(value);
-        this.restore(item);
-      }
+      const defaultValue = valuesOf(this.getAttribute('default-value'));
+      if (defaultValue ? defaultValue.includes(value) : item.hasAttribute('data-expanded')) this.open.add(value);
+      this.restore(item);
       Array.from(item.querySelectorAll<HTMLElement>('[data-accordion-fallback]'))
         .filter((fallback) => this.itemOf(fallback) === item)
         .forEach((fallback) => {
@@ -276,17 +259,21 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private change(next: Set<string>, force = false) {
       const value = this.items.map((item) => item.dataset.value ?? '').filter((v) => next.has(v));
-      // Find in page must show the match, so it opens the section even when controlled.
-      if (!this.controlled || force) {
-        const previous = this.open;
-        this.open = new Set(value);
-        if (!this.controlled) {
-          this.picked = value;
-          this.store(previous);
-        }
-        this.render();
+      const event = new CustomEvent('govuk-react-accordion:change', {
+        detail: { value },
+        bubbles: true,
+        cancelable: true,
+      });
+      const proceed = this.dispatchEvent(event);
+      // Find in page must show the match, so it opens the section even when cancelled.
+      if (!proceed && !force) return;
+      const previous = this.open;
+      this.open = new Set(value);
+      if (proceed) {
+        this.picked = value;
+        this.store(previous);
       }
-      this.dispatchEvent(new CustomEvent('govuk-react-accordion:change', { detail: { value }, bubbles: true }));
+      this.render();
     }
 
     private render() {

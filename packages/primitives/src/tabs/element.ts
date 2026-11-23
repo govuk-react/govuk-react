@@ -25,18 +25,17 @@
  *   keyed off classes rather than `data-state`, `aria-selected` and `hidden`.
  *
  * Properties:
- * - `value`: when set, controls the selected tab. A user's choice then only fires the change
- *   events, and the tab changes when `value` does. `undefined` or `null` stops controlling it.
+ * - `selectedValue`: the selected tab's value, once upgraded.
+ * - `select(value)`: selects a tab, firing no change event.
  *
  * While upgraded it sets `data-upgraded`, `data-orientation` on itself, the list, tabs and
  * panels, and `data-state` ("active" or "inactive") on the items, tabs and panels. A user's
- * choice fires a bubbling `govuk-react-tabs:change` event with `{ value }`, for code that
- * doesn't use React. With "links", the URL hash follows the selected tab and selects it, as in
+ * choice fires a bubbling, cancelable `govuk-react-tabs:change` event with `{ value }`. Cancel it
+ * to stay on the selected tab. To control the tab, use `TabsController` from `tabs-controller`. With "links", the URL hash follows the selected tab and selects it, as in
  * govuk-frontend.
  */
 
 import { classesOf } from '../utils/dom.js';
-import { upgradeProperty } from '../utils/upgrade-property.js';
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -50,8 +49,6 @@ declare global {
 export const tagName = 'govuk-react-tabs';
 
 export interface TabsElement extends HTMLElement {
-  /** Controls the selected tab, by value, when set. */
-  value: string | undefined;
   /** The selected tab's value, once upgraded. */
   readonly selectedValue: string | undefined;
   /**
@@ -59,7 +56,7 @@ export interface TabsElement extends HTMLElement {
    * the upgraded tabs, when it differs from the tab that would otherwise be selected.
    */
   readonly pickedValue: string | undefined;
-  /** Select a tab without reporting a change, such as to apply a controlled value. */
+  /** Selects a tab without reporting a change, such as to apply a controlled value. */
   select(value: string): void;
 }
 
@@ -80,8 +77,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private mql?: MediaQueryList;
 
-    private controlledValue?: string;
-
     private started = false;
 
     private active = false;
@@ -91,12 +86,13 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     // The last tab the user chose, by any route.
     private picked?: string;
 
-    // The first tab was selected only because nothing else had been parsed yet.
+    // The element selected the tab itself, from what had been parsed so far.
     private provisional = false;
 
-    private readonly onModeChange = () => this.checkMode();
+    // The radio found checked, other than by the element showing its tab.
+    private foundChecked?: string;
 
-    private readonly onReady = () => this.start();
+    private readonly onModeChange = () => this.checkMode();
 
     private readonly onHashChange = () => {
       const trigger = this.triggerForHash();
@@ -146,33 +142,20 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (value === undefined || value === this.dataset.value) return;
       this.picked = value;
       this.provisional = false;
-      if (this.controlledValue !== undefined) {
-        // Controlled: the tab changes when `value` does. Put the radio back once the change has
-        // been handled, so React's onChange still sees it, unless `value` has followed it.
+      const change = new CustomEvent('govuk-react-tabs:change', { detail: { value }, bubbles: true, cancelable: true });
+      if (!this.dispatchEvent(change)) {
+        // Put the radio back once the change has been handled, so React's onChange still sees it.
         queueMicrotask(() => this.restoreRadio(radio));
       } else if (!this.active) {
         this.dataset.value = value;
       } else {
         this.show(this.triggerFor(value));
         const id = content.id;
-        if (!this.radiosFallback && this.active && id && window.location.hash !== `#${id}`) {
+        if (!this.radiosFallback && id && window.location.hash !== `#${id}`) {
           window.history.pushState(window.history.state, '', `#${id}`);
         }
       }
-      this.dispatchEvent(new CustomEvent('govuk-react-tabs:change', { detail: { value }, bubbles: true }));
     };
-
-    get value(): string | undefined {
-      return this.controlledValue;
-    }
-
-    set value(value: string | null | undefined) {
-      const previous = this.controlledValue;
-      const next = value ?? undefined;
-      this.controlledValue = next;
-      // Until it starts, the element reads `value` when it sets up, after any pick before upgrade.
-      if (this.started && next !== undefined && next !== previous && next !== this.dataset.value) this.select(next);
-    }
 
     get selectedValue() {
       return this.dataset.value;
@@ -194,7 +177,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     connectedCallback() {
-      upgradeProperty(this, 'value');
       this.addEventListener('change', this.onChange);
       // Tabs can be added or removed later, and React can rewrite a class attribute.
       this.observer = new MutationObserver((records) => {
@@ -205,21 +187,18 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         }
         if (records.some((record) => record.type === 'childList')) {
           this.wire();
-          if (this.provisional) this.show(this.initialTrigger());
+          if (this.provisional) this.showInitial();
         }
         this.show(this.triggerFor(this.dataset.value) ?? this.triggers[0]);
         addClasses(this, classesOf(this.getAttribute('upgraded-class')));
       });
       this.observer.observe(this, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
-      // Wait for the markup to be parsed, so the initial tab is chosen from all of it.
-      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', this.onReady);
-      else this.start();
+      this.start();
     }
 
     disconnectedCallback() {
       this.removeEventListener('change', this.onChange);
       this.observer?.disconnect();
-      document.removeEventListener('DOMContentLoaded', this.onReady);
       this.mql?.removeEventListener('change', this.onModeChange);
       this.mql = undefined;
       this.started = false;
@@ -298,15 +277,10 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     /** The tab that would be selected if the user had picked nothing. */
     private defaultSelection() {
-      return (
-        valueOf(this.triggerFor(this.controlledValue)) ??
-        valueOf(this.triggerFor(this.getAttribute('default-value'))) ??
-        valueOf(this.triggers[0])
-      );
+      return valueOf(this.triggerFor(this.getAttribute('default-value'))) ?? valueOf(this.triggers[0]);
     }
 
     private start() {
-      document.removeEventListener('DOMContentLoaded', this.onReady);
       if (this.started) return;
       this.started = true;
       this.watchMedia();
@@ -332,18 +306,26 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private pickedTrigger() {
       const hashed = this.triggerForHash();
       if (hashed) return hashed;
-      const checked = this.own('[data-tabs-content]').find((content) => this.radioOf(content)?.checked);
-      return this.triggerFor(valueOf(checked));
+      const checked = valueOf(this.own('[data-tabs-content]').find((content) => this.radioOf(content)?.checked));
+      if (checked !== this.dataset.value) this.foundChecked = checked;
+      return this.triggerFor(this.foundChecked);
     }
 
     private initialTrigger() {
-      const controlled = this.triggerFor(this.controlledValue);
-      const remembered = this.triggerFor(this.dataset.value);
+      const remembered = this.provisional ? undefined : this.triggerFor(this.dataset.value);
       const picked = this.pickedTrigger();
       const fallback = this.triggerFor(this.getAttribute('default-value'));
-      const initial = controlled ?? remembered ?? picked ?? fallback;
-      this.provisional = !initial;
+      const initial = remembered ?? picked ?? fallback;
+      // While the page is being parsed, the tab or panel that decides this may be yet to come.
+      this.provisional = !remembered && (!initial || document.readyState === 'loading');
       return initial ?? this.triggers[0];
+    }
+
+    private showInitial() {
+      if (this.provisional || (this.picked === undefined && !this.dataset.value)) {
+        this.picked = valueOf(this.pickedTrigger());
+      }
+      this.show(this.initialTrigger());
     }
 
     private setup() {
@@ -356,8 +338,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.addEventListener('keydown', this.onKeydown);
       if (!this.radiosFallback) window.addEventListener('hashchange', this.onHashChange);
 
-      if (this.picked === undefined && !this.dataset.value) this.picked = valueOf(this.pickedTrigger());
-      this.show(this.initialTrigger());
+      this.showInitial();
     }
 
     /** Roles and ids for the tabs and panels. */

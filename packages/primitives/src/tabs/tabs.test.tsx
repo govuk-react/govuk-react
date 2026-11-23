@@ -4,6 +4,7 @@ import { hydrateRoot } from 'react-dom/client';
 import { renderToString } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import * as Tabs from '.';
+import { TabsController } from './controller.js';
 
 function Example(props: Tabs.RootProps) {
   return (
@@ -433,28 +434,91 @@ test('a new media query takes over from the old one', async () => {
   vi.unstubAllGlobals();
 });
 
-test('without React, the value property controls the selected tab, until it is undefined or null', async () => {
+test('without React, a TabsController controls the selected tab, until its value is undefined or null', async () => {
   const container = document.createElement('div');
   document.body.appendChild(container);
   container.innerHTML = renderToString(<Example />);
   await upgraded();
   const element = container.querySelector('govuk-react-tabs');
+  if (!element) throw new Error('No element');
+  const controller = new TabsController(element);
   const onChange = vi.fn();
-  element?.addEventListener('govuk-react-tabs:change', (event) => onChange(event.detail.value));
+  element.addEventListener('govuk-react-tabs:change', (event) => onChange(event.detail.value));
   const selected = (name: string) => screen.getByRole('tab', { name }).getAttribute('aria-selected');
-  if (element) element.value = 'week';
+  controller.value = 'week';
   expect(selected('Past week')).toBe('true');
   fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
   expect(onChange).toHaveBeenLastCalledWith('month');
   expect(selected('Past week')).toBe('true');
   // The element puts the radio back in a microtask.
   await Promise.resolve();
-  if (element) element.value = undefined;
+  controller.value = undefined;
   fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
   expect(selected('Past month')).toBe('true');
-  if (element) element.value = 'day';
-  Reflect.set(element ?? {}, 'value', null);
+  controller.value = 'day';
+  controller.value = null;
   fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
   expect(selected('Past week')).toBe('true');
   container.remove();
+});
+
+describe('while the page is still being parsed', () => {
+  const parsedUpTo = (panel: string, example = <Example />) => {
+    const container = document.createElement('div');
+    document.body.appendChild(container);
+    const [first, rest] = renderToString(example).split(new RegExp(`(?=<div[^>]*data-value="${panel}")`));
+    container.innerHTML = `${first}</govuk-react-tabs>`;
+    const laterPanels = document.createElement('template');
+    laterPanels.innerHTML = rest.replace('</govuk-react-tabs>', '');
+    return { container, parseTheRest: () => container.firstElementChild?.append(laterPanels.content) };
+  };
+
+  beforeEach(() => {
+    window.location.hash = '';
+    vi.spyOn(document, 'readyState', 'get').mockReturnValue('loading');
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+    window.location.hash = '';
+    document.body.replaceChildren();
+  });
+
+  test('upgrades without waiting for the rest of the page', async () => {
+    const { parseTheRest } = parsedUpTo('week');
+    await upgraded();
+    expect(screen.getByRole('tab', { name: 'Past day' })).toHaveAttribute('aria-selected', 'true');
+    parseTheRest();
+    await upgraded();
+    expect(screen.getByRole('tab', { name: 'Past day' })).toHaveAttribute('aria-selected', 'true');
+    expect(screen.getByText('Week content')).not.toBeVisible();
+  });
+
+  test('selects the panel the URL hash names once it is parsed', async () => {
+    window.location.hash = '#month';
+    const { parseTheRest } = parsedUpTo('week');
+    await upgraded();
+    parseTheRest();
+    await upgraded();
+    expect(screen.getByRole('tab', { name: 'Past month' })).toHaveAttribute('aria-selected', 'true');
+    expect(screen.getByText('Month content')).toBeVisible();
+  });
+
+  test('selects the radio checked in a panel parsed later', async () => {
+    const { parseTheRest } = parsedUpTo('week', <RadiosExample defaultValue="month" />);
+    await upgraded();
+    parseTheRest();
+    await upgraded();
+    expect(screen.getByRole('tab', { name: 'Past month' })).toHaveAttribute('aria-selected', 'true');
+    expect(screen.getByText('Day content')).not.toBeVisible();
+  });
+
+  test('keeps a tab the user chose as more panels are parsed', async () => {
+    const { parseTheRest } = parsedUpTo('month');
+    await upgraded();
+    fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+    parseTheRest();
+    await upgraded();
+    expect(screen.getByRole('tab', { name: 'Past week' })).toHaveAttribute('aria-selected', 'true');
+  });
 });

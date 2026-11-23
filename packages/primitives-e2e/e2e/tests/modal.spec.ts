@@ -220,13 +220,7 @@ test.describe('in a browser without invoker commands', () => {
     // Stop the browser running the commands, and hide its support, so only the element runs them.
     await page.addInitScript(() => {
       Reflect.deleteProperty(HTMLButtonElement.prototype, 'command');
-      window.addEventListener(
-        'click',
-        (event) => {
-          if (event.target instanceof Element && event.target.closest('button[commandfor]')) event.preventDefault();
-        },
-        true
-      );
+      window.addEventListener('command', (event) => event.preventDefault(), true);
     });
     await page.goto('/test/modal');
   });
@@ -272,13 +266,16 @@ test.describe('in a browser that fires no toggle events on dialogs', () => {
   });
 });
 
-test('without React, the open property controls the dialog, until it is undefined or null', async ({ page }) => {
+test('without React, a ModalController controls the dialog, until its open is undefined or null', async ({ page }) => {
   await page.goto('/test/modal');
+  await page.evaluate(() => {
+    const element = document.getElementById('upgraded')?.closest('govuk-react-modal');
+    const Controller: unknown = Reflect.get(window, 'ModalController');
+    if (element && typeof Controller === 'function')
+      Reflect.set(window, 'controller', Reflect.construct(Controller, [element]));
+  });
   const setOpen = (open: boolean | null | undefined) =>
-    page.evaluate((value) => {
-      const element = document.getElementById('upgraded')?.closest('govuk-react-modal');
-      if (element) Reflect.set(element, 'open', value);
-    }, open);
+    page.evaluate((value) => Reflect.set(Reflect.get(window, 'controller'), 'open', value), open);
   await setOpen(true);
   await expect(dialog(page, 'upgraded')).toBeVisible();
   expect(await dialog(page, 'upgraded').evaluate((element) => element.matches(':modal'))).toBe(true);
