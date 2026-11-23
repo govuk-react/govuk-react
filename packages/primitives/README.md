@@ -13,6 +13,16 @@ Each primitive:
 
 Import each primitive from its own path, such as `@govuk-react/primitives/tabs`. Each path defines its element when imported.
 
+## Layers
+
+A primitive with behaviour has up to three layers. For Tabs:
+
+- The element, [`<govuk-react-tabs>`](src/tabs/element.ts), a custom element that upgrades the markup inside it, with no React. It can be [inlined](#inline-scripts), so the markup is interactive and laid out as it will be before React hydrates, or without React at all. It keeps what the user changed before hydration.
+- The controller, [`TabsController`](src/tabs/controller.ts), which lets other code control the element's state. It's in your bundle but not the inline script, so a page that never controls the state doesn't load it. Tabs, Accordion, Disclosure and Modal have one.
+- The React parts, [`Tabs`](src/tabs/index.tsx), which render the element and its markup on the server and hydrate them in the browser. Once hydrated, they report what the user changed before hydration through `onValueChange`, so React's state catches up with the page, and apply the `value` prop through the controller.
+
+Each layer works without the next: the markup without JavaScript, the element without React, and the React parts without the inline script.
+
 ## Controlled state
 
 Prefer uncontrolled: leave out `value` and `open`, start from `defaultValue` or `defaultOpen` where there is one, and listen with `onValueChange` or `onOpenChange`. The markup then holds the state, so it's the same before hydration, without React and without JavaScript.
