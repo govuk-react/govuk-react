@@ -9,8 +9,7 @@
  * Markup inside the element:
  * - `[data-password-input]`: an `input` of type "password".
  * - `[data-password-trigger]`: a `button` of type "button", rendered `hidden`.
- * - `[data-password-status]` (optional): a visually hidden live region for the announcements.
- *   Without one, the element adds one after the input.
+ * - `[data-password-status]`: a live region for the announcements. Make it visually hidden.
  *
  * While upgraded it sets `data-upgraded`.
  *
@@ -38,19 +37,6 @@ const defaults = {
 };
 
 // The same visually hidden styles as govuk-frontend's, for a live region the element adds itself.
-const visuallyHidden: Record<string, string> = {
-  position: 'absolute',
-  width: '1px',
-  height: '1px',
-  margin: '0',
-  padding: '0',
-  overflow: 'hidden',
-  clip: 'rect(0 0 0 0)',
-  'clip-path': 'inset(50%)',
-  border: '0',
-  'white-space': 'nowrap',
-};
-
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactPasswordInput extends HTMLElement {
     private input?: HTMLInputElement;
@@ -118,15 +104,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.input = input;
       this.toggle = toggle;
       this.status = this.own('[data-password-status]', HTMLElement);
-      if (!this.status) {
-        this.status = document.createElement('div');
-        this.status.dataset.passwordStatus = '';
-        this.status.setAttribute('aria-live', 'polite');
-        // Set one by one: a Content Security Policy can block a whole `style` attribute.
-        const { style } = this.status;
-        Object.entries(visuallyHidden).forEach(([name, value]) => style.setProperty(name, value));
-        input.insertAdjacentElement('afterend', this.status);
-      }
       this.dataset.upgraded = '';
       toggle.hidden = false;
       toggle.addEventListener('click', this.onToggle);

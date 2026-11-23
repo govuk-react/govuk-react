@@ -40,7 +40,7 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
   wordsAtLimitText?: Translation;
   /** Shown while over the limit when counting words. `%{count}` is the number too many. */
   wordsOverLimitText?: Translation;
-  /** Classes that visually hide the description once upgraded. Without them, inline styles do. */
+  /** Classes that visually hide the description once upgraded. Without them, the package's stylesheet does. */
   hiddenDescriptionClass?: string;
   /** Classes for the visible count while within the limit. */
   withinLimitClass?: string;

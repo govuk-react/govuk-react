@@ -24,8 +24,8 @@
  *   English by default.
  * - `indicator-visible-class`, `light-on-class`: classes for the indicator and its lights.
  * - `hide-content-class`: classes for `body` that hide the page behind the overlay.
- * - `overlay-class`: classes for the overlay. Without them, the overlay covers the page with
- *   inline styles.
+ * - `overlay-class`: classes for the overlay, which is added to `body` with
+ *   `data-exit-this-page-overlay`.
  */
 
 import { classesOf, setText } from '../utils/dom.js';
@@ -64,13 +64,6 @@ declare global {
 }
 
 const timeoutMs = 5000;
-
-const overlayStyles: Record<string, string> = {
-  position: 'fixed',
-  inset: '0',
-  'z-index': '2147483647',
-  background: 'white',
-};
 
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactExitThisPage extends HTMLElement implements ExitThisPageElement {
@@ -118,8 +111,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const overlay = document.createElement('div');
       overlay.setAttribute('role', 'alert');
       const overlayClasses = classesOf(this.getAttribute('overlay-class'));
+      overlay.dataset.exitThisPageOverlay = '';
       if (overlayClasses.length) overlay.classList.add(...overlayClasses);
-      else Object.entries(overlayStyles).forEach(([name, value]) => overlay.style.setProperty(name, value));
       document.body.appendChild(overlay);
       overlay.textContent = this.message('activated-announcement');
       this.overlay = overlay;

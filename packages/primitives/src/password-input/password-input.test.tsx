@@ -100,18 +100,6 @@ describe('PasswordInput', () => {
     expect(screen.getByLabelText('Password').nextElementSibling?.textContent).toBe('Your password is visible');
     expect(screen.getByRole('button', { name: 'Hide password' })).toHaveTextContent('Cuddio');
   });
-
-  test('adds a live region when there is none', async () => {
-    render(
-      <PasswordInput.Root>
-        <PasswordInput.Input aria-label="Password" />
-        <PasswordInput.Trigger />
-      </PasswordInput.Root>
-    );
-    await upgraded();
-    fireEvent.click(screen.getByRole('button', { name: 'Show password' }));
-    expect(screen.getByText('Your password is visible')).toHaveAttribute('aria-live', 'polite');
-  });
 });
 
 test('keeps the text node React rendered in the button, and marks the element upgraded', async () => {

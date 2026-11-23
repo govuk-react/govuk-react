@@ -31,7 +31,7 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
   lightOnClass?: string;
   /** Classes for `body` that hide the page behind the overlay. */
   hideContentClass?: string;
-  /** Classes for the overlay. Without them, inline styles cover the page. */
+  /** Classes for the overlay. Without them, the package's stylesheet covers the page with it. */
   overlayClass?: string;
 };
 

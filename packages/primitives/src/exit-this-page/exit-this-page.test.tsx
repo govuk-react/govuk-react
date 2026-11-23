@@ -89,6 +89,7 @@ describe('ExitThisPage', () => {
     const location = vi.spyOn(window, 'location', 'get').mockReturnValue({ ...window.location, href: '' });
     fireEvent.click(screen.getAllByRole('link')[1]);
     expect(screen.getByRole('alert')).toHaveTextContent('Loading.');
+    expect(screen.getByRole('alert')).toHaveAttribute('data-exit-this-page-overlay');
     // `pageshow` on load leaves it, and coming back from the browser's cache removes it.
     window.dispatchEvent(new PageTransitionEvent('pageshow', { persisted: false }));
     expect(screen.getByRole('alert')).toBeInTheDocument();
