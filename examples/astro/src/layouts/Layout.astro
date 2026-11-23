@@ -1,7 +1,7 @@
 ---
 import '../styles/govuk-frontend.scss';
 import 'govuk-react/styles.css';
-import { InlineScript, autoFocus, focusLinks, passwordInput } from '@govuk-react/primitives/inline-script';
+import { InlineScript, autoFocus, disclosure, focusLinks, passwordInput } from '@govuk-react/primitives/inline-script';
 import { Chrome } from '../components/Chrome';
 
 type Props = {
@@ -20,6 +20,7 @@ const { title, error } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{error ? 'Error: ' : ''}{title} – Astro example</title>
     <InlineScript script={autoFocus} />
+    <InlineScript script={disclosure} />
     <InlineScript script={focusLinks} />
     <InlineScript script={passwordInput} />
     <slot name="head" />
