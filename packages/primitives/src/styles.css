@@ -1,4 +1,4 @@
-/* Rules the primitives need. They set no look, only `display`. */
+/* Rules the primitives need. They set no look, only what is shown. */
 
 /*
  * Each element only holds its parts' state, so it leaves no box of its own. A class that sets
@@ -29,4 +29,29 @@ govuk-react-tabs:not([data-upgraded]) [data-tabs-content]:has(> input[data-tabs-
 /* Accordion: `hidden` wins over a display set on a fallback heading, trigger or controls. */
 govuk-react-accordion :is([data-accordion-fallback], [data-accordion-trigger], [data-accordion-controls])[hidden] {
   display: none !important;
+}
+
+/*
+ * Character count: once upgraded, the count replaces the description, which screen readers still
+ * read. `hidden-description-class` hides it instead.
+ */
+govuk-react-character-count[data-upgraded]:not([hidden-description-class]) [data-character-count-description] {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Exit this page: the overlay covers the page, unless a class of yours places it. */
+:where([data-exit-this-page-overlay]) {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  background: white;
 }

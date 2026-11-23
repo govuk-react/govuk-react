@@ -60,11 +60,13 @@ Returning without changing `value` puts the tabs back to `value`.
 
 ## Styles
 
-Load the package's stylesheet once, or copy its rules into your own. Its rules only set `display`:
+Load the package's stylesheet once, or copy its rules into your own. Its rules only set what is shown:
 
 - Each element gets `display: contents`, so it adds no box between your markup and its parent, such as a flex or grid container. The rule has no specificity, so a class of yours that sets `display` on the element wins, and `hidden` still hides it.
 - The Tabs radios fallback shows only the checked tab's panel.
 - The Accordion hides its fallback heading once upgraded, and its trigger and controls before then.
+- The Character count visually hides its description once upgraded, unless `hiddenDescriptionClass` does.
+- The Exit this page overlay covers the page. The rule has no specificity, so `overlayClass` wins.
 
 ```ts
 import '@govuk-react/primitives/styles.css';
@@ -290,7 +292,7 @@ import * as CharacterCount from '@govuk-react/primitives/character-count';
 </CharacterCount.Root>;
 ```
 
-Without JavaScript the `Description` is shown and both statuses are hidden. On upgrade the element visually hides the description, removes the field's `maxlength` so users can see by how much they're over, and shows `Status`, which updates as the user types. As in govuk-frontend, `ScreenReaderStatus` updates once the user pauses, rather than on every key, and is hidden from screen readers below `threshold`.
+Without JavaScript the `Description` is shown and both statuses are hidden. On upgrade the description is visually hidden, by `hiddenDescriptionClass` or else by the package's stylesheet, and the element removes the field's `maxlength` so users can see by how much they're over, and shows `Status`, which updates as the user types. As in govuk-frontend, `ScreenReaderStatus` updates once the user pauses, rather than on every key, and is hidden from screen readers below `threshold`.
 
 `countType` is "length" (the default, as `maxlength` counts), "characters" (as users see them, such as an emoji as one) or "words". The messages are English by default, and take a message for each plural form. The statuses get `data-state` ("under", "at" or "over") for styling, or pass class names such as `overLimitClass`. The field's value is the state, so a value React sets is counted too.
 
@@ -385,7 +387,7 @@ import * as PasswordInput from '@govuk-react/primitives/password-input';
 </PasswordInput.Root>;
 ```
 
-Without JavaScript the field is a plain password field and the `Trigger` is hidden. On upgrade the element shows the button, which switches the input between `type="password"` and `type="text"`, sets its own text ("Show" or "Hide") and accessible name ("Show password" or "Hide password"), and announces the change in `Status`. Leave out `Status` and the element adds a visually hidden one after the input.
+Without JavaScript the field is a plain password field and the `Trigger` is hidden. On upgrade the element shows the button, which switches the input between `type="password"` and `type="text"`, sets its own text ("Show" or "Hide") and accessible name ("Show password" or "Hide password"), and announces the change in `Status`. Without `Status`, nothing is announced.
 
 The input's `type` is the state, kept when React renders the input again, so there is nothing to control. As in govuk-frontend, the password is hidden again when its form is submitted and when the page is restored from the back-forward cache. The text is English by default: pass `showText`, `hideText`, `showLabel`, `hideLabel`, `shownAnnouncement` and `hiddenAnnouncement` to `Root`.
 

@@ -29,7 +29,7 @@
  *   the number. Add a plural form to the name, such as `characters-under-limit-text-one`, for a
  *   message for each form.
  * - `hidden-description-class`: classes that visually hide the description. Without them, the
- *   element visually hides it with inline styles.
+ *   package's stylesheet visually hides it.
  * - `within-limit-class`, `over-limit-class`, `below-threshold-class`: classes for the visible
  *   count.
  * - `input-over-limit-class`: classes for the field while over the limit.
@@ -56,19 +56,6 @@ declare global {
 }
 
 // The same visually hidden styles as govuk-frontend's.
-const visuallyHidden: Record<string, string> = {
-  position: 'absolute',
-  width: '1px',
-  height: '1px',
-  margin: '0',
-  padding: '0',
-  overflow: 'hidden',
-  clip: 'rect(0 0 0 0)',
-  'clip-path': 'inset(50%)',
-  border: '0',
-  'white-space': 'nowrap',
-};
-
 const isField = (element: Element | undefined): element is HTMLTextAreaElement | HTMLInputElement =>
   element instanceof HTMLTextAreaElement || element instanceof HTMLInputElement;
 
@@ -214,10 +201,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         this.lastAnnouncedValue = undefined;
       }
       this.dataset.upgraded = '';
-      const description = this.own('[data-character-count-description]');
-      if (description && !this.hasAttribute('hidden-description-class')) {
-        Object.entries(visuallyHidden).forEach(([name, value]) => description.style.setProperty(name, value));
-      }
       [this.own('[data-character-count-status]'), this.own('[data-character-count-sr-status]')].forEach((status) => {
         if (status) status.hidden = false;
       });
@@ -244,15 +227,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.unbind();
       delete this.dataset.upgraded;
       const description = this.own('[data-character-count-description]');
-      if (description) {
-        if (this.hasAttribute('hidden-description-class')) {
-          classesOf(this.getAttribute('hidden-description-class')).forEach((name) =>
-            description.classList.toggle(name, false)
-          );
-        } else {
-          Object.keys(visuallyHidden).forEach((name) => description.style.removeProperty(name));
-        }
-      }
+      classesOf(this.getAttribute('hidden-description-class')).forEach((name) =>
+        description?.classList.toggle(name, false)
+      );
       [this.own('[data-character-count-status]'), this.own('[data-character-count-sr-status]')].forEach((status) => {
         if (status) status.hidden = true;
       });
