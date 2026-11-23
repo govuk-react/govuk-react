@@ -86,7 +86,13 @@ export function Trigger({ asChild, children = 'Show', ...props }: TriggerProps) 
 export type StatusProps = PartProps<'div'>;
 
 /** A live region for the announcements. Make it visually hidden. */
-export function Status({ asChild, ...props }: StatusProps) {
+export function Status({ asChild, children, ...props }: StatusProps) {
   const Element = asChild ? Slot : 'div';
-  return <Element data-password-status="" aria-live="polite" suppressHydrationWarning {...props} />;
+  // A string child, even an empty one, is hydrated as text, so an announcement the element made
+  // before hydration is kept rather than being a mismatch that makes React render the page again.
+  return (
+    <Element data-password-status="" aria-live="polite" suppressHydrationWarning {...props}>
+      {children ?? ''}
+    </Element>
+  );
 }

@@ -134,8 +134,13 @@ export function Separator({ asChild, children = ', ', ...props }: SeparatorProps
 export type AnnouncementsProps = PartProps<'span'>;
 
 /** Announces entering and leaving the drop zone. Make it visually hidden. */
-export function Announcements({ asChild, ...props }: AnnouncementsProps) {
+export function Announcements({ asChild, children, ...props }: AnnouncementsProps) {
   const Element = asChild ? Slot : 'span';
-  // The element owns its text after upgrade.
-  return <Element data-file-upload-announcements="" aria-live="assertive" suppressHydrationWarning {...props} />;
+  // The element owns its text after upgrade. A string child, even an empty one, is hydrated as
+  // text, so an announcement made before hydration is kept rather than being a mismatch.
+  return (
+    <Element data-file-upload-announcements="" aria-live="assertive" suppressHydrationWarning {...props}>
+      {children ?? ''}
+    </Element>
+  );
 }
