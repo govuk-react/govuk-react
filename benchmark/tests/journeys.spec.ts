@@ -1,7 +1,9 @@
 import { expect, test } from '@playwright/test';
-import budgets from '../budgets.json' with { type: 'json' };
+import budgetsJson from '../budgets.json' with { type: 'json' };
 import { journeys, variants } from '../lib/journeys.mjs';
 import { runJourney } from '../lib/run.mjs';
+
+const budgets: Record<string, number> = budgetsJson;
 
 for (const { name: variant } of variants) {
   test.describe(variant, () => {

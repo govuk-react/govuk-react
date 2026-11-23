@@ -24,7 +24,7 @@ Every journey works without JavaScript in every variant.
 [`measure.mjs`](./measure.mjs) runs each journey in Chromium, as a Moto G4 viewport, with:
 
 - the CPU slowed down to match a phone's [Lighthouse BenchmarkIndex](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md): 125 for a low-end phone and 400 for a mid-tier phone. It measures the host's BenchmarkIndex first, and divides it by the target.
-- Lighthouse's slow 4G network: 562.5 ms latency, 1.4 Mbps down
+- Lighthouse's slow 4G network: 562.5 ms latency, about 1.4 Mbps down and 675 kbps up
 
 Each run starts with an empty cache, and each journey's later pages load with the files its earlier pages cached. Each journey runs twice in each run:
 
@@ -41,7 +41,7 @@ For each page, it records:
 - INP: Interaction to Next Paint, the slowest of the page's interactions
 - Hydrated: when every Astro island on the page has hydrated
 
-It reports the median and 90th percentile over the runs, in `results/results.md` and `results/results.json`.
+It reports the median and 90th percentile over the runs, in `results/results.md` and `results/results.json`. The committed [results](./results/results.md) are from 10 runs of each profile.
 
 ## Run it
 

@@ -7,3 +7,4 @@ storybook-static
 test-results
 pnpm-lock.yaml
 **/.astro
+benchmark/public

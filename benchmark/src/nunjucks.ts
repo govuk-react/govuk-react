@@ -12,15 +12,18 @@ const templates: Record<string, string> = import.meta.glob('./templates/*.njk', 
 
 const govukFrontend = join(dirname(createRequire(import.meta.url).resolve('govuk-frontend/package.json')), 'dist');
 
-/** Loads this package's templates, which Vite bundles, so the server doesn't need them on disk. */
-const bundled: nunjucks.ILoader = {
-  getSource: (name) => {
+/**
+ * Loads govuk-frontend's templates from node_modules, and this package's from the bundle, so the
+ * server doesn't need them on disk.
+ */
+class Loader extends nunjucks.FileSystemLoader {
+  getSource(name: string) {
     const src = templates[`./templates/${name}`];
-    return src === undefined ? null : { src, path: name, noCache: false };
-  },
-};
+    return src === undefined ? super.getSource(name) : { src, path: name, noCache: false };
+  }
+}
 
-const env = new nunjucks.Environment([bundled, new nunjucks.FileSystemLoader(govukFrontend)], { autoescape: true });
+const env = new nunjucks.Environment(new Loader(govukFrontend), { autoescape: true });
 
 /** Renders a screen with govuk-frontend's Nunjucks macros, as a govuk-frontend service would. */
 export function render(base: string, screen: Screen) {

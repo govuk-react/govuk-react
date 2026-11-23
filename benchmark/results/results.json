@@ -1,0 +1,2314 @@
+{
+  "date": "2026-11-23T10:58:17.217Z",
+  "runs": 10,
+  "host": {
+    "low-end": {
+      "benchmarkIndex": 2390
+    },
+    "mid-tier": {
+      "benchmarkIndex": 2411
+    }
+  },
+  "network": {
+    "latency": 562.5,
+    "downloadThroughput": 188743.68000000002,
+    "uploadThroughput": 86400
+  },
+  "profiles": {
+    "low-end": {
+      "benchmarkIndex": 125,
+      "description": "Low-end phone (Lighthouse BenchmarkIndex 125)",
+      "cpuSlowdown": 19.1,
+      "results": [
+        {
+          "variant": "govuk-frontend",
+          "journey": "account",
+          "pages": [
+            {
+              "step": "Form",
+              "jsParsed": 46981,
+              "jsTransferred": 12064,
+              "fcp": {
+                "median": 1648,
+                "p90": 1800
+              },
+              "lcp": {
+                "median": 1744,
+                "p90": 1840
+              },
+              "tbt": {
+                "median": 43,
+                "p90": 104
+              },
+              "tti": {
+                "median": 3057,
+                "p90": 3153
+              },
+              "inp": {
+                "median": 88,
+                "p90": 104
+              },
+              "inpWhileLoading": {
+                "median": 88,
+                "p90": 112
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Form with errors",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 912,
+                "p90": 988
+              },
+              "lcp": {
+                "median": 940,
+                "p90": 988
+              },
+              "tbt": {
+                "median": 15,
+                "p90": 32
+              },
+              "tti": {
+                "median": 1137,
+                "p90": 1565
+              },
+              "inp": {
+                "median": 64,
+                "p90": 80
+              },
+              "inpWhileLoading": {
+                "median": 48,
+                "p90": 96
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 1476,
+                "p90": 1564
+              },
+              "lcp": {
+                "median": 1492,
+                "p90": 1564
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 16
+              },
+              "tti": {
+                "median": 1530,
+                "p90": 2036
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 12412,
+            "tbt": {
+              "median": 58,
+              "p90": 136
+            },
+            "inp": {
+              "median": 88,
+              "p90": 104
+            },
+            "inpWhileLoading": {
+              "median": 96,
+              "p90": 112
+            },
+            "lcp": {
+              "median": 1744,
+              "p90": 1840
+            }
+          }
+        },
+        {
+          "variant": "govuk-frontend",
+          "journey": "licence",
+          "pages": [
+            {
+              "step": "Task list",
+              "jsParsed": 46981,
+              "jsTransferred": 12064,
+              "fcp": {
+                "median": 1724,
+                "p90": 1772
+              },
+              "lcp": {
+                "median": 1816,
+                "p90": 1884
+              },
+              "tbt": {
+                "median": 28,
+                "p90": 51
+              },
+              "tti": {
+                "median": 3131,
+                "p90": 3221
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Radios with a conditional reveal",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 892,
+                "p90": 980
+              },
+              "lcp": {
+                "median": 992,
+                "p90": 1044
+              },
+              "tbt": {
+                "median": 13,
+                "p90": 40
+              },
+              "tti": {
+                "median": 1480,
+                "p90": 1630
+              },
+              "inp": {
+                "median": 80,
+                "p90": 96
+              },
+              "inpWhileLoading": {
+                "median": 88,
+                "p90": 120
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Task list, 1 task done",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 1480,
+                "p90": 1536
+              },
+              "lcp": {
+                "median": 1508,
+                "p90": 1572
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 7
+              },
+              "tti": {
+                "median": 1575,
+                "p90": 1948
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Character count",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 932,
+                "p90": 980
+              },
+              "lcp": {
+                "median": 932,
+                "p90": 980
+              },
+              "tbt": {
+                "median": 172,
+                "p90": 204
+              },
+              "tti": {
+                "median": 1290,
+                "p90": 1652
+              },
+              "inp": {
+                "median": 80,
+                "p90": 120
+              },
+              "inpWhileLoading": {
+                "median": 80,
+                "p90": 112
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Task list, 2 tasks done",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 1496,
+                "p90": 1560
+              },
+              "lcp": {
+                "median": 1508,
+                "p90": 1620
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 6
+              },
+              "tti": {
+                "median": 1557,
+                "p90": 2051
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Check answers",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 856,
+                "p90": 968
+              },
+              "lcp": {
+                "median": 868,
+                "p90": 968
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 6
+              },
+              "tti": {
+                "median": 956,
+                "p90": 1283
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 1512,
+                "p90": 1548
+              },
+              "lcp": {
+                "median": 1512,
+                "p90": 1548
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 3
+              },
+              "tti": {
+                "median": 1568,
+                "p90": 1955
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 13108,
+            "tbt": {
+              "median": 228,
+              "p90": 275
+            },
+            "inp": {
+              "median": 96,
+              "p90": 120
+            },
+            "inpWhileLoading": {
+              "median": 104,
+              "p90": 120
+            },
+            "lcp": {
+              "median": 1816,
+              "p90": 1884
+            }
+          }
+        },
+        {
+          "variant": "govuk-react",
+          "journey": "account",
+          "pages": [
+            {
+              "step": "Form",
+              "jsParsed": 2956,
+              "jsTransferred": 1233,
+              "fcp": {
+                "median": 1656,
+                "p90": 1760
+              },
+              "lcp": {
+                "median": 1708,
+                "p90": 1760
+              },
+              "tbt": {
+                "median": 29,
+                "p90": 56
+              },
+              "tti": {
+                "median": 3187,
+                "p90": 3333
+              },
+              "inp": {
+                "median": 72,
+                "p90": 120
+              },
+              "inpWhileLoading": {
+                "median": 88,
+                "p90": 120
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Form with errors",
+              "jsParsed": 7869,
+              "jsTransferred": 2601,
+              "fcp": {
+                "median": 924,
+                "p90": 960
+              },
+              "lcp": {
+                "median": 1084,
+                "p90": 1180
+              },
+              "tbt": {
+                "median": 24,
+                "p90": 78
+              },
+              "tti": {
+                "median": 1141,
+                "p90": 1657
+              },
+              "inp": {
+                "median": 48,
+                "p90": 72
+              },
+              "inpWhileLoading": {
+                "median": 56,
+                "p90": 64
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 1500,
+                "p90": 1548
+              },
+              "lcp": {
+                "median": 1508,
+                "p90": 1548
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 1
+              },
+              "tti": {
+                "median": 1520,
+                "p90": 1919
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 3834,
+            "tbt": {
+              "median": 74,
+              "p90": 98
+            },
+            "inp": {
+              "median": 72,
+              "p90": 120
+            },
+            "inpWhileLoading": {
+              "median": 88,
+              "p90": 120
+            },
+            "lcp": {
+              "median": 1708,
+              "p90": 1760
+            }
+          }
+        },
+        {
+          "variant": "govuk-react",
+          "journey": "licence",
+          "pages": [
+            {
+              "step": "Task list",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 1632,
+                "p90": 1692
+              },
+              "lcp": {
+                "median": 1632,
+                "p90": 1692
+              },
+              "tbt": {
+                "median": 25,
+                "p90": 32
+              },
+              "tti": {
+                "median": 2896,
+                "p90": 2949
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Radios with a conditional reveal",
+              "jsParsed": 3234,
+              "jsTransferred": 1219,
+              "fcp": {
+                "median": 888,
+                "p90": 928
+              },
+              "lcp": {
+                "median": 956,
+                "p90": 1048
+              },
+              "tbt": {
+                "median": 21,
+                "p90": 43
+              },
+              "tti": {
+                "median": 1043,
+                "p90": 1594
+              },
+              "inp": {
+                "median": 72,
+                "p90": 96
+              },
+              "inpWhileLoading": {
+                "median": 72,
+                "p90": 88
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Task list, 1 task done",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 1460,
+                "p90": 1516
+              },
+              "lcp": {
+                "median": 1476,
+                "p90": 1544
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 5
+              },
+              "tti": {
+                "median": 1520,
+                "p90": 1891
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Character count",
+              "jsParsed": 7414,
+              "jsTransferred": 2482,
+              "fcp": {
+                "median": 900,
+                "p90": 1000
+              },
+              "lcp": {
+                "median": 1176,
+                "p90": 1264
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 194
+              },
+              "tti": {
+                "median": 1159,
+                "p90": 1556
+              },
+              "inp": {
+                "median": 72,
+                "p90": 96
+              },
+              "inpWhileLoading": {
+                "median": 64,
+                "p90": 96
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Task list, 2 tasks done",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 1488,
+                "p90": 1568
+              },
+              "lcp": {
+                "median": 1488,
+                "p90": 1568
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 4
+              },
+              "tti": {
+                "median": 1568,
+                "p90": 1964
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Check answers",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 848,
+                "p90": 908
+              },
+              "lcp": {
+                "median": 876,
+                "p90": 912
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 3
+              },
+              "tti": {
+                "median": 862,
+                "p90": 1302
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 1424,
+                "p90": 1504
+              },
+              "lcp": {
+                "median": 1468,
+                "p90": 1520
+              },
+              "tbt": {
+                "median": 4,
+                "p90": 17
+              },
+              "tti": {
+                "median": 1520,
+                "p90": 1892
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 3701,
+            "tbt": {
+              "median": 78,
+              "p90": 258
+            },
+            "inp": {
+              "median": 80,
+              "p90": 104
+            },
+            "inpWhileLoading": {
+              "median": 80,
+              "p90": 96
+            },
+            "lcp": {
+              "median": 1632,
+              "p90": 1692
+            }
+          }
+        },
+        {
+          "variant": "govuk-react-hydrated",
+          "journey": "account",
+          "pages": [
+            {
+              "step": "Form",
+              "jsParsed": 253351,
+              "jsTransferred": 81921,
+              "fcp": {
+                "median": 1628,
+                "p90": 1744
+              },
+              "lcp": {
+                "median": 1744,
+                "p90": 1828
+              },
+              "tbt": {
+                "median": 40,
+                "p90": 113
+              },
+              "tti": {
+                "median": 3706,
+                "p90": 6137
+              },
+              "inp": {
+                "median": 112,
+                "p90": 160
+              },
+              "inpWhileLoading": {
+                "median": 216,
+                "p90": 272
+              },
+              "hydrated": {
+                "median": 3647,
+                "p90": 3733
+              }
+            },
+            {
+              "step": "Form with errors",
+              "jsParsed": 258264,
+              "jsTransferred": 4335,
+              "fcp": {
+                "median": 924,
+                "p90": 980
+              },
+              "lcp": {
+                "median": 1060,
+                "p90": 1236
+              },
+              "tbt": {
+                "median": 44,
+                "p90": 68
+              },
+              "tti": {
+                "median": 1595,
+                "p90": 1898
+              },
+              "inp": {
+                "median": 72,
+                "p90": 80
+              },
+              "inpWhileLoading": {
+                "median": 88,
+                "p90": 136
+              },
+              "hydrated": {
+                "median": 1511,
+                "p90": 1618
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 230803,
+              "jsTransferred": 3501,
+              "fcp": {
+                "median": 1476,
+                "p90": 1516
+              },
+              "lcp": {
+                "median": 1584,
+                "p90": 1648
+              },
+              "tbt": {
+                "median": 2,
+                "p90": 29
+              },
+              "tti": {
+                "median": 1551,
+                "p90": 2108
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 3270,
+                "p90": 3373
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 89757,
+            "tbt": {
+              "median": 96,
+              "p90": 147
+            },
+            "inp": {
+              "median": 112,
+              "p90": 160
+            },
+            "inpWhileLoading": {
+              "median": 216,
+              "p90": 272
+            },
+            "lcp": {
+              "median": 1744,
+              "p90": 1828
+            }
+          }
+        },
+        {
+          "variant": "govuk-react-hydrated",
+          "journey": "licence",
+          "pages": [
+            {
+              "step": "Task list",
+              "jsParsed": 231893,
+              "jsTransferred": 74627,
+              "fcp": {
+                "median": 1608,
+                "p90": 1644
+              },
+              "lcp": {
+                "median": 1796,
+                "p90": 1836
+              },
+              "tbt": {
+                "median": 39,
+                "p90": 76
+              },
+              "tti": {
+                "median": 3387,
+                "p90": 3457
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 3389,
+                "p90": 3458
+              }
+            },
+            {
+              "step": "Radios with a conditional reveal",
+              "jsParsed": 253399,
+              "jsTransferred": 11001,
+              "fcp": {
+                "median": 928,
+                "p90": 976
+              },
+              "lcp": {
+                "median": 1020,
+                "p90": 1076
+              },
+              "tbt": {
+                "median": 55,
+                "p90": 71
+              },
+              "tti": {
+                "median": 1564,
+                "p90": 2384
+              },
+              "inp": {
+                "median": 104,
+                "p90": 136
+              },
+              "inpWhileLoading": {
+                "median": 152,
+                "p90": 184
+              },
+              "hydrated": {
+                "median": 2384,
+                "p90": 2494
+              }
+            },
+            {
+              "step": "Task list, 1 task done",
+              "jsParsed": 231893,
+              "jsTransferred": 1992,
+              "fcp": {
+                "median": 1480,
+                "p90": 1564
+              },
+              "lcp": {
+                "median": 1552,
+                "p90": 1588
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 2
+              },
+              "tti": {
+                "median": 1512,
+                "p90": 2148
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 1875,
+                "p90": 1956
+              }
+            },
+            {
+              "step": "Character count",
+              "jsParsed": 264150,
+              "jsTransferred": 8806,
+              "fcp": {
+                "median": 976,
+                "p90": 1060
+              },
+              "lcp": {
+                "median": 1300,
+                "p90": 1444
+              },
+              "tbt": {
+                "median": 216,
+                "p90": 274
+              },
+              "tti": {
+                "median": 1522,
+                "p90": 2059
+              },
+              "inp": {
+                "median": 80,
+                "p90": 104
+              },
+              "inpWhileLoading": {
+                "median": 104,
+                "p90": 136
+              },
+              "hydrated": {
+                "median": 2401,
+                "p90": 2711
+              }
+            },
+            {
+              "step": "Task list, 2 tasks done",
+              "jsParsed": 231893,
+              "jsTransferred": 1992,
+              "fcp": {
+                "median": 1484,
+                "p90": 1572
+              },
+              "lcp": {
+                "median": 1524,
+                "p90": 1688
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 7
+              },
+              "tti": {
+                "median": 1556,
+                "p90": 2237
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 1885,
+                "p90": 1993
+              }
+            },
+            {
+              "step": "Check answers",
+              "jsParsed": 236814,
+              "jsTransferred": 3562,
+              "fcp": {
+                "median": 880,
+                "p90": 1020
+              },
+              "lcp": {
+                "median": 996,
+                "p90": 1136
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 18
+              },
+              "tti": {
+                "median": 942,
+                "p90": 1632
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 2106,
+                "p90": 2308
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 230803,
+              "jsTransferred": 2506,
+              "fcp": {
+                "median": 1456,
+                "p90": 1512
+              },
+              "lcp": {
+                "median": 1552,
+                "p90": 1640
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 13
+              },
+              "tti": {
+                "median": 1546,
+                "p90": 2193
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 2139,
+                "p90": 2264
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 104486,
+            "tbt": {
+              "median": 292,
+              "p90": 433
+            },
+            "inp": {
+              "median": 104,
+              "p90": 136
+            },
+            "inpWhileLoading": {
+              "median": 152,
+              "p90": 184
+            },
+            "lcp": {
+              "median": 1796,
+              "p90": 1836
+            }
+          }
+        }
+      ]
+    },
+    "mid-tier": {
+      "benchmarkIndex": 400,
+      "description": "Mid-tier phone (Lighthouse BenchmarkIndex 400)",
+      "cpuSlowdown": 6,
+      "results": [
+        {
+          "variant": "govuk-frontend",
+          "journey": "account",
+          "pages": [
+            {
+              "step": "Form",
+              "jsParsed": 46981,
+              "jsTransferred": 12064,
+              "fcp": {
+                "median": 1432,
+                "p90": 1460
+              },
+              "lcp": {
+                "median": 1432,
+                "p90": 1460
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1444,
+                "p90": 1480
+              },
+              "inp": {
+                "median": 24,
+                "p90": 32
+              },
+              "inpWhileLoading": {
+                "median": 32,
+                "p90": 40
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Form with errors",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 680,
+                "p90": 704
+              },
+              "lcp": {
+                "median": 680,
+                "p90": 704
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 694,
+                "p90": 722
+              },
+              "inp": {
+                "median": 24,
+                "p90": 24
+              },
+              "inpWhileLoading": {
+                "median": 24,
+                "p90": 80
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 1264,
+                "p90": 1300
+              },
+              "lcp": {
+                "median": 1264,
+                "p90": 1304
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1277,
+                "p90": 1304
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 12412,
+            "tbt": {
+              "median": 0,
+              "p90": 0
+            },
+            "inp": {
+              "median": 24,
+              "p90": 32
+            },
+            "inpWhileLoading": {
+              "median": 32,
+              "p90": 80
+            },
+            "lcp": {
+              "median": 1432,
+              "p90": 1460
+            }
+          }
+        },
+        {
+          "variant": "govuk-frontend",
+          "journey": "licence",
+          "pages": [
+            {
+              "step": "Task list",
+              "jsParsed": 46981,
+              "jsTransferred": 12064,
+              "fcp": {
+                "median": 1440,
+                "p90": 1468
+              },
+              "lcp": {
+                "median": 1440,
+                "p90": 1468
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1445,
+                "p90": 1478
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Radios with a conditional reveal",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 668,
+                "p90": 688
+              },
+              "lcp": {
+                "median": 684,
+                "p90": 716
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 699,
+                "p90": 739
+              },
+              "inp": {
+                "median": 24,
+                "p90": 48
+              },
+              "inpWhileLoading": {
+                "median": 24,
+                "p90": 32
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Task list, 1 task done",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 1260,
+                "p90": 1280
+              },
+              "lcp": {
+                "median": 1260,
+                "p90": 1280
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1264,
+                "p90": 1280
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Character count",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 680,
+                "p90": 728
+              },
+              "lcp": {
+                "median": 680,
+                "p90": 728
+              },
+              "tbt": {
+                "median": 6,
+                "p90": 15
+              },
+              "tti": {
+                "median": 739,
+                "p90": 769
+              },
+              "inp": {
+                "median": 24,
+                "p90": 32
+              },
+              "inpWhileLoading": {
+                "median": 24,
+                "p90": 32
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Task list, 2 tasks done",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 1252,
+                "p90": 1300
+              },
+              "lcp": {
+                "median": 1252,
+                "p90": 1300
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1256,
+                "p90": 1300
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Check answers",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 680,
+                "p90": 740
+              },
+              "lcp": {
+                "median": 680,
+                "p90": 740
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 680,
+                "p90": 741
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 46981,
+              "jsTransferred": 174,
+              "fcp": {
+                "median": 1236,
+                "p90": 1276
+              },
+              "lcp": {
+                "median": 1236,
+                "p90": 1276
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1242,
+                "p90": 1281
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 13108,
+            "tbt": {
+              "median": 6,
+              "p90": 15
+            },
+            "inp": {
+              "median": 24,
+              "p90": 48
+            },
+            "inpWhileLoading": {
+              "median": 32,
+              "p90": 40
+            },
+            "lcp": {
+              "median": 1440,
+              "p90": 1468
+            }
+          }
+        },
+        {
+          "variant": "govuk-react",
+          "journey": "account",
+          "pages": [
+            {
+              "step": "Form",
+              "jsParsed": 2956,
+              "jsTransferred": 1233,
+              "fcp": {
+                "median": 1376,
+                "p90": 1392
+              },
+              "lcp": {
+                "median": 1376,
+                "p90": 1392
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1384,
+                "p90": 1403
+              },
+              "inp": {
+                "median": 32,
+                "p90": 48
+              },
+              "inpWhileLoading": {
+                "median": 32,
+                "p90": 32
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Form with errors",
+              "jsParsed": 7869,
+              "jsTransferred": 2601,
+              "fcp": {
+                "median": 668,
+                "p90": 744
+              },
+              "lcp": {
+                "median": 732,
+                "p90": 776
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 703,
+                "p90": 749
+              },
+              "inp": {
+                "median": 24,
+                "p90": 24
+              },
+              "inpWhileLoading": {
+                "median": 16,
+                "p90": 24
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 1240,
+                "p90": 1264
+              },
+              "lcp": {
+                "median": 1240,
+                "p90": 1264
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1240,
+                "p90": 1264
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 3834,
+            "tbt": {
+              "median": 0,
+              "p90": 0
+            },
+            "inp": {
+              "median": 32,
+              "p90": 48
+            },
+            "inpWhileLoading": {
+              "median": 32,
+              "p90": 32
+            },
+            "lcp": {
+              "median": 1376,
+              "p90": 1392
+            }
+          }
+        },
+        {
+          "variant": "govuk-react",
+          "journey": "licence",
+          "pages": [
+            {
+              "step": "Task list",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 1372,
+                "p90": 1384
+              },
+              "lcp": {
+                "median": 1372,
+                "p90": 1384
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1372,
+                "p90": 1384
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Radios with a conditional reveal",
+              "jsParsed": 3234,
+              "jsTransferred": 1219,
+              "fcp": {
+                "median": 672,
+                "p90": 708
+              },
+              "lcp": {
+                "median": 680,
+                "p90": 724
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 680,
+                "p90": 720
+              },
+              "inp": {
+                "median": 24,
+                "p90": 32
+              },
+              "inpWhileLoading": {
+                "median": 24,
+                "p90": 24
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Task list, 1 task done",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 1240,
+                "p90": 1256
+              },
+              "lcp": {
+                "median": 1240,
+                "p90": 1256
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1242,
+                "p90": 1256
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Character count",
+              "jsParsed": 7414,
+              "jsTransferred": 2482,
+              "fcp": {
+                "median": 732,
+                "p90": 792
+              },
+              "lcp": {
+                "median": 744,
+                "p90": 792
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 25
+              },
+              "tti": {
+                "median": 740,
+                "p90": 792
+              },
+              "inp": {
+                "median": 24,
+                "p90": 32
+              },
+              "inpWhileLoading": {
+                "median": 24,
+                "p90": 24
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Task list, 2 tasks done",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 1256,
+                "p90": 1292
+              },
+              "lcp": {
+                "median": 1256,
+                "p90": 1292
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1256,
+                "p90": 1292
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Check answers",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 652,
+                "p90": 688
+              },
+              "lcp": {
+                "median": 652,
+                "p90": 688
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 660,
+                "p90": 688
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 0,
+              "jsTransferred": 0,
+              "fcp": {
+                "median": 1228,
+                "p90": 1256
+              },
+              "lcp": {
+                "median": 1228,
+                "p90": 1256
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1228,
+                "p90": 1257
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": null,
+                "p90": null
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 3701,
+            "tbt": {
+              "median": 0,
+              "p90": 25
+            },
+            "inp": {
+              "median": 24,
+              "p90": 32
+            },
+            "inpWhileLoading": {
+              "median": 24,
+              "p90": 32
+            },
+            "lcp": {
+              "median": 1372,
+              "p90": 1384
+            }
+          }
+        },
+        {
+          "variant": "govuk-react-hydrated",
+          "journey": "account",
+          "pages": [
+            {
+              "step": "Form",
+              "jsParsed": 253351,
+              "jsTransferred": 81921,
+              "fcp": {
+                "median": 1368,
+                "p90": 1408
+              },
+              "lcp": {
+                "median": 1400,
+                "p90": 1440
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1396,
+                "p90": 1433
+              },
+              "inp": {
+                "median": 32,
+                "p90": 56
+              },
+              "inpWhileLoading": {
+                "median": 24,
+                "p90": 40
+              },
+              "hydrated": {
+                "median": 3157,
+                "p90": 3190
+              }
+            },
+            {
+              "step": "Form with errors",
+              "jsParsed": 258264,
+              "jsTransferred": 4335,
+              "fcp": {
+                "median": 700,
+                "p90": 716
+              },
+              "lcp": {
+                "median": 728,
+                "p90": 752
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 704,
+                "p90": 719
+              },
+              "inp": {
+                "median": 24,
+                "p90": 32
+              },
+              "inpWhileLoading": {
+                "median": 24,
+                "p90": 24
+              },
+              "hydrated": {
+                "median": 811,
+                "p90": 836
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 230803,
+              "jsTransferred": 3501,
+              "fcp": {
+                "median": 1268,
+                "p90": 1308
+              },
+              "lcp": {
+                "median": 1284,
+                "p90": 1308
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1268,
+                "p90": 1308
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 2980,
+                "p90": 3003
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 89757,
+            "tbt": {
+              "median": 0,
+              "p90": 0
+            },
+            "inp": {
+              "median": 32,
+              "p90": 56
+            },
+            "inpWhileLoading": {
+              "median": 24,
+              "p90": 40
+            },
+            "lcp": {
+              "median": 1400,
+              "p90": 1440
+            }
+          }
+        },
+        {
+          "variant": "govuk-react-hydrated",
+          "journey": "licence",
+          "pages": [
+            {
+              "step": "Task list",
+              "jsParsed": 231893,
+              "jsTransferred": 74627,
+              "fcp": {
+                "median": 1364,
+                "p90": 1412
+              },
+              "lcp": {
+                "median": 1400,
+                "p90": 1416
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1372,
+                "p90": 1413
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 3013,
+                "p90": 3035
+              }
+            },
+            {
+              "step": "Radios with a conditional reveal",
+              "jsParsed": 253399,
+              "jsTransferred": 11001,
+              "fcp": {
+                "median": 692,
+                "p90": 704
+              },
+              "lcp": {
+                "median": 692,
+                "p90": 704
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 692,
+                "p90": 704
+              },
+              "inp": {
+                "median": 32,
+                "p90": 48
+              },
+              "inpWhileLoading": {
+                "median": 32,
+                "p90": 48
+              },
+              "hydrated": {
+                "median": 1876,
+                "p90": 1900
+              }
+            },
+            {
+              "step": "Task list, 1 task done",
+              "jsParsed": 231893,
+              "jsTransferred": 1992,
+              "fcp": {
+                "median": 1252,
+                "p90": 1296
+              },
+              "lcp": {
+                "median": 1252,
+                "p90": 1296
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1256,
+                "p90": 1304
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 1349,
+                "p90": 1430
+              }
+            },
+            {
+              "step": "Character count",
+              "jsParsed": 264150,
+              "jsTransferred": 8806,
+              "fcp": {
+                "median": 732,
+                "p90": 776
+              },
+              "lcp": {
+                "median": 744,
+                "p90": 800
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 23
+              },
+              "tti": {
+                "median": 740,
+                "p90": 800
+              },
+              "inp": {
+                "median": 24,
+                "p90": 32
+              },
+              "inpWhileLoading": {
+                "median": 32,
+                "p90": 56
+              },
+              "hydrated": {
+                "median": 1844,
+                "p90": 1891
+              }
+            },
+            {
+              "step": "Task list, 2 tasks done",
+              "jsParsed": 231893,
+              "jsTransferred": 1992,
+              "fcp": {
+                "median": 1244,
+                "p90": 1276
+              },
+              "lcp": {
+                "median": 1244,
+                "p90": 1276
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1249,
+                "p90": 1276
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 1338,
+                "p90": 1401
+              }
+            },
+            {
+              "step": "Check answers",
+              "jsParsed": 236814,
+              "jsTransferred": 3562,
+              "fcp": {
+                "median": 660,
+                "p90": 704
+              },
+              "lcp": {
+                "median": 692,
+                "p90": 720
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 671,
+                "p90": 704
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 1835,
+                "p90": 1855
+              }
+            },
+            {
+              "step": "Confirmation",
+              "jsParsed": 230803,
+              "jsTransferred": 2506,
+              "fcp": {
+                "median": 1244,
+                "p90": 1296
+              },
+              "lcp": {
+                "median": 1272,
+                "p90": 1296
+              },
+              "tbt": {
+                "median": 0,
+                "p90": 0
+              },
+              "tti": {
+                "median": 1251,
+                "p90": 1296
+              },
+              "inp": {
+                "median": null,
+                "p90": null
+              },
+              "inpWhileLoading": {
+                "median": null,
+                "p90": null
+              },
+              "hydrated": {
+                "median": 1830,
+                "p90": 1855
+              }
+            }
+          ],
+          "total": {
+            "jsTransferred": 104486,
+            "tbt": {
+              "median": 0,
+              "p90": 23
+            },
+            "inp": {
+              "median": 32,
+              "p90": 48
+            },
+            "inpWhileLoading": {
+              "median": 32,
+              "p90": 64
+            },
+            "lcp": {
+              "median": 1400,
+              "p90": 1416
+            }
+          }
+        }
+      ]
+    }
+  },
+  "failures": []
+}
