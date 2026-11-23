@@ -4,6 +4,8 @@ An implementation of the [GOV.UK Design System](https://design-system.service.go
 
 govuk-react is a community project, actively maintained by volunteers. It isn't an official port of GOV.UK Frontend and isn't supported by the GOV.UK Design System team, who maintain [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend).
 
+The GOV.UK Service Manual's guidance on [building a robust frontend using progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement) and the [Service Standard](https://www.gov.uk/service-manual/service-standard) describe how government services are expected to work without JavaScript. Every govuk-react component renders HTML that works before and without JavaScript, so pages can be rendered on the server. See [Server rendering](https://govuk-react.com/guides/server-rendering/).
+
 We aim to track the following projects (in priority order) as to which components to implement and how they should look/behave. Where possible we are using the existing CSS as a guide. When we need to modify to suit custom markup, we aim to provide a comment in our code as to why this was done.
 
 - [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)
