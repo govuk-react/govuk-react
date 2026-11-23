@@ -13,3 +13,4 @@ export { Button, type ButtonProps } from './button/index.js';
 export * as ExitThisPage from './exit-this-page/index.js';
 export * as FileUpload from './file-upload/index.js';
 export * as Autocomplete from './autocomplete/index.js';
+export * as ControlledField from './controlled-field/index.js';
