@@ -26,6 +26,8 @@ export default defineConfig({
   output: 'server',
   integrations: [react(), govukFrontendAssets()],
   adapter: node({ mode: 'standalone' }),
+  // The forms are small, so refuse large submissions rather than parse them.
+  security: { actionBodySizeLimit: 16 * 1024 },
   // govuk-frontend's CSS has hacks for old browsers that Lightning CSS rejects unless it can recover.
   vite: { css: { lightningcss: { errorRecovery: true } } },
 });

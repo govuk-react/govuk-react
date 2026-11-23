@@ -12,8 +12,7 @@ import { Heading } from 'govuk-react/heading';
 import { InputField } from 'govuk-react/input';
 import { VisuallyHidden } from 'govuk-react/visually-hidden';
 import { z } from 'zod';
-import type { ActionResult } from '../action-result';
-import { path } from '../path';
+import type { HandlerResult } from '../action-result';
 import { fieldProps } from '../components/fields';
 import { FormErrorSummary, useFailedSubmits } from '../components/FormErrorSummary';
 
@@ -42,7 +41,7 @@ const todosSchema = coerceFormValue(
   })
 );
 
-export async function submitTodos(formData: FormData): Promise<ActionResult> {
+export async function submitTodos(formData: FormData): Promise<HandlerResult> {
   const submission = parseSubmission(formData);
   const { intent, targetValue } = resolveSubmission(submission);
 
@@ -57,7 +56,7 @@ export async function submitTodos(formData: FormData): Promise<ActionResult> {
     return { success: false, result: report(submission, { error: { issues: result.error.issues } }) };
   }
 
-  return { success: true, redirectTo: path(`/forms?value=${encodeURIComponent(JSON.stringify(result.data))}`) };
+  return { success: true, value: result.data };
 }
 
 export function TodosForm({ action, lastResult = null }: TodosFormProps) {

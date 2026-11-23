@@ -15,8 +15,7 @@ import { InputField } from 'govuk-react/input';
 import * as PasswordInput from 'govuk-react/password-input';
 import { useMemo, type ComponentProps, type ReactNode } from 'react';
 import { z } from 'zod';
-import type { ActionResult } from '../action-result';
-import { path } from '../path';
+import type { HandlerResult } from '../action-result';
 import { fieldProps } from '../components/fields';
 import { FormErrorSummary, useFailedSubmits } from '../components/FormErrorSummary';
 
@@ -54,7 +53,7 @@ export const signupSchema = coerceFormValue(z.object({ username: usernameSchema 
 /** Passwords aren't sent back to the browser when the form has errors. */
 export const hideFields = ['password', 'confirmPassword'];
 
-export async function signup(formData: FormData): Promise<ActionResult> {
+export async function signup(formData: FormData): Promise<HandlerResult> {
   const submission = parseSubmission(formData);
   const result = signupSchema.safeParse(submission.payload);
 
@@ -75,10 +74,7 @@ export async function signup(formData: FormData): Promise<ActionResult> {
     };
   }
 
-  return {
-    success: true,
-    redirectTo: path(`/forms?value=${encodeURIComponent(JSON.stringify({ username: result.data.username }))}`),
-  };
+  return { success: true, value: { username: result.data.username } };
 }
 
 type SignupFieldsProps = {

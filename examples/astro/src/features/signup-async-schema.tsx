@@ -2,8 +2,7 @@ import { memoize, parseSubmission, report, useForm, type SubmissionResult } from
 import { coerceFormValue } from '@conform-to/zod/v4/future';
 import { useMemo } from 'react';
 import { z } from 'zod';
-import type { ActionResult } from '../action-result';
-import { path } from '../path';
+import type { HandlerResult } from '../action-result';
 import { FormErrorSummary, useFailedSubmits } from '../components/FormErrorSummary';
 import { hideFields, isUsernameAvailable, passwordsSchema, SignupPage, usernameSchema, usernameTaken } from './signup';
 
@@ -27,7 +26,7 @@ export function createSignupAsyncSchema(checks: { isUsernameAvailable: (username
   );
 }
 
-export async function signupWithAsyncSchema(formData: FormData): Promise<ActionResult> {
+export async function signupWithAsyncSchema(formData: FormData): Promise<HandlerResult> {
   const schema = createSignupAsyncSchema({ isUsernameAvailable });
   const submission = parseSubmission(formData);
   const result = await schema.safeParseAsync(submission.payload);
@@ -39,10 +38,7 @@ export async function signupWithAsyncSchema(formData: FormData): Promise<ActionR
     };
   }
 
-  return {
-    success: true,
-    redirectTo: path(`/forms?value=${encodeURIComponent(JSON.stringify({ username: result.data.username }))}`),
-  };
+  return { success: true, value: { username: result.data.username } };
 }
 
 export function SignupAsyncSchemaForm({ action, lastResult = null }: SignupAsyncSchemaFormProps) {
