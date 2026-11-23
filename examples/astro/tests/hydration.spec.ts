@@ -78,3 +78,14 @@ test('React takes over from the inline script, and keeps what the user did', asy
   await page.getByRole('button', { name: 'After you apply' }).click();
   await expect(page.getByText('You’ve read 2 of 3 sections, 1 of them before React loaded.')).toBeVisible();
 });
+
+test('the service navigation’s inline script gives a narrow screen a menu button', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 700 });
+  await page.goto('without-react');
+  const menu = page.getByRole('button', { name: 'Menu' });
+  const link = page.getByRole('navigation').getByRole('link', { name: 'Forms' });
+  await expect(menu).toHaveAttribute('aria-expanded', 'false');
+  await expect(link).toBeHidden();
+  await menu.click();
+  await expect(link).toBeVisible();
+});
