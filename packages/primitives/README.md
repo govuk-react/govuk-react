@@ -64,7 +64,16 @@ No part renders a `style` element or attribute, so the primitives work under a s
 
 ## Without React
 
-Each element is also exported on its own, with no React, from `@govuk-react/primitives/<name>-element`, such as `tabs-element`. Importing it defines the element, such as `<govuk-react-tabs>`. Render the same markup as the React parts do: the element finds its parts by `data-` attributes, takes its options as attributes, and reports changes with bubbling events named after it, such as `govuk-react-tabs:change`. An attribute sets only where the state starts, such as `default-value`. To control the state, set a property: `value` on Tabs and Accordion, which takes an array, and `open` on Disclosure and Modal. Set it back to `undefined` or `null` to stop controlling it. The comment at the top of each element's source lists its markup, attributes, properties and events:
+Each element is also exported on its own, with no React, from `@govuk-react/primitives/<name>-element`, such as `tabs-element`. Importing it defines the element, such as `<govuk-react-tabs>`. Render the same markup as the React parts do: the element finds its parts by `data-` attributes, takes its options as attributes, and reports changes with bubbling events named after it, such as `govuk-react-tabs:change`. An attribute sets only where the state starts, such as `default-value`. To control the state, set a property: `value` on Tabs and Accordion, which takes an array, and `open` on Disclosure. Set it back to `undefined` or `null` to stop controlling it. A Modal is controlled by a `ModalController` from `@govuk-react/primitives/modal-controller`, kept out of the element so its inline script stays small:
+
+```ts
+import { ModalController } from '@govuk-react/primitives/modal-controller';
+
+const controller = new ModalController(element);
+controller.open = true;
+```
+
+The comment at the top of each element's source lists its markup, attributes, properties and events:
 
 [accordion](src/accordion/element.ts), [auto-focus](src/auto-focus/element.ts), [autocomplete](src/autocomplete/element.ts), [button](src/button/element.ts), [character-count](src/character-count/element.ts), [choices](src/choices/element.ts), [disclosure](src/disclosure/element.ts), [exit-this-page](src/exit-this-page/element.ts), [file-upload](src/file-upload/element.ts), [focus-links](src/focus-links/element.ts), [modal](src/modal/element.ts), [password-input](src/password-input/element.ts) and [tabs](src/tabs/element.ts).
 

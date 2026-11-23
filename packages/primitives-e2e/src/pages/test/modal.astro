@@ -12,6 +12,9 @@ import ControlledModal from '../../components/ControlledModal.tsx';
     <ControlledModal client:load />
     <script>
       import "@govuk-react/primitives/modal-element";
+      import { ModalController } from "@govuk-react/primitives/modal-controller";
+
+      Object.assign(window, { ModalController });
     </script>
   </body>
 </html>

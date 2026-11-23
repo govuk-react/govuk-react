@@ -5,6 +5,7 @@ import { createContext, useCallback, useContext, useEffect, useEffectEvent, useI
 import type { ComponentProps, ReactNode, SyntheticEvent } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { composeRefs, Slot } from '../utils/slot.js';
+import { ModalController } from './controller.js';
 import { tagName, type ModalElement } from './element.js';
 
 export type { ChangeDetails };
@@ -16,7 +17,7 @@ export type { ChangeDetails };
  * Trigger and Close are buttons with invoker commands (`command` and `commandfor`), so where
  * the browser supports them the dialog opens as a true modal with no JavaScript: the page behind
  * is inert, focus moves into the dialog, and Escape closes it. The element runs the commands in
- * browsers without them, and applies `open` when controlled.
+ * browsers without them, and Root controls it with a `ModalController` when given `open`.
  *
  * Context only fills in ids: in an island without a Root, pass `dialogId` to Trigger and Close,
  * and `id` to Content.
@@ -27,6 +28,7 @@ const ModalContext = createContext<{
   titleId?: string;
   descriptionId?: string;
   onOpenChange?: (open: boolean, details: ChangeDetails) => void;
+  controlledOpen?: () => boolean | undefined;
 }>({});
 
 export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
@@ -48,14 +50,25 @@ export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...
   const generatedId = useId();
   const dialogId = dialogIdProp ?? generatedId;
   const element = useRef<ModalElement>(null);
+  const controller = useRef<ModalController>(null);
   const synced = useRef(false);
   const [, render] = useReducer((count: number) => count + 1, 0);
+  useEffect(() => {
+    const node = element.current;
+    if (!node) return undefined;
+    const created = new ModalController(node);
+    controller.current = created;
+    return () => {
+      created.disconnect();
+      controller.current = null;
+    };
+  }, []);
   // `open` is set once hydrated, so the server markup is uncontrolled and the buttons work before
   // hydration. A dialog opened by then is reported by Content, rather than closed.
   useEffect(() => {
-    const node = element.current;
-    if (!node || open === undefined) {
-      if (node) node.open = undefined;
+    const current = controller.current;
+    if (!current || open === undefined) {
+      if (current) current.open = undefined;
       return;
     }
     if (!synced.current) {
@@ -67,11 +80,17 @@ export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...
         return;
       }
     }
-    node.open = open;
+    current.open = open;
   });
   return (
     <ModalContext.Provider
-      value={{ dialogId, titleId: `${dialogId}-title`, descriptionId: `${dialogId}-description`, onOpenChange }}
+      value={{
+        dialogId,
+        titleId: `${dialogId}-title`,
+        descriptionId: `${dialogId}-description`,
+        onOpenChange,
+        controlledOpen: () => controller.current?.open,
+      }}
     >
       {React.createElement(
         tagName,
@@ -144,7 +163,7 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
     if (reported.current === dialog.open) return;
     reported.current = dialog.open;
     // A controlled dialog that arrives at `open` is no news.
-    if (dialog.closest(tagName)?.open === dialog.open) return;
+    if (context.controlledOpen?.() === dialog.open) return;
     context.onOpenChange?.(dialog.open, live);
   };
   const reportFromDialog = useEffectEvent(report);
