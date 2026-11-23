@@ -91,12 +91,13 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     // The last tab the user chose, by any route.
     private picked?: string;
 
-    // The first tab was selected only because nothing else had been parsed yet.
+    // The element selected the tab itself, from what had been parsed so far.
     private provisional = false;
 
-    private readonly onModeChange = () => this.checkMode();
+    // The radio found checked, other than by the element showing its tab.
+    private foundChecked?: string;
 
-    private readonly onReady = () => this.start();
+    private readonly onModeChange = () => this.checkMode();
 
     private readonly onHashChange = () => {
       const trigger = this.triggerForHash();
@@ -205,21 +206,18 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         }
         if (records.some((record) => record.type === 'childList')) {
           this.wire();
-          if (this.provisional) this.show(this.initialTrigger());
+          if (this.provisional) this.showInitial();
         }
         this.show(this.triggerFor(this.dataset.value) ?? this.triggers[0]);
         addClasses(this, classesOf(this.getAttribute('upgraded-class')));
       });
       this.observer.observe(this, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
-      // Wait for the markup to be parsed, so the initial tab is chosen from all of it.
-      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', this.onReady);
-      else this.start();
+      this.start();
     }
 
     disconnectedCallback() {
       this.removeEventListener('change', this.onChange);
       this.observer?.disconnect();
-      document.removeEventListener('DOMContentLoaded', this.onReady);
       this.mql?.removeEventListener('change', this.onModeChange);
       this.mql = undefined;
       this.started = false;
@@ -306,7 +304,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     private start() {
-      document.removeEventListener('DOMContentLoaded', this.onReady);
       if (this.started) return;
       this.started = true;
       this.watchMedia();
@@ -332,18 +329,27 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private pickedTrigger() {
       const hashed = this.triggerForHash();
       if (hashed) return hashed;
-      const checked = this.own('[data-tabs-content]').find((content) => this.radioOf(content)?.checked);
-      return this.triggerFor(valueOf(checked));
+      const checked = valueOf(this.own('[data-tabs-content]').find((content) => this.radioOf(content)?.checked));
+      if (checked !== this.dataset.value) this.foundChecked = checked;
+      return this.triggerFor(this.foundChecked);
     }
 
     private initialTrigger() {
       const controlled = this.triggerFor(this.controlledValue);
-      const remembered = this.triggerFor(this.dataset.value);
+      const remembered = this.provisional ? undefined : this.triggerFor(this.dataset.value);
       const picked = this.pickedTrigger();
       const fallback = this.triggerFor(this.getAttribute('default-value'));
       const initial = controlled ?? remembered ?? picked ?? fallback;
-      this.provisional = !initial;
+      // While the page is being parsed, the tab or panel that decides this may be yet to come.
+      this.provisional = !remembered && (!initial || document.readyState === 'loading');
       return initial ?? this.triggers[0];
+    }
+
+    private showInitial() {
+      if (this.provisional || (this.picked === undefined && !this.dataset.value)) {
+        this.picked = valueOf(this.pickedTrigger());
+      }
+      this.show(this.initialTrigger());
     }
 
     private setup() {
@@ -356,8 +362,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.addEventListener('keydown', this.onKeydown);
       if (!this.radiosFallback) window.addEventListener('hashchange', this.onHashChange);
 
-      if (this.picked === undefined && !this.dataset.value) this.picked = valueOf(this.pickedTrigger());
-      this.show(this.initialTrigger());
+      this.showInitial();
     }
 
     /** Roles and ids for the tabs and panels. */
