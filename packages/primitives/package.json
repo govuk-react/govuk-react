@@ -15,6 +15,10 @@
       "types": "./dist/*/element.d.ts",
       "default": "./dist/*/element.js"
     },
+    "./*-controller": {
+      "types": "./dist/*/controller.d.ts",
+      "default": "./dist/*/controller.js"
+    },
     "./*": {
       "types": "./dist/*/index.d.ts",
       "default": "./dist/*/index.js"
