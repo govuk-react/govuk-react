@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { hydrateRoot } from 'react-dom/client';
 import { renderToString } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
@@ -416,6 +416,44 @@ test('server markup: a tab picked before hydration that the handler does not ado
   });
   await upgraded();
   expect(onValueChange.mock.calls).toEqual([['week', { beforeHydration: true }]]);
+  expect(screen.getByRole('tab', { name: 'Past day' })).toHaveAttribute('aria-selected', 'true');
+  container.remove();
+});
+
+test('server markup: going back to the value keeps the HTML of a Suspense boundary that has yet to hydrate', async () => {
+  const Week = () => <p>Week content</p>;
+  let load: () => void = () => {};
+  const LazyWeek = lazy(
+    () =>
+      new Promise<{ default: typeof Week }>((resolve) => {
+        load = () => resolve({ default: Week });
+      })
+  );
+  const tabs = (week: React.ReactNode) => (
+    <Tabs.Root value="day" onValueChange={() => {}}>
+      <Tabs.List>
+        <Tabs.Trigger value="day">Past day</Tabs.Trigger>
+        <Tabs.Trigger value="week">Past week</Tabs.Trigger>
+      </Tabs.List>
+      <Tabs.Content value="day">Day content</Tabs.Content>
+      <Tabs.Content value="week">
+        <h2>Past week</h2>
+        <Suspense fallback="Loading">{week}</Suspense>
+      </Tabs.Content>
+    </Tabs.Root>
+  );
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(tabs(<Week />));
+  await upgraded();
+  fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+  await act(async () => {
+    hydrateRoot(container, tabs(<LazyWeek />));
+  });
+  await upgraded();
+  expect(screen.getByText('Week content')).toBeInTheDocument();
+  expect(screen.queryByText('Loading')).not.toBeInTheDocument();
+  await act(async () => load());
   expect(screen.getByRole('tab', { name: 'Past day' })).toHaveAttribute('aria-selected', 'true');
   container.remove();
 });

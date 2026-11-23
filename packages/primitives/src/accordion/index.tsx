@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { createContext, useContext, useEffect, useEffectEvent, useReducer, useRef } from 'react';
+import { createContext, startTransition, useContext, useEffect, useEffectEvent, useReducer, useRef } from 'react';
 import type { ComponentProps } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
@@ -119,7 +119,8 @@ export function Root({
         reportChange(picked, early);
         if (value !== undefined) {
           // The pick shows until the next render, which adopts it or goes back to `value`.
-          render();
+          // A transition, so React first hydrates any Suspense boundary inside, rather than discard its HTML.
+          startTransition(render);
           return;
         }
       }
