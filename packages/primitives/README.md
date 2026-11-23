@@ -74,6 +74,8 @@ Each element that changes how its markup shows sets `data-upgraded` on itself on
 
 Each element is also built as a small, self-contained classic script, with no imports and no React, at `@govuk-react/primitives/inline/<name>-element.js`, such as `inline/tabs-element.js`. Inline the ones your page uses, so the markup is interactive as soon as it loads, before React has downloaded and hydrated. React's parts then pick up from the elements, including anything the user did before hydration. Each element is defined only once, whichever runs first: the inline script or React's bundle. So inline the scripts from the same version of this package as the one in your bundle.
 
+Without its inline script, an element upgrades once your bundle has loaded, and until then the page shows the markup as it is without JavaScript. The accordion, tabs, disclosure and file upload change the page's layout when they upgrade: an accordion's sections all start open, then close. With the script inlined in the `head`, the element upgrades as it is parsed, before the browser first paints it.
+
 To render them from React on the server, `inline-script` has each script as a string, and an `InlineScript` component:
 
 ```tsx
