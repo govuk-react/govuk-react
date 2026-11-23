@@ -1,0 +1,8 @@
+// Like the Astro example, use Arial rather than GDS Transport. Setting the font
+// family also stops govuk-frontend including its @font-face rules, so no font is downloaded.
+@use 'govuk-frontend/dist/govuk' with (
+  $govuk-font-family: (
+    arial,
+    sans-serif,
+  )
+);

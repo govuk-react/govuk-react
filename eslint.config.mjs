@@ -18,6 +18,7 @@ export default tseslint.config(
       '**/storybook-static',
       'test-results',
       '**/.astro',
+      'benchmark/public',
     ],
   },
   { linterOptions: { reportUnusedDisableDirectives: 'off' } },
@@ -49,11 +50,11 @@ export default tseslint.config(
   },
   {
     // The examples use React's automatic JSX runtime, as new projects do.
-    files: ['examples/**/*.{ts,tsx}'],
+    files: ['examples/**/*.{ts,tsx}', 'benchmark/**/*.{ts,tsx}'],
     rules: { 'react/react-in-jsx-scope': 'off' },
   },
   {
-    files: ['examples/**/*.mjs'],
+    files: ['examples/**/*.mjs', 'benchmark/**/*.mjs'],
     languageOptions: { globals: globals.node },
   },
   {

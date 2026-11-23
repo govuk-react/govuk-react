@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+{% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+
+
+{% set incomplete = { tag: { text: "Incomplete", classes: "govuk-tag--blue" } } %}
+{% set ready = contactDone and eventDone %}
+
+{% block form %}
+  <h1 class="govuk-heading-l">Apply for an event licence</h1>
+  {{ govukTaskList({
+    idPrefix: "licence",
+    items: [
+      {
+        title: { text: "Contact details" },
+        href: base + "/licence/contact",
+        status: { text: "Completed" } if contactDone else incomplete
+      },
+      {
+        title: { text: "Event details" },
+        href: base + "/licence/event",
+        status: { text: "Completed" } if eventDone else incomplete
+      },
+      {
+        title: { text: "Check and submit" },
+        href: base + "/licence/check" if ready else undefined,
+        status: incomplete if ready else { text: "Cannot start yet", classes: "govuk-task-list__status--cannot-start-yet" }
+      }
+    ]
+  }) }}
+{% endblock %}

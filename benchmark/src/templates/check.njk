@@ -1,0 +1,29 @@
+{% extends "layout.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block form %}
+  <h1 class="govuk-heading-l">Check your answers</h1>
+  {{ govukSummaryList({
+    rows: [
+      {
+        key: { text: "Contact" },
+        value: { text: contactSummary(contact) },
+        actions: { items: [{ href: base + "/licence/contact", text: "Change", visuallyHiddenText: "contact" }] }
+      },
+      {
+        key: { text: "Event name" },
+        value: { text: event.name },
+        actions: { items: [{ href: base + "/licence/event", text: "Change", visuallyHiddenText: "event name" }] }
+      },
+      {
+        key: { text: "Description" },
+        value: { text: event.description },
+        actions: { items: [{ href: base + "/licence/event", text: "Change", visuallyHiddenText: "description" }] }
+      }
+    ]
+  }) }}
+  <form method="post" novalidate>
+    {{ govukButton({ text: "Submit application" }) }}
+  </form>
+{% endblock %}

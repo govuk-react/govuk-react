@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/password-input/macro.njk" import govukPasswordInput %}
+
+{% block form %}
+  <h1 class="govuk-heading-l">Create an account</h1>
+  <form method="post" novalidate>
+    {{ govukInput({
+      name: "username",
+      label: { text: "Username" },
+      hint: { text: "Must only include letters a to z and numbers" },
+      value: values.username,
+      errorMessage: errorFor("username"),
+      autocomplete: "username",
+      spellcheck: false
+    }) }}
+    {{ govukPasswordInput({
+      name: "password",
+      label: { text: "Create a password" },
+      hint: { text: "Must be at least 8 characters" },
+      errorMessage: errorFor("password"),
+      autocomplete: "new-password"
+    }) }}
+    {{ govukPasswordInput({
+      name: "confirmPassword",
+      label: { text: "Confirm password" },
+      errorMessage: errorFor("confirmPassword"),
+      autocomplete: "new-password"
+    }) }}
+    {{ govukButton({ text: "Create account" }) }}
+  </form>
+{% endblock %}

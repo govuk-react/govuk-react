@@ -1,0 +1,25 @@
+{% extends "layout.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% block form %}
+  <h1 class="govuk-heading-l">Event details</h1>
+  <form method="post" novalidate>
+    {{ govukInput({
+      name: "name",
+      label: { text: "Event name" },
+      value: values.name,
+      errorMessage: errorFor("name")
+    }) }}
+    {{ govukCharacterCount({
+      name: "description",
+      label: { text: "Describe your event" },
+      hint: { text: "Include where and when it takes place" },
+      maxlength: descriptionMaxLength,
+      value: values.description,
+      errorMessage: errorFor("description")
+    }) }}
+    {{ govukButton({ text: "Save and continue" }) }}
+  </form>
+{% endblock %}
