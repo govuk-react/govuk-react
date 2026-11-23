@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { hydrateRoot } from 'react-dom/client';
 import { renderToString } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
@@ -220,6 +220,47 @@ test('server markup: an uncontrolled section opened before hydration is reported
   await upgraded();
   expect(onValueChange.mock.calls).toEqual([[['writing'], { beforeHydration: true }]]);
   expect(button(/^Writing well for the web/)).toHaveAttribute('aria-expanded', 'true');
+  container.remove();
+  window.sessionStorage.clear();
+});
+
+test('server markup: closing a section the handler does not adopt keeps the HTML of a Suspense boundary that has yet to hydrate', async () => {
+  const Guidance = () => <p>Guidance</p>;
+  let load: () => void = () => {};
+  const LazyGuidance = lazy(
+    () =>
+      new Promise<{ default: typeof Guidance }>((resolve) => {
+        load = () => resolve({ default: Guidance });
+      })
+  );
+  const accordion = (guidance: React.ReactNode) => (
+    <Accordion.Root rememberExpanded={false} value={[]} onValueChange={() => {}}>
+      <Accordion.Item value="writing">
+        <h2>
+          <Accordion.Fallback>Writing well for the web</Accordion.Fallback>
+          <Accordion.Trigger>
+            <Accordion.Label>Writing well for the web</Accordion.Label>
+          </Accordion.Trigger>
+        </h2>
+        <Accordion.Content id="writing-content">
+          <Suspense fallback="Loading">{guidance}</Suspense>
+        </Accordion.Content>
+      </Accordion.Item>
+    </Accordion.Root>
+  );
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(accordion(<Guidance />));
+  await upgraded();
+  fireEvent.click(button(/^Writing well for the web/));
+  await act(async () => {
+    hydrateRoot(container, accordion(<LazyGuidance />));
+  });
+  await upgraded();
+  expect(screen.getByText('Guidance')).toBeInTheDocument();
+  expect(screen.queryByText('Loading')).not.toBeInTheDocument();
+  await act(async () => load());
+  expect(button(/^Writing well for the web/)).toHaveAttribute('aria-expanded', 'false');
   container.remove();
   window.sessionStorage.clear();
 });

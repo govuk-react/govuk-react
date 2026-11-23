@@ -1,7 +1,17 @@
 'use client';
 
 import * as React from 'react';
-import { createContext, useCallback, useContext, useEffect, useEffectEvent, useId, useReducer, useRef } from 'react';
+import {
+  createContext,
+  startTransition,
+  useCallback,
+  useContext,
+  useEffect,
+  useEffectEvent,
+  useId,
+  useReducer,
+  useRef,
+} from 'react';
 import type { ComponentProps, ReactNode, SyntheticEvent } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { composeRefs, Slot } from '../utils/slot.js';
@@ -76,7 +86,8 @@ export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...
       const dialog = document.getElementById(dialogId);
       if (onOpenChange && !open && dialog instanceof HTMLDialogElement && dialog.open) {
         // The dialog stays open until the next render, which adopts it or closes it.
-        render();
+        // A transition, so React first hydrates any Suspense boundary inside, rather than discard its HTML.
+        startTransition(render);
         return;
       }
     }
