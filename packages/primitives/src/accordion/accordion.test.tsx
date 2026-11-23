@@ -4,6 +4,7 @@ import { hydrateRoot } from 'react-dom/client';
 import { renderToString } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import * as Accordion from '.';
+import { AccordionController } from './controller.js';
 
 const sections = [
   { value: 'writing', heading: 'Writing well for the web', summary: 'An introduction' },
@@ -243,24 +244,26 @@ test('hides closed content with plain hidden when asked', async () => {
   expect(screen.getByText('Content')).toHaveAttribute('hidden', '');
 });
 
-test('without React, the value property controls the open sections, until it is undefined or null', async () => {
+test('without React, an AccordionController controls the open sections, until its value is undefined or null', async () => {
   const container = document.createElement('div');
   document.body.appendChild(container);
   container.innerHTML = renderToString(<Example />);
   await upgraded();
   const element = container.querySelector('govuk-react-accordion');
+  if (!element) throw new Error('No element');
+  const controller = new AccordionController(element);
   const onChange = vi.fn();
-  element?.addEventListener('govuk-react-accordion:change', (event) => onChange(event.detail.value));
-  if (element) element.value = ['specialists'];
+  element.addEventListener('govuk-react-accordion:change', (event) => onChange(event.detail.value));
+  controller.value = ['specialists'];
   expect(screen.getByText('Writing well for specialists content')).toBeVisible();
   fireEvent.click(button(/^Writing well for the web/));
   expect(onChange).toHaveBeenLastCalledWith(['writing', 'specialists']);
   expect(screen.getByText('Writing well for the web content')).not.toBeVisible();
-  if (element) element.value = undefined;
+  controller.value = undefined;
   fireEvent.click(button(/^Writing well for the web/));
   expect(screen.getByText('Writing well for the web content')).toBeVisible();
-  if (element) element.value = [];
-  Reflect.set(element ?? {}, 'value', null);
+  controller.value = [];
+  controller.value = null;
   fireEvent.click(button(/^Writing well for the web/));
   expect(screen.getByText('Writing well for the web content')).toBeVisible();
   container.remove();

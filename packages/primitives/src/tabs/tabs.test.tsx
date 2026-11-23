@@ -4,6 +4,7 @@ import { hydrateRoot } from 'react-dom/client';
 import { renderToString } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import * as Tabs from '.';
+import { TabsController } from './controller.js';
 
 function Example(props: Tabs.RootProps) {
   return (
@@ -433,27 +434,29 @@ test('a new media query takes over from the old one', async () => {
   vi.unstubAllGlobals();
 });
 
-test('without React, the value property controls the selected tab, until it is undefined or null', async () => {
+test('without React, a TabsController controls the selected tab, until its value is undefined or null', async () => {
   const container = document.createElement('div');
   document.body.appendChild(container);
   container.innerHTML = renderToString(<Example />);
   await upgraded();
   const element = container.querySelector('govuk-react-tabs');
+  if (!element) throw new Error('No element');
+  const controller = new TabsController(element);
   const onChange = vi.fn();
-  element?.addEventListener('govuk-react-tabs:change', (event) => onChange(event.detail.value));
+  element.addEventListener('govuk-react-tabs:change', (event) => onChange(event.detail.value));
   const selected = (name: string) => screen.getByRole('tab', { name }).getAttribute('aria-selected');
-  if (element) element.value = 'week';
+  controller.value = 'week';
   expect(selected('Past week')).toBe('true');
   fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
   expect(onChange).toHaveBeenLastCalledWith('month');
   expect(selected('Past week')).toBe('true');
   // The element puts the radio back in a microtask.
   await Promise.resolve();
-  if (element) element.value = undefined;
+  controller.value = undefined;
   fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
   expect(selected('Past month')).toBe('true');
-  if (element) element.value = 'day';
-  Reflect.set(element ?? {}, 'value', null);
+  controller.value = 'day';
+  controller.value = null;
   fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
   expect(selected('Past week')).toBe('true');
   container.remove();

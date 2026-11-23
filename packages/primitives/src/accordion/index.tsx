@@ -5,6 +5,7 @@ import { createContext, useContext, useEffect, useEffectEvent, useReducer, useRe
 import type { ComponentProps } from 'react';
 import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
+import { AccordionController } from './controller.js';
 import { tagName, type AccordionElement } from './element.js';
 
 export type { ChangeDetails };
@@ -80,6 +81,17 @@ export function Root({
 }: RootProps) {
   const element = useRef<AccordionElement>(null);
   const reportChange = useEffectEvent((next: string[], details: ChangeDetails) => onValueChange?.(next, details));
+  const controller = useRef<AccordionController>(null);
+  useEffect(() => {
+    const node = element.current;
+    if (!node) return undefined;
+    const created = new AccordionController(node);
+    controller.current = created;
+    return () => {
+      created.disconnect();
+      controller.current = null;
+    };
+  }, []);
   const synced = useRef(false);
   const [, render] = useReducer((count: number) => count + 1, 0);
 
@@ -112,7 +124,7 @@ export function Root({
         }
       }
     }
-    node.value = value;
+    if (controller.current) controller.current.value = value;
   });
 
   const initial = value ?? defaultValue;
