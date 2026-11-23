@@ -7,8 +7,18 @@ import { path } from './path';
  */
 const name = 'submitted';
 
-export function setSubmitted(cookies: AstroCookies, value: Record<string, unknown>) {
-  cookies.set(name, value, { path: path('/forms'), httpOnly: true, sameSite: 'lax', maxAge: 60 });
+/** Browsers drop cookies over about 4 KB, so leave out values that won't fit. */
+const maxLength = 3000;
+
+export function setSubmitted(cookies: AstroCookies, url: URL, value: Record<string, unknown>) {
+  if (encodeURIComponent(JSON.stringify(value)).length > maxLength) return;
+  cookies.set(name, value, {
+    path: path('/forms'),
+    httpOnly: true,
+    secure: url.protocol === 'https:',
+    sameSite: 'lax',
+    maxAge: 60,
+  });
 }
 
 export function takeSubmitted(cookies: AstroCookies): Record<string, unknown> | null {

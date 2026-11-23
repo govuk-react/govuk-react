@@ -10,15 +10,12 @@ type Action = Parameters<AstroGlobal['getActionResult']>[0] & { queryString: str
  */
 export function formState(Astro: AstroGlobal, action: Action) {
   const actionResult = Astro.getActionResult(action);
-  const formAction = new URL(Astro.url);
-  for (const [key, value] of new URLSearchParams(action.queryString)) {
-    formAction.searchParams.append(key, value);
-  }
   const data: ActionResult | undefined = actionResult && !actionResult.error ? actionResult.data : undefined;
   const lastResult = data && 'result' in data ? data.result : null;
 
   return {
-    action: formAction.toString(),
+    // The page's own path, without any query string it was linked with.
+    action: `${Astro.url.pathname}${action.queryString}`,
     redirectTo: data && 'redirectTo' in data ? data.redirectTo : undefined,
     lastResult,
     hasErrors: hasErrors(lastResult),
